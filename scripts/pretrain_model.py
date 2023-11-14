@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -10,6 +11,8 @@ from transformers import RobertaForMaskedLM, RobertaTokenizerFast, Trainer
 from transformers import TrainingArguments
 from wasabi import msg
 
+DEFAULT_WANDB_PROJECT = "sigtyp2024"
+
 
 def pretrain_model(
     # fmt: off
@@ -20,6 +23,7 @@ def pretrain_model(
     merges: Path = typer.Option(None, help="Path to merges.txt to initialize the tokenizer."),
     batch_size: int = typer.Option(64, help="Set the batch size for GPU training."),
     epochs: int = typer.Option(5, help="Number of epochs to train."),
+    wandb_project: str = typer.Option(DEFAULT_WANDB_PROJECT, help="W&B project for tracking model training."),
     seed: int = typer.Option(42, help="Set the random seed."),
     # fmt: on
 ):
@@ -61,6 +65,11 @@ def pretrain_model(
     model_dir = output_dir / "model"
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     model_dir.mkdir(parents=True, exist_ok=True)
+
+    msg.info("Setting up training arguments")
+    os.environ["WANDB_PROJECT"] = wandb_project
+    os.environ["WANDB_LOGIN_MODEL"] = "checkpoint"
+    msg.text(f"Tracking pretraining on W&B project: '{wandb_project}' ('checkpoint')")
 
     training_args = TrainingArguments(
         seed=seed,

@@ -26,7 +26,6 @@ vars:
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
-  wandb_log_model: "checkpoint"
 
 remotes:
   # Create a service account, download a JSON key, and set the credentials path
@@ -88,7 +87,6 @@ commands:
     help: "Pretrain a multilingual LM from a corpus"
     script:
       - >-
-        WANDB_PROJECT=${vars.wandb_project} WANDB_LOG_MODEL=${vars.wandb_log_model} 
         python -m scripts.pretrain_model pretraining/ 
         --name ${vars.name}
         --pretraining-corpus corpus/pretraining.txt
@@ -97,6 +95,7 @@ commands:
         --batch-size ${vars.batch_size}
         --epochs ${vars.epochs}
         --seed ${vars.seed}
+        --wandb-project ${vars.wandb_project}
     deps:
       - tokenizer/vocab.json
       - tokenizer/merges.txt

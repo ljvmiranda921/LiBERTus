@@ -1,0 +1,56 @@
+title: "LiBERTus: A Multilingual Language Model for Ancient and Historical Languages"
+description: |
+  Submission to Task 1 (Constrained) of the [SIGTYP 2024 Shared Task on Word
+  Embedding Evaluation for Ancient and Historical
+  Languages](https://sigtyp.github.io/st2024.html)
+
+# These are the directories that the project needs. The project CLI will make
+# sure that they always exist.
+directories:
+  - "assets"
+  - "corpus"
+  - "training"
+  - "metrics"
+  - "scripts"
+
+vars:
+  version: 0.1.0
+  remote_gcs_bucket: "ljvmiranda"
+
+remotes:
+  # Create a service account, download a JSON key, and set the credentials path
+  # to GOOGLE_APPLICATION_CREDENTIALS env variable
+  gcs: "gs://${vars.remote_gcs_bucket}/LiBERTus/training_cache/v${vars.version}/"
+
+# Assets that should be downloaded or available in the directory. But the
+# 'weasel assets' command still lets you verify that the checksums match.
+assets:
+  - dest: assets/train/
+    git:
+      repo: https://github.com/sigtyp/ST2024
+      branch: main
+      path: morphology/train
+    description: "CoNLL-U training datasets for Task 0 (morphology/lemma/POS)"
+  - dest: assets/dev/
+    git:
+      repo: https://github.com/sigtyp/ST2024
+      branch: main
+      path: morphology/valid
+    description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
+
+# Project commands, specified in a style similar to CI config files (e.g. Azure
+# pipelines). The name is the command name that lets you trigger the command
+# via "weasel run [command] [path]". The help message is optional and
+# shown when executing "weasel run [optional command] [path] --help".
+commands:
+  - name: "create-pretraining"
+    help: "Create corpus for multilingual LM pretraining"
+    script:
+      - python -m scripts.create_pretraining corpus/ assets/train/ assets/dev/ --shuffle
+    outputs:
+      - corpus/pretraining.txt
+
+  - name: "pretrain"
+    help: "Pretrain a multilingual LM from a corpus"
+    script:
+      - python -m scripts.pretrain corpus/pretraining.txt

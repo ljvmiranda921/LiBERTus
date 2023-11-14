@@ -1,6 +1,6 @@
 <!-- WEASEL: AUTO-GENERATED DOCS START (do not remove) -->
 
-# 🪐 Weasel Project: LiBERTus: A Multilingual Language Model for Ancient and Historical Languages
+# 🪐 Weasel Project: LiBERTus - A Multilingual Language Model for Ancient and Historical Languages
 
 Submission to Task 1 (Constrained) of the [SIGTYP 2024 Shared Task on Word
 Embedding Evaluation for Ancient and Historical
@@ -22,7 +22,19 @@ Commands are only re-run if their inputs have changed.
 | Command | Description |
 | --- | --- |
 | `create-pretraining` | Create corpus for multilingual LM pretraining |
-| `pretrain` | Pretrain a multilingual LM from a corpus |
+| `create-vocab` | Train a tokenizer to create a vocabulary |
+| `pretrain-model` | Pretrain a multilingual LM from a corpus |
+
+### ⏭ Workflows
+
+The following workflows are defined by the project. They
+can be executed using [`weasel run [name]`](https://github.com/explosion/weasel/tree/main/docs/cli.md#rocket-run)
+and will run the specified commands in order. Commands are only re-run if their
+inputs have changed.
+
+| Workflow | Steps |
+| --- | --- |
+| `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
 
 ### 🗂 Assets
 

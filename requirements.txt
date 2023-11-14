@@ -1,7 +1,9 @@
 # Experiments
 transformers>=4.35.0
+conllu
 torch
 # Project
 weasel
 typer
 wasabi
+tqdm

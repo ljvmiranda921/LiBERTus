@@ -1,4 +1,5 @@
 import os
+from enum import Enum
 from pathlib import Path
 from typing import Optional
 
@@ -11,19 +12,52 @@ from transformers import RobertaForMaskedLM, RobertaTokenizerFast, Trainer
 from transformers import TrainingArguments
 from wasabi import msg
 
-DEFAULT_WANDB_PROJECT = "sigtyp2024"
+MODEL_CONFIG = {
+    "base": {
+        "vocab_size": 52_000,
+        "max_position_embeddings": 512,
+        "hidden_size": 768,
+        "intermediate_size": 3072,
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "classifier_dropout": 0.1,
+        "attention_probs_dropout_prob": 0.1,
+        "hidden_dropout_prob": 0.1,
+        "type_vocab_size": 2,
+    },
+    "large": {
+        "vocab_size": 52_000,
+        "max_position_embeddings": 512,
+        "hidden_size": 1024,
+        "intermediate_size": 4096,
+        "num_attention_heads": 16,
+        "num_hidden_layers": 24,
+        "classifier_dropout": 0.1,
+        "attention_probs_dropout_prob": 0.1,
+        "hidden_dropout_prob": 0.1,
+        "type_vocab_size": 2,
+    },
+}
+
+
+class ModelSize(str, Enum):
+    base = "base"
+    large = "large"
 
 
 def pretrain_model(
     # fmt: off
     output_dir: Path = typer.Argument(..., help="Path to save the trained model."),
+    model_size: ModelSize = typer.Option(ModelSize.base, "--size", "-sz", help="Size of the model to train."),
     name: Optional[str] = typer.Option(None, "--name", "-n", help="Optional name for the run for W&B tracking."),
     pretraining_corpus: Path = typer.Option(None, help="Path to the pretraining corpus."),
     vocab: Path = typer.Option(None, help="Path to vocab.json to initialize the tokenizer."),
     merges: Path = typer.Option(None, help="Path to merges.txt to initialize the tokenizer."),
+    learning_rate: float = typer.Option(6e-4, help="Set the learning rate."),
     batch_size: int = typer.Option(64, help="Set the batch size for GPU training."),
     epochs: int = typer.Option(5, help="Number of epochs to train."),
-    wandb_project: str = typer.Option(DEFAULT_WANDB_PROJECT, help="W&B project for tracking model training."),
+    max_steps: int = typer.Option(-1, help="Maximum number of steps to run. Overrides epochs."),
+    wandb_project: str = typer.Option("sigtyp2024", help="W&B project for tracking model training."),
     seed: int = typer.Option(42, help="Set the random seed."),
     # fmt: on
 ):
@@ -51,15 +85,12 @@ def pretrain_model(
     )
 
     msg.info("Initializing model and Trainer")
-    config = RobertaConfig(
-        vocab_size=52_000,
-        max_position_embeddings=512,
-        num_attention_heads=12,
-        num_hidden_layers=12,
-        type_vocab_size=2,
-    )
+    model_config = MODEL_CONFIG.get(model_size.value)
+    config = RobertaConfig(**model_config)
     model = RobertaForMaskedLM(config=config)
+    msg.text(f"Training a '{model_size.value}' model")
     msg.text(f"Number of parameters to train: {model.num_parameters()}")
+    msg.text(f"Model config: {model_config}")
 
     checkpoint_dir = output_dir / "checkpoints"
     model_dir = output_dir / "model"
@@ -72,21 +103,29 @@ def pretrain_model(
     msg.text(f"Tracking pretraining on W&B project: '{wandb_project}' ('checkpoint')")
 
     training_args = TrainingArguments(
-        seed=seed,
-        # Artifacts
         output_dir=str(checkpoint_dir),
+        # Artifacts
         overwrite_output_dir=True,
+        # Optimization parameters
         num_train_epochs=epochs,
-        # Train time parameters
+        max_steps=max_steps,
+        optim="adamw_torch",
+        adam_beta2=0.98,
+        weight_decay=0.1,
+        learning_rate=learning_rate,
         per_gpu_train_batch_size=batch_size,
+        lr_scheduler_type="linear",
+        warmup_steps=25_000,
         prediction_loss_only=True,
         save_steps=10_000,
         save_total_limit=3,
+        # Reproducibility
+        seed=seed,
+        data_seed=seed,
         # Tracking and reporting
         report_to="wandb",
-        logging_steps=1,
+        logging_steps=100,
         run_name=name,
-        load_best_model_at_end=True,
         log_level="info",
     )
     trainer = Trainer(

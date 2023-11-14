@@ -2,6 +2,7 @@
 transformers>=4.35.0
 conllu
 torch
+wandb
 # Project
 weasel
 typer

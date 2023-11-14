@@ -15,17 +15,18 @@ directories:
   - "tokenizer"
   - "training"
 
-env:
-  WANDB_PROJECT: "sigtyp2024"
-  WANDB_LOG_MODEL: "checkpoint"
-
 vars:
+  version: 0.1.0
+  # Project
+  remote_gcs_bucket: "ljvmiranda"
+  # Training params
   seed: 42
   batch_size: 65
   epochs: 5
+  # Training logs
   name: "main"
-  version: 0.1.0
-  remote_gcs_bucket: "ljvmiranda"
+  wandb_project: "sigtyp2024"
+  wandb_log_model: "checkpoint"
 
 remotes:
   # Create a service account, download a JSON key, and set the credentials path
@@ -87,7 +88,7 @@ commands:
     help: "Pretrain a multilingual LM from a corpus"
     script:
       - >-
-        WANDB_PROJECT=${env.WANDB_PROJECT} WANDB_LOG_MODEL=${env.WANDB_LOG_MODEL} 
+        WANDB_PROJECT=${vars.wandb_project} WANDB_LOG_MODEL=${vars.wandb_log_model} 
         python -m scripts.pretrain_model pretraining/ 
         --name ${vars.name}
         --pretraining-corpus corpus/pretraining.txt

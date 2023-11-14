@@ -1,0 +1,7 @@
+# Experiments
+transformers>=4.35.0
+torch
+# Project
+weasel
+typer
+wasabi

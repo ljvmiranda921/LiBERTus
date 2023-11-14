@@ -87,7 +87,7 @@ commands:
     help: "Pretrain a multilingual LM from a corpus"
     script:
       - >-
-        WANDB_PROJECT=${vars.WANDB_PROJECT} WANDB_LOG_MODEL=${vars.WANDB_LOG_MODEL} 
+        WANDB_PROJECT=${env.WANDB_PROJECT} WANDB_LOG_MODEL=${env.WANDB_LOG_MODEL} 
         python -m scripts.pretrain_model pretraining/ 
         --name ${vars.name}
         --pretraining-corpus corpus/pretraining.txt

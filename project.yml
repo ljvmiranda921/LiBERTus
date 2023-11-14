@@ -46,7 +46,7 @@ commands:
   - name: "create-pretraining"
     help: "Create corpus for multilingual LM pretraining"
     script:
-      - python -m scripts.create_pretraining corpus/ assets/train/ assets/dev/ --shuffle
+      - python -m scripts.create_pretraining assets/train/ assets/dev/ --output corpus/pretraining.txt --shuffle
     outputs:
       - corpus/pretraining.txt
 

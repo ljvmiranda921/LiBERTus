@@ -9,11 +9,14 @@ description: |
 directories:
   - "assets"
   - "corpus"
-  - "training"
   - "metrics"
+  - "pretraining"
   - "scripts"
+  - "training"
+  - "vocab"
 
 vars:
+  seed: 42
   version: 0.1.0
   remote_gcs_bucket: "ljvmiranda"
 
@@ -38,6 +41,15 @@ assets:
       path: morphology/valid
     description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
 
+# Workflows are sequences of commands (see below) executed in order. You can
+# run them via "weasel run [workflow]". If a commands's inputs/outputs
+# haven't changed, it won't be re-run.
+workflows:
+  pretrain:
+    - create-pretraining
+    - create-vocab
+    - pretrain-model
+
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
 # via "weasel run [command] [path]". The help message is optional and
@@ -46,11 +58,25 @@ commands:
   - name: "create-pretraining"
     help: "Create corpus for multilingual LM pretraining"
     script:
-      - python -m scripts.create_pretraining assets/train/ assets/dev/ --output corpus/pretraining.txt --shuffle
+      - >-
+        python -m scripts.create_pretraining assets/train/ assets/dev/ 
+        --output corpus/pretraining.txt 
+        --seed ${vars.seed}
+        --shuffle
     outputs:
       - corpus/pretraining.txt
 
-  - name: "pretrain"
+  - name: "create-vocab"
+    help: "Train a tokenizer to create a vocabulary"
+    script:
+      - python -m scripts.create_vocab corpus/pretraining.txt vocab/
+    deps:
+      - corpus/pretraining.txt
+    outputs:
+      - vocab/vocab.json
+      - vocab/merges.txt
+
+  - name: "pretrain-model"
     help: "Pretrain a multilingual LM from a corpus"
     script:
       - python -m scripts.pretrain corpus/pretraining.txt

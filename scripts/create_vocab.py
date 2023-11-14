@@ -1,8 +1,8 @@
 from pathlib import Path
 
 import typer
-from wasabi import msg
 from tokenizers.implementations import ByteLevelBPETokenizer
+from wasabi import msg
 
 
 def create_vocab(
@@ -16,7 +16,7 @@ def create_vocab(
     tokenizer = ByteLevelBPETokenizer()
     tokenizer.train(
         files=str(input_path),
-        vocab_size=52000,
+        vocab_size=52_000,
         min_frequency=2,
         special_tokens=[
             "<s>",

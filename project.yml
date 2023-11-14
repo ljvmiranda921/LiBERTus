@@ -12,11 +12,18 @@ directories:
   - "metrics"
   - "pretraining"
   - "scripts"
+  - "tokenizer"
   - "training"
-  - "vocab"
+
+env:
+  WANDB_PROJECT: "sigtyp2024"
+  WANDB_LOG_MODEL: "checkpoint"
 
 vars:
   seed: 42
+  batch_size: 65
+  epochs: 5
+  name: "main"
   version: 0.1.0
   remote_gcs_bucket: "ljvmiranda"
 
@@ -60,7 +67,7 @@ commands:
     script:
       - >-
         python -m scripts.create_pretraining assets/train/ assets/dev/ 
-        --output corpus/pretraining.txt 
+        --output-path corpus/pretraining.txt 
         --seed ${vars.seed}
         --shuffle
     outputs:
@@ -69,14 +76,27 @@ commands:
   - name: "create-vocab"
     help: "Train a tokenizer to create a vocabulary"
     script:
-      - python -m scripts.create_vocab corpus/pretraining.txt vocab/
+      - python -m scripts.create_vocab corpus/pretraining.txt tokenizer/
     deps:
       - corpus/pretraining.txt
     outputs:
-      - vocab/vocab.json
-      - vocab/merges.txt
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
 
   - name: "pretrain-model"
     help: "Pretrain a multilingual LM from a corpus"
     script:
-      - python -m scripts.pretrain corpus/pretraining.txt
+      - >-
+        WANDB_PROJECT=${vars.WANDB_PROJECT} WANDB_LOG_MODEL=${vars.WANDB_LOG_MODEL} 
+        python -m scripts.pretrain_model pretraining/ 
+        --name ${vars.name}
+        --pretraining-corpus corpus/pretraining.txt
+        --vocab tokenizer/vocab.json
+        --merges tokenizer/merges.txt
+        --batch-size ${vars.batch_size}
+        --epochs ${vars.epochs}
+        --seed ${vars.seed}
+    deps:
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
+      - corpus/pretraining.txt

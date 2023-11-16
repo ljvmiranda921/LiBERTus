@@ -8,3 +8,4 @@ weasel
 typer
 wasabi
 tqdm
+cloudpathlib[gs]

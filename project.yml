@@ -23,6 +23,7 @@ vars:
   seed: 42
   batch_size: 65
   max_steps: 100000
+  model_size: "base"
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
@@ -30,7 +31,7 @@ vars:
 remotes:
   # Create a service account, download a JSON key, and set the credentials path
   # to GOOGLE_APPLICATION_CREDENTIALS env variable
-  gcs: "gs://${vars.remote_gcs_bucket}/LiBERTus/training_cache/v${vars.version}/"
+  gcs: "gs://${vars.remote_gcs_bucket}/research/LiBERTus/training_cache/v${vars.version}/"
 
 # Assets that should be downloaded or available in the directory. But the
 # 'weasel assets' command still lets you verify that the checksums match.
@@ -87,8 +88,9 @@ commands:
   - name: "pretrain-model"
     help: "Pretrain a multilingual LM from a corpus"
     script:
+      - mkdir -p pretraining/${vars.model_size}/
       - >-
-        python -m scripts.pretrain_model pretraining/ 
+        python -m scripts.pretrain_model pretraining/${vars.model_size}/
         --name ${vars.name}
         --pretraining-corpus corpus/pretraining.txt
         --vocab tokenizer/vocab.json
@@ -101,3 +103,7 @@ commands:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
       - corpus/pretraining.txt
+    outputs:
+      - pretraining/${vars.model_size}/model/config.json
+      - pretraining/${vars.model_size}/model/model.safetensors
+      - pretraining/${vars.model_size}/model/training_args.bin

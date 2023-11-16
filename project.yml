@@ -22,7 +22,7 @@ vars:
   # Training params
   seed: 42
   batch_size: 65
-  epochs: 5
+  max_steps: 100000
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
@@ -94,7 +94,7 @@ commands:
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
-        --epochs ${vars.epochs}
+        --max-steps ${vars.max_steps}
         --seed ${vars.seed}
         --wandb-project ${vars.wandb_project}
     deps:

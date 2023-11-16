@@ -19,6 +19,7 @@ vars:
   version: 0.1.0
   # Project
   remote_gcs_bucket: "ljvmiranda"
+  hf_repo: "ljvmiranda921/LiBERTus"
   # Training params
   seed: 42
   batch_size: 65
@@ -104,6 +105,22 @@ commands:
       - tokenizer/merges.txt
       - corpus/pretraining.txt
     outputs:
+      - pretraining/${vars.model_size}/model/config.json
+      - pretraining/${vars.model_size}/model/model.safetensors
+      - pretraining/${vars.model_size}/model/training_args.bin
+
+  - name: "upload-to-hf"
+    help: "Upload pretrained model and corresponding tokenizer to the HuggingFace repository"
+    script:
+      # Upload the models and tokenizer
+      - huggingface-cli upload ${vars.hf_repo}-${vars.model_size} pretraining/${vars.model_size}/model/ .
+      - huggingface-cli upload ${vars.hf_repo}-${vars.model_size} tokenizer/ .
+      # Upload pretraining data (for reproducibility)
+      - huggingface-cli upload ${vars.hf_repo}-${vars.model_size} corpus/pretraining.txt pretraining.txt
+    deps:
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
+      - corpus/pretraining.txt
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors
       - pretraining/${vars.model_size}/model/training_args.bin

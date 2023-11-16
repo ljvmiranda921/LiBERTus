@@ -58,6 +58,7 @@ def pretrain_model(
     epochs: int = typer.Option(5, help="Number of epochs to train."),
     max_steps: int = typer.Option(-1, help="Maximum number of steps to run. Overrides epochs."),
     wandb_project: str = typer.Option("sigtyp2024", help="W&B project for tracking model training."),
+    do_not_track: bool = typer.Option(False, help="If set, will not log results to W&B."),
     seed: int = typer.Option(42, help="Set the random seed."),
     # fmt: on
 ):
@@ -98,9 +99,10 @@ def pretrain_model(
     model_dir.mkdir(parents=True, exist_ok=True)
 
     msg.info("Setting up training arguments")
-    os.environ["WANDB_PROJECT"] = wandb_project
-    os.environ["WANDB_LOGIN_MODEL"] = "checkpoint"
-    msg.text(f"Tracking pretraining on W&B project: '{wandb_project}' ('checkpoint')")
+    if not do_not_track:
+        os.environ["WANDB_PROJECT"] = wandb_project
+        os.environ["WANDB_LOGIN_MODEL"] = "checkpoint"
+        msg.text(f"Tracking on W&B project: '{wandb_project}'")
 
     training_args = TrainingArguments(
         output_dir=str(checkpoint_dir),
@@ -123,7 +125,7 @@ def pretrain_model(
         seed=seed,
         data_seed=seed,
         # Tracking and reporting
-        report_to="wandb",
+        report_to=None if do_not_track else "wandb",
         logging_steps=100,
         run_name=name,
         log_level="info",

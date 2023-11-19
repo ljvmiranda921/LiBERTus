@@ -68,7 +68,7 @@ commands:
     help: "Create corpus for multilingual LM pretraining"
     script:
       - >-
-        python -m scripts.create_pretraining assets/train/ assets/dev/ 
+        python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
         --output-path corpus/pretraining.txt 
         --seed ${vars.seed}
         --shuffle
@@ -79,7 +79,7 @@ commands:
   - name: "create-vocab"
     help: "Train a tokenizer to create a vocabulary"
     script:
-      - python -m scripts.create_vocab corpus/pretraining.txt tokenizer/
+      - python -m scripts.train_tokenizer corpus/pretraining.txt tokenizer/
     deps:
       - corpus/pretraining.txt
     outputs:

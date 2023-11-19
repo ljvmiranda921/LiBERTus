@@ -8,7 +8,7 @@ from tqdm import tqdm
 from wasabi import msg
 
 
-def create_pretraining(
+def convert_to_pretrain(
     # fmt: off
     sources: List[Path] = typer.Argument(..., help="Directories to source the CoNLL-U files."),
     output_path: Path = typer.Option(Path("corpus/pretraining.txt"), "--output-path", "-o", help="Path to save the pretraining corpus."),
@@ -56,4 +56,4 @@ def get_examples(file: Path) -> List[str]:
 
 
 if __name__ == "__main__":
-    typer.run(create_pretraining)
+    typer.run(convert_to_pretrain)

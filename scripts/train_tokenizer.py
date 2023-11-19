@@ -5,7 +5,7 @@ from tokenizers.implementations import ByteLevelBPETokenizer
 from wasabi import msg
 
 
-def create_vocab(
+def train_tokenizer(
     # fmt: off
     input_path: Path = typer.Argument(..., help="Path to the pretraining corpus."),
     output_dir: Path = typer.Argument(..., dir_okay=True, help="Directory to save the output files."),
@@ -31,4 +31,4 @@ def create_vocab(
 
 
 if __name__ == "__main__":
-    typer.run(create_vocab)
+    typer.run(train_tokenizer)

@@ -20,11 +20,17 @@ vars:
   # Project
   remote_gcs_bucket: "ljvmiranda"
   hf_repo: "ljvmiranda921/LiBERTus"
-  # Training params
+  # Pretraining params
   seed: 42
   batch_size: 65
   max_steps: 100000
   model_size: "base"
+  # Finetuning params
+  base_model: "ljvmiranda921/LiBERTus-base"
+  train_lang: "chu"
+  dev_lang: "chu"
+  test_lang: "chu"
+  gpu_id: 0
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
@@ -140,3 +146,24 @@ commands:
     outputs:
       - corpus/train/
       - corpus/dev/
+
+  - name: "finetune-model"
+    help: "Finetune a model given a training and validation corpora"
+    script:
+      - mkdir -p training/${vars.train_lang}/
+      - >-
+        python -m spacy train configs/default.cfg
+        --output-path training/${vars.train_lang}/
+        --paths.train corpus/train/${vars.train_lang}_train.spacy
+        --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy
+        --components.transformer.model.name ${vars.base_model}
+        --training.logger.project_name ${vars.wandb_project}
+        --training.logger.run_name finetuning-${vars.name}-${vars.train_lang}
+        --training.logging.log_best_dir training/${vars.train_lang}/model-best/
+        --system.seed ${vars.seed}
+        --gpu-id ${vars.gpu_id}
+    deps:
+      - corpus/train/${vars.train_lang}_train.spacy
+      - corpus/dev/${vars.train_lang}_valid.spacy
+    outputs:
+      - training/${vars.train_lang}/model-best/

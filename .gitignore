@@ -165,3 +165,9 @@ assets/
 corpus/
 metrics/
 training/
+
+# Let's save our own versions of ORV because some lines aren't read by spaCy
+# For now, I'm just skipping them in the conversion
+!corpus/train/ohu_train.spacy
+!corpus/train/orv_train.spacy
+!corpus/dev/orv_valid.spacy

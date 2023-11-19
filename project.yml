@@ -58,6 +58,8 @@ workflows:
     - create-pretraining
     - create-vocab
     - pretrain-model
+  finetune:
+    - convert-to-spacy
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -124,3 +126,17 @@ commands:
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors
       - pretraining/${vars.model_size}/model/training_args.bin
+
+  - name: "convert-to-spacy"
+    help: "Convert CoNLL-U files into spaCy format for finetuning"
+    script:
+      - mkdir -p corpus/train
+      - python -m spacy convert assets/train/ corpus/train/ --morphology
+      - mkdir -p corpus/dev
+      - python -m spacy convert assets/dev/ corpus/dev/ --morphology
+    deps:
+      - assets/train/
+      - assets/dev/
+    outputs:
+      - corpus/train/
+      - corpus/dev/

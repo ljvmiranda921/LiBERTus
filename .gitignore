@@ -164,6 +164,7 @@ project.lock
 assets/
 corpus/
 metrics/
+pretraining/
 training/
 
 # Let's save our own versions of ORV because some lines aren't read by spaCy

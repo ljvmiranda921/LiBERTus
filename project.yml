@@ -161,9 +161,6 @@ commands:
         --paths.train corpus/train/${vars.train_lang}_train.spacy
         --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy
         --components.transformer.model.name ${vars.base_model}
-        --training.logger.project_name ${vars.wandb_project}
-        --training.logger.run_name finetuning-${vars.name}-${vars.train_lang}
-        --training.logger.log_best_dir training/${vars.train_lang}/model-best/
         --system.seed ${vars.seed}
         --gpu-id ${vars.gpu_id}
     deps:

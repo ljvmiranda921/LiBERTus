@@ -136,6 +136,10 @@ commands:
   - name: "convert-to-spacy"
     help: "Convert CoNLL-U files into spaCy format for finetuning"
     script:
+      # Remove erroneus files first from corpus
+      - mv assets/train/ohu_train.conllu .
+      - mv assets/train/orv_train.conllu .
+      - mv assets/dev/orv_valid.conllu .
       - mkdir -p corpus/train
       - python -m spacy convert assets/train/ corpus/train/ --morphology
       - mkdir -p corpus/dev

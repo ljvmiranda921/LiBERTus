@@ -1,6 +1,6 @@
 # Experiments
 transformers[torch]>=4.35.0
-spacy-transfomers
+spacy-transformers
 spacy
 conllu
 torch

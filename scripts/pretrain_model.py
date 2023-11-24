@@ -53,7 +53,7 @@ def pretrain_model(
     pretraining_corpus: Path = typer.Option(None, help="Path to the pretraining corpus."),
     vocab: Path = typer.Option(None, help="Path to vocab.json to initialize the tokenizer."),
     merges: Path = typer.Option(None, help="Path to merges.txt to initialize the tokenizer."),
-    learning_rate: float = typer.Option(3e-4, help="Set the learning rate."),
+    learning_rate: float = typer.Option(2e-4, help="Set the learning rate."),
     batch_size: int = typer.Option(64, help="Set the batch size for GPU training."),
     epochs: int = typer.Option(5, help="Number of epochs to train."),
     max_steps: int = typer.Option(-1, help="Maximum number of steps to run. Overrides epochs."),

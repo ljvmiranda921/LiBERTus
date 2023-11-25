@@ -66,6 +66,8 @@ workflows:
     - pretrain-model
   finetune:
     - convert-to-spacy
+    - finetune-model
+    - evaluate-model
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -165,6 +167,30 @@ commands:
         --gpu-id ${vars.gpu_id}
     deps:
       - corpus/train/${vars.train_lang}_train.spacy
-      - corpus/dev/${vars.train_lang}_valid.spacy
+      - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
       - training/${vars.train_lang}/model-best/
+
+  - name: "evaluate-model"
+    help: "Evaluate a model on both validation and test corpora"
+    script:
+      - mkdir -p metrics/${vars.train_lang}/
+      - >-
+        python -m spacy evaluate
+        training/${vars.train_lang}/model-best/ corpus/dev/${vars.dev_lang}_valid.spacy
+        --output metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
+        --per-component
+        --gpu-id ${vars.gpu_id}
+      - >-
+        python -m spacy evaluate
+        training/${vars.train_lang}/model-best/ corpus/test/${vars.test_lang}_test.spacy
+        --output metrics/${vars.train_lang}/metrics-${vars.test_lang}-test.json
+        --per-component
+        --gpu-id ${vars.gpu_id}
+    deps:
+      - training/${vars.train_lang}/model-best/
+      - corpus/dev/${vars.dev_lang}_valid.spacy
+      - corpus/test/${vars.test_lang}_test.spacy
+    outputs:
+      - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
+      - metrics/${vars.train_lang}/metrics-${vars.test_lang}-dev.json

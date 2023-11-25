@@ -24,6 +24,10 @@ Commands are only re-run if their inputs have changed.
 | `create-pretraining` | Create corpus for multilingual LM pretraining |
 | `create-vocab` | Train a tokenizer to create a vocabulary |
 | `pretrain-model` | Pretrain a multilingual LM from a corpus |
+| `upload-to-hf` | Upload pretrained model and corresponding tokenizer to the HuggingFace repository |
+| `convert-to-spacy` | Convert CoNLL-U files into spaCy format for finetuning |
+| `finetune-model` | Finetune a model given a training and validation corpora |
+| `evaluate-model` | Evaluate a model on both validation and test corpora |
 
 ### ⏭ Workflows
 
@@ -35,6 +39,7 @@ inputs have changed.
 | Workflow | Steps |
 | --- | --- |
 | `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
+| `finetune` | `convert-to-spacy` &rarr; `finetune-model` &rarr; `evaluate-model` |
 
 ### 🗂 Assets
 

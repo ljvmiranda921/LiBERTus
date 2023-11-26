@@ -36,13 +36,14 @@
 In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
 Using only the data provided by the organizers, we built transformer-based multilingual models finetuned on the Universal Dependencies (UD) annotations of a given language.
 We also explored the effect of different data mixes, and the cross-lingual capability of our trained models.
+\lj{Our systems achieved}
 % TODO: talk about results and scores on the test set
 % maybe benchmark against XLM-RoBERTa and mBERT just for a good baseline?
 \end{abstract}
 
 \section{Introduction}
 This paper describes Team 21a's submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
-Our general approach involves pretraining a transformer-based multilingual model on the data mix provided by the organizers, and then finetuning it using the Universal Dependencies (UD) annotations of each language.
+Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
@@ -57,7 +58,15 @@ In addition, we also show the results of our cross-lingual transfer learning set
 % \subfile{tables/main_results.tex}
 
 
-\subsection{Data Preprocessing}
+\subsection{Building the pretraining corpora}
+
+We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
+Then, we explored several data augmentation techniques to ensure that each language is properly represented (computed by the number of unique tokens).
+
+From our experiments, \textbf{upsampling underrepresented languages} helped improve our pretraining validation loss.
+Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
+We upsampled each languages by randomly choosing a document until the number of unique tokens is greater than or equal to that of \textsc{latm}.
+
 
 
 \subsection{Model Pretraining}

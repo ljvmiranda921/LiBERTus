@@ -10,6 +10,7 @@ directories:
   - "assets"
   - "corpus"
   - "metrics"
+  - "packages"
   - "pretraining"
   - "scripts"
   - "tokenizer"
@@ -170,6 +171,23 @@ commands:
       - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
       - training/${vars.train_lang}/model-best/
+
+  - name: "package-model"
+    help: "Package model and upload to HuggingFace"
+    script:
+      - >-
+        python -m spacy package
+        training/${vars.train_lang}/model-best/ packages/
+        --name ${vars.train_lang}_sigtyp_trf
+        --version ${vars.version}
+        --build sdist,wheel
+        --create-meta
+        --force
+    deps:
+      - training/${vars.train_lang}/model-best/
+    outputs:
+      - packages/${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
+      - packages/${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
 
   - name: "evaluate-model"
     help: "Evaluate a model on both validation and test corpora"

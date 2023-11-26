@@ -171,6 +171,7 @@ commands:
       - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
       - training/${vars.train_lang}/model-best/
+      - training/${vars.train_lang}/model-last/
 
   - name: "package-model"
     help: "Package model and upload to HuggingFace"

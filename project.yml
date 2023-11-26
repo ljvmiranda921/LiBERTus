@@ -186,7 +186,6 @@ commands:
         --name ${vars.train_lang}_sigtyp_trf
         --version ${vars.version}
         --build sdist,wheel
-        --create-meta
         --force
       # Upload to HuggingFace
       - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}

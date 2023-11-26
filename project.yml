@@ -86,6 +86,7 @@ commands:
         python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
         --output-path corpus/pretraining.txt 
         --seed ${vars.seed}
+        --sampling-strategy upsample
         --shuffle
         --verbose
     outputs:

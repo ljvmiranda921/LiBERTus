@@ -11,3 +11,4 @@ typer
 wasabi
 tqdm
 cloudpathlib[gs]
+spacy-huggingface-hub

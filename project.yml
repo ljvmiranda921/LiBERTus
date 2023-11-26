@@ -190,14 +190,14 @@ commands:
       # Upload to HuggingFace
       - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}
       - >-
-        python -m spacy huggingface-hub push packages/${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
-        --msg "${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
+        python -m spacy huggingface-hub push packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/xx_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+        --msg "xx_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
         --verbose
     deps:
       - training/${vars.train_lang}/model-best/
     outputs:
-      - packages/${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
-      - packages/${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
+      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
 
   - name: "evaluate-model"
     help: "Evaluate a model on both validation and test corpora"

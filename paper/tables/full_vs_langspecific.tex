@@ -1,26 +1,27 @@
 \documentclass{../acl_latex.tex}
 \begin{document}
-\begin{table}[t]
+\begin{table*}[t]
 \centering
-\begin{tabular}{lll}
+\begin{tabular}{lrrrrrr}
 \toprule
-                 & Full     & Per-language \\ \midrule
-\textsc{chu}     &          &              \\ 
-\textsc{fro}     &          &              \\
-\textsc{got}     &          &              \\
-\textsc{grc}     &          &              \\
-\textsc{hbo}     &          &              \\
-\textsc{isl}     &          &              \\
-\textsc{lat}     &          &              \\
-\textsc{latm}    &          &              \\
-\textsc{lzh}     &          &              \\
-\textsc{ohu}     &          &              \\
-\textsc{orv}     &          &              \\
-\textsc{san}     &          &              \\ \bottomrule 
+                 & \multicolumn{2}{c}{Lemmatization} & \multicolumn{2}{c}{Morph. analy.} & \multicolumn{2}{c}{POS tagging} \\
+                 & Full     & Per-language & Full   & Per-language  & Full        & Per-language     \\ \midrule
+\textsc{chu}     &          &              &        &               &             &                  \\ 
+\textsc{fro}     &          &              &        &               &             &                  \\
+\textsc{got}     &          &              &        &               &             &                  \\
+\textsc{grc}     &          &              &        &               &             &                  \\
+\textsc{hbo}     &          &              &        &               &             &                  \\
+\textsc{isl}     &          &              &        &               &             &                  \\
+\textsc{lat}     &          &              &        &               &             &                  \\
+\textsc{latm}    &          &              &        &               &             &                  \\
+\textsc{lzh}     &          &              &        &               &             &                  \\
+\textsc{ohu}     &          &              &        &               &             &                  \\
+\textsc{orv}     &          &              &        &               &             &                  \\
+\textsc{san}     &          &              &        &               &             &                  \\ \bottomrule 
 \end{tabular}
 \caption{
     Comparison between finetuning a model for each language vs. the whole set (dev).
     \lj{maybe make this into a chart later, then put the table in the appendix}
 }
-\end{table}
+\end{table*}
 \end{document}

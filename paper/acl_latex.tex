@@ -12,6 +12,7 @@
 \usepackage{microtype}
 \usepackage{inconsolata}
 \usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{subfiles}
 
 % Commands 
@@ -43,7 +44,7 @@ We also explored the effect of different data mixes, and the cross-lingual capab
 This paper describes Team 21a's submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
 Our general approach involves pretraining a transformer-based multilingual model on the data mix provided by the organizers, and then finetuning it using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
-We also explored data sampling and data augmentation techniques during the pretraining step to ensure better generalization performance.
+We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
 Our systems achieved...\lj{stuff}
 
@@ -52,18 +53,17 @@ In addition, we also show the results of our cross-lingual transfer learning set
 
 \section{Methodology}
 
-\subfile{tables/full_vs_langspecific.tex}
-
-\subfile{tables/main_results.tex}
+% \subfile{tables/full_vs_langspecific.tex}
+% \subfile{tables/main_results.tex}
 
 
 \subsection{Data Preprocessing}
 
 
-\subsection{Model pretraining}
+\subsection{Model Pretraining}
 
 
-\subsection{Model finetuning}
+\subsection{Model Finetuning}
 
 
 \section{Results}

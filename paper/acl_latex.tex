@@ -35,7 +35,7 @@
 \begin{abstract}
 In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
 Using only the data provided by the organizers, we built transformer-based multilingual models finetuned on the Universal Dependencies (UD) annotations of a given language.
-We also explored the effect of different data mixes, and the cross-lingual capability of our trained models.
+We also explored the cross-lingual capability of our trained models.
 \lj{Our systems achieved}
 % TODO: talk about results and scores on the test set
 % maybe benchmark against XLM-RoBERTa and mBERT just for a good baseline?
@@ -62,17 +62,25 @@ In addition, we also show the results of our cross-lingual transfer learning set
 \subsection{Resource creation}
 
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
-Then, we explored several data augmentation techniques to ensure that each language is properly represented (computed by the number of unique tokens).
+Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 
-From our experiments, \textbf{upsampling underrepresented languages} helped improve our pretraining validation loss.
+From our experiments, \textbf{upsampling underrepresented languages} helped reduce our pretraining validation loss.
 Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
-We upsampled each language by randomly adding a document from its original pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
+We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
+The same figure also shows the token counts after the augmentation process.
 
 \subsection{Model Pretraining}
 
-We then pretrained two transformer models\textemdash \libertus{}\textsubscript{base} and \libertus{}\textsubscript{large}.
-Both models follow the RoBERTa pretraining architecture \cite{liu-etal-2019-roberta}.
-The goal of these models is to serve as bases for finetuning downstream tasks.
+Using the pretraining corpora, we trained two variants of \libertus{}, a Base model with XXXM parameters and a Large model with XXXM parameters, that serve as foundations for finetuning downstream tasks.
+\libertus{} follows RoBERTa's pretraining architecture \cite{liu-etal-2019-roberta} and takes inspiration from \citet{conneau-etal-2020-unsupervised}'s work on scaling BERT models to multiple languages.
+
+Our hyperparameter choices closely resemble that of the original RoBERTa implementation as seen in Table \ref{table:pretrain_hyerparams}.
+We also trained the same BPE tokenizer \citep{sennrich-etal-2016-neural} using the constructed corpora.
+During model pretraining, we used the AdamW optimizer with $\beta_2$=0.98 and a weight decay of 0.01.
+The Base model underwent training for 100,000 steps with a learning rate of 2e-4 whereas the Large variant trained for 300,000 steps.
+We used a learning rate scheduler that linearly warms up during the first quarter of the training process, then linearly decays for the rest.
+Figure \ref{fig:training_curve} shows the training curve for both variants.
+
 
 
 

@@ -3,7 +3,7 @@ import random
 from collections import Counter
 from enum import Enum
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import typer
 from conllu import parse_incr
@@ -39,13 +39,13 @@ def convert_to_pretrain(
     msg.info(f"Found {len(files)} files from source/s.")
 
     examples = {file.stem.split("_")[0]: get_examples(file) for file in tqdm(files)}
-    pretraining = list(itertools.chain.from_iterable(examples))
+    pretraining = list(itertools.chain.from_iterable(examples.values()))
     msg.info(f"Found {len(pretraining)} examples in total.")
 
     if sampling_strategy:
         # Sample the files
         msg.text(f"Sampling using '{sampling_strategy.value}'")
-        pretraining = sample_corpora(pretraining, strategy=sampling_strategy)
+        pretraining = sample_corpora(examples, sampling_strategy, verbose=verbose)
 
     if shuffle:
         msg.info(f"Shuffling examples using seed '{seed}'")
@@ -68,7 +68,80 @@ def get_examples(file: Path) -> List[str]:
     return examples
 
 
-def sample_corpora(pretraining: List[str], strategy: SamplingStrategy) -> List[str]:
+def sample_corpora(
+    examples: Dict[str, List[str]],
+    strategy: SamplingStrategy,
+    verbose: bool = True,
+) -> List[str]:
+    """Sample the corpora based on some token statistics
+
+    We want to sample sentences based on the number of unique tokens, not their raw
+    number nor the number of sentences. Yes, increasing the number of sentences by X
+    doesn't mean it will increase the number of tokens by the same proportion, however,
+    we want to have a rough estimate.
+    """
+
+    def _count_tokens(lang: str, sents: List[str]) -> int:
+        sep = None if lang == "lzh" else " "
+        count = 0
+        for sent in sents:
+            # Count unique tokens only
+            count += len(set(sent.split(sep)))
+        return count
+
+    # Get token counts
+    # We want to sample sentences based on the number of unique tokens, not
+    # just its raw value NOR the number of sentences.
+    token_counts = Counter(
+        {lang: _count_tokens(lang, sents) for lang, sents in examples.items()}
+    )
+    msg.text(
+        title="Token counts",
+        text=" ".join([f"{lang} ({count})" for lang, count in token_counts.items()]),
+        show=verbose,
+    )
+
+    augmented_corpora: Dict[str, List[str]] = {}
+    if strategy == SamplingStrategy.upsample:
+        msg.info("Using upsampling strategy")
+        # Upsample: get percentage of each with respect to max and sample by that amount.
+        _, most_common = token_counts.most_common()[0]
+        for lang, sents in examples.items():
+            msg.text(f"Upsampling '{lang}'...", show=verbose)
+            num_tokens_to_add = int(
+                most_common * (1 - (token_counts[lang] / most_common))
+            )
+            sents_to_add = []
+            while True:
+                sents_to_add.append(random.choice(sents))
+                num_tokens_added = _count_tokens(lang, sents_to_add)
+                if num_tokens_added >= num_tokens_to_add:
+                    break
+
+            msg.text(
+                f"Adding {len(sents_to_add)} sentences ({num_tokens_added} tokens) to {lang}",
+                show=verbose,
+            )
+            augmented_corpora[lang] = sents + sents_to_add
+
+    if strategy == SamplingStrategy.average:
+        msg.text("Using averaging strategy")
+        # Average: get median and upsample or downsample based on that.
+        pass
+
+    # Report the new token counts
+    new_token_counts = Counter(
+        {lang: _count_tokens(lang, sents) for lang, sents in augmented_corpora.items()}
+    )
+    msg.text(
+        title="Token counts",
+        text=" ".join(
+            [f"{lang} ({count})" for lang, count in new_token_counts.items()]
+        ),
+        show=verbose,
+    )
+
+    pretraining = list(itertools.chain.from_iterable(augmented_corpora.values()))
     return pretraining
 
 

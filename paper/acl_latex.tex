@@ -4,7 +4,7 @@
 
 \documentclass[11pt]{article}
 
-\usepackage[review]{latex/acl}
+\usepackage[review]{acl}
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -49,7 +49,8 @@ We also explored data sampling and augmentation techniques during the pretrainin
 
 Our systems achieved...\lj{stuff}
 
-We detail our data preprocessing, model pretraining, and finetuning methodologies.
+
+We detail our resource creation, model pretraining, and finetuning methodologies.
 In addition, we also show the results of our cross-lingual transfer learning set-up.
 
 \section{Methodology}
@@ -58,18 +59,22 @@ In addition, we also show the results of our cross-lingual transfer learning set
 % \subfile{tables/main_results.tex}
 
 
-\subsection{Building the pretraining corpora}
+\subsection{Resource creation}
 
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Then, we explored several data augmentation techniques to ensure that each language is properly represented (computed by the number of unique tokens).
 
 From our experiments, \textbf{upsampling underrepresented languages} helped improve our pretraining validation loss.
 Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
-We upsampled each languages by randomly choosing a document until the number of unique tokens is greater than or equal to that of \textsc{latm}.
-
-
+We upsampled each language by randomly adding a document from its original pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
 
 \subsection{Model Pretraining}
+
+We then pretrained two transformer models\textemdash \libertus{}\textsubscript{base} and \libertus{}\textsubscript{large}.
+Both models follow the RoBERTa pretraining architecture \cite{liu-etal-2019-roberta}.
+The goal of these models is to serve as bases for finetuning downstream tasks.
+
+
 
 
 \subsection{Model Finetuning}
@@ -87,13 +92,11 @@ We upsampled each languages by randomly choosing a document until the number of 
 \subsection{Ablations}
 
 
-\bibliography{anthology,custom}
+\bibliography{custom}
 
 % \appendix
 
 % \section{Example Appendix}
 % \label{sec:appendix}
-
-
 
 \end{document}

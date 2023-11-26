@@ -11,6 +11,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage{inconsolata}
+\usepackage{booktabs}
+\usepackage{subfiles}
+
+% Commands 
+\newcommand{\draftonly}[1]{#1}
+\newcommand{\draftcomment}[3]{\draftonly{\textcolor{#2}{[#3]{$_{\textsc{#1}}$}}}}
+\newcommand{\lj}[1]{\draftcomment{Lj}{violet}{#1}}
+\newcommand{\libertus}{\textsc{LiBERTus}}
 
 \title{Team 21a's Submission to the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages}
 
@@ -34,14 +42,19 @@ We also explored the effect of different data mixes, and the cross-lingual capab
 \section{Introduction}
 This paper describes Team 21a's submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
 Our general approach involves pretraining a transformer-based multilingual model on the data mix provided by the organizers, and then finetuning it using the Universal Dependencies (UD) annotations of each language.
+Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and data augmentation techniques during the pretraining step to ensure better generalization performance.
 
-Our systems achieved...
+Our systems achieved...\lj{stuff}
 
 We detail our data preprocessing, model pretraining, and finetuning methodologies.
 In addition, we also show the results of our cross-lingual transfer learning set-up.
 
 \section{Methodology}
+
+\subfile{tables/full_vs_langspecific.tex}
+
+\subfile{tables/main_results.tex}
 
 
 \subsection{Data Preprocessing}
@@ -65,16 +78,13 @@ In addition, we also show the results of our cross-lingual transfer learning set
 \subsection{Ablations}
 
 
-\subsection{}
-
-
 \bibliography{anthology,custom}
 
-\appendix
+% \appendix
 
-\section{Example Appendix}
-\label{sec:appendix}
+% \section{Example Appendix}
+% \label{sec:appendix}
 
-This is an appendix.
+
 
 \end{document}

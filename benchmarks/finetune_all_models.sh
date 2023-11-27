@@ -1,3 +1,4 @@
+# Finetune a multi-task model for each language
 declare -a arr=("chu" "cop" "fro" "got" "grc" "hbo" "isl" "lat" "latm" "lzh" "ohu" "orv" "san")
 weasel run convert-to-spacy --force
 for i in "${arr[@]}"

@@ -83,10 +83,22 @@ The base model underwent training for 100,000 steps with a learning rate of 2e-4
 We used a learning rate scheduler that linearly warms up during the first quarter of the training process, then linearly decays for the rest.
 Figure \ref{fig:training_curve} shows the training curve for both variants.
 
-
-
-
 \subsection{Model Finetuning}
+
+For each language, we finetuned a multitask model using spaCy \cite{honnibal-etal-2020-spacy}. 
+The final system consists of a lemmatizer, POS tagger, and morphological analyzer.
+
+\paragraph{Lemmatizer.} We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
+Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
+Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
+To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
+
+
+
+\paragraph{POS tagger.}
+
+
+\paragraph{Morphological analyzer.}
 
 
 \section{Results}
@@ -94,6 +106,8 @@ Figure \ref{fig:training_curve} shows the training curve for both variants.
 
 \subsection{Benchmarking results}
 \label{sec:results_benchmarking}
+
+% baseline model doesn't use any embeddings. just straight up training, cite your multihash paper
 
 
 \subsection{Cross-lingual transfer}

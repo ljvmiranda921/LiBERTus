@@ -27,6 +27,7 @@ vars:
   batch_size: 65
   max_steps: 100000
   model_size: "base"
+  sampling_strategy: "upsample"
   # Finetuning params
   base_model: "ljvmiranda921/LiBERTus-base"
   train_lang: "chu"
@@ -86,7 +87,7 @@ commands:
         python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
         --output-path corpus/pretraining.txt 
         --seed ${vars.seed}
-        --sampling-strategy upsample
+        --sampling-strategy ${vars.sampling_strategy}
         --shuffle
         --verbose
     outputs:

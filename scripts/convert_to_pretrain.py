@@ -1,5 +1,6 @@
 import itertools
 import random
+import statistics
 from collections import Counter
 from enum import Enum
 from pathlib import Path
@@ -14,6 +15,7 @@ from wasabi import msg
 class SamplingStrategy(str, Enum):
     upsample = "upsample"
     average = "average"
+    propn_augment = "propn_augment"
 
 
 def convert_to_pretrain(
@@ -127,7 +129,18 @@ def sample_corpora(
     if strategy == SamplingStrategy.average:
         msg.text("Using averaging strategy")
         # Average: get median and upsample or downsample based on that.
-        pass
+        median = statistics.median(token_counts.values())
+        for lang, sents in examples.items():
+            approach = "Downsampling" if token_counts[lang] >= median else "Upsampling"
+            msg.text(f"{approach} '{lang}'...", show=verbose)
+            new_sents = []
+            while True:
+                new_sents.append(random.choice(sents))
+                num_tokens_added = _count_tokens(lang, new_sents)
+                if num_tokens_added >= median:
+                    break
+
+            augmented_corpora[lang] = new_sents
 
     # Report the new token counts
     new_token_counts = Counter(

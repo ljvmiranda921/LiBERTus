@@ -47,11 +47,14 @@ Our general approach involves pretraining a transformer-based multilingual model
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
-Our systems achieved...\lj{stuff}
+Our systems achieved...\lj{stuff}. 
+Table \ref{table:main_results} shows our systems' performance on the shared task test set.
 
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
 In addition, we also show the results of our cross-lingual transfer learning setup.
+
+\subfile{tables/main_results.tex}
 
 \section{Methodology}
 
@@ -64,7 +67,7 @@ In addition, we also show the results of our cross-lingual transfer learning set
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 
-From our experiments, \textbf{upsampling underrepresented languages} helped reduce our pretraining validation loss.
+From our experiments, upsampling underrepresented languages helped reduce our pretraining validation loss.
 Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
 We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
 The same figure also shows the token counts after the augmentation process.
@@ -79,7 +82,7 @@ Using the pretraining corpora, we trained two variants of \libertus{}, a base mo
 Our hyperparameter choices closely resemble that of the original RoBERTa implementation as seen in Table \ref{table:pretrain_hyperparams}.
 We also trained the same BPE tokenizer \citep{sennrich-etal-2016-neural} using the constructed corpora.
 During model pretraining, we used the AdamW optimizer with $\beta_2$=0.98 and a weight decay of 0.01.
-The base model underwent training for 100,000 steps with a learning rate of 2e-4 whereas the large variant trained for 300,000 steps.
+The base model underwent training for 100k steps with a learning rate of 2e-4 whereas the large variant trained for 300k steps.
 We used a learning rate scheduler that linearly warms up during the first quarter of the training process, then linearly decays for the rest.
 Figure \ref{fig:training_curve} shows the training curve for both variants.
 
@@ -105,9 +108,7 @@ Because this process can result to hundreds of edit trees, we treat the problem 
 Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
 To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
 
-
-
-\section{Results}
+\section{Results and Discussion}
 
 
 \subsection{Benchmarking results}
@@ -120,6 +121,7 @@ To obtain the most probable tree, we passed the context-sensitive embeddings fro
 \label{sec:results_crosslingual}
 
 
+\section{Conclusion}
 
 
 \bibliography{custom}

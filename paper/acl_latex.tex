@@ -18,8 +18,9 @@
 % Commands 
 \newcommand{\draftonly}[1]{#1}
 \newcommand{\draftcomment}[3]{\draftonly{\textcolor{#2}{[#3]{$_{\textsc{#1}}$}}}}
-\newcommand{\lj}[1]{\draftcomment{Lj}{violet}{#1}}
+\newcommand{\lj}[1]{\draftcomment{Lj}{red}{#1}}
 \newcommand{\libertus}{\textsc{LiBERTus}}
+
 
 \title{Team 21a's Submission to the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages}
 
@@ -91,18 +92,18 @@ Figure \ref{fig:training_curve} shows the training curve for both variants.
 For each language, we finetuned a multitask model using spaCy \cite{honnibal-etal-2020-spacy}. 
 The final system consists of a parts-of-speech (POS) tagger, morphological analyzer, and lemmatizer.
 
-\paragraph{Parts-of-speech (POS) tagger.}
+\paragraph{Parts-of-speech (POS) tagger:}
 We employed a standard classifier that predicts a vector of tag probabilities for each token.
 Each POS tag is a unique class that we assign exclusively to a token.
 We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
 The network is then optimized using a categorical cross-entropy loss.
 
-\paragraph{Morphological analyzer.}
+\paragraph{Morphological analyzer:}
 Similar to the POS tagger, we treat morphological annotation as a token classification task.
 Instead of directly modeling each feature, we made every unique combination of morphological features as a class.
 The limitation of this approach is that it can only predict combinations that were present in the training corpora.
 
-\paragraph{Lemmatizer.} 
+\paragraph{Lemmatizer:} 
 We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
 Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
 Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
@@ -110,9 +111,24 @@ To obtain the most probable tree, we passed the context-sensitive embeddings fro
 
 \section{Results and Discussion}
 
+The test scores we obtained from the shared task can be found in Table \ref{table:main_results}.
+\lj{Talk about how you ranked against other teams?}
+In this section, we will outline our internal evaluations and benchmarking experiments.
+
 
 \subsection{Benchmarking results}
 \label{sec:results_benchmarking}
+
+We compared our system against a baseline model that skips the pretraining step.
+Instead, it uses lexical and subword features based on spaCy's multi-hash embeddings \cite{miranda-etal-2022-multi}.
+In addition, we also compared against multilingual language models such as XLM-RoBERTa \cite{conneau-etal-2020-unsupervised} and Multilingual BERT \cite{devlin-etal-2019-bert}.
+Unlike \libertus{}, these models were not trained on ancient and historical text, but we find it interesting to see how well these modern languages transfer to our targets. 
+The results can be found in Figure \ref{fig:benchmarking}
+
+\lj{Insert discussion here: 1 paragraph}
+
+
+
 
 % baseline model doesn't use any embeddings. just straight up training, cite your multihash paper
 

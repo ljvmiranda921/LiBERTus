@@ -51,7 +51,7 @@ Our systems achieved...\lj{stuff}
 
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
-In addition, we also show the results of our cross-lingual transfer learning set-up.
+In addition, we also show the results of our cross-lingual transfer learning setup.
 
 \section{Methodology}
 
@@ -86,17 +86,25 @@ Figure \ref{fig:training_curve} shows the training curve for both variants.
 \subsection{Model Finetuning}
 
 For each language, we finetuned a multitask model using spaCy \cite{honnibal-etal-2020-spacy}. 
-The final system consists of a lemmatizer, POS tagger, and morphological analyzer.
+The final system consists of a parts-of-speech (POS) tagger, morphological analyzer, and lemmatizer.
 
-\paragraph{Lemmatizer.} We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
+\paragraph{Parts-of-speech (POS) tagger.}
+We employed a standard classifier that predicts a vector of tag probabilities for each token.
+Each POS tag is a unique class that we assign exclusively to a token.
+We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
+The network is then optimized using a categorical cross-entropy loss.
+
+\paragraph{Morphological analyzer.}
+Similar to the POS tagger, we treat morphological annotation as a token classification task.
+Instead of directly modeling each feature, we made every unique combination of morphological features as a class.
+The limitation of this approach is that it can only predict combinations that were present in the training corpora.
+
+\paragraph{Lemmatizer.} 
+We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
 Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
 Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
 To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
 
-\paragraph{POS tagger.} 
-
-
-\paragraph{Morphological analyzer.}
 
 
 \section{Results}

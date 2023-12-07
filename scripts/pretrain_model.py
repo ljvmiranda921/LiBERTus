@@ -4,9 +4,10 @@ from pathlib import Path
 from typing import Optional
 
 import typer
+import wandb
 from tokenizers.implementations import ByteLevelBPETokenizer
 from tokenizers.processors import BertProcessing
-from transformers import DataCollatorForLanguageModeling
+from transformers import AutoModelForMaskedLM, DataCollatorForLanguageModeling
 from transformers import LineByLineTextDataset, RobertaConfig
 from transformers import RobertaForMaskedLM, RobertaTokenizerFast, Trainer
 from transformers import TrainingArguments
@@ -49,7 +50,6 @@ def pretrain_model(
     # fmt: off
     output_dir: Path = typer.Argument(..., help="Path to save the trained model."),
     model_size: ModelSize = typer.Option(ModelSize.base, "--size", "-sz", help="Size of the model to train."),
-    name: Optional[str] = typer.Option(None, "--name", "-n", help="Optional name for the run for W&B tracking."),
     pretraining_corpus: Path = typer.Option(None, help="Path to the pretraining corpus."),
     vocab: Path = typer.Option(None, help="Path to vocab.json to initialize the tokenizer."),
     merges: Path = typer.Option(None, help="Path to merges.txt to initialize the tokenizer."),
@@ -58,6 +58,9 @@ def pretrain_model(
     epochs: int = typer.Option(5, help="Number of epochs to train."),
     max_steps: int = typer.Option(-1, help="Maximum number of steps to run. Overrides epochs."),
     wandb_project: str = typer.Option("sigtyp2024", help="W&B project for tracking model training."),
+    resume_from_checkpoint: bool = typer.Option(False, help="If set, resume from checkpoint based on run name."),
+    run_name: Optional[str] = typer.Option(None, "--name", "-n", help="Optional name for the run for W&B tracking."),
+    run_save_steps: int = typer.Option(10_000, "--save-steps", help="Save artifacts for every n steps."),
     do_not_track: bool = typer.Option(False, help="If set, will not log results to W&B."),
     seed: int = typer.Option(42, help="Set the random seed."),
     # fmt: on
@@ -101,7 +104,8 @@ def pretrain_model(
     msg.info("Setting up training arguments")
     if not do_not_track:
         os.environ["WANDB_PROJECT"] = wandb_project
-        os.environ["WANDB_LOGIN_MODEL"] = "checkpoint"
+        os.environ["WANDB_LOG_MODEL"] = "checkpoint"
+        os.environ["WANDB_WATCH"] = "all"
         msg.text(f"Tracking on W&B project: '{wandb_project}'")
 
     training_args = TrainingArguments(
@@ -119,7 +123,7 @@ def pretrain_model(
         lr_scheduler_type="linear",
         warmup_steps=12_000,
         prediction_loss_only=True,
-        save_steps=10_000,
+        save_steps=run_save_steps,
         save_total_limit=3,
         # Reproducibility
         seed=seed,
@@ -127,9 +131,27 @@ def pretrain_model(
         # Tracking and reporting
         report_to=None if do_not_track else "wandb",
         logging_steps=100,
-        run_name=name,
+        run_name=run_name,
         log_level="info",
     )
+
+    if resume_from_checkpoint:
+        with wandb.init(project=wandb_project, id=run_name, resume="allow") as run:
+            # Connect an Artifact to run
+            checkpoint = f"checkpoint-{run_name}:latest"
+            msg.info(f"Resuming from checkpoint: {checkpoint}")
+            artifact = run.use_artifact(checkpoint)
+            checkpoint_dir = artifact.download()
+            model = AutoModelForMaskedLM.from_pretrained(checkpoint_dir)
+            trainer = Trainer(
+                model=model,
+                args=training_args,
+                data_collator=data_collator,
+                train_dataset=dataset,
+            )
+            trainer.train(resume_from_checkpoint=checkpoint_dir)
+            trainer.save_model(str(model_dir))
+
     trainer = Trainer(
         model=model,
         args=training_args,

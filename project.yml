@@ -26,6 +26,7 @@ vars:
   seed: 42
   batch_size: 65
   max_steps: 100000
+  save_steps: 1000
   model_size: "base"
   sampling_strategy: "upsample"
   # Finetuning params
@@ -40,6 +41,7 @@ vars:
 
 env:
   HUGGINGFACE_TOKEN: HUGGINGFACE_TOKEN
+  WANDB_LOG_MODEL: WANDB_LOG_MODEL
 
 remotes:
   # Create a service account, download a JSON key, and set the credentials path
@@ -110,11 +112,39 @@ commands:
       - >-
         python -m scripts.pretrain_model pretraining/${vars.model_size}/
         --name ${vars.name}
+        --size ${vars.model_size}
         --pretraining-corpus corpus/pretraining.txt
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
         --max-steps ${vars.max_steps}
+        --save-steps ${vars.save_steps}
+        --seed ${vars.seed}
+        --wandb-project ${vars.wandb_project}
+    deps:
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
+      - corpus/pretraining.txt
+    outputs:
+      - pretraining/${vars.model_size}/model/config.json
+      - pretraining/${vars.model_size}/model/model.safetensors
+      - pretraining/${vars.model_size}/model/training_args.bin
+
+  - name: "pretrain-model-from-checkpoint"
+    help: "Pretrain a multilingual LM from a corpus based on a checkpoint"
+    script:
+      - mkdir -p pretraining/${vars.model_size}/
+      - >-
+        python -m scripts.pretrain_model pretraining/${vars.model_size}/
+        --resume-from-checkpoint
+        --name ${vars.name}
+        --size ${vars.model_size}
+        --pretraining-corpus corpus/pretraining.txt
+        --vocab tokenizer/vocab.json
+        --merges tokenizer/merges.txt
+        --batch-size ${vars.batch_size}
+        --max-steps ${vars.max_steps}
+        --save-steps ${vars.save_steps}
         --seed ${vars.seed}
         --wandb-project ${vars.wandb_project}
     deps:

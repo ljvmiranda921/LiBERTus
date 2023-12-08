@@ -11,3 +11,5 @@ typer
 wasabi
 tqdm
 cloudpathlib[gs]
+# Paper
+matplotlib

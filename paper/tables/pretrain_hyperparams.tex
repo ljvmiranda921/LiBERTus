@@ -2,18 +2,18 @@
 \begin{document}
 \begin{table}[t]
 \centering
-\begin{tabular}{lrr}
+\begin{tabular}{lr}
 \toprule
-                     & Base     & Large  \\ \midrule
-Hidden size          & 768      & 1024   \\ 
-Intermediate size    & 3072     & 4096   \\
-Max position embed.  & 512      & 512    \\
-Num. attention heads & 12       & 16     \\
-Hidden layers        & 12       & 24     \\
-Dropout              & 0.1      & 0.1    \\ \bottomrule
+Hyperparameters      & Value \\ \midrule
+Hidden size          & 768   \\ 
+Intermediate size    & 3072  \\
+Max position embed.  & 512   \\
+Num. attention heads & 12    \\
+Hidden layers        & 12    \\
+Dropout              & 0.1   \\ \bottomrule
 \end{tabular}
 \caption{
-    Hyperparameter configuration for the base and large variants of \libertus{}.
+    Hyperparameter configuration for the \libertus{} pretrained model.
 }
 \label{table:pretrain_hyperparams}
 \end{table}

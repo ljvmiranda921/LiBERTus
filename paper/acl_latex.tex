@@ -74,12 +74,19 @@ Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of u
 We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
 The same figure also shows the token counts after the augmentation process.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/token_counts.pdf}
+\caption{Unique token counts for each language before and after upsampling.}
+\label{fig:unique_tokens}
+\end{figure}
+
 \subsection{Model Pretraining}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
-\caption{Training loss curve for \libertus{}, a RoBERTa-based model}
+\caption{Training loss curve for \libertus{}, a RoBERTa-based model.}
 \label{fig:training_curve}
 \end{figure}
 

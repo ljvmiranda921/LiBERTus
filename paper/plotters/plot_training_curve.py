@@ -22,7 +22,7 @@ def plot_training_curve(input_file: Path, output_file: Path):
             _, loss, _, _ = row
             losses.append(float(loss))
 
-    fig, ax = plt.subplots(figsize=(4, 2))
+    fig, ax = plt.subplots(figsize=(6, 4))
 
     # Plot actual data
     ax.plot(losses, color="k")
@@ -32,7 +32,8 @@ def plot_training_curve(input_file: Path, output_file: Path):
 
     def formatter(x, pos):
         del pos
-        return int(x * 100)
+        actual_steps = int(x * 100)
+        return f"{actual_steps // 1000}k"
 
     ax.xaxis.set_major_formatter(formatter)
 

@@ -14,6 +14,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{subfiles}
+\usepackage{graphicx}
 
 % Commands 
 \newcommand{\draftonly}[1]{#1}
@@ -75,7 +76,13 @@ The same figure also shows the token counts after the augmentation process.
 
 \subsection{Model Pretraining}
 
-Using the pretraining corpora, we trained a model with XXXM parameters, that will later on serve as bases for finetuning downstream tasks.
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
+\caption{Pretraining loss for \libertus{}, a RoBERTa-based model}
+\end{figure}
+
+Using the pretraining corpora, we trained a model with 126M parameters, that will later on serve as bases for finetuning downstream tasks.
 \libertus{} follows RoBERTa's pretraining architecture \cite{liu-etal-2019-roberta} and takes inspiration from \citet{conneau-etal-2020-unsupervised}'s work on scaling BERT models to multiple languages.
 
 \subfile{tables/pretrain_hyperparams.tex}

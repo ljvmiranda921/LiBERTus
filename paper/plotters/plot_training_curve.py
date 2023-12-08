@@ -22,11 +22,11 @@ def plot_training_curve(input_file: Path, output_file: Path):
             _, loss, _, _ = row
             losses.append(float(loss))
 
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=(4, 2))
 
     # Plot actual data
     ax.plot(losses, color="k")
-    ax.set_ylabel("Training Loss")
+    ax.set_ylabel("Pretraining Loss")
     ax.set_xlabel("Steps")
     ax.set_ylim(bottom=0)
 

@@ -29,7 +29,8 @@ Commands are only re-run if their inputs have changed.
 | `convert-to-spacy` | Convert CoNLL-U files into spaCy format for finetuning |
 | `finetune-model` | Finetune a model given a training and validation corpora |
 | `package-model` | Package model and upload to HuggingFace |
-| `evaluate-model` | Evaluate a model on both validation and test corpora |
+| `evaluate-model-dev` | Evaluate a model on the validation set |
+| `evaluate-model-test` | Evaluate a model on the test set |
 
 ### ⏭ Workflows
 
@@ -41,7 +42,7 @@ inputs have changed.
 | Workflow | Steps |
 | --- | --- |
 | `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
-| `finetune` | `convert-to-spacy` &rarr; `finetune-model` &rarr; `evaluate-model` |
+| `finetune` | `convert-to-spacy` &rarr; `finetune-model` &rarr; `evaluate-model-dev` &rarr; `evaluate-model-test` |
 
 ### 🗂 Assets
 

@@ -22,13 +22,23 @@ def plot_training_curve(input_file: Path, output_file: Path):
             _, loss, _, _ = row
             losses.append(float(loss))
 
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(8, 4))
 
     # Plot actual data
-    ax.plot(losses)
+    ax.plot(losses, color="k")
     ax.set_ylabel("Training Loss")
     ax.set_xlabel("Steps")
     ax.set_ylim(bottom=0)
+
+    def formatter(x, pos):
+        del pos
+        return int(x * 100)
+
+    ax.xaxis.set_major_formatter(formatter)
+
+    # ax.set_xticks(
+    #     range(0, len(losses)), labels=[i * 100 for i in range(0, len(losses))]
+    # )
 
     # Hide the right and top splines
     ax.spines.right.set_visible(False)

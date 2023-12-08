@@ -194,3 +194,10 @@ commands:
     outputs:
       - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
       - metrics/${vars.train_lang}/metrics-${vars.test_lang}-dev.json
+
+  - name: "plot-figures"
+    help: "Plot figures for the writeup"
+    script:
+      - python -m paper.plotters.plot_training_curve metrics/wandb_train_curve_main.csv paper/figures/train_loss.pdf
+    outputs:
+      - paper/figures/train_loss.pdf

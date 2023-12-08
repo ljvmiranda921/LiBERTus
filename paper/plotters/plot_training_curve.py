@@ -36,10 +36,6 @@ def plot_training_curve(input_file: Path, output_file: Path):
 
     ax.xaxis.set_major_formatter(formatter)
 
-    # ax.set_xticks(
-    #     range(0, len(losses)), labels=[i * 100 for i in range(0, len(losses))]
-    # )
-
     # Hide the right and top splines
     ax.spines.right.set_visible(False)
     ax.spines.top.set_visible(False)

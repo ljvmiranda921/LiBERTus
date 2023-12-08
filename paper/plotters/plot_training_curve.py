@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import typer
 from wasabi import msg
 
-from .constants import MATPLOTLIB_STYLE
+from .constants import ACL_STYLE
 
-pylab.rcParams.update(MATPLOTLIB_STYLE)
+pylab.rcParams.update(ACL_STYLE)
 
 
 def plot_training_curve(input_file: Path, output_file: Path):
@@ -49,6 +49,7 @@ def plot_training_curve(input_file: Path, output_file: Path):
         )
 
     plt.savefig(output_file, transparent=True)
+    msg.good(f"Saved file to {output_file}")
 
 
 if __name__ == "__main__":

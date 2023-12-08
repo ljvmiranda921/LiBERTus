@@ -1,4 +1,4 @@
-MATPLOTLIB_STYLE = {
+ACL_STYLE = {
     "legend.fontsize": "large",
     "axes.labelsize": "x-large",
     "axes.titlesize": "x-large",

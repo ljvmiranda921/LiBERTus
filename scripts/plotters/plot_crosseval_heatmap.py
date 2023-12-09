@@ -1,10 +1,11 @@
 from enum import Enum
-import typer
 from pathlib import Path
 
+import numpy as np
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
 import typer
+from srsly import read_json
 from wasabi import msg
 
 from .constants import ACL_STYLE
@@ -23,6 +24,8 @@ def plot_crosseval_heatmap(
     split: Split = typer.Option(Split.dev, help="Dataset split to plot."),
 ):
     """Plot heatmap to evaluate cross-lingual transfer"""
+    lang_paths = sorted([f for f in input_dir.iterdir() if f.is_dir()])
+    languages = [path.stem for path in lang_paths]
     breakpoint()
 
 

@@ -30,15 +30,21 @@ def plot_crosseval_heatmap(
 
     # Add containers for the data
     component_to_metric: Dict[str, str] = {
-        "trainable_lemmatizer": "lemma_acc",
         "tagger": "tag_acc",
         # "morphologizer": "morph_acc",
+        "trainable_lemmatizer": "lemma_acc",
     }
 
     component_to_heatmap: Dict[str, List[List[float]]] = {
-        "trainable_lemmatizer": [],
         "tagger": [],
         # "morphologizer": [],
+        "trainable_lemmatizer": [],
+    }
+
+    component_to_task: Dict[str, str] = {
+        "tagger": "POS tagging",
+        "morphologizer": "Morphological annotation",
+        "trainable_lemmatizer": "Lemmatization",
     }
 
     components = component_to_metric.keys()
@@ -63,7 +69,7 @@ def plot_crosseval_heatmap(
         ax.set_yticks(np.arange(len(languages)), labels=languages)
         ax.set_xlabel("Validation set")
         ax.set_ylabel("Trained model")
-        ax.set_title(component)
+        ax.set_title(component_to_task.get(component))
 
         # Loop over data dimensions and create text annotations
         for i in range(len(languages)):

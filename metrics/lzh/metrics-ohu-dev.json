@@ -1,0 +1,37 @@
+{
+  "tokenizer":{
+    "token_acc":1.0,
+    "token_p":0.9119515351,
+    "token_r":0.9607758087,
+    "token_f":0.9357272179
+  },
+  "transformer":{
+
+  },
+  "parser":{
+    "sents_p":1.0,
+    "sents_r":0.9607758087,
+    "sents_f":0.9799955756,
+    "dep_uas":1.0,
+    "dep_las":0.0,
+    "dep_las_per_type":{
+      "_":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "root":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      }
+    }
+  },
+  "trainable_lemmatizer":{
+    "lemma_acc":0.2451444525
+  },
+  "tagger":{
+    "tag_acc":0.0
+  },
+  "speed":1623.7639968528
+}

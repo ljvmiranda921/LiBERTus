@@ -60,7 +60,7 @@ def plot_crosseval_heatmap(
             component_to_heatmap[component].append(rowline)
 
     # Plotting proper
-    fig, axs = plt.subplots(1, len(component_to_heatmap), figsize=(10, 6), sharey=True)
+    fig, axs = plt.subplots(1, len(component_to_heatmap), figsize=(10, 6))
 
     for ax, (component, matrix) in zip(axs, component_to_heatmap.items()):
         matrix = np.asarray(matrix)

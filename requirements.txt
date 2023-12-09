@@ -11,5 +11,6 @@ typer
 wasabi
 tqdm
 cloudpathlib[gs]
+spacy-huggingface-hub
 # Paper
 matplotlib

@@ -10,6 +10,7 @@ directories:
   - "assets"
   - "corpus"
   - "metrics"
+  - "packages"
   - "pretraining"
   - "scripts"
   - "tokenizer"
@@ -20,11 +21,14 @@ vars:
   # Project
   remote_gcs_bucket: "ljvmiranda"
   hf_repo: "ljvmiranda921/LiBERTus"
+  publish_message: "Update SIGTYP pipeline"
   # Pretraining params
   seed: 42
   batch_size: 65
   max_steps: 100000
+  save_steps: 1000
   model_size: "base"
+  sampling_strategy: "upsample"
   # Finetuning params
   base_model: "ljvmiranda921/LiBERTus-base"
   train_lang: "chu"
@@ -34,6 +38,10 @@ vars:
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
+
+env:
+  HUGGINGFACE_TOKEN: HUGGINGFACE_TOKEN
+  WANDB_LOG_MODEL: WANDB_LOG_MODEL
 
 remotes:
   # Create a service account, download a JSON key, and set the credentials path
@@ -67,7 +75,8 @@ workflows:
   finetune:
     - convert-to-spacy
     - finetune-model
-    - evaluate-model
+    - evaluate-model-dev
+    # - evaluate-model-test
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -81,6 +90,7 @@ commands:
         python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
         --output-path corpus/pretraining.txt 
         --seed ${vars.seed}
+        --sampling-strategy ${vars.sampling_strategy}
         --shuffle
         --verbose
     outputs:
@@ -103,11 +113,39 @@ commands:
       - >-
         python -m scripts.pretrain_model pretraining/${vars.model_size}/
         --name ${vars.name}
+        --size ${vars.model_size}
         --pretraining-corpus corpus/pretraining.txt
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
         --max-steps ${vars.max_steps}
+        --save-steps ${vars.save_steps}
+        --seed ${vars.seed}
+        --wandb-project ${vars.wandb_project}
+    deps:
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
+      - corpus/pretraining.txt
+    outputs:
+      - pretraining/${vars.model_size}/model/config.json
+      - pretraining/${vars.model_size}/model/model.safetensors
+      - pretraining/${vars.model_size}/model/training_args.bin
+
+  - name: "pretrain-model-from-checkpoint"
+    help: "Pretrain a multilingual LM from a corpus based on a checkpoint"
+    script:
+      - mkdir -p pretraining/${vars.model_size}/
+      - >-
+        python -m scripts.pretrain_model pretraining/${vars.model_size}/
+        --resume-from-checkpoint
+        --name ${vars.name}
+        --size ${vars.model_size}
+        --pretraining-corpus corpus/pretraining.txt
+        --vocab tokenizer/vocab.json
+        --merges tokenizer/merges.txt
+        --batch-size ${vars.batch_size}
+        --max-steps ${vars.max_steps}
+        --save-steps ${vars.save_steps}
         --seed ${vars.seed}
         --wandb-project ${vars.wandb_project}
     deps:
@@ -170,29 +208,58 @@ commands:
       - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
       - training/${vars.train_lang}/model-best/
+      - training/${vars.train_lang}/model-last/
 
-  - name: "evaluate-model"
-    help: "Evaluate a model on both validation and test corpora"
+  - name: "package-model"
+    help: "Package model and upload to HuggingFace"
+    script:
+      - >-
+        python -m spacy package
+        training/${vars.train_lang}/model-best/ packages/
+        --name ${vars.train_lang}_sigtyp_trf
+        --version ${vars.version}
+        --build sdist,wheel
+        --force
+      # Upload to HuggingFace
+      - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}
+      - >-
+        python -m spacy huggingface-hub push packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/xx_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+        --msg "xx_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
+        --verbose
+    deps:
+      - training/${vars.train_lang}/model-best/
+    outputs:
+      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
+      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+
+  - name: "evaluate-model-dev"
+    help: "Evaluate a model on the validation set"
     script:
       - mkdir -p metrics/${vars.train_lang}/
       - >-
         python -m spacy evaluate
-        training/${vars.train_lang}/model-best/ corpus/dev/${vars.dev_lang}_valid.spacy
+        xx_${vars.train_lang}_sigtyp_trf corpus/dev/${vars.dev_lang}_valid.spacy
         --output metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
         --per-component
         --gpu-id ${vars.gpu_id}
+    deps:
+      - corpus/dev/${vars.dev_lang}_valid.spacy
+    outputs:
+      - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
+
+  - name: "evaluate-model-test"
+    help: "Evaluate a model on the test set"
+    script:
+      - mkdir -p metrics/${vars.train_lang}/
       - >-
         python -m spacy evaluate
-        training/${vars.train_lang}/model-best/ corpus/test/${vars.test_lang}_test.spacy
+        xx_${vars.train_lang}_sigtyp_trf corpus/test/${vars.test_lang}_test.spacy
         --output metrics/${vars.train_lang}/metrics-${vars.test_lang}-test.json
         --per-component
         --gpu-id ${vars.gpu_id}
     deps:
-      - training/${vars.train_lang}/model-best/
-      - corpus/dev/${vars.dev_lang}_valid.spacy
       - corpus/test/${vars.test_lang}_test.spacy
     outputs:
-      - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
       - metrics/${vars.train_lang}/metrics-${vars.test_lang}-dev.json
 
   - name: "plot-figures"

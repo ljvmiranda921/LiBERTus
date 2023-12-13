@@ -31,18 +31,18 @@ def plot_crosseval_heatmap(
     # Add containers for the data
     component_to_metric: Dict[str, str] = {
         "tagger": "tag_acc",
-        # "morphologizer": "morph_acc",
+        "morphologizer": "morph_acc",
         "trainable_lemmatizer": "lemma_acc",
     }
 
     component_to_heatmap: Dict[str, List[List[float]]] = {
         "tagger": [],
-        # "morphologizer": [],
+        "morphologizer": [],
         "trainable_lemmatizer": [],
     }
 
     component_to_task: Dict[str, str] = {
-        "tagger": "POS tagging",
+        "tagger": "Parts-of-speech (POS) tagging",
         "morphologizer": "Morphological annotation",
         "trainable_lemmatizer": "Lemmatization",
     }
@@ -60,15 +60,15 @@ def plot_crosseval_heatmap(
             component_to_heatmap[component].append(rowline)
 
     # Plotting proper
-    fig, axs = plt.subplots(1, len(component_to_heatmap), figsize=(10, 6))
+    fig, axs = plt.subplots(1, len(component_to_heatmap), figsize=(14, 5))
 
     for ax, (component, matrix) in zip(axs, component_to_heatmap.items()):
         matrix = np.asarray(matrix)
         ax.imshow(matrix, cmap="Greys")
         ax.set_xticks(np.arange(len(languages)), labels=languages)
         ax.set_yticks(np.arange(len(languages)), labels=languages)
-        ax.set_xlabel("Validation set")
-        ax.set_ylabel("Trained model")
+        ax.set_xlabel("Target language")
+        ax.set_ylabel("Source language")
         ax.set_title(component_to_task.get(component))
 
         # Loop over data dimensions and create text annotations

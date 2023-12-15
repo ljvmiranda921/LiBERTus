@@ -30,6 +30,7 @@ vars:
   model_size: "base"
   sampling_strategy: "upsample"
   # Finetuning params
+  config: "transformer.cfg"
   base_model: "ljvmiranda921/LiBERTus-base"
   train_lang: "chu"
   dev_lang: "chu"
@@ -74,7 +75,7 @@ workflows:
     - pretrain-model
   finetune:
     - convert-to-spacy
-    - finetune-model
+    - finetune-trf-model
     - evaluate-model-dev
     # - evaluate-model-test
 
@@ -191,12 +192,30 @@ commands:
       - corpus/train/
       - corpus/dev/
 
-  - name: "finetune-model"
-    help: "Finetune a model given a training and validation corpora"
+  - name: "finetune-tok2vec-model"
+    help: "Finetune a tok2vec model given a training and validation corpora"
     script:
       - mkdir -p training/${vars.train_lang}/
       - >-
         python -m spacy train configs/default.cfg
+        --output-path training/${vars.train_lang}/
+        --paths.train corpus/train/${vars.train_lang}_train.spacy
+        --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy
+        --system.seed ${vars.seed}
+        --gpu-id ${vars.gpu_id}
+    deps:
+      - corpus/train/${vars.train_lang}_train.spacy
+      - corpus/dev/${vars.dev_lang}_valid.spacy
+    outputs:
+      - training/${vars.train_lang}/model-best/
+      - training/${vars.train_lang}/model-last/
+
+  - name: "finetune-trf-model"
+    help: "Finetune a transformer model given a training and validation corpora"
+    script:
+      - mkdir -p training/${vars.train_lang}/
+      - >-
+        python -m spacy train configs/transformer.cfg
         --output-path training/${vars.train_lang}/
         --paths.train corpus/train/${vars.train_lang}_train.spacy
         --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy

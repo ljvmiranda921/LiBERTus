@@ -265,8 +265,8 @@ commands:
   - name: "plot-figures"
     help: "Plot figures for the writeup"
     script:
-      - python -m paper.plotters.plot_training_curve metrics/wandb_train_curve_main.csv paper/figures/train_loss.pdf
-      - python -m paper.plotters.plot_token_counts metrics/tokens_upsampling.csv paper/figures/token_counts.pdf
+      - python -m scripts.plotters.plot_training_curve metrics/wandb_train_curve_main.csv paper/figures/train_loss.pdf
+      - python -m scripts.plotters.plot_token_counts metrics/tokens_upsampling.csv paper/figures/token_counts.pdf
     outputs:
       - paper/figures/train_loss.pdf
       - paper/figures/token_counts.pdf

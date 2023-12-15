@@ -238,11 +238,12 @@ commands:
       - mkdir -p metrics/${vars.train_lang}/
       - >-
         python -m spacy evaluate
-        xx_${vars.train_lang}_sigtyp_trf corpus/dev/${vars.dev_lang}_valid.spacy
+        training/${vars.train_lang}/model-best/ corpus/dev/${vars.dev_lang}_valid.spacy
         --output metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
         --per-component
         --gpu-id ${vars.gpu_id}
     deps:
+      - training/${vars.train_lang}/model-best/
       - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
       - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
@@ -253,11 +254,12 @@ commands:
       - mkdir -p metrics/${vars.train_lang}/
       - >-
         python -m spacy evaluate
-        xx_${vars.train_lang}_sigtyp_trf corpus/test/${vars.test_lang}_test.spacy
+        training/${vars.train_lang}/model-best/ corpus/test/${vars.test_lang}_test.spacy
         --output metrics/${vars.train_lang}/metrics-${vars.test_lang}-test.json
         --per-component
         --gpu-id ${vars.gpu_id}
     deps:
+      - training/${vars.train_lang}/model-best/
       - corpus/test/${vars.test_lang}_test.spacy
     outputs:
       - metrics/${vars.train_lang}/metrics-${vars.test_lang}-dev.json

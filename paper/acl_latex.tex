@@ -127,7 +127,7 @@ To obtain the most probable tree, we passed the context-sensitive embeddings fro
 
 \section{Results and Discussion}
 
-The test scores we obtained from the shared task can be found in Table \ref{table:main_results}.
+Table \ref{table:main_results} shows the test scores for the shared task.
 \lj{Talk about how you ranked against other teams?}
 In this section, we will outline our internal evaluations and benchmarking experiments.
 
@@ -141,19 +141,24 @@ In this section, we will outline our internal evaluations and benchmarking exper
 
 
 
-\subsection{Benchmark results}
+\subsection{Comparing against a word-vector baseline}
 \label{sec:results_benchmarking}
 
 We compared our system against a baseline model that skips the pretraining step
 and only uses orthographic features based on spaCy's multi-hash embeddings \cite{miranda-etal-2022-multi}.
 These embeddings apply the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to create a vector table with considerably less memory footprint.
 
-The results can be found in Figure \ref{fig:benchmarking}.
+Figure \ref{fig:benchmarking} shows the results.
 It is notable that simple orthographic features are competitive with our transformer-based model, with at least 2--3\% difference.
 However, we chose to submit the transformer-based models as our final system because their performance still beats the baseline. 
 
-\subsection{Cross-lingual transfer}
+\subsection{Testing cross-lingual capabilities}
 \label{sec:results_crosslingual}
+
+To test the cross-lingual capability of a language, we evaluated its finetuned model to the validation set of another.
+Figure \ref{fig:cross_lingual} shows the results.
+
+
 
 
 \section{Conclusion}

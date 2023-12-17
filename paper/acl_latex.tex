@@ -15,6 +15,7 @@
 \usepackage{multirow}
 \usepackage{subfiles}
 \usepackage{graphicx}
+\usepackage{colortbl}
 
 % Commands 
 \newcommand{\draftonly}[1]{#1}
@@ -140,14 +141,17 @@ In this section, we will outline our internal evaluations and benchmarking exper
 
 
 
-\subsection{Benchmarking results}
+\subsection{Benchmark results}
 \label{sec:results_benchmarking}
 
 We compared our system against a baseline model that skips the pretraining step
-and only uses lexical and subword features based on spaCy's multi-hash embeddings \cite{miranda-etal-2022-multi}.
-% In addition, we also compared against multilingual language models such as XLM-RoBERTa \cite{conneau-etal-2020-unsupervised} and Multilingual BERT \cite{devlin-etal-2019-bert}.
-% Unlike \libertus{}, these models were not trained on ancient and historical text, but we find it interesting to see how well these modern languages transfer to our targets. 
-The results can be found in Figure \ref{fig:benchmarking}
+and only uses orthographic features based on spaCy's multi-hash embeddings \cite{miranda-etal-2022-multi}.
+These embeddings apply the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to create a vector table with considerably less memory footprint.
+
+The results can be found in Figure \ref{fig:benchmarking}.
+It is notable that simple orthographic features are competitive with our transformer-based model, with at least 2--3\% difference.
+However, we chose to submit the 
+
 
 \lj{Insert discussion here: 1 paragraph}
 
@@ -157,6 +161,12 @@ The results can be found in Figure \ref{fig:benchmarking}
 
 \section{Conclusion}
 
+\section*{Limitations}
+
+\paragraph{Use of BPE tokenizer:}
+
+\paragraph{Pretrained LM size:}
+
 
 \bibliography{custom}
 
@@ -164,10 +174,6 @@ The results can be found in Figure \ref{fig:benchmarking}
 
 \section{Appendix}
 \label{sec:appendix}
-
-\subsection{Full results for benchmark experiments}
-
-Here, we show the full results table for the benchmarking experiments in Sections \ref{sec:results_benchmarking} and \ref{sec:results_crosslingual}.
 
 \subsection{Effect of different sampling strategies on pretraining performance}
 
@@ -179,18 +185,15 @@ We examined the following configurations:
   \item \textbf{None:} use the original dataset without any data sampling or augmentation.
   \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
-  \item \textbf{PROPN augmentation:} similar to upsampling, but instead of duplicating sentences, we replace their \textsc{PROPN} with another.
 \end{itemize}
 
 Figure \ref{fig:effect_sampling} shows that upsampling provides the clearest benefit for our pretrained model.
-
 
 \subsection{Finetuning a model per language vs. monolithic system}
 
 We also investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 We found out that although more expensive, finetuning a model per language still yields the best results. 
 Table \ref{table:full_vs_langspecific} illustrates these results.
-
 
 \subsection{Reproducibility}
 

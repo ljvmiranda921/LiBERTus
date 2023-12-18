@@ -37,7 +37,7 @@
 
 \begin{abstract}
 In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
-Using only the data provided by the organizers, we pretrained a transformer-based multilingual model finetuned on the Universal Dependencies (UD) annotations of a given language.
+Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
 We also explored the cross-lingual capability of our trained models.
 \lj{Our systems achieved}
 % TODO: talk about results and scores on the test set
@@ -55,7 +55,7 @@ Table \ref{table:main_results} shows our systems' performance on the shared task
 
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
-In addition, we also show the results of our cross-lingual transfer learning setup.
+The source code for all experiments can be found on GitHub: \lj{insert github link or OSF link for anonymity}.
 
 \subfile{tables/main_results.tex}
 
@@ -115,19 +115,6 @@ Similar to the POS tagger, we treat morphological annotation as a token classifi
 Instead of directly modeling each feature, we made every unique combination of morphological features as a class.
 The limitation of this approach is that it can only predict combinations that were present in the training corpora.
 
-\paragraph{Lemmatizer:} 
-We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
-Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
-Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
-To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
-
-\section{Results and Discussion}
-
-Table \ref{table:main_results} shows the test scores for the shared task.
-\lj{Talk about how you ranked against other teams?}
-In this section, we will outline our internal evaluations and benchmarking experiments.
-
-
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/cross_lingual.pdf}
@@ -136,14 +123,40 @@ In this section, we will outline our internal evaluations and benchmarking exper
 \end{figure*}
 
 
-\subsection{Performance on the validation set}
+\paragraph{Lemmatizer:} 
+We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
+Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
+Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
+To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
 
-First, we evaluated our finetuned models on the validation set.
-Table \ref{table:validation_results} shows the results.
+We set the minimum frequency of an edit tree to 3, and used the surface form of the token as a backoff when no applicable edit tree is found.
+Finally, we ensured that the lemmatizer checks at least a single tree before resorting to backoff. \\
+
+\noindent We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
+For all components, the pretrained embeddings are passed on to linear layer with softmax activation.
+Sometimes, the tokenization from the multilingual model does not align one-to-one with spaCy's tokenization.
+In such case, we use a pooling layer that computes the average of each feature to obtain a single vector per spaCy token.
+
+During finetuning, we used the Adam optimizer with $\beta_1$=0.9, $\beta_2$=0.999 and a learning rate of $0.001$.
+The learning rate also warms up linearly for the first 250 steps, and then decays afterwards.
+
+\section{Results}
+
+Table \ref{table:main_results} shows the test scores for the shared task.
+\lj{Talk about how you ranked against other teams?}
+In this section, we will outline our internal evaluations and benchmarking experiments.
+
+
+
+\subsection{Performance on the validation set}
 
 \subfile{tables/validation_results.tex}
 
-
+First, we evaluated our finetuned models on the validation set.
+Table \ref{table:validation_results} shows the results.
+Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
+These languages have non-latin scripts, and our BPE tokenizer cannot handle these characters.
+In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -151,13 +164,26 @@ Table \ref{table:validation_results} shows the results.
 To test the cross-lingual capability of a language, we evaluated its finetuned model to the validation set of another.
 Figure \ref{fig:cross_lingual} shows the results.
 
-% it is possible to adapt a language on some tasks (e.g., morph annotation and lemmatization),
-% some languages like lat, latm can also be used interchangeably in lemmatization
+We found that it is possible to adapt a language onto another for morphological annotation and lemmatization.
+However, this does not extend to POS tagging, as the validation set performs best only in the language it was trained on.
 
-
-
+Some target languages tend to be cross-lingually receptive on lemmatization, i.e., many source languages can perform decently when applied to them.
+This observation is true for \textsc{fro}, \textsc{got}, \textsc{isl}, \textsc{lat}, and \textsc{latm}.
+Finally, there is also good cross-lingual compatibility between \textsc{lat} and \textsc{latm}\textemdash which is expected because they came from similar roots. 
 
 \section{Conclusion}
+
+This paper describes Team 21a's system: a pretrained multilingual model (\libertus{}) finetuned on different languages for each downstream task.
+Our system obtained \lj{describe your rank, how you stack, etc. etc.}
+
+Our system's main strength is its downstream performance.
+The validation scores are high for the majority of languages.
+However, it is limited by its tokenizer, resulting to poor performance on languages with non-latin scripts.
+We also evaluated each language's cross-lingual capability and showed that transfer learning is possible especially on lemmatization.
+This approach can be a viable alternative on limited corpora.
+
+The source code for training and experimentation can be found on GitHub: \lj{insert GitHub or OSF url}.
+We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
 
 \section*{Limitations}
 
@@ -190,16 +216,16 @@ Figure \ref{fig:effect_sampling} shows that upsampling provides the clearest ben
 \subsection{Finetuning a model per language vs. monolithic system}
 
 We also investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
+Here, we combined the training corpora for all languages, then shuffled them before batching.
+This means that the downstream model sees a language mix per training epoch.
+
 We found out that although more expensive, finetuning a model per language still yields the best results. 
 Table \ref{table:full_vs_langspecific} illustrates these results.
 
-\subsection{Reproducibility}
-
-The pretrained models can be found in ... while the source code to replicate the experiments can be found on ...
 
 \subsection{Alternative approach}
 
-We also considered to use multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
+We also considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.
 This approach also applies the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to decrease the vector table's memory footprint.
 

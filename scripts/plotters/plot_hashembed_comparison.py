@@ -61,8 +61,6 @@ def plot_hashembed_comparison(
             )
     breakpoint()
 
-    breakpoint()
-
 
 if __name__ == "__main__":
     typer.run(plot_hashembed_comparison)

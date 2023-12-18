@@ -24,7 +24,7 @@ def plot_token_counts(input_file: Path, output_file: Path):
     languages = []
     num_tokens = {Label.before.value: [], Label.after.value: []}
     bar_settings = {
-        Label.before.value: {"color": "k", "hatch": None},
+        Label.before.value: {"color": "gray", "edgecolor": "k"},
         Label.after.value: {"color": "w", "edgecolor": "k"},
     }
 

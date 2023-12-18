@@ -141,22 +141,25 @@ In this section, we will outline our internal evaluations and benchmarking exper
 
 
 
-\subsection{Comparing against a word-vector baseline}
+\subsection{Comparing against a word vector baseline}
 \label{sec:results_benchmarking}
 
-We compared our system against a baseline model that skips the pretraining step
-and only uses orthographic features based on spaCy's multi-hash embeddings \cite{miranda-etal-2022-multi}.
-These embeddings apply the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to create a vector table with considerably less memory footprint.
+We compared our system against a baseline model that uses multi-hash embeddings \cite{miranda-etal-2022-multi}.
+Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.
+This approach also applies the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to decrease the vector table's memory footprint.
 
 Figure \ref{fig:benchmarking} shows the results.
 It is notable that simple orthographic features are competitive with our transformer-based model, with at least 2--3\% difference.
-However, we chose to submit the transformer-based models as our final system because their performance still beats the baseline. 
+However, we chose to submit the transformer-based pipeline as our final system because their performance still beats the baseline. 
 
-\subsection{Testing cross-lingual capabilities}
+\subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
 
 To test the cross-lingual capability of a language, we evaluated its finetuned model to the validation set of another.
 Figure \ref{fig:cross_lingual} shows the results.
+
+% it is possible to adapt a language on some tasks (e.g., morph annotation and lemmatization),
+% some languages like lat, latm can also be used interchangeably in lemmatization
 
 
 
@@ -184,7 +187,7 @@ In our final system, we used the upsampling strategy as it provides clear benefi
 
 We examined the following configurations:
 \begin{itemize}
-  \item \textbf{None:} use the original dataset without any data sampling or augmentation.
+  \item \textbf{None:} we used the original dataset without any data sampling or augmentation.
   \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
 \end{itemize}

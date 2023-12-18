@@ -61,10 +61,6 @@ In addition, we also show the results of our cross-lingual transfer learning set
 
 \section{Methodology}
 
-% \subfile{tables/full_vs_langspecific.tex}
-% \subfile{tables/main_results.tex}
-
-
 \subsection{Resource creation}
 
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
@@ -142,6 +138,11 @@ In this section, we will outline our internal evaluations and benchmarking exper
 
 \subsection{Performance on the validation set}
 
+First, we evaluated our finetuned models on the validation set.
+Table \ref{table:validation_results} shows the results.
+
+\subfile{tables/validation_results.tex}
+
 
 
 \subsection{Evaluating cross-lingual capabilities}
@@ -205,5 +206,6 @@ This approach also applies the hashing trick, inspired by Bloom filters \cite{bl
 Figure \ref{fig:benchmarking} shows the results in comparison to our final system.
 It is notable that simple orthographic features are competitive with our transformer-based model.
 However, we chose to submit the transformer-based pipeline as our final system because it still outperforms the multi-hash embed method in the majority of our language-task pairs. 
+We still recommend investigating this approach further because the hash-embed method has noticeable efficiency gains in terms of model size.
 
 \end{document}

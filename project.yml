@@ -254,34 +254,34 @@ commands:
   - name: "evaluate-model-dev"
     help: "Evaluate a model on the validation set"
     script:
-      - mkdir -p metrics/${vars.train_lang}/
+      - mkdir -p metrics/system_scores/${vars.train_lang}/
       - >-
         python -m spacy evaluate
         training/${vars.train_lang}/model-best/ corpus/dev/${vars.dev_lang}_valid.spacy
-        --output metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
+        --output metrics/system_scores/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
         --per-component
         --gpu-id ${vars.gpu_id}
     deps:
       - training/${vars.train_lang}/model-best/
       - corpus/dev/${vars.dev_lang}_valid.spacy
     outputs:
-      - metrics/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
+      - metrics/system_scores/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
 
   - name: "evaluate-model-test"
     help: "Evaluate a model on the test set"
     script:
-      - mkdir -p metrics/${vars.train_lang}/
+      - mkdir -p metrics/system_scores/${vars.train_lang}/
       - >-
         python -m spacy evaluate
         training/${vars.train_lang}/model-best/ corpus/test/${vars.test_lang}_test.spacy
-        --output metrics/${vars.train_lang}/metrics-${vars.test_lang}-test.json
+        --output metrics/system_scores/${vars.train_lang}/metrics-${vars.test_lang}-test.json
         --per-component
         --gpu-id ${vars.gpu_id}
     deps:
       - training/${vars.train_lang}/model-best/
       - corpus/test/${vars.test_lang}_test.spacy
     outputs:
-      - metrics/${vars.train_lang}/metrics-${vars.test_lang}-dev.json
+      - metrics/system_scores/${vars.train_lang}/metrics-${vars.test_lang}-dev.json
 
   - name: "plot-figures"
     help: "Plot figures for the writeup"

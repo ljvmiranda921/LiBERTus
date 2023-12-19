@@ -62,7 +62,50 @@ def plot_hashembed_comparison(
                 )
             )
 
-    x = np.arange
+    x = np.arange(len(languages))
+
+    bar_settings = {
+        "ours": {"color": "gray", "edgecolor": "k"},
+        "theirs": {"color": "w", "edgecolor": "k"},
+    }
+
+    fig, axs = plt.subplots(1, len(component_to_rects), figsize=(14, 5))
+    for component, ax in zip(component_to_rects, axs):
+        width = 0.30
+        multiplier = 0
+        for label, scores in component_to_rects[component].items():
+            offset = width * multiplier
+            rects = ax.bar(
+                x + offset + 0.15,
+                np.array(scores),
+                width,
+                label="RoBERTa-based" if label == "ours" else "MultiHashEmbed",
+                **bar_settings.get(label),
+            )
+            multiplier += 1
+
+        ax.set_ylabel("F1-score")
+        ax.set_xlabel("Language")
+        ax.set_xticks(x + width, languages)
+        ax.set_title(COMPONENT_TO_TASK[component])
+
+        # Hide the right and top splines
+        ax.spines.right.set_visible(False)
+        ax.spines.top.set_visible(False)
+
+        # Hack to show a single legend
+
+    fig.tight_layout()
+    ax.legend(loc=(-1.15, -0.2), ncol=2, frameon=False)
+
+    if output_file.suffix != ".pdf":
+        msg.warn(
+            "File extension is not PDF. I highly recommend"
+            " using that filetype for better resolution."
+        )
+
+    plt.savefig(output_file, transparent=True, bbox_inches="tight")
+    msg.good(f"Saved file to {output_file}")
 
 
 if __name__ == "__main__":

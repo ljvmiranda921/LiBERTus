@@ -1,3 +1,4 @@
+import concurrent.futures
 import itertools
 import random
 import statistics
@@ -5,6 +6,7 @@ from collections import Counter
 from enum import Enum
 from pathlib import Path
 from typing import Dict, List, Optional
+from multiprocessing import Pool
 
 import typer
 from conllu import parse_incr
@@ -105,11 +107,9 @@ def sample_corpora(
 
     augmented_corpora: Dict[str, List[str]] = {}
     if strategy == SamplingStrategy.upsample:
-        msg.info("Using upsampling strategy")
-        # Upsample: get percentage of each with respect to max and sample by that amount.
-        _, most_common = token_counts.most_common()[0]
-        for lang, sents in examples.items():
-            msg.text(f"Upsampling '{lang}'...", show=verbose)
+
+        def _worker(args):
+            lang, sents, most_common, token_counts = args
             num_tokens_to_add = int(
                 most_common * (1 - (token_counts[lang] / most_common))
             )
@@ -124,7 +124,21 @@ def sample_corpora(
                 f"Adding {len(sents_to_add)} sentences ({num_tokens_added} tokens) to {lang}",
                 show=verbose,
             )
-            augmented_corpora[lang] = sents + sents_to_add
+
+            return lang, sents + sents_to_add
+
+        msg.info("Using upsampling strategy")
+        # Upsample: get percentage of each with respect to max and sample by that amount.
+        _, most_common = token_counts.most_common()[0]
+
+        args_list = [
+            (lang, sents, most_common, token_counts) for lang, sents in examples.items()
+        ]
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            results = executor.map(_worker, args_list)
+
+        for lang, augmented_sents in results:
+            augmented_corpora[lang] = augmented_sents
 
     if strategy == SamplingStrategy.average:
         msg.text("Using averaging strategy")

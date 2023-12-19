@@ -172,7 +172,6 @@ commands:
       - mkdir -p pretraining/${vars.model_size}/
       - >-
         python -m scripts.pretrain_model pretraining/${vars.model_size}/
-        --resume-from-checkpoint
         --name ${vars.name}
         --size ${vars.model_size}
         --pretraining-corpus ${vars.pretraining_corpus}

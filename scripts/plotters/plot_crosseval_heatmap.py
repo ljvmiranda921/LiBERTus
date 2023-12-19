@@ -2,14 +2,14 @@ from enum import Enum
 from pathlib import Path
 from typing import Dict, List
 
-import numpy as np
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
+import numpy as np
 import typer
 from srsly import read_json
 from wasabi import msg
 
-from .constants import ACL_STYLE
+from .constants import ACL_STYLE, COMPONENT_TO_METRIC, COMPONENT_TO_TASK
 
 pylab.rcParams.update(ACL_STYLE)
 
@@ -29,25 +29,13 @@ def plot_crosseval_heatmap(
     languages = [path.stem for path in lang_paths]  # cols
 
     # Add containers for the data
-    component_to_metric: Dict[str, str] = {
-        "tagger": "tag_acc",
-        "morphologizer": "morph_acc",
-        "trainable_lemmatizer": "lemma_acc",
-    }
-
     component_to_heatmap: Dict[str, List[List[float]]] = {
         "tagger": [],
         "morphologizer": [],
         "trainable_lemmatizer": [],
     }
 
-    component_to_task: Dict[str, str] = {
-        "tagger": "Parts-of-speech (POS) tagging",
-        "morphologizer": "Morphological annotation",
-        "trainable_lemmatizer": "Lemmatization",
-    }
-
-    components = component_to_metric.keys()
+    components = COMPONENT_TO_METRIC.keys()
 
     for component in components:
         for row in lang_paths:
@@ -55,7 +43,7 @@ def plot_crosseval_heatmap(
             for col in languages:
                 metrics_path = row / f"metrics-{col}-{split.value}.json"
                 metrics = read_json(metrics_path)
-                score = metrics[component].get(component_to_metric[component])
+                score = metrics[component].get(COMPONENT_TO_METRIC[component])
                 rowline.append(score)
             component_to_heatmap[component].append(rowline)
 
@@ -69,7 +57,7 @@ def plot_crosseval_heatmap(
         ax.set_yticks(np.arange(len(languages)), labels=languages)
         ax.set_xlabel("Target language")
         ax.set_ylabel("Source language")
-        ax.set_title(component_to_task.get(component))
+        ax.set_title(COMPONENT_TO_TASK.get(component))
 
         # Loop over data dimensions and create text annotations
         for i in range(len(languages)):

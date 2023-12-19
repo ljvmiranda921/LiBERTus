@@ -1,10 +1,10 @@
-from enum import Enum
 import csv
+from enum import Enum
 from pathlib import Path
 
-import numpy as np
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
+import numpy as np
 import typer
 from wasabi import msg
 
@@ -24,7 +24,7 @@ def plot_token_counts(input_file: Path, output_file: Path):
     languages = []
     num_tokens = {Label.before.value: [], Label.after.value: []}
     bar_settings = {
-        Label.before.value: {"color": "k", "hatch": None},
+        Label.before.value: {"color": "gray", "edgecolor": "k"},
         Label.after.value: {"color": "w", "edgecolor": "k"},
     }
 

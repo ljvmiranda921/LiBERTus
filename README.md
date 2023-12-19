@@ -27,10 +27,12 @@ Commands are only re-run if their inputs have changed.
 | `pretrain-model-from-checkpoint` | Pretrain a multilingual LM from a corpus based on a checkpoint |
 | `upload-to-hf` | Upload pretrained model and corresponding tokenizer to the HuggingFace repository |
 | `convert-to-spacy` | Convert CoNLL-U files into spaCy format for finetuning |
-| `finetune-model` | Finetune a model given a training and validation corpora |
+| `finetune-tok2vec-model` | Finetune a tok2vec model given a training and validation corpora |
+| `finetune-trf-model` | Finetune a transformer model given a training and validation corpora |
 | `package-model` | Package model and upload to HuggingFace |
 | `evaluate-model-dev` | Evaluate a model on the validation set |
 | `evaluate-model-test` | Evaluate a model on the test set |
+| `plot-figures` | Plot figures for the writeup |
 
 ### ⏭ Workflows
 
@@ -42,7 +44,7 @@ inputs have changed.
 | Workflow | Steps |
 | --- | --- |
 | `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
-| `finetune` | `convert-to-spacy` &rarr; `finetune-model` &rarr; `evaluate-model-dev` &rarr; `evaluate-model-test` |
+| `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 
 ### 🗂 Assets
 

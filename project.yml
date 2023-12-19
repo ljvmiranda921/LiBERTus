@@ -96,7 +96,7 @@ commands:
     help: "Create corpus for multilingual LM pretraining"
     script:
       - >-
-        python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
+        python -m scripts.convert_to_pretrain assets/train/ 
         --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
         --sampling-strategy ${vars.sampling_strategy}

@@ -83,6 +83,9 @@ workflows:
   experiment-merged:
     - convert-to-spacy-merged
     - finetune-with-merged-corpus
+  experiment-sampling:
+    - create-vocab
+    - pretrain-model-with-validation
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command

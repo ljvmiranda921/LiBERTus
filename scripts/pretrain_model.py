@@ -143,6 +143,8 @@ def pretrain_model(
         # Reproducibility
         seed=seed,
         data_seed=seed,
+        # Evaluation
+        evaluation_strategy="steps" if eval_dataset else "no",
         # Tracking and reporting
         report_to=None if do_not_track else "wandb",
         logging_steps=100,

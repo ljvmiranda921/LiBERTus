@@ -2,14 +2,14 @@ from enum import Enum
 from pathlib import Path
 from typing import Dict, List
 
-import numpy as np
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
+import numpy as np
 import typer
 from srsly import read_json
 from wasabi import msg
 
-from .constants import ACL_STYLE, COMPONENT_TO_TASK, COMPONENT_TO_METRIC
+from .constants import ACL_STYLE, COMPONENT_TO_METRIC, COMPONENT_TO_TASK
 
 pylab.rcParams.update(ACL_STYLE)
 

@@ -1,10 +1,10 @@
-from enum import Enum
 import csv
+from enum import Enum
 from pathlib import Path
 
-import numpy as np
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
+import numpy as np
 import typer
 from wasabi import msg
 

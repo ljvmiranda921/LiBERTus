@@ -1,15 +1,15 @@
-from pathlib import Path
 from enum import Enum
-from typing import Any, Dict, List
-
-import typer
-from wasabi import msg
-import srsly
+from pathlib import Path
+from typing import Dict, List
 
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
+import numpy as np
+import srsly
+import typer
+from wasabi import msg
 
-from .constants import ACL_STYLE, COMPONENT_TO_TASK, COMPONENT_TO_METRIC
+from .constants import ACL_STYLE, COMPONENT_TO_METRIC, COMPONENT_TO_TASK
 
 pylab.rcParams.update(ACL_STYLE)
 
@@ -53,13 +53,16 @@ def plot_hashembed_comparison(
         their_scores = srsly.read_json(theirs_fp)
         for component in components:
             component_to_rects[component]["ours"].append(
-                our_scores.get(component).get(COMPONENT_TO_METRIC[component])
+                round(our_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2)
             )
 
             component_to_rects[component]["theirs"].append(
-                their_scores.get(component).get(COMPONENT_TO_METRIC[component])
+                round(
+                    their_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2
+                )
             )
-    breakpoint()
+
+    x = np.arange
 
 
 if __name__ == "__main__":

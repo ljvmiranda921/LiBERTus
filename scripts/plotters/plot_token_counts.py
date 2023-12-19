@@ -54,7 +54,7 @@ def plot_token_counts(input_file: Path, output_file: Path):
         )
         multiplier += 1
 
-    ax.set_ylabel("Unique token counts")
+    ax.set_ylabel("Token counts")
     ax.set_xlabel("Language")
     ax.set_xticks(x + width, languages)
     ax.legend(loc=(0.10, 1.025), ncol=2, frameon=False)

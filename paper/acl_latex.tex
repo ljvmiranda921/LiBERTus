@@ -68,13 +68,13 @@ Then, we explored several data augmentation techniques to ensure that each langu
 
 From our experiments, upsampling underrepresented languages helped reduce our pretraining validation loss.
 Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
-We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens is greater than or equal to that of \textsc{latm}.
+We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
 The same figure also shows the token counts after the augmentation process.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/token_counts.pdf}
-\caption{Unique token counts for each language before and after upsampling.}
+\caption{Unique token counts (with allowance for duplicates) for each language before and after upsampling.}
 \label{fig:unique_tokens}
 \end{figure}
 

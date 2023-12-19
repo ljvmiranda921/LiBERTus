@@ -222,6 +222,7 @@ Figure \ref{fig:effect_sampling} shows that upsampling provides the clearest ben
 
 We also investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 Here, we combined the training corpora for all languages, then shuffled them before batching.
+The merged dataset has 194,281 documents for training and 26,954 documents for validation.
 This means that the downstream model sees a language mix per training epoch.
 
 We found out that although more expensive, finetuning a model per language still yields the best results. 

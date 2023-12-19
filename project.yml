@@ -180,15 +180,16 @@ commands:
   - name: "convert-to-spacy"
     help: "Convert CoNLL-U files into spaCy format for finetuning"
     script:
+      # Remove erroneus files first from corpus
+      - mv assets/train/ohu_train.conllu .
+      - mv assets/train/orv_train.conllu .
+      - mv assets/dev/orv_valid.conllu .
       # Concatenate everything for experiment
       - mkdir -p corpus/merged_train/
       - python -m spacy convert assets/train/ corpus/merged_train/ --morphology --concatenate
       - mkdir -p corpus/merged_dev/
       - python -m spacy convert assets/dev/ corpus/merged_dev/ --morphology --concatenate
-      # Remove erroneus files first from corpus
-      - mv assets/train/ohu_train.conllu .
-      - mv assets/train/orv_train.conllu .
-      - mv assets/dev/orv_valid.conllu .
+      # Convert each language
       - mkdir -p corpus/train
       - python -m spacy convert assets/train/ corpus/train/ --morphology
       - mkdir -p corpus/dev

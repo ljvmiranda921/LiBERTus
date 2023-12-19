@@ -79,7 +79,7 @@ workflows:
     - evaluate-model-dev
     # - evaluate-model-test
   experiment-merged:
-    - convert-to-spacy
+    - convert-to-spacy-merged
     - finetune-with-merged-corpus
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
@@ -177,7 +177,7 @@ commands:
       - pretraining/${vars.model_size}/model/model.safetensors
       - pretraining/${vars.model_size}/model/training_args.bin
 
-  - name: "convert-to-spacy"
+  - name: "convert-to-spacy-merged"
     help: "Convert CoNLL-U files into spaCy format for finetuning"
     script:
       # Remove erroneus files first from corpus
@@ -189,6 +189,20 @@ commands:
       - python -m spacy convert assets/train/ corpus/merged_train/ --morphology --concatenate
       - mkdir -p corpus/merged_dev/
       - python -m spacy convert assets/dev/ corpus/merged_dev/ --morphology --concatenate
+    deps:
+      - assets/train/
+      - assets/dev/
+    outputs:
+      - corpus/merged_train/train.spacy
+      - corpus/merged_dev/dev.spacy
+
+  - name: "convert-to-spacy"
+    help: "Convert CoNLL-U files into spaCy format for finetuning"
+    script:
+      # Remove erroneus files first from corpus
+      - mv assets/train/ohu_train.conllu .
+      - mv assets/train/orv_train.conllu .
+      - mv assets/dev/orv_valid.conllu .
       # Convert each language
       - mkdir -p corpus/train
       - python -m spacy convert assets/train/ corpus/train/ --morphology
@@ -198,8 +212,6 @@ commands:
       - assets/train/
       - assets/dev/
     outputs:
-      - corpus/merged_train/train.spacy
-      - corpus/merged_dev/dev.spacy
       - corpus/train/
       - corpus/dev/
 

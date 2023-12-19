@@ -106,7 +106,7 @@ commands:
         --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
         --sampling-strategy ${vars.sampling_strategy}
-        --num-choices 100 
+        --num-choices 1000 
         --shuffle
         --verbose
     outputs:

@@ -185,12 +185,19 @@ commands:
       - python -m spacy convert assets/train/ corpus/train/ --morphology
       - mkdir -p corpus/dev
       - python -m spacy convert assets/dev/ corpus/dev/ --morphology
+      # Concatenate everything for experiment
+      - mkdir -p corpus/merged_train/
+      - python -m spacy convert assets/train/ corpus/merged_train/ --morphology --concatenate
+      - mkdir -p corpus/merged_dev/
+      - python -m spacy convert assets/dev/ corpus/merged_dev/ --morphology --concatenate
     deps:
       - assets/train/
       - assets/dev/
     outputs:
       - corpus/train/
       - corpus/dev/
+      - corpus/merged_train/
+      - corpus/merged_dev/
 
   - name: "finetune-tok2vec-model"
     help: "Finetune a tok2vec model given a training and validation corpora"

@@ -29,6 +29,8 @@ vars:
   save_steps: 1000
   model_size: "base"
   sampling_strategy: "upsample"
+  evaluation_corpus: "corpus/evaluation.txt"
+  pretraining_corpus: "corpus/pretraining.txt"
   # Finetuning params
   config: "transformer.cfg"
   base_model: "ljvmiranda921/LiBERTus-base"
@@ -92,20 +94,20 @@ commands:
     script:
       - >-
         python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
-        --output-path corpus/pretraining.txt 
+        --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
         --sampling-strategy ${vars.sampling_strategy}
         --shuffle
         --verbose
     outputs:
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
 
   - name: "create-vocab"
     help: "Train a tokenizer to create a vocabulary"
     script:
-      - python -m scripts.train_tokenizer corpus/pretraining.txt tokenizer/
+      - python -m scripts.train_tokenizer ${vars.pretraining_corpus} tokenizer/
     deps:
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
@@ -118,7 +120,7 @@ commands:
         python -m scripts.pretrain_model pretraining/${vars.model_size}/
         --name ${vars.name}
         --size ${vars.model_size}
-        --pretraining-corpus corpus/pretraining.txt
+        --pretraining-corpus ${vars.pretraining_corpus}
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
@@ -129,7 +131,7 @@ commands:
     deps:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors
@@ -144,7 +146,7 @@ commands:
         --resume-from-checkpoint
         --name ${vars.name}
         --size ${vars.model_size}
-        --pretraining-corpus corpus/pretraining.txt
+        --pretraining-corpus ${vars.pretraining_corpus}
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
@@ -155,7 +157,34 @@ commands:
     deps:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
+    outputs:
+      - pretraining/${vars.model_size}/model/config.json
+      - pretraining/${vars.model_size}/model/model.safetensors
+      - pretraining/${vars.model_size}/model/training_args.bin
+
+  - name: "pretrain-model-with-validation"
+    help: "Pretrain a multilingual LM yet include validation dataset"
+    script:
+      - mkdir -p pretraining/${vars.model_size}/
+      - >-
+        python -m scripts.pretrain_model pretraining/${vars.model_size}/
+        --resume-from-checkpoint
+        --name ${vars.name}
+        --size ${vars.model_size}
+        --pretraining-corpus ${vars.pretraining_corpus}
+        --evaluation-corpus ${vars.evaluation_corpus} 
+        --vocab tokenizer/vocab.json
+        --merges tokenizer/merges.txt
+        --batch-size ${vars.batch_size}
+        --max-steps ${vars.max_steps}
+        --save-steps ${vars.save_steps}
+        --seed ${vars.seed}
+        --wandb-project ${vars.wandb_project}
+    deps:
+      - tokenizer/vocab.json
+      - tokenizer/merges.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors

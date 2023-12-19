@@ -206,7 +206,7 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 
 \subsection{Effect of different sampling strategies on pretraining performance}
 
-We also explored different sampling strategies and their effect on the pretraining loss curve.
+We explored different sampling strategies and their effect on the pretraining loss curve.
 In our final system, we used the upsampling strategy as it provides clear benefit compared to others.
 
 We examined the following configurations:
@@ -220,7 +220,7 @@ Figure \ref{fig:effect_sampling} shows that upsampling provides the clearest ben
 
 \subsection{Finetuning a model per language vs. monolithic system}
 
-We also investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
+We investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 Here, we combined the training corpora for all languages, then shuffled them before batching.
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
 This means that the downstream model sees a language mix per training epoch.
@@ -238,7 +238,7 @@ Table \ref{table:full_vs_langspecific} illustrates these results.
 \label{fig:hashembed}
 \end{figure*}
 
-We also considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
+We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.
 This approach also applies the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to decrease the vector table's memory footprint.
 

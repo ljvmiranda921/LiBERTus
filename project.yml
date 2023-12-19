@@ -96,6 +96,12 @@ commands:
     help: "Create corpus for multilingual LM pretraining"
     script:
       - >-
+        python -m scripts.convert_to_pretrain assets/dev 
+        --output-path ${vars.evaluation_corpus} 
+        --seed 42 
+        --shuffle 
+        --verbose
+      - >-
         python -m scripts.convert_to_pretrain assets/train/ 
         --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
@@ -104,6 +110,7 @@ commands:
         --verbose
     outputs:
       - ${vars.pretraining_corpus}
+      - ${vars.evaluation_corpus}
 
   - name: "create-vocab"
     help: "Train a tokenizer to create a vocabulary"
@@ -124,6 +131,7 @@ commands:
         --name ${vars.name}
         --size ${vars.model_size}
         --pretraining-corpus ${vars.pretraining_corpus}
+        --evaluation-corpus ${vars.evaluation_corpus} 
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}

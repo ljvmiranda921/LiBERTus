@@ -26,6 +26,7 @@ def convert_to_pretrain(
     output_path: Path = typer.Option(Path("corpus/pretraining.txt"), "--output-path", "-o", help="Path to save the pretraining corpus."),
     shuffle: bool = typer.Option(False, "--shuffle", "-s", help="Shuffle the examples before saving to disk."),
     sampling_strategy: Optional[SamplingStrategy] = typer.Option(None, "--sampling-strategy", "-S", help="Sampling strategy to use."),
+    num_choices: int = typer.Option(1, "--num-choices", "-N", help="Number of choices to sample."),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Show additional information."),
     seed: int = typer.Option(42, "--seed", help="Set random seed for shuffling."),
     # fmt: on
@@ -49,7 +50,9 @@ def convert_to_pretrain(
     if sampling_strategy:
         # Sample the files
         msg.text(f"Sampling using '{sampling_strategy.value}'")
-        pretraining = sample_corpora(examples, sampling_strategy, verbose=verbose)
+        pretraining = sample_corpora(
+            examples, sampling_strategy, verbose=verbose, num_choices=num_choices
+        )
 
     if shuffle:
         msg.info(f"Shuffling examples using seed '{seed}'")
@@ -75,6 +78,7 @@ def get_examples(file: Path) -> List[str]:
 def sample_corpora(
     examples: Dict[str, List[str]],
     strategy: SamplingStrategy,
+    num_choices: int,
     verbose: bool = True,
 ) -> List[str]:
     """Sample the corpora based on some token statistics
@@ -109,13 +113,13 @@ def sample_corpora(
     if strategy == SamplingStrategy.upsample:
 
         def _worker(args):
-            lang, sents, most_common, token_counts = args
+            lang, sents, most_common, token_counts, num_choices = args
             num_tokens_to_add = int(
                 most_common * (1 - (token_counts[lang] / most_common))
             )
             sents_to_add = []
             while True:
-                sents_to_add.append(random.choice(sents))
+                sents_to_add.extend(random.sample(sents, num_choices))
                 num_tokens_added = _count_tokens(lang, sents_to_add)
                 if num_tokens_added >= num_tokens_to_add:
                     break
@@ -132,7 +136,8 @@ def sample_corpora(
         _, most_common = token_counts.most_common()[0]
 
         args_list = [
-            (lang, sents, most_common, token_counts) for lang, sents in examples.items()
+            (lang, sents, most_common, token_counts, num_choices)
+            for lang, sents in examples.items()
         ]
         with concurrent.futures.ThreadPoolExecutor() as executor:
             results = executor.map(_worker, args_list)

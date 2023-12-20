@@ -28,7 +28,7 @@ vars:
   max_steps: 100000
   save_steps: 1000
   model_size: "base"
-  learning_rate: 0.0002
+  learning_rate: 0.0006
   sampling_strategy: "upsample"
   evaluation_corpus: "corpus/evaluation.txt"
   pretraining_corpus: "corpus/pretraining.txt"

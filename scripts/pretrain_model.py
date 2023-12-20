@@ -147,7 +147,7 @@ def pretrain_model(
         evaluation_strategy="steps" if eval_dataset else "no",
         # Tracking and reporting
         report_to=None if do_not_track else "wandb",
-        logging_steps=1000,
+        logging_steps=500,
         run_name=run_name,
         log_level="info",
     )

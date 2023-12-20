@@ -136,7 +136,7 @@ def pretrain_model(
         learning_rate=learning_rate,
         per_gpu_train_batch_size=batch_size,
         lr_scheduler_type="linear",
-        warmup_steps=25_000,
+        warmup_steps=12_000,
         prediction_loss_only=True,
         save_steps=run_save_steps,
         save_total_limit=3,

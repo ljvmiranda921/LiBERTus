@@ -24,10 +24,11 @@ vars:
   publish_message: "Update SIGTYP pipeline"
   # Pretraining params
   seed: 42
-  batch_size: 65
+  batch_size: 64
   max_steps: 100000
   save_steps: 1000
   model_size: "base"
+  learning_rate: 0.0002
   sampling_strategy: "upsample"
   evaluation_corpus: "corpus/evaluation.txt"
   pretraining_corpus: "corpus/pretraining.txt"
@@ -133,6 +134,7 @@ commands:
         --size ${vars.model_size}
         --pretraining-corpus ${vars.pretraining_corpus}
         --evaluation-corpus ${vars.evaluation_corpus} 
+        --learning-rate ${vars.learning_rate}
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}

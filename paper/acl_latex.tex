@@ -66,7 +66,7 @@ The source code for all experiments can be found on GitHub: \lj{insert github li
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 
-From our experiments, upsampling underrepresented languages helped reduce our pretraining validation loss.
+We noticed that there is a stark diffence in token distribution across all languages, so we used an upsampling strategy to balance them out.
 Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
 We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
 The same figure also shows the token counts after the augmentation process.
@@ -204,19 +204,19 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 \section{Appendix}
 \label{sec:appendix}
 
-\subsection{Effect of different sampling strategies on pretraining performance}
+\subsection{Different sampling strategies on pretraining validation performance}
 
-We explored different sampling strategies and their effect on the pretraining loss curve.
-In our final system, we used the upsampling strategy as it provides clear benefit compared to others.
+We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
 
-We examined the following configurations:
 \begin{itemize}
   \item \textbf{None:} we used the original dataset without any data sampling or augmentation.
   \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
 \end{itemize}
 
-Figure \ref{fig:effect_sampling} shows that upsampling provides the clearest benefit for our pretrained model.
+The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
+It is interesting that sampling is detrimental to validation loss, but in our final system, we employed the upsampling strategy as we believe that it would provide a more robust performance across all languages.
+
 
 \subsection{Finetuning a model per language vs. monolithic system}
 

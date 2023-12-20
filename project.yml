@@ -106,8 +106,6 @@ commands:
         python -m scripts.convert_to_pretrain assets/train/ 
         --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
-        --sampling-strategy ${vars.sampling_strategy}
-        --num-choices 1000 
         --shuffle
         --verbose
     outputs:

@@ -3,7 +3,7 @@ declare -a arr=("chu" "cop" "fro" "got" "grc" "hbo" "isl" "lat" "latm" "lzh" "or
 weasel run convert-to-spacy --force
 for i in "${arr[@]}"
 do
-    weasel run finetune-model . --vars.train_lang "$i" --vars.dev_lang "$i" 
+    weasel run finetune-trf-model . --vars.train_lang "$i" --vars.dev_lang "$i" 
     weasel run package-model . --vars.train_lang "$i"
 done
 

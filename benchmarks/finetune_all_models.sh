@@ -28,7 +28,7 @@ done
 
 ## cop needs special tokenizer
 weasel run finetune-trf-model . --vars.train_lang cop --vars.dev_lang cop --vars.nlp_lang el --vars.config transformer.cfg
-weasel run package-model . --vars.train_lang cop
+weasel run package-model . --vars.train_lang cop --vars.nlp_lang el
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang cop --vars.dev_lang "$j"
@@ -37,7 +37,7 @@ done
 
 ## lzh needs special tokenizer
 weasel run finetune-trf-model . --vars.train_lang lzh --vars.dev_lang lzh --vars.nlp_lang zh --vars.config transformer_zh.cfg
-weasel run package-model . --vars.train_lang lzh
+weasel run package-model . --vars.train_lang lzh --vars.nlp_lang zh
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang lzh --vars.dev_lang "$j"
@@ -46,7 +46,7 @@ done
 
 ## hbo might need some lexical info
 weasel run finetune-trf-model . --vars.train_lang hbo --vars.dev_lang hbo --vars.nlp_lang he --vars.config transformer.cfg
-weasel run package-model . --vars.train_lang hbo
+weasel run package-model . --vars.train_lang hbo --vars.nlp_lang he
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang hbo --vars.dev_lang "$j"

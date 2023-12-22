@@ -148,17 +148,15 @@ Table \ref{table:main_results} shows the test scores for the shared task.
 \lj{Talk about how you ranked against other teams?}
 In this section, we will outline our internal evaluations and benchmarking experiments.
 
-
-
 \subsection{Performance on the validation set}
 
 \subfile{tables/validation_results.tex}
 
 First, we evaluated our finetuned models on the validation set.
 Table \ref{table:validation_results} shows the results.
-Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
-These languages have non-latin scripts, and our tokenizer cannot handle these characters.
-In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
+% Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
+% These languages have non-latin scripts, and our tokenizer cannot handle these characters.
+% In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -180,7 +178,7 @@ Our system obtained \lj{describe your rank, how you stack, etc. etc.}
 
 Our system's main strength is its downstream performance.
 The validation scores are high for the majority of languages.
-However, it is limited by its tokenizer, resulting to poor performance on languages with non-latin scripts.
+% However, it is limited by its tokenizer, resulting to poor performance on languages with non-latin scripts.
 We also evaluated each language's cross-lingual capability and showed that transfer learning is possible especially on lemmatization.
 This approach can be a viable alternative on limited corpora.
 
@@ -188,11 +186,6 @@ The source code for training and experimentation can be found on GitHub: \lj{ins
 We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
 
 \section*{Limitations}
-
-\paragraph{Handling non-Latin scripts.}
-The performance of our downstream models on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are below 0.5.
-We believe that this is due to our tokenization method, which fails for non-latin scripts.
-We encourage exploring alternative tokenization strategies that are better equipped to handle diverse script types.
 
 \paragraph{Pretrained LM size.}
 Due to compute constraints, we were only able to pretrain a model akin to the size of RoBERTa\textsubscript{base}.

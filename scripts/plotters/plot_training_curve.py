@@ -26,13 +26,15 @@ def plot_training_curve(input_file: Path, output_file: Path):
 
     # Plot actual data
     ax.plot(losses, color="k")
-    ax.set_ylabel("Pretraining Loss")
+    ax.set_ylabel("Training Loss")
     ax.set_xlabel("Steps")
     ax.set_ylim(bottom=0)
 
+    eval_steps = 500
+
     def formatter(x, pos):
         del pos
-        actual_steps = int(x * 100)
+        actual_steps = int(x * eval_steps)
         return f"{actual_steps // 1000}k"
 
     ax.xaxis.set_major_formatter(formatter)

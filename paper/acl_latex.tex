@@ -66,17 +66,23 @@ The source code for all experiments can be found on GitHub: \lj{insert github li
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 
-We noticed that there is a stark diffence in token distribution across all languages, so we used an upsampling strategy to balance them out.
-Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
-We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
-The same figure also shows the token counts after the augmentation process.
+Given that the token distribution across all languages is not uniform, we experimented with several sampling techniques.
+However, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/token_counts.pdf}
-\caption{Unique token counts (with allowance for duplicates) for each language before and after upsampling.}
-\label{fig:unique_tokens}
-\end{figure}
+
+
+
+% We noticed that there is a stark diffence in token distribution across all languages, so we used an upsampling strategy to balance them out.
+% Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
+% We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
+% The same figure also shows the token counts after the augmentation process.
+
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=0.5\textwidth]{figures/token_counts.pdf}
+% \caption{Unique token counts (with allowance for duplicates) for each language before and after upsampling.}
+% \label{fig:unique_tokens}
+% \end{figure}
 
 \subsection{Model Pretraining}
 
@@ -87,7 +93,7 @@ The same figure also shows the token counts after the augmentation process.
 \label{fig:training_curve}
 \end{figure}
 
-Using the pretraining corpora, we trained a model with 126M parameters, that will later on serve as bases for finetuning downstream tasks.
+Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
 \libertus{} follows RoBERTa's pretraining architecture \cite{liu-etal-2019-roberta} and takes inspiration from \citet{conneau-etal-2020-unsupervised}'s work on scaling BERT models to multiple languages.
 
 \subfile{tables/pretrain_hyperparams.tex}
@@ -96,7 +102,7 @@ Our hyperparameter choices closely resemble that of the original RoBERTa impleme
 We also trained the same BPE tokenizer \citep{sennrich-etal-2016-neural} using the constructed corpora.
 During model pretraining, we used the AdamW optimizer with $\beta_2$=0.98 and a weight decay of 0.01.
 The base model underwent training for 100k steps with a learning rate of 2e-4.
-We used a learning rate scheduler that linearly warms up during the first quarter of the training process, then linearly decays for the rest.
+We used a learning rate scheduler that linearly warms up during the first 12k steps of the training process, then linearly decays for the rest.
 Figure \ref{fig:training_curve} shows the training curve.
 
 \subsection{Model Finetuning}
@@ -138,7 +144,7 @@ Sometimes, the tokenization from the multilingual model does not align one-to-on
 In such case, we use a pooling layer that computes the average of each feature to obtain a single vector per spaCy token.
 
 During finetuning, we used the Adam optimizer with $\beta_1$=0.9, $\beta_2$=0.999 and a learning rate of $0.001$.
-The learning rate also warms up linearly for the first 250 steps, and then decays afterwards.
+The learning rate warms up linearly for the first 250 steps, and then decays afterwards.
 
 \section{Results}
 

@@ -61,17 +61,6 @@ The source code for all experiments can be found on GitHub: \lj{insert github li
 
 \section{Methodology}
 
-\subsection{Resource creation}
-
-We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
-Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
-
-Given that the token distribution across all languages is not uniform, we experimented with several sampling techniques.
-However, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
-
-
-
-
 % We noticed that there is a stark diffence in token distribution across all languages, so we used an upsampling strategy to balance them out.
 % Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
 % We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
@@ -93,7 +82,13 @@ However, we found that leaving the token distribution as-is leads to more stable
 \label{fig:training_curve}
 \end{figure}
 
-Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
+\paragraph{Preparing the pretraining corpora.} We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
+Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
+Initially, we upsampled each language to match the token count of \textsc{latm} (highest unique token count), but we found that the training loss jumps up by 5-pp in the middle of pretraining.
+
+In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
+
+\paragraph{Pretraining the base model.} Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
 \libertus{} follows RoBERTa's pretraining architecture \cite{liu-etal-2019-roberta} and takes inspiration from \citet{conneau-etal-2020-unsupervised}'s work on scaling BERT models to multiple languages.
 
 \subfile{tables/pretrain_hyperparams.tex}
@@ -161,7 +156,7 @@ In this section, we will outline our internal evaluations and benchmarking exper
 First, we evaluated our finetuned models on the validation set.
 Table \ref{table:validation_results} shows the results.
 Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
-These languages have non-latin scripts, and our BPE tokenizer cannot handle these characters.
+These languages have non-latin scripts, and our tokenizer cannot handle these characters.
 In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
 
 \subsection{Evaluating cross-lingual capabilities}
@@ -201,6 +196,10 @@ We encourage exploring alternative tokenization strategies that are better equip
 \paragraph{Pretrained LM size.}
 Due to compute constraints, we were only able to pretrain a model akin to the size of RoBERTa\textsubscript{base}.
 We highly recommend pretraining a large \libertus{} model to obtain performance gains if the resource allows.
+
+\paragraph{Pretraining data mix.}
+In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
+
 
 
 \bibliography{custom}

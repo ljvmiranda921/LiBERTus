@@ -12,6 +12,7 @@ wasabi
 tqdm
 cloudpathlib[gs]
 spacy-huggingface-hub
+spacy-pkuseg
 # Paper
 matplotlib
 numpy

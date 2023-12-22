@@ -55,7 +55,7 @@ Table \ref{table:main_results} shows our systems' performance on the shared task
 
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
-The source code for all experiments can be found on GitHub: \lj{insert github link or OSF link for anonymity}.
+The source code for all experiments can be found on GitHub: \url{https://anonymous.4open.science/r/sigtyp-1F05/}
 
 \subfile{tables/main_results.tex}
 
@@ -75,6 +75,9 @@ The source code for all experiments can be found on GitHub: \lj{insert github li
 
 \subsection{Model Pretraining}
 
+The main purpose of pretraining is to obtain context-sensitive word embeddings that we will finetune further for each downstream task.
+We approach this by training a multilingual language model akin to the XLM-RoBERTa \cite{conneau-etal-2020-unsupervised} and multilingual BERT \cite{devlin-etal-2019-bert} architectures.
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
@@ -85,7 +88,6 @@ The source code for all experiments can be found on GitHub: \lj{insert github li
 \paragraph{Preparing the pretraining corpora.} We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 Initially, we upsampled each language to match the token count of \textsc{latm} (highest unique token count), but we found that the training loss jumps up by 5-pp in the middle of pretraining.
-
 In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
 
 \paragraph{Pretraining the base model.} Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
@@ -129,11 +131,10 @@ We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by 
 Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
 Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
 To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
-
 We set the minimum frequency of an edit tree to 3, and used the surface form of the token as a backoff when no applicable edit tree is found.
-Finally, we ensured that the lemmatizer checks at least a single tree before resorting to backoff. \\
+Finally, we ensured that the lemmatizer checks at least a single tree before resorting to backoff. 
 
-\noindent We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
+\paragraph{Finetuning the pipelines} We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
 For all components, the pretrained embeddings are passed on to linear layer with softmax activation.
 Sometimes, the tokenization from the multilingual model does not align one-to-one with spaCy's tokenization.
 In such case, we use a pooling layer that computes the average of each feature to obtain a single vector per spaCy token.

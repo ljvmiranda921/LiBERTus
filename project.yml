@@ -331,7 +331,7 @@ commands:
       - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}
       - >-
         python -m spacy huggingface-hub push packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/xx_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
-        --msg "xx_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
+        --msg "${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
         --verbose
     deps:
       - training/${vars.train_lang}/model-best/

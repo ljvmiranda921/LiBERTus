@@ -283,7 +283,7 @@ commands:
     script:
       - mkdir -p training/${vars.train_lang}/
       - >-
-        python -m spacy train configs/transformer.cfg
+        python -m spacy train configs/${vars.config}
         --nlp.lang ${vars.nlp_lang}
         --output-path training/${vars.train_lang}/
         --paths.train corpus/train/${vars.train_lang}_train.spacy

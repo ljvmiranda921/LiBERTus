@@ -105,6 +105,7 @@ Figure \ref{fig:training_curve} shows the training curve.
 \subsection{Model Finetuning}
 
 For each language, we finetuned a multitask model using spaCy \cite{honnibal-etal-2020-spacy}. 
+We used spaCy's tokenization rules for the majority of languages except for \textsc{lzh}, where we segmented on characters.
 The final system consists of a parts-of-speech (POS) tagger, morphological analyzer, and lemmatizer.
 
 \paragraph{Parts-of-speech (POS) tagger.}

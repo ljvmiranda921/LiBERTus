@@ -53,7 +53,12 @@ do
     cp metrics/system_scores/hbo/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/hbo/
 done
 
-## latm is weird because you need to upload it properly on HugginGface
+## latm is weird because you need to upload it properly on Huggingface
 weasel run finetune-trf-model . --vars.train_lang latm --vars.dev_lang latm
 weasel run package-model . --vars.train_lang latm
 cp packages/xx_latm_sigtyp_trf-0.1.0/dist/latm_sigtyp_trf-0.1.0-py3-none-any.whl /content/drive/MyDrive/
+for j in "${dev[@]}"
+do
+    weasel run evaluate-model-dev . --vars.train_lang latm --vars.dev_lang "$j"
+    cp metrics/system_scores/latm/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/latm/
+done

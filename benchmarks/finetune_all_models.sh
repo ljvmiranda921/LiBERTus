@@ -12,7 +12,7 @@ do
     for j in "${dev[@]}"
     do
         weasel run evaluate-model-dev . --vars.train_lang "$i" --vars.dev_lang "$j"
-        cp metrics/system_scores/"$i"/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/"$i"/
+        cp metrics/system_scores/$i/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/$i/
     done
 done
 
@@ -23,7 +23,7 @@ weasel run package-model . --vars.train_lang ohu
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang ohu --vars.dev_lang "$j"
-    cp metrics/system_scores/ohu/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/ohu/
+    cp metrics/system_scores/ohu/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/ohu/
 done
 
 ## cop needs special tokenizer
@@ -32,16 +32,7 @@ weasel run package-model . --vars.train_lang cop --vars.nlp_lang el
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang cop --vars.dev_lang "$j"
-    cp metrics/system_scores/cop/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/cop/
-done
-
-## lzh needs special tokenizer
-weasel run finetune-trf-model . --vars.train_lang lzh --vars.dev_lang lzh --vars.nlp_lang zh --vars.config transformer_zh.cfg
-weasel run package-model . --vars.train_lang lzh --vars.nlp_lang zh
-for j in "${dev[@]}"
-do
-    weasel run evaluate-model-dev . --vars.train_lang lzh --vars.dev_lang "$j"
-    cp metrics/system_scores/lzh/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/lzh/
+    cp metrics/system_scores/cop/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/cop/
 done
 
 ## hbo might need some lexical info
@@ -50,7 +41,7 @@ weasel run package-model . --vars.train_lang hbo --vars.nlp_lang he
 for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang hbo --vars.dev_lang "$j"
-    cp metrics/system_scores/hbo/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/hbo/
+    cp metrics/system_scores/hbo/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/hbo/
 done
 
 ## latm is weird because you need to upload it properly on Huggingface
@@ -61,4 +52,13 @@ for j in "${dev[@]}"
 do
     weasel run evaluate-model-dev . --vars.train_lang latm --vars.dev_lang "$j"
     cp metrics/system_scores/latm/metrics-"$j"-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/latm/
+done
+
+## lzh needs special tokenizer
+weasel run finetune-trf-model . --vars.train_lang lzh --vars.dev_lang lzh --vars.nlp_lang zh --vars.config transformer_zh.cfg
+weasel run package-model . --vars.train_lang lzh --vars.nlp_lang zh
+for j in "${dev[@]}"
+do
+    weasel run evaluate-model-dev . --vars.train_lang lzh --vars.dev_lang "$j"
+    cp metrics/system_scores/lzh/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/lzh/
 done

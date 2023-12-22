@@ -330,14 +330,14 @@ commands:
       # Upload to HuggingFace
       - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}
       - >-
-        python -m spacy huggingface-hub push packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/xx_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+        python -m spacy huggingface-hub push packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
         --msg "${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
         --verbose
     deps:
       - training/${vars.train_lang}/model-best/
     outputs:
-      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
-      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+      - packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
+      - packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
 
   - name: "evaluate-model-dev"
     help: "Evaluate a model on the validation set"

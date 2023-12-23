@@ -4,7 +4,8 @@ weasel run convert-to-spacy --force
 declare -a dev=("chu" "cop" "fro" "got" "grc" "hbo" "isl" "lat" "latm" "lzh" "ohu" "orv" "san")
 
 # Common cases
-declare -a arr=("chu" "fro" "got" "grc" "isl" "lat" "latm" "orv" "san")
+# declare -a arr=("chu" "fro" "got" "grc" "isl" "lat" "orv" "san")
+declare -a arr=("lat" "orv" "san")
 for i in "${arr[@]}"
 do
     weasel run finetune-trf-model . --vars.train_lang "$i" --vars.dev_lang "$i" 

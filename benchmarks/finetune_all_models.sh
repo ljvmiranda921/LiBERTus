@@ -19,7 +19,7 @@ declare -a dev=("chu" "cop" "fro" "got" "grc" "hbo" "isl" "lat" "latm" "lzh" "oh
 
 # Special cases
 ## ohu needs to adjust the minimum frequency
-spacy train configs/transformer.cfg --output-path training/ohu/ --paths.train corpus/train/ohu_train.spacy --paths.dev corpus/dev/ohu_valid.spacy --system.seed 42 --gpu-id 0 --components.parser.min_action_freq 1 --components.transformer.model.name ljvmiranda/LiBERTus-base
+spacy train configs/transformer.cfg --output-path training/ohu/ --paths.train corpus/train/ohu_train.spacy --paths.dev corpus/dev/ohu_valid.spacy --system.seed 42 --gpu-id 0 --components.parser.min_action_freq 1 --components.transformer.model.name ljvmiranda921/LiBERTus-base
 weasel run package-model . --vars.train_lang ohu
 for j in "${dev[@]}"
 do

@@ -154,7 +154,7 @@ def sample_corpora(
             msg.text(f"{approach} '{lang}'...", show=verbose)
             new_sents = []
             while True:
-                new_sents.append(random.sample(sents, num_choices))
+                new_sents.extend(random.sample(sents, num_choices))
                 num_tokens_added = _count_tokens(lang, new_sents)
                 if num_tokens_added >= median:
                     break

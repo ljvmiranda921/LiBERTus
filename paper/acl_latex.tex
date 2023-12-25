@@ -151,8 +151,8 @@ The top performers, calculated by taking the average across all tasks, are \text
 whereas the bottom performers are \textsc{san} (0.839), \textsc{cop} (0.292), and \textsc{hbo} (0.200).
 
 \paragraph{Error analysis for \textsc{cop} and \textsc{hbo}.}
-We suspect that the main reason why we obtained worse scores on \textsc{cop} and \textsc{hbo} is due to our downstream tokenization process.
-To test this, we \lj{look into how some sentences were tokenized vs. their actual tokenization?}
+Our performance on \textsc{cop} and \textsc{hbo} are below random chance.
+We suspect that it's due to our tokenization process during finetuning.
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -173,8 +173,10 @@ This paper describes Team 21a's system: a pretrained multilingual model (\libert
 Our system obtained \lj{describe your rank, how you stack, etc. etc.}
 
 Our system's main strength is its downstream performance.
-The validation scores are high for the majority of languages.
-% However, it is limited by its tokenizer, resulting to poor performance on languages with non-latin scripts.
+The validation scores are high ($\geq$70\% F1-score) for the majority of language-task pairs.
+However, performance on languages such as \textsc{cop} and \textsc{hbo} are low because of our downstream tokenization process.
+We highly recommend exploring alternative approaches to tokenization.
+
 We also evaluated each language's cross-lingual capability and showed that transfer learning is possible especially on lemmatization.
 This approach can be a viable alternative on limited corpora.
 
@@ -203,7 +205,7 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 \centering
 \includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
 \caption{\lj{Training loss curve for the 126M-parameter model after 100k steps.}}
-\label{fig:training_curve}
+\label{fig:effect_sampling}
 \end{figure}
 
 \begin{figure*}[t]
@@ -250,7 +252,7 @@ One advantage of language-specific models is that we were able to set a differen
 Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (\textsc{latm}, \textsc{lat}) and minority ones (\textsc{ohu}, \textsc{orv}, \textsc{san}).
 Due to these findings, we decided to train multiple models for our final system.
 
-\subsection{Alternative approach we considered}
+\subsection{Alternative approach\textemdash multi-hash embeddings}
 
 
 We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.

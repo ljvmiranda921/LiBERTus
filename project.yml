@@ -223,9 +223,9 @@ commands:
       - mv assets/dev/orv_valid.conllu .
       # Convert each language
       - mkdir -p corpus/train
-      - python -m spacy convert assets/train/ corpus/train/ --morphology
+      - python -m spacy convert assets/train/ corpus/train/ --morphology -T
       - mkdir -p corpus/dev
-      - python -m spacy convert assets/dev/ corpus/dev/ --morphology
+      - python -m spacy convert assets/dev/ corpus/dev/ --morphology -T
     deps:
       - assets/train/
       - assets/dev/

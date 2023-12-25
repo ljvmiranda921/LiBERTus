@@ -12,8 +12,8 @@
     "sents_p":0.9996522142,
     "sents_r":0.9998840445,
     "sents_f":0.9997681159,
-    "dep_uas":0.0170160105,
-    "dep_las":0.0170160105,
+    "dep_uas":0.0170163396,
+    "dep_las":0.0170163396,
     "dep_las_per_type":{
       "obl:lmod":{
         "p":0.0,
@@ -209,18 +209,23 @@
         "p":0.0,
         "r":0.0,
         "f":0.0
+      },
+      "dep":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
       }
     }
   },
   "trainable_lemmatizer":{
-    "lemma_acc":0.0213635946
+    "lemma_acc":0.0211798217
   },
   "tagger":{
     "tag_acc":0.0
   },
   "morphologizer":{
-    "pos_acc":0.0005972618,
-    "morph_acc":0.0186070017,
+    "pos_acc":0.01415051,
+    "morph_acc":0.0000918864,
     "morph_micro_p":0.0,
     "morph_micro_r":0.0,
     "morph_micro_f":0.0,
@@ -305,12 +310,22 @@
         "r":0.0,
         "f":0.0
       },
-      "Foreign":{
+      "Definite":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Gender":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Number":{
         "p":0.0,
         "r":0.0,
         "f":0.0
       }
     }
   },
-  "speed":449.5537646533
+  "speed":433.6149782288
 }

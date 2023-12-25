@@ -353,6 +353,7 @@ commands:
       - python -m scripts.plotters.plot_crosseval_heatmap metrics/system_scores/ paper/figures/cross_lingual.pdf
       - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf --ours-name "RoBERTa-based (ours)" --theirs-name "Multi hash embeddings"
       - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/monolithic_scores/ paper/figures/monolithic.pdf --ours-name "Language-specific (ours)" --theirs-name "Monolithic"
+      # - python -m scripts.plotters.plot_pretraining_eval_scores metrics/compare_pretraining.csv paper/figures/effect_sampling.pdf
     outputs:
       - paper/figures/train_loss.pdf
       - paper/figures/token_counts.pdf

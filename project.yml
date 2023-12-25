@@ -351,7 +351,7 @@ commands:
       - python -m scripts.plotters.plot_training_curve metrics/wandb_train_curve_main.csv paper/figures/train_loss.pdf
       - python -m scripts.plotters.plot_token_counts metrics/tokens_upsampling.csv paper/figures/token_counts.pdf
       - python -m scripts.plotters.plot_crosseval_heatmap metrics/system_scores/ paper/figures/cross_lingual.pdf
-      - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf --ours-name "RoBERTa-based (ours)" --theirs-name "MultiHashEmbed"
+      - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf --ours-name "RoBERTa-based (ours)" --theirs-name "Multi hash embeddings"
       - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/monolithic_scores/ paper/figures/monolithic.pdf --ours-name "Language-specific (ours)" --theirs-name "Monolithic"
     outputs:
       - paper/figures/train_loss.pdf

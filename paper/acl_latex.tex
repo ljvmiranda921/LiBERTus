@@ -4,7 +4,8 @@
 
 \documentclass[11pt]{article}
 
-\usepackage{acl}
+\usepackage[review]{acl}
+%\usepackage{acl}
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -207,14 +208,14 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/monolithic.pdf}
+\includegraphics[width=0.95\textwidth]{figures/monolithic.pdf}
 \caption{Comparison between training language-specific models versus a single monolithic model as evaluated on the validation set.}
 \label{fig:monolithic}
 \end{figure*}
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/hashembed.pdf}
+\includegraphics[width=0.95\textwidth]{figures/hashembed.pdf}
 \caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
 \label{fig:hashembed}
 \end{figure*}
@@ -224,6 +225,7 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
 We ran the pretraining pipeline for 20k steps (one-fifths of the final training configuration) and measured the validation loss.
 The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
+We tested the following sampling strategies:
 
 \begin{itemize}
   \item \textbf{None:} we used the original dataset without any data sampling or augmentation.

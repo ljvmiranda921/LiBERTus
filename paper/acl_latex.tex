@@ -247,7 +247,7 @@ The merged dataset has 194,281 documents for training and 26,954 documents for v
 This means that the downstream model sees a language mix per training epoch.
 
 As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
-\lj{talk more about what will happen}
+One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on \textsc{lzh}.
 
 
 \subsection{Alternative approach we considered}

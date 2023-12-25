@@ -4,7 +4,7 @@
 
 \documentclass[11pt]{article}
 
-\usepackage[review]{acl}
+\usepackage{acl}
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -39,10 +39,10 @@
 \begin{abstract}
 In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
 Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
+Our systems achieved \lj{on the test set...}.
+On the validation set, we obtained $\geq$70\% F1-score on most language-task pairs.
 We also explored the cross-lingual capability of our trained models.
-\lj{Our systems achieved}
-% TODO: talk about results and scores on the test set
-% maybe benchmark against XLM-RoBERTa and mBERT just for a good baseline?
+This paper highlights our pretraining and finetuning process, and our findings from our internal evaluations.
 \end{abstract}
 
 \section{Introduction}
@@ -53,7 +53,7 @@ We also explored data sampling and augmentation techniques during the pretrainin
 
 Our systems achieved...\lj{stuff}. 
 Table \ref{table:main_results} shows our systems' performance on the shared task test set.
-
+On the validation set, we obtain $\geq$70\% F1-score for the majority of language-task pairs.
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
 The source code for all experiments can be found on GitHub: \githuburl{}.
@@ -61,18 +61,6 @@ The source code for all experiments can be found on GitHub: \githuburl{}.
 \subfile{tables/main_results.tex}
 
 \section{Methodology}
-
-% We noticed that there is a stark diffence in token distribution across all languages, so we used an upsampling strategy to balance them out.
-% Figure \ref{fig:unique_tokens} shows that \textsc{latm} has the most number of unique tokens in the corpora.
-% We upsampled each language by randomly duplicating a document in the training pool until the number of unique tokens (with allowance for duplicates) is greater than or equal to that of \textsc{latm}.
-% The same figure also shows the token counts after the augmentation process.
-
-% \begin{figure}[t]
-% \centering
-% \includegraphics[width=0.5\textwidth]{figures/token_counts.pdf}
-% \caption{Unique token counts (with allowance for duplicates) for each language before and after upsampling.}
-% \label{fig:unique_tokens}
-% \end{figure}
 
 \subsection{Model Pretraining}
 
@@ -202,8 +190,6 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 \paragraph{Pretraining data mix.}
 In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
 We only tested simple up-/downsampling strategies and our experiments are limited to repeating available data. 
-\lj{expand on this}
-
 
 \bibliography{custom}
 
@@ -212,19 +198,12 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 \section{Appendix}
 \label{sec:appendix}
 
-\subsection{Different sampling strategies on pretraining validation performance}
-
-We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
-We ran the pretraining pipeline for 20k steps (one-fifths of the final training configuration) and measured the validation loss.
-The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
-
-\begin{itemize}
-  \item \textbf{None:} we used the original dataset without any data sampling or augmentation.
-  \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
-  \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
-\end{itemize}
-
-Because any form of sampling resulted to unstable pretraining, we decided to stick with the dataset's original data distribution.
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
+\caption{\lj{Training loss curve for the 126M-parameter model after 100k steps.}}
+\label{fig:training_curve}
+\end{figure}
 
 \begin{figure*}[t]
 \centering
@@ -239,6 +218,23 @@ Because any form of sampling resulted to unstable pretraining, we decided to sti
 \caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
 \label{fig:hashembed}
 \end{figure*}
+
+\subsection{Different sampling strategies on pretraining validation performance}
+
+We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
+We ran the pretraining pipeline for 20k steps (one-fifths of the final training configuration) and measured the validation loss.
+The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
+
+\begin{itemize}
+  \item \textbf{None:} we used the original dataset without any data sampling or augmentation.
+  \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
+  \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
+\end{itemize}
+
+
+Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
+We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.
+
 
 \subsection{Finetuning a model per language vs. monolithic system}
 

@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict
 
 ACL_STYLE = {
     "legend.fontsize": "large",
@@ -12,7 +12,7 @@ ACL_STYLE = {
 
 
 COMPONENT_TO_METRIC: Dict[str, str] = {
-    "tagger": "tag_acc",
+    "tagger": "pos_acc",
     "morphologizer": "morph_acc",
     "trainable_lemmatizer": "lemma_acc",
 }

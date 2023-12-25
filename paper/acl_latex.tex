@@ -85,12 +85,14 @@ We approach this by training a multilingual language model akin to the XLM-RoBER
 \label{fig:training_curve}
 \end{figure}
 
-\paragraph{Preparing the pretraining corpora.} We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
-Then, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
-Initially, we upsampled each language to match the token count of \textsc{latm} (highest unique token count), but we found that the training loss jumps up by 5-pp in the middle of pretraining.
+\paragraph{Preparing the pretraining corpora.} 
+We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
+Initially, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
+However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as \textsc{latm}, the most overrepresented language.
 In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
 
-\paragraph{Pretraining the base model.} Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
+\paragraph{Pretraining the base model.} 
+Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
 \libertus{} follows RoBERTa's pretraining architecture \cite{liu-etal-2019-roberta} and takes inspiration from \citet{conneau-etal-2020-unsupervised}'s work on scaling BERT models to multiple languages.
 
 \subfile{tables/pretrain_hyperparams.tex}

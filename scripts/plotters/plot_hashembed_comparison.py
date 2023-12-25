@@ -48,18 +48,24 @@ def plot_hashembed_comparison(
 
     components = COMPONENT_TO_METRIC.keys()
 
+    def _get_score(scores_dict, component: str) -> float:
+        score = (
+            scores_dict.get("morphologizer").get("pos_acc")
+            if component == "tagger"
+            else scores_dict.get(component).get(COMPONENT_TO_METRIC[component])
+        )
+        return round(score, 2)
+
     for ours_fp, theirs_fp in zip(our_scores_fp, their_scores_fp):
         our_scores = srsly.read_json(ours_fp)
         their_scores = srsly.read_json(theirs_fp)
         for component in components:
             component_to_rects[component]["ours"].append(
-                round(our_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2)
+                _get_score(our_scores, component)
             )
 
             component_to_rects[component]["theirs"].append(
-                round(
-                    their_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2
-                )
+                _get_score(their_scores, component)
             )
 
     x = np.arange(len(languages))

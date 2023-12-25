@@ -163,9 +163,7 @@ whereas the bottom performers are \textsc{san} (0.839), \textsc{cop} (0.292), an
 
 \paragraph{Error analysis for \textsc{cop} and \textsc{hbo}.}
 We suspect that the main reason why we obtained worse scores on \textsc{cop} and \textsc{hbo} is due to our downstream tokenization process.
-% Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
-% These languages have non-latin scripts, and our tokenizer cannot handle these characters.
-% In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
+To test this, we \lj{look into how some sentences were tokenized vs. their actual tokenization?}
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -194,6 +192,7 @@ This approach can be a viable alternative on limited corpora.
 Our training and benchmarking source code is on GitHub: \githuburl{}.
 We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
 
+
 \section*{Limitations}
 
 \paragraph{Pretrained LM size.}
@@ -202,7 +201,7 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 
 \paragraph{Pretraining data mix.}
 In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
-
+\lj{expand on this}
 
 
 \bibliography{custom}
@@ -215,6 +214,8 @@ In the end, we didn't employ any sampling strategy to balance the token distribu
 \subsection{Different sampling strategies on pretraining validation performance}
 
 We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
+We ran the pretraining pipeline for 20k steps (one-fifths of the final training configuration) and measured the validation loss.
+The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
 
 \begin{itemize}
   \item \textbf{None:} we used the original dataset without any data sampling or augmentation.
@@ -222,8 +223,7 @@ We explored different sampling strategies and their effect on the pretraining va
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
 \end{itemize}
 
-The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
-It is interesting that sampling is detrimental to validation loss, but in our final system, we employed the upsampling strategy as we believe that it would provide a more robust performance across all languages.
+Because any form of sampling resulted to unstable pretraining, we decided to stick with the dataset's original data distribution.
 
 
 \subsection{Finetuning a model per language vs. monolithic system}

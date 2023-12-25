@@ -4,18 +4,18 @@ weasel run convert-to-spacy --force
 declare -a dev=("chu" "cop" "fro" "got" "grc" "hbo" "isl" "lat" "latm" "lzh" "ohu" "orv" "san")
 
 # Common cases
-# declare -a arr=("chu" "fro" "got" "grc" "isl" "lat" "orv" "san")
-# declare -a arr=("lat" "orv" "san")
-# for i in "${arr[@]}"
-# do
-#     weasel run finetune-trf-model . --vars.train_lang "$i" --vars.dev_lang "$i" 
-#     weasel run package-model . --vars.train_lang "$i"
-#     for j in "${dev[@]}"
-#     do
-#         weasel run evaluate-model-dev . --vars.train_lang "$i" --vars.dev_lang "$j"
-#         cp metrics/system_scores/$i/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/$i/
-#     done
-# done
+declare -a arr=("chu" "fro" "got" "grc" "isl" "lat" "orv" "san")
+declare -a arr=("lat" "orv" "san")
+for i in "${arr[@]}"
+do
+    weasel run finetune-trf-model . --vars.train_lang "$i" --vars.dev_lang "$i" 
+    weasel run package-model . --vars.train_lang "$i"
+    for j in "${dev[@]}"
+    do
+        weasel run evaluate-model-dev . --vars.train_lang "$i" --vars.dev_lang "$j"
+        cp metrics/system_scores/$i/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/$i/
+    done
+done
 
 # Special cases
 ## ohu needs to adjust the minimum frequency
@@ -28,22 +28,22 @@ do
 done
 
 ## cop needs special tokenizer
-# weasel run finetune-trf-model . --vars.train_lang cop --vars.dev_lang cop --vars.nlp_lang el --vars.config transformer.cfg
-# weasel run package-model . --vars.train_lang cop --vars.nlp_lang el
-# for j in "${dev[@]}"
-# do
-#     weasel run evaluate-model-dev . --vars.train_lang cop --vars.dev_lang "$j"
-#     cp metrics/system_scores/cop/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/cop/
-# done
+weasel run finetune-trf-model . --vars.train_lang cop --vars.dev_lang cop --vars.nlp_lang el --vars.config transformer.cfg
+weasel run package-model . --vars.train_lang cop --vars.nlp_lang el
+for j in "${dev[@]}"
+do
+    weasel run evaluate-model-dev . --vars.train_lang cop --vars.dev_lang "$j"
+    cp metrics/system_scores/cop/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/cop/
+done
 
 ## hbo might need some lexical info
-# weasel run finetune-trf-model . --vars.train_lang hbo --vars.dev_lang hbo --vars.nlp_lang he --vars.config transformer.cfg
-# weasel run package-model . --vars.train_lang hbo --vars.nlp_lang he
-# for j in "${dev[@]}"
-# do
-#     weasel run evaluate-model-dev . --vars.train_lang hbo --vars.dev_lang "$j"
-#     cp metrics/system_scores/hbo/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/hbo/
-# done
+weasel run finetune-trf-model . --vars.train_lang hbo --vars.dev_lang hbo --vars.nlp_lang he --vars.config transformer.cfg
+weasel run package-model . --vars.train_lang hbo --vars.nlp_lang he
+for j in "${dev[@]}"
+do
+    weasel run evaluate-model-dev . --vars.train_lang hbo --vars.dev_lang "$j"
+    cp metrics/system_scores/hbo/metrics-$j-dev.json /content/drive/MyDrive/Documents/Experiments/libertus/hbo/
+done
 
 ## latm is weird because you need to upload it properly on Huggingface
 weasel run finetune-trf-model . --vars.train_lang latm --vars.dev_lang latm

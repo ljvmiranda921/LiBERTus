@@ -22,6 +22,7 @@
 \newcommand{\draftcomment}[3]{\draftonly{\textcolor{#2}{[#3]{$_{\textsc{#1}}$}}}}
 \newcommand{\lj}[1]{\draftcomment{Lj}{red}{#1}}
 \newcommand{\libertus}{\textsc{LiBERTus}}
+\newcommand{\githuburl}{\url{https://anonymous.4open.science/r/sigtyp-1F05/}}
 
 
 \title{Team 21a's Submission to the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages}
@@ -55,7 +56,7 @@ Table \ref{table:main_results} shows our systems' performance on the shared task
 
 
 We detail our resource creation, model pretraining, and finetuning methodologies.
-The source code for all experiments can be found on GitHub: \url{https://anonymous.4open.science/r/sigtyp-1F05/}
+The source code for all experiments can be found on GitHub: \githuburl{}.
 
 \subfile{tables/main_results.tex}
 
@@ -155,8 +156,12 @@ In this section, we will outline our internal evaluations and benchmarking exper
 
 \subfile{tables/validation_results.tex}
 
-First, we evaluated our finetuned models on the validation set.
-Table \ref{table:validation_results} shows the results.
+Table \ref{table:validation_results} shows the validation scores of our finetuned models.
+We achieved $\geq$70\% performance in most language-task pairs. 
+The top performers, calculated by taking the average across all tasks, are \textsc{latm} (0.968), \textsc{isl} (0.938), and \textsc{lat} (0.918),
+whereas the bottom performers are \textsc{san} (0.839), \textsc{cop} (0.292), and \textsc{hbo} (0.200).
+
+
 % Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
 % These languages have non-latin scripts, and our tokenizer cannot handle these characters.
 % In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
@@ -185,7 +190,7 @@ The validation scores are high for the majority of languages.
 We also evaluated each language's cross-lingual capability and showed that transfer learning is possible especially on lemmatization.
 This approach can be a viable alternative on limited corpora.
 
-The source code for training and experimentation can be found on GitHub: \lj{insert GitHub or OSF url}.
+The source code for training and experimentation can be found on GitHub: \githuburl{}.
 We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
 
 \section*{Limitations}

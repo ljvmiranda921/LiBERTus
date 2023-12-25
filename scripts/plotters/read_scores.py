@@ -4,6 +4,7 @@ from typing import Dict, List
 
 import srsly
 import typer
+import numpy as np
 from wasabi import msg
 
 from .constants import COMPONENT_TO_METRIC
@@ -53,7 +54,28 @@ def read_scores(
     # Format for table
     keys = component_to_rects.keys()
     table_data = [scores for scores in zip(*(component_to_rects[key] for key in keys))]
+    msg.info(f"Scores in the {split.value} split")
     msg.table(data=table_data, header=list(keys))
+
+    msg.info("Top-3 performers (average of all tasks)")
+    avg_scores = sorted(
+        [(lang, np.mean(scores)) for lang, scores in zip(languages, table_data)],
+        key=lambda x: x[1],
+        reverse=True,
+    )
+    msg.text(
+        ", ".join([f"{lang} ({round(score,3)})" for lang, score in avg_scores[:3]])
+    )
+    msg.info("Bottom-3 performers (average of all tasks)")
+    msg.text(
+        ", ".join([f"{lang} ({round(score,3)})" for lang, score in avg_scores[-3:]])
+    )
+    msg.info("Worst than random chance")
+    msg.text(
+        ", ".join(
+            [f"{lang} ({round(score,3)})" for lang, score in avg_scores if score <= 0.5]
+        )
+    )
 
 
 if __name__ == "__main__":

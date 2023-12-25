@@ -201,6 +201,7 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 
 \paragraph{Pretraining data mix.}
 In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
+We only tested simple up-/downsampling strategies and our experiments are limited to repeating available data. 
 \lj{expand on this}
 
 
@@ -248,7 +249,8 @@ This means that the downstream model sees a language mix per training epoch.
 
 As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
 One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on \textsc{lzh}.
-
+Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (\textsc{latm}, \textsc{lat}) and minority ones (\textsc{ohu}, \textsc{orv}, \textsc{san}).
+Due to these findings, we decided to train multiple models for our final system.
 
 \subsection{Alternative approach we considered}
 

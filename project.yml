@@ -90,7 +90,7 @@ workflows:
     - finetune-with-merged-corpus
   experiment-sampling:
     - create-vocab
-    - pretrain-model-with-validation
+    - pretrain-model
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -163,32 +163,6 @@ commands:
         --name ${vars.name}
         --size ${vars.model_size}
         --pretraining-corpus ${vars.pretraining_corpus}
-        --vocab tokenizer/vocab.json
-        --merges tokenizer/merges.txt
-        --batch-size ${vars.batch_size}
-        --max-steps ${vars.max_steps}
-        --save-steps ${vars.save_steps}
-        --seed ${vars.seed}
-        --wandb-project ${vars.wandb_project}
-    deps:
-      - tokenizer/vocab.json
-      - tokenizer/merges.txt
-      - ${vars.pretraining_corpus}
-    outputs:
-      - pretraining/${vars.model_size}/model/config.json
-      - pretraining/${vars.model_size}/model/model.safetensors
-      - pretraining/${vars.model_size}/model/training_args.bin
-
-  - name: "pretrain-model-with-validation"
-    help: "Pretrain a multilingual LM yet include validation dataset"
-    script:
-      - mkdir -p pretraining/${vars.model_size}/
-      - >-
-        python -m scripts.pretrain_model pretraining/${vars.model_size}/
-        --name ${vars.name}
-        --size ${vars.model_size}
-        --pretraining-corpus ${vars.pretraining_corpus}
-        --evaluation-corpus ${vars.evaluation_corpus} 
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}

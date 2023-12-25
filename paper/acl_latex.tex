@@ -203,8 +203,8 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/train_loss.pdf}
-\caption{\lj{Training loss curve for the 126M-parameter model after 100k steps.}}
+\includegraphics[width=0.5\textwidth]{figures/effect_sampling.pdf}
+\caption{Validation loss curve for different sampling strategies in 20k steps.}
 \label{fig:effect_sampling}
 \end{figure}
 
@@ -235,10 +235,8 @@ We tested the following sampling strategies:
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
 \end{itemize}
 
-
 Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
 We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.
-
 
 \subsection{Finetuning a model per language vs. monolithic system}
 
@@ -253,7 +251,6 @@ Training the monolithic model is also sensitive to the training data distributio
 Due to these findings, we decided to train multiple models for our final system.
 
 \subsection{Alternative approach\textemdash multi-hash embeddings}
-
 
 We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.

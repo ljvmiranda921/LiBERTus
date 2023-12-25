@@ -138,7 +138,7 @@ To obtain the most probable tree, we passed the context-sensitive embeddings fro
 We set the minimum frequency of an edit tree to 3, and used the surface form of the token as a backoff when no applicable edit tree is found.
 Finally, we ensured that the lemmatizer checks at least a single tree before resorting to backoff. 
 
-\paragraph{Finetuning the pipelines} We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
+\paragraph{Finetuning the pipelines.} We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
 For all components, the pretrained embeddings are passed on to linear layer with softmax activation.
 Sometimes, the tokenization from the multilingual model does not align one-to-one with spaCy's tokenization.
 In such case, we use a pooling layer that computes the average of each feature to obtain a single vector per spaCy token.
@@ -161,7 +161,8 @@ We achieved $\geq$70\% performance in most language-task pairs.
 The top performers, calculated by taking the average across all tasks, are \textsc{latm} (0.968), \textsc{isl} (0.938), and \textsc{lat} (0.918),
 whereas the bottom performers are \textsc{san} (0.839), \textsc{cop} (0.292), and \textsc{hbo} (0.200).
 
-
+\paragraph{Error analysis for \textsc{cop} and \textsc{hbo}.}
+We suspect that the main reason why we obtained worse scores on \textsc{cop} and \textsc{hbo} is due to our downstream tokenization process.
 % Although we obtained strong performance on the majority of languages, our results on \textsc{cop}, \textsc{hbo}, and \textsc{lzh} are poor.
 % These languages have non-latin scripts, and our tokenizer cannot handle these characters.
 % In the end, we decided to prioritize having a single multilingual model for the task so we maintained our tokenizer choice.
@@ -241,7 +242,7 @@ Figure \ref{fig:full_vs_langspecific} illustrates these results.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/hashembed.pdf}
-\caption{Comparison.}
+\caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
 \label{fig:hashembed}
 \end{figure*}
 

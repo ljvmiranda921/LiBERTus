@@ -30,7 +30,6 @@ def plot_pretraining_eval_scores(input_file: Path, output_file: Path):
             )
 
     df = pd.DataFrame().from_dict(sampling_strategy)
-    df = df.fillna(method="bfill")
     sampling_strategy = df.to_dict(orient="list")
 
     fig, ax = plt.subplots(figsize=(6, 4))

@@ -225,6 +225,19 @@ The evaluation corpus was built from the validation set of the shared task, and 
 
 Because any form of sampling resulted to unstable pretraining, we decided to stick with the dataset's original data distribution.
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/monolithic.pdf}
+\caption{Comparison between training language-specific models versus a single monolithic model as evaluated on the validation set.}
+\label{fig:monolithic}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/hashembed.pdf}
+\caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
+\label{fig:hashembed}
+\end{figure*}
 
 \subsection{Finetuning a model per language vs. monolithic system}
 
@@ -233,18 +246,12 @@ Here, we combined the training corpora for all languages, then shuffled them bef
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
 This means that the downstream model sees a language mix per training epoch.
 
-We found out that although more expensive, finetuning a model per language still yields the best results. 
-Figure \ref{fig:full_vs_langspecific} illustrates these results.
+As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
+\lj{talk more about what will happen}
 
 
 \subsection{Alternative approach we considered}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/hashembed.pdf}
-\caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
-\label{fig:hashembed}
-\end{figure*}
 
 We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.

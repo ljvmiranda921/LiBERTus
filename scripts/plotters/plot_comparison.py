@@ -19,13 +19,19 @@ class Split(str, Enum):
     test = "test"
 
 
-def plot_hashembed_comparison(
+def plot_comparison(
     our_scores_dir: Path,
     their_scores_dir: Path,
     output_file: Path,
+    ours_name: str = typer.Option(
+        "RoBERTa-based", help="Name for our_scores_dir to appear in plot."
+    ),
+    theirs_name: str = typer.Option(
+        "MultiHashEmbed", help="Name of their_scores_dir to appear in plot."
+    ),
     split: Split = typer.Option(Split.dev, help="Dataset split to plot."),
 ):
-    """Plot hash embed comparison"""
+    """Plot comparison"""
 
     languages = sorted([dir.stem for dir in our_scores_dir.iterdir() if dir.is_dir()])
     msg.text(f"Found languages: {', '.join(lang for lang in languages)}")
@@ -85,7 +91,7 @@ def plot_hashembed_comparison(
                 x + offset + 0.15,
                 np.array(scores),
                 width,
-                label="RoBERTa-based" if label == "ours" else "MultiHashEmbed",
+                label=ours_name if label == "ours" else theirs_name,
                 **bar_settings.get(label),
             )
             multiplier += 1
@@ -115,4 +121,4 @@ def plot_hashembed_comparison(
 
 
 if __name__ == "__main__":
-    typer.run(plot_hashembed_comparison)
+    typer.run(plot_comparison)

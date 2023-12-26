@@ -148,11 +148,7 @@ In this section, we will outline our internal evaluations and benchmarking exper
 Table \ref{table:validation_results} shows the validation scores of our finetuned models.
 We achieved $\geq$70\% performance in most language-task pairs. 
 The top performers, calculated by taking the average across all tasks, are \textsc{latm} (0.968), \textsc{isl} (0.938), and \textsc{lat} (0.918),
-whereas the bottom performers are \textsc{cop} (0.849), \textsc{san} (0.839), and \textsc{hbo} (0.200).
-
-\paragraph{Error analysis for \textsc{cop} and \textsc{hbo}.}
-Our performance on \textsc{cop} and \textsc{hbo} are below random chance.
-We suspect that it's due to our tokenization process during finetuning.
+whereas the bottom performers are \textsc{cop} (0.849), \textsc{san} (0.839), and \textsc{hbo} (0.468).
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -193,6 +189,10 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 \paragraph{Pretraining data mix.}
 In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
 We only tested simple up-/downsampling strategies and our experiments are limited to repeating available data. 
+
+\paragraph{Label combination as individual classes}
+When training the morphologizer and POS tagger, we treated each feature and parts-of-speech combination as its own class instead of modeling them individually.
+This limits our text classifier to only predicting combinations it has seen during the training process.
 
 \bibliography{custom}
 

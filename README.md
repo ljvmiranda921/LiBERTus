@@ -25,7 +25,6 @@ Commands are only re-run if their inputs have changed.
 | `create-vocab` | Train a tokenizer to create a vocabulary |
 | `pretrain-model` | Pretrain a multilingual LM from a corpus |
 | `pretrain-model-from-checkpoint` | Pretrain a multilingual LM from a corpus based on a checkpoint |
-| `pretrain-model-with-validation` | Pretrain a multilingual LM yet include validation dataset |
 | `upload-to-hf` | Upload pretrained model and corresponding tokenizer to the HuggingFace repository |
 | `convert-to-spacy-merged` | Convert CoNLL-U files into spaCy format for finetuning |
 | `convert-to-spacy` | Convert CoNLL-U files into spaCy format for finetuning |
@@ -49,7 +48,7 @@ inputs have changed.
 | `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
 | `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 | `experiment-merged` | `convert-to-spacy-merged` &rarr; `finetune-with-merged-corpus` |
-| `experiment-sampling` | `create-vocab` &rarr; `pretrain-model-with-validation` |
+| `experiment-sampling` | `create-vocab` &rarr; `pretrain-model` |
 
 ### 🗂 Assets
 

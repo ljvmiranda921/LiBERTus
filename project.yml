@@ -68,9 +68,6 @@ assets:
       branch: main
       path: morphology/valid
     description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
-  - dest: assets/default_zh_model.zip
-    url: https://github.com/lancopku/pkuseg-python/releases/download/v0.0.25/default_v2.zip
-    description: "Model to use for pkuseg for Chinese"
 
 # Workflows are sequences of commands (see below) executed in order. You can
 # run them via "weasel run [workflow]". If a commands's inputs/outputs

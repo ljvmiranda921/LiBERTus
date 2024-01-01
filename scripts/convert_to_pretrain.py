@@ -1,3 +1,4 @@
+import concurrent.futures
 import itertools
 import random
 import statistics
@@ -5,6 +6,7 @@ from collections import Counter
 from enum import Enum
 from pathlib import Path
 from typing import Dict, List, Optional
+from multiprocessing import Pool
 
 import typer
 from conllu import parse_incr
@@ -24,6 +26,7 @@ def convert_to_pretrain(
     output_path: Path = typer.Option(Path("corpus/pretraining.txt"), "--output-path", "-o", help="Path to save the pretraining corpus."),
     shuffle: bool = typer.Option(False, "--shuffle", "-s", help="Shuffle the examples before saving to disk."),
     sampling_strategy: Optional[SamplingStrategy] = typer.Option(None, "--sampling-strategy", "-S", help="Sampling strategy to use."),
+    num_choices: int = typer.Option(1, "--num-choices", "-N", help="Number of choices to sample."),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Show additional information."),
     seed: int = typer.Option(42, "--seed", help="Set random seed for shuffling."),
     # fmt: on
@@ -47,7 +50,9 @@ def convert_to_pretrain(
     if sampling_strategy:
         # Sample the files
         msg.text(f"Sampling using '{sampling_strategy.value}'")
-        pretraining = sample_corpora(examples, sampling_strategy, verbose=verbose)
+        pretraining = sample_corpora(
+            examples, sampling_strategy, verbose=verbose, num_choices=num_choices
+        )
 
     if shuffle:
         msg.info(f"Shuffling examples using seed '{seed}'")
@@ -73,6 +78,7 @@ def get_examples(file: Path) -> List[str]:
 def sample_corpora(
     examples: Dict[str, List[str]],
     strategy: SamplingStrategy,
+    num_choices: int,
     verbose: bool = True,
 ) -> List[str]:
     """Sample the corpora based on some token statistics
@@ -105,17 +111,15 @@ def sample_corpora(
 
     augmented_corpora: Dict[str, List[str]] = {}
     if strategy == SamplingStrategy.upsample:
-        msg.info("Using upsampling strategy")
-        # Upsample: get percentage of each with respect to max and sample by that amount.
-        _, most_common = token_counts.most_common()[0]
-        for lang, sents in examples.items():
-            msg.text(f"Upsampling '{lang}'...", show=verbose)
+
+        def _worker(args):
+            lang, sents, most_common, token_counts, num_choices = args
             num_tokens_to_add = int(
                 most_common * (1 - (token_counts[lang] / most_common))
             )
             sents_to_add = []
             while True:
-                sents_to_add.append(random.choice(sents))
+                sents_to_add.extend(random.sample(sents, num_choices))
                 num_tokens_added = _count_tokens(lang, sents_to_add)
                 if num_tokens_added >= num_tokens_to_add:
                     break
@@ -124,7 +128,22 @@ def sample_corpora(
                 f"Adding {len(sents_to_add)} sentences ({num_tokens_added} tokens) to {lang}",
                 show=verbose,
             )
-            augmented_corpora[lang] = sents + sents_to_add
+
+            return lang, sents + sents_to_add
+
+        msg.info("Using upsampling strategy")
+        # Upsample: get percentage of each with respect to max and sample by that amount.
+        _, most_common = token_counts.most_common()[0]
+
+        args_list = [
+            (lang, sents, most_common, token_counts, num_choices)
+            for lang, sents in examples.items()
+        ]
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            results = executor.map(_worker, args_list)
+
+        for lang, augmented_sents in results:
+            augmented_corpora[lang] = augmented_sents
 
     if strategy == SamplingStrategy.average:
         msg.text("Using averaging strategy")
@@ -135,7 +154,7 @@ def sample_corpora(
             msg.text(f"{approach} '{lang}'...", show=verbose)
             new_sents = []
             while True:
-                new_sents.append(random.choice(sents))
+                new_sents.extend(random.sample(sents, num_choices))
                 num_tokens_added = _count_tokens(lang, new_sents)
                 if num_tokens_added >= median:
                     break

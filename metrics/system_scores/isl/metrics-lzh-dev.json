@@ -12,7 +12,7 @@
     "sents_p":1.0,
     "sents_r":1.0,
     "sents_f":1.0,
-    "dep_uas":0.0170546833,
+    "dep_uas":0.0170160105,
     "dep_las":0.0170160105,
     "dep_las_per_type":{
       "obl:lmod":{
@@ -210,6 +210,11 @@
         "r":0.0,
         "f":0.0
       },
+      "nmod:poss":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
       "appos":{
         "p":0.0,
         "r":0.0,
@@ -218,17 +223,17 @@
     }
   },
   "trainable_lemmatizer":{
-    "lemma_acc":0.01929615
+    "lemma_acc":0.0210879353
   },
   "tagger":{
     "tag_acc":0.0
   },
   "morphologizer":{
-    "pos_acc":0.0006891482,
-    "morph_acc":0.0002756593,
-    "morph_micro_p":0.1578947368,
-    "morph_micro_r":0.0008228195,
-    "morph_micro_f":0.0016371078,
+    "pos_acc":0.0128641,
+    "morph_acc":0.0064779932,
+    "morph_micro_p":0.0,
+    "morph_micro_r":0.0,
+    "morph_micro_f":0.0,
     "morph_per_feat":{
       "Case":{
         "p":0.0,
@@ -251,9 +256,9 @@
         "f":0.0
       },
       "Degree":{
-        "p":0.8181818182,
-        "r":0.0062456627,
-        "f":0.0123966942
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
       },
       "VerbForm":{
         "p":0.0,
@@ -324,8 +329,13 @@
         "p":0.0,
         "r":0.0,
         "f":0.0
+      },
+      "Foreign":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
       }
     }
   },
-  "speed":636.5849602446
+  "speed":608.0668892897
 }

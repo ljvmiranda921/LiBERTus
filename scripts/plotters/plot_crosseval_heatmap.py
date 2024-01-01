@@ -43,7 +43,11 @@ def plot_crosseval_heatmap(
             for col in languages:
                 metrics_path = row / f"metrics-{col}-{split.value}.json"
                 metrics = read_json(metrics_path)
-                score = metrics[component].get(COMPONENT_TO_METRIC[component])
+                score = (
+                    metrics["morphologizer"].get("pos_acc")
+                    if component == "tagger"
+                    else metrics[component].get(COMPONENT_TO_METRIC[component])
+                )
                 rowline.append(score)
             component_to_heatmap[component].append(rowline)
 

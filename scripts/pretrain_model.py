@@ -51,6 +51,7 @@ def pretrain_model(
     output_dir: Path = typer.Argument(..., help="Path to save the trained model."),
     model_size: ModelSize = typer.Option(ModelSize.base, "--size", "-sz", help="Size of the model to train."),
     pretraining_corpus: Path = typer.Option(None, help="Path to the pretraining corpus."),
+    evaluation_corpus: Optional[Path] = typer.Option(None, help="Path to the evaluation corpus."),
     vocab: Path = typer.Option(None, help="Path to vocab.json to initialize the tokenizer."),
     merges: Path = typer.Option(None, help="Path to merges.txt to initialize the tokenizer."),
     learning_rate: float = typer.Option(2e-4, help="Set the learning rate."),
@@ -77,11 +78,25 @@ def pretrain_model(
 
     msg.info("Setting-up the pretraining corpus")
     tokenizer = RobertaTokenizerFast.from_pretrained(str(vocab.parent), max_len=512)
-    dataset = LineByLineTextDataset(
+    train_dataset = LineByLineTextDataset(
         tokenizer=tokenizer,
         file_path=str(pretraining_corpus),
         block_size=128,
     )
+
+    eval_dataset = (
+        LineByLineTextDataset(
+            tokenizer=tokenizer,
+            file_path=str(evaluation_corpus),
+            block_size=128,
+        )
+        if evaluation_corpus
+        else None
+    )
+
+    if eval_dataset is not None:
+        msg.info("Pretraining with evaluation dataset")
+
     data_collator = DataCollatorForLanguageModeling(
         tokenizer=tokenizer,
         mlm=True,
@@ -128,9 +143,11 @@ def pretrain_model(
         # Reproducibility
         seed=seed,
         data_seed=seed,
+        # Evaluation
+        evaluation_strategy="steps" if eval_dataset else "no",
         # Tracking and reporting
         report_to=None if do_not_track else "wandb",
-        logging_steps=100,
+        logging_steps=500,
         run_name=run_name,
         log_level="info",
     )
@@ -147,7 +164,8 @@ def pretrain_model(
                 model=model,
                 args=training_args,
                 data_collator=data_collator,
-                train_dataset=dataset,
+                train_dataset=train_dataset,
+                eval_dataset=eval_dataset,
             )
             trainer.train(resume_from_checkpoint=checkpoint_dir)
             trainer.save_model(str(model_dir))
@@ -156,7 +174,8 @@ def pretrain_model(
         model=model,
         args=training_args,
         data_collator=data_collator,
-        train_dataset=dataset,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
     )
     trainer.train()
     trainer.save_model(str(model_dir))

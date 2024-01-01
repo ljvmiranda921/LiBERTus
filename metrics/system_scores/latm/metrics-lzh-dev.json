@@ -12,8 +12,8 @@
     "sents_p":1.0,
     "sents_r":1.0,
     "sents_f":1.0,
-    "dep_uas":0.0175194338,
-    "dep_las":0.0170166686,
+    "dep_uas":0.0170160105,
+    "dep_las":0.0170160105,
     "dep_las_per_type":{
       "obl:lmod":{
         "p":0.0,
@@ -213,14 +213,14 @@
     }
   },
   "trainable_lemmatizer":{
-    "lemma_acc":0.0196177525
+    "lemma_acc":0.0213635946
   },
   "tagger":{
     "tag_acc":0.0
   },
   "morphologizer":{
-    "pos_acc":0.0001378296,
-    "morph_acc":0.0002756593,
+    "pos_acc":0.0001837729,
+    "morph_acc":0.0128181568,
     "morph_micro_p":0.0,
     "morph_micro_r":0.0,
     "morph_micro_f":0.0,
@@ -295,11 +295,6 @@
         "r":0.0,
         "f":0.0
       },
-      "Form":{
-        "p":0.0,
-        "r":0.0,
-        "f":0.0
-      },
       "Voice":{
         "p":0.0,
         "r":0.0,
@@ -327,5 +322,5 @@
       }
     }
   },
-  "speed":643.679779394
+  "speed":444.8605871121
 }

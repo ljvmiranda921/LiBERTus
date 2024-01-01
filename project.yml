@@ -24,12 +24,16 @@ vars:
   publish_message: "Update SIGTYP pipeline"
   # Pretraining params
   seed: 42
-  batch_size: 65
+  batch_size: 64
   max_steps: 100000
   save_steps: 1000
   model_size: "base"
+  learning_rate: 0.0002
   sampling_strategy: "upsample"
+  evaluation_corpus: "corpus/evaluation.txt"
+  pretraining_corpus: "corpus/pretraining.txt"
   # Finetuning params
+  nlp_lang: "xx"
   config: "transformer.cfg"
   base_model: "ljvmiranda921/LiBERTus-base"
   train_lang: "chu"
@@ -64,6 +68,9 @@ assets:
       branch: main
       path: morphology/valid
     description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
+  - dest: assets/default_zh_model.zip
+    url: https://github.com/lancopku/pkuseg-python/releases/download/v0.0.25/default_v2.zip
+    description: "Model to use for pkuseg for Chinese"
 
 # Workflows are sequences of commands (see below) executed in order. You can
 # run them via "weasel run [workflow]". If a commands's inputs/outputs
@@ -78,6 +85,12 @@ workflows:
     - finetune-trf-model
     - evaluate-model-dev
     # - evaluate-model-test
+  experiment-merged:
+    - convert-to-spacy-merged
+    - finetune-with-merged-corpus
+  experiment-sampling:
+    - create-vocab
+    - pretrain-model
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -88,21 +101,27 @@ commands:
     help: "Create corpus for multilingual LM pretraining"
     script:
       - >-
-        python -m scripts.convert_to_pretrain assets/train/ assets/dev/ 
-        --output-path corpus/pretraining.txt 
+        python -m scripts.convert_to_pretrain assets/dev 
+        --output-path ${vars.evaluation_corpus} 
+        --seed 42 
+        --shuffle 
+        --verbose
+      - >-
+        python -m scripts.convert_to_pretrain assets/train/ 
+        --output-path ${vars.pretraining_corpus} 
         --seed ${vars.seed}
-        --sampling-strategy ${vars.sampling_strategy}
         --shuffle
         --verbose
     outputs:
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
+      - ${vars.evaluation_corpus}
 
   - name: "create-vocab"
     help: "Train a tokenizer to create a vocabulary"
     script:
-      - python -m scripts.train_tokenizer corpus/pretraining.txt tokenizer/
+      - python -m scripts.train_tokenizer ${vars.pretraining_corpus} tokenizer/
     deps:
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
@@ -115,7 +134,9 @@ commands:
         python -m scripts.pretrain_model pretraining/${vars.model_size}/
         --name ${vars.name}
         --size ${vars.model_size}
-        --pretraining-corpus corpus/pretraining.txt
+        --pretraining-corpus ${vars.pretraining_corpus}
+        --evaluation-corpus ${vars.evaluation_corpus} 
+        --learning-rate ${vars.learning_rate}
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
@@ -126,7 +147,7 @@ commands:
     deps:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors
@@ -141,7 +162,7 @@ commands:
         --resume-from-checkpoint
         --name ${vars.name}
         --size ${vars.model_size}
-        --pretraining-corpus corpus/pretraining.txt
+        --pretraining-corpus ${vars.pretraining_corpus}
         --vocab tokenizer/vocab.json
         --merges tokenizer/merges.txt
         --batch-size ${vars.batch_size}
@@ -152,7 +173,7 @@ commands:
     deps:
       - tokenizer/vocab.json
       - tokenizer/merges.txt
-      - corpus/pretraining.txt
+      - ${vars.pretraining_corpus}
     outputs:
       - pretraining/${vars.model_size}/model/config.json
       - pretraining/${vars.model_size}/model/model.safetensors
@@ -174,6 +195,25 @@ commands:
       - pretraining/${vars.model_size}/model/model.safetensors
       - pretraining/${vars.model_size}/model/training_args.bin
 
+  - name: "convert-to-spacy-merged"
+    help: "Convert CoNLL-U files into spaCy format for finetuning"
+    script:
+      # Remove erroneus files first from corpus
+      - mv assets/train/ohu_train.conllu .
+      - mv assets/train/orv_train.conllu .
+      - mv assets/dev/orv_valid.conllu .
+      # Concatenate everything for experiment
+      - mkdir -p corpus/merged_train/
+      - python -m spacy convert assets/train/ corpus/merged_train/ --morphology --concatenate
+      - mkdir -p corpus/merged_dev/
+      - python -m spacy convert assets/dev/ corpus/merged_dev/ --morphology --concatenate
+    deps:
+      - assets/train/
+      - assets/dev/
+    outputs:
+      - corpus/merged_train/train.spacy
+      - corpus/merged_dev/dev.spacy
+
   - name: "convert-to-spacy"
     help: "Convert CoNLL-U files into spaCy format for finetuning"
     script:
@@ -181,10 +221,11 @@ commands:
       - mv assets/train/ohu_train.conllu .
       - mv assets/train/orv_train.conllu .
       - mv assets/dev/orv_valid.conllu .
+      # Convert each language
       - mkdir -p corpus/train
-      - python -m spacy convert assets/train/ corpus/train/ --morphology
+      - python -m spacy convert assets/train/ corpus/train/ --morphology -T
       - mkdir -p corpus/dev
-      - python -m spacy convert assets/dev/ corpus/dev/ --morphology
+      - python -m spacy convert assets/dev/ corpus/dev/ --morphology -T
     deps:
       - assets/train/
       - assets/dev/
@@ -198,6 +239,7 @@ commands:
       - mkdir -p training/${vars.train_lang}/
       - >-
         python -m spacy train configs/default.cfg
+        --nlp.lang ${vars.nlp_lang}
         --output-path training/${vars.train_lang}/
         --paths.train corpus/train/${vars.train_lang}_train.spacy
         --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy
@@ -215,7 +257,8 @@ commands:
     script:
       - mkdir -p training/${vars.train_lang}/
       - >-
-        python -m spacy train configs/transformer.cfg
+        python -m spacy train configs/${vars.config}
+        --nlp.lang ${vars.nlp_lang}
         --output-path training/${vars.train_lang}/
         --paths.train corpus/train/${vars.train_lang}_train.spacy
         --paths.dev corpus/dev/${vars.dev_lang}_valid.spacy
@@ -228,6 +271,25 @@ commands:
     outputs:
       - training/${vars.train_lang}/model-best/
       - training/${vars.train_lang}/model-last/
+
+  - name: "finetune-with-merged-corpus"
+    help: "Finetune a transformer model on the combined training and validation corpora"
+    script:
+      - mkdir -p training/merged/
+      - >-
+        python -m spacy train configs/transformer.cfg
+        --output-path training/merged/
+        --paths.train corpus/merged_train/train.spacy
+        --paths.dev corpus/merged_dev/dev.spacy
+        --components.transformer.model.name ${vars.base_model}
+        --system.seed ${vars.seed}
+        --gpu-id ${vars.gpu_id}
+    deps:
+      - corpus/merged_train/train.spacy
+      - corpus/merged_dev/dev.spacy
+    outputs:
+      - training/merged/model-best/
+      - training/merged/model-last/
 
   - name: "package-model"
     help: "Package model and upload to HuggingFace"
@@ -242,14 +304,14 @@ commands:
       # Upload to HuggingFace
       - huggingface-cli login --token ${env.HUGGINGFACE_TOKEN}
       - >-
-        python -m spacy huggingface-hub push packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/xx_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
-        --msg "xx_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
+        python -m spacy huggingface-hub push packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+        --msg "${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}: ${vars.publish_message}"
         --verbose
     deps:
       - training/${vars.train_lang}/model-best/
     outputs:
-      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
-      - packages/xx_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
+      - packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}.tar.gz
+      - packages/${vars.nlp_lang}_${vars.train_lang}_sigtyp_trf-${vars.version}/dist/${vars.train_lang}_sigtyp_trf-${vars.version}-py3-none-any.whl
 
   - name: "evaluate-model-dev"
     help: "Evaluate a model on the validation set"
@@ -289,7 +351,9 @@ commands:
       - python -m scripts.plotters.plot_training_curve metrics/wandb_train_curve_main.csv paper/figures/train_loss.pdf
       - python -m scripts.plotters.plot_token_counts metrics/tokens_upsampling.csv paper/figures/token_counts.pdf
       - python -m scripts.plotters.plot_crosseval_heatmap metrics/system_scores/ paper/figures/cross_lingual.pdf
-      - python -m scripts.plotters.plot_hashembed_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf
+      - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf --ours-name "RoBERTa-based (ours)" --theirs-name "Multi hash embeddings"
+      - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/monolithic_scores/ paper/figures/monolithic.pdf --ours-name "Language-specific (ours)" --theirs-name "Monolithic"
+      # - python -m scripts.plotters.plot_pretraining_eval_scores metrics/compare_pretraining.csv paper/figures/effect_sampling.pdf
     outputs:
       - paper/figures/train_loss.pdf
       - paper/figures/token_counts.pdf

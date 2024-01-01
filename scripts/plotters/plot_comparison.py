@@ -19,13 +19,19 @@ class Split(str, Enum):
     test = "test"
 
 
-def plot_hashembed_comparison(
+def plot_comparison(
     our_scores_dir: Path,
     their_scores_dir: Path,
     output_file: Path,
+    ours_name: str = typer.Option(
+        "RoBERTa-based", help="Name for our_scores_dir to appear in plot."
+    ),
+    theirs_name: str = typer.Option(
+        "MultiHashEmbed", help="Name of their_scores_dir to appear in plot."
+    ),
     split: Split = typer.Option(Split.dev, help="Dataset split to plot."),
 ):
-    """Plot hash embed comparison"""
+    """Plot comparison"""
 
     languages = sorted([dir.stem for dir in our_scores_dir.iterdir() if dir.is_dir()])
     msg.text(f"Found languages: {', '.join(lang for lang in languages)}")
@@ -48,18 +54,24 @@ def plot_hashembed_comparison(
 
     components = COMPONENT_TO_METRIC.keys()
 
+    def _get_score(scores_dict, component: str) -> float:
+        score = (
+            scores_dict.get("morphologizer").get("pos_acc")
+            if component == "tagger"
+            else scores_dict.get(component).get(COMPONENT_TO_METRIC[component])
+        )
+        return round(score, 2)
+
     for ours_fp, theirs_fp in zip(our_scores_fp, their_scores_fp):
         our_scores = srsly.read_json(ours_fp)
         their_scores = srsly.read_json(theirs_fp)
         for component in components:
             component_to_rects[component]["ours"].append(
-                round(our_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2)
+                _get_score(our_scores, component)
             )
 
             component_to_rects[component]["theirs"].append(
-                round(
-                    their_scores.get(component).get(COMPONENT_TO_METRIC[component]), 2
-                )
+                _get_score(their_scores, component)
             )
 
     x = np.arange(len(languages))
@@ -79,7 +91,7 @@ def plot_hashembed_comparison(
                 x + offset + 0.15,
                 np.array(scores),
                 width,
-                label="RoBERTa-based" if label == "ours" else "MultiHashEmbed",
+                label=ours_name if label == "ours" else theirs_name,
                 **bar_settings.get(label),
             )
             multiplier += 1
@@ -109,4 +121,4 @@ def plot_hashembed_comparison(
 
 
 if __name__ == "__main__":
-    typer.run(plot_hashembed_comparison)
+    typer.run(plot_comparison)

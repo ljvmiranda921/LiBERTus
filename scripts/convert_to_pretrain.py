@@ -4,9 +4,9 @@ import random
 import statistics
 from collections import Counter
 from enum import Enum
+from multiprocessing import Pool
 from pathlib import Path
 from typing import Dict, List, Optional
-from multiprocessing import Pool
 
 import typer
 from conllu import parse_incr

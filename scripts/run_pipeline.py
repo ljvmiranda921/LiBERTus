@@ -1,9 +1,9 @@
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import List, Optional
 
 import spacy
-import typer
 import srsly
+import typer
 from wasabi import msg
 
 

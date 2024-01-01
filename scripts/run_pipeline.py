@@ -50,7 +50,9 @@ def run_pipeline(
     # Save results
     lang_code = lang if lang else get_langcode(input_path)
     for task, outputs in results.items():
-        output_path = output_dir / task / f"{lang_code}.json"
+        task_dir = output_dir / task
+        task_dir.mkdir(parents=True, exist_ok=True)
+        output_path = task_dir / f"{lang_code}.json"
         srsly.write_json(output_path, outputs)
         msg.good(f"Saved file to {output_path}!")
 

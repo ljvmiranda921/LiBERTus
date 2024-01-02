@@ -389,19 +389,19 @@ commands:
     script:
       - mkdir -p corpus/test
       - python -m spacy convert assets/test/ corpus/test/ -T
-      - python -m scripts.run_pipeline xx submission xx_chu_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission el_cop_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_fro_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_got_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_grc_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission he_hbo_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_isl_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_lat_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_latm_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission zh_lzh_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_ohu_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_orv_sigtyp_trf
-      - python -m scripts.run_pipeline xx submission xx_san_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/chu_test.spacy submission xx_chu_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/fro_test.spacy submission xx_fro_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/got_test.spacy submission xx_got_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/grc_test.spacy submission xx_grc_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/hbo_test.spacy submission he_hbo_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/isl_test.spacy submission xx_isl_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/lat_test.spacy submission xx_lat_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/latm_test.spacy submission xx_latm_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/lzh_test.spacy submission zh_lzh_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/ohu_test.spacy submission xx_ohu_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/orv_test.spacy submission xx_orv_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf
       # Zip everything
       - zip -r -j submission.zip submission/*
     deps:

@@ -12,9 +12,10 @@ from wasabi import msg
 def run_pipeline(
     # fmt: off
     input_path: Path = typer.Argument(..., help="Path to the input spaCy file."),
-    output_dir: Path = typer.Argument(..., help="Directory to save the outputs"),
-    model: str = typer.Argument(..., help="spaCy pipeline to use"),
-    lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path"),
+    output_dir: Path = typer.Argument(..., help="Directory to save the outputs."),
+    model: str = typer.Argument(..., help="spaCy pipeline to use."),
+    lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
+    save_preds_path: Optional[Path] = typer.Option(None, help="Optional path to save the predictions as a spaCy file."),
     use_gpu: int = typer.Option(-1, "--gpu-id", "-g", help="GPU ID or -1 for CPU."),
     n_process: int = typer.Option(1, "--n-process", "-n", help="Number of processors to use.")
     # fmt: on
@@ -62,6 +63,10 @@ def run_pipeline(
         output_path = task_dir / f"{lang_code}.json"
         srsly.write_json(output_path, outputs)
         msg.good(f"Saved file to {output_path}!")
+
+    if save_preds_path:
+        doc_bin_out = DocBin(docs=docs)
+        doc_bin_out.to_disk(save_preds_path)
 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 from pathlib import Path
 from typing import List, Optional
 
-import conllu
 import spacy
 import srsly
 import typer
+from spacy.tokens import DocBin
 from wasabi import msg
 
 
@@ -25,9 +25,11 @@ def run_pipeline(
         msg.fail(f"Model {model} not installed!", exits=1)
     nlp = spacy.load(model)
 
-    texts = get_texts(input_path)
+    doc_bin = DocBin().from_disk(input_path)
+    _docs = doc_bin.get_docs(nlp.vocab)
+    docs = nlp.pipe(_docs)
 
-    docs = list(nlp.pipe(texts))
+    breakpoint()
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in docs:
         sentence = {"pos": [], "morph": [], "lemma": []}
@@ -56,13 +58,6 @@ def run_pipeline(
         output_path = task_dir / f"{lang_code}.json"
         srsly.write_json(output_path, outputs)
         msg.good(f"Saved file to {output_path}!")
-
-
-def get_texts(filepath: Path) -> List[str]:
-    """Get texts to pass to the NLP pipeline"""
-    with filepath.open() as file:
-        for conllu_instance in conllu.parse_incr(file):
-            breakpoint()
 
 
 if __name__ == "__main__":

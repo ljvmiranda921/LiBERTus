@@ -63,5 +63,6 @@ in the project directory.
 | --- | --- | --- |
 | `assets/train/` | Git | CoNLL-U training datasets for Task 0 (morphology/lemma/POS) |
 | `assets/dev/` | Git | CoNLL-U validation datasets for Task 0 (morphology/lemma/POS) |
+| `assets/test/` | Git | CoNLL-U test datasets for Task 0 (morphology/lemma/POS) |
 
 <!-- WEASEL: AUTO-GENERATED DOCS END (do not remove) -->

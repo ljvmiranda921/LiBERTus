@@ -69,6 +69,12 @@ assets:
       branch: main
       path: morphology/valid
     description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
+  - dest: assets/test/
+    git:
+      repo: https://github.com/sigtyp/ST2024
+      branch: main
+      path: morphology/test
+    description: "CoNLL-U test datasets for Task 0 (morphology/lemma/POS)"
 
 # Workflows are sequences of commands (see below) executed in order. You can
 # run them via "weasel run [workflow]". If a commands's inputs/outputs

@@ -387,6 +387,8 @@ commands:
   - name: "get-test-results"
     help: "Get results from the test file"
     script:
+      - mkdir -p corpus/test
+      - python -m spacy convert assets/test/ corpus/test/ -T
       - python -m scripts.run_pipeline xx submission xx_chu_sigtyp_trf
       - python -m scripts.run_pipeline xx submission el_cop_sigtyp_trf
       - python -m scripts.run_pipeline xx submission xx_fro_sigtyp_trf

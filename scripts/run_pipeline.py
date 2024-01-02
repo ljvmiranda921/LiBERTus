@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import List, Optional
 
+import conllu
 import spacy
 import srsly
 import typer
@@ -9,7 +10,7 @@ from wasabi import msg
 
 def run_pipeline(
     # fmt: off
-    input_path: Path = typer.Argument(..., help="Path to the input test file."),
+    input_path: Path = typer.Argument(..., help="Path to the input spaCy file."),
     output_dir: Path = typer.Argument(..., help="Directory to save the outputs"),
     model: str = typer.Argument(..., help="spaCy pipeline to use"),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path"),
@@ -48,7 +49,7 @@ def run_pipeline(
         results["lemmatisation"].append(sentence["lemma"])
 
     # Save results
-    lang_code = lang if lang else get_langcode(input_path)
+    lang_code = lang if lang else input_path.stem.split("_")[0]
     for task, outputs in results.items():
         task_dir = output_dir / task
         task_dir.mkdir(parents=True, exist_ok=True)
@@ -59,13 +60,9 @@ def run_pipeline(
 
 def get_texts(filepath: Path) -> List[str]:
     """Get texts to pass to the NLP pipeline"""
-    # TODO
-    pass
-
-
-def get_langcode(filepath: Path) -> str:
-    # TODO
-    pass
+    with filepath.open() as file:
+        for conllu_instance in conllu.parse_incr(file):
+            breakpoint()
 
 
 if __name__ == "__main__":

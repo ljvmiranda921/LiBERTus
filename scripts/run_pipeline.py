@@ -29,7 +29,6 @@ def run_pipeline(
     _docs = doc_bin.get_docs(nlp.vocab)
     docs = nlp.pipe(_docs)
 
-    breakpoint()
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in docs:
         sentence = {"pos": [], "morph": [], "lemma": []}

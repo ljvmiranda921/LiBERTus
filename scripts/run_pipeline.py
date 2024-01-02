@@ -1,10 +1,11 @@
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 import spacy
 import srsly
 import typer
 from spacy.tokens import DocBin
+from spacy.cli._util import setup_gpu
 from wasabi import msg
 
 
@@ -14,6 +15,8 @@ def run_pipeline(
     output_dir: Path = typer.Argument(..., help="Directory to save the outputs"),
     model: str = typer.Argument(..., help="spaCy pipeline to use"),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path"),
+    use_gpu: int = typer.Option(-1, "--gpu-id", "-g", help="GPU ID or -1 for CPU."),
+    n_process: int = typer.Option(1, "--n-process", "-n", help="Number of processors to use.")
     # fmt: on
 ):
     """Run a pipeline on a file and then output it in a directory
@@ -21,13 +24,15 @@ def run_pipeline(
     The output files follow the shared task's submission format:
     https://github.com/sigtyp/ST2024?tab=readme-ov-file#submission-format
     """
+    setup_gpu(use_gpu)
+
     if model not in spacy.util.get_installed_models():
         msg.fail(f"Model {model} not installed!", exits=1)
     nlp = spacy.load(model)
 
     doc_bin = DocBin().from_disk(input_path)
     _docs = doc_bin.get_docs(nlp.vocab)
-    docs = nlp.pipe(_docs)
+    docs = nlp.pipe(_docs, n_process=n_process)
 
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in docs:

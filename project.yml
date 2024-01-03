@@ -404,8 +404,6 @@ commands:
       - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf
       # Zip everything
       - zip -r -j submission.zip submission/*
-    deps:
-      - corpus/test
     outputs:
       - submission.zip
       - submission/pos_tagging/

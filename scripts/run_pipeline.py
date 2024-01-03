@@ -40,16 +40,14 @@ def run_pipeline(
         # spaCy unable to parse them properly.
         if input_path.suffix != ".conllu":
             msg.fail("Lang 'orv' has weird parsing errors so must pass a CoNLL-U file")
-
         texts = [sent.metadata["text"] for sent in conllu.parse_incr(input_path.open())]
-        docs = nlp.pipe(texts, n_process=n_process)
     else:
         doc_bin = DocBin().from_disk(input_path)
         _docs = doc_bin.get_docs(nlp.vocab)
         # Convert to text for faster processing
         texts = [_doc.text for _doc in _docs]
-        docs = nlp.pipe(texts, n_process=n_process)
 
+    docs = nlp.pipe(texts, n_process=n_process)
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in tqdm(docs):
         sentence = {"pos": [], "morph": [], "lemma": []}

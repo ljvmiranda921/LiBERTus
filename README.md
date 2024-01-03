@@ -35,7 +35,7 @@ Commands are only re-run if their inputs have changed.
 | `evaluate-model-dev` | Evaluate a model on the validation set |
 | `evaluate-model-test` | Evaluate a model on the test set |
 | `plot-figures` | Plot figures for the writeup |
-| `download-hf-models` | Download models from HuggingFace |
+| `setup-test` | Download models from HuggingFace and convert test files to spaCy |
 | `get-test-results` | Get results from the test file |
 
 ### ⏭ Workflows
@@ -51,7 +51,7 @@ inputs have changed.
 | `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 | `experiment-merged` | `convert-to-spacy-merged` &rarr; `finetune-with-merged-corpus` |
 | `experiment-sampling` | `create-vocab` &rarr; `pretrain-model` |
-| `make-submission` | `download-hf-models` &rarr; `get-test-results` |
+| `make-submission` | `setup-test` &rarr; `get-test-results` |
 
 ### 🗂 Assets
 

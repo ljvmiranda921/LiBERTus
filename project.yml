@@ -96,7 +96,7 @@ workflows:
     - create-vocab
     - pretrain-model
   make-submission:
-    - download-hf-models
+    - setup-test
     - get-test-results
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
@@ -367,8 +367,8 @@ commands:
       - paper/figures/cross_lingual.pdf
       - paper/figures/hashembed.pdf
 
-  - name: "download-hf-models"
-    help: "Download models from HuggingFace"
+  - name: "setup-test"
+    help: "Download models from HuggingFace and convert test files to spaCy"
     script:
       - pip install https://huggingface.co/ljvmiranda921/xx_chu_sigtyp_trf/resolve/main/xx_chu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/el_cop_sigtyp_trf/resolve/main/el_cop_sigtyp_trf-any-py3-none-any.whl
@@ -383,6 +383,8 @@ commands:
       - pip install https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
+      - mkdir -p corpus/test
+      - python -m spacy convert assets/test/ corpus/test/ -T
 
   - name: "get-test-results"
     help: "Get results from the test file"

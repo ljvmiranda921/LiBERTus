@@ -40,7 +40,10 @@ def run_pipeline(
         # spaCy unable to parse them properly.
         if input_path.suffix != ".conllu":
             msg.fail("Lang 'orv' has weird parsing errors so must pass a CoNLL-U file")
-        texts = [sent.metadata["text"] for sent in conllu.parse_incr(input_path.open())]
+        texts = [
+            sent.metadata["text"]
+            for sent in conllu.parse_incr(input_path.open(encoding="utf-8"))
+        ]
     else:
         doc_bin = DocBin().from_disk(input_path)
         _docs = doc_bin.get_docs(nlp.vocab)

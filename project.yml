@@ -388,7 +388,6 @@ commands:
       - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
       # convert everything to spaCy files
       - python -m spacy convert assets/test/ corpus/test/ -T
-      # bring it back again
 
   - name: "get-test-results"
     help: "Get results from the test file"

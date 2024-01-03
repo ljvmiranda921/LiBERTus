@@ -46,7 +46,11 @@ def run_pipeline(
     else:
         doc_bin = DocBin().from_disk(input_path)
         _docs = doc_bin.get_docs(nlp.vocab)
-        docs = list(nlp.pipe(_docs, n_process=n_process))
+        docs = []
+        for idx, _doc in enumerate(_docs):
+            print(idx, _doc.text)
+            docs.append(nlp(_doc))
+        # docs = list(nlp.pipe(_docs, n_process=n_process))
 
     msg.info(f"Found {len(docs)} docs in {input_path}.")
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}

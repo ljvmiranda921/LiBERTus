@@ -1,9 +1,9 @@
+import json
 from pathlib import Path
 from typing import Optional
 
 import conllu
 import spacy
-import srsly
 import typer
 from spacy.tokens import DocBin
 from spacy.cli._util import setup_gpu
@@ -77,7 +77,10 @@ def run_pipeline(
         task_dir.mkdir(parents=True, exist_ok=True)
         output_path = task_dir / f"{lang_code}.json"
         msg.text(f"Saving outputs ({len(outputs)} docs) for {task} in {output_path}...")
-        srsly.write_json(output_path, outputs)
+
+        with open(output_path, "w", encoding="utf-8") as file:
+            json.dump(outputs, file, ensure_ascii=False)
+
         msg.good(f"Saved file to {output_path}!")
 
     if save_preds_path:

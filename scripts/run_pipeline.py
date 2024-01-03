@@ -51,7 +51,7 @@ def run_pipeline(
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in tqdm(docs):
         sentence = {"pos": [], "morph": [], "lemma": []}
-        for token in doc:
+        for token in tqdm(doc):
             # Add POS-tagging results
             sentence["pos"].append((token.text, token.pos_))
             # Add morphological analysis results

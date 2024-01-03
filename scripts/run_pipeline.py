@@ -73,6 +73,7 @@ def run_pipeline(
         task_dir = output_dir / task
         task_dir.mkdir(parents=True, exist_ok=True)
         output_path = task_dir / f"{lang_code}.json"
+        msg.text(f"Saving outputs ({len(outputs)} docs) for {task} in {output_path}...")
         srsly.write_json(output_path, outputs)
         msg.good(f"Saved file to {output_path}!")
 

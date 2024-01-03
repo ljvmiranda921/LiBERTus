@@ -7,6 +7,7 @@ import srsly
 import typer
 from spacy.tokens import DocBin
 from spacy.cli._util import setup_gpu
+from tqdm import tqdm
 from wasabi import msg
 
 
@@ -48,7 +49,7 @@ def run_pipeline(
         docs = nlp.pipe(_docs, n_process=n_process)
 
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
-    for doc in docs:
+    for doc in tqdm(docs):
         sentence = {"pos": [], "morph": [], "lemma": []}
         for token in doc:
             # Add POS-tagging results

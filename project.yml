@@ -405,7 +405,7 @@ commands:
       # Zip everything
       - zip -r -j submission.zip submission/*
     deps:
-      - "test"
+      - corpus/test
     outputs:
       - submission.zip
       - submission/pos_tagging/

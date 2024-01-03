@@ -18,7 +18,7 @@ def run_pipeline(
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
     save_preds_path: Optional[Path] = typer.Option(None, help="Optional path to save the predictions as a spaCy file."),
     use_gpu: int = typer.Option(-1, "--gpu-id", "-g", help="GPU ID or -1 for CPU."),
-    n_process: int = typer.Option(1, "--n-process", "-n", help="Number of processors to use.")
+    n_process: int = typer.Option(-1, "--n-process", "-n", help="Number of processors to use. Default uses all CPUs.")
     # fmt: on
 ):
     """Run a pipeline on a file and then output it in a directory

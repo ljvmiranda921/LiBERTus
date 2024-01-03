@@ -32,6 +32,7 @@ def run_pipeline(
         msg.fail(f"Model {model} not installed!", exits=1)
     nlp = spacy.load(model)
     lang_code = lang if lang else input_path.stem.split("_")[0]
+    msg.good(f"Loaded '{model}' for lang code '{lang_code}'")
 
     if lang_code == "orv":
         # orv has a weird special case in their CoNLL-U file that makes

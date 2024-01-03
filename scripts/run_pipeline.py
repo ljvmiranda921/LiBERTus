@@ -79,7 +79,7 @@ def run_pipeline(
         msg.text(f"Saving outputs ({len(outputs)} docs) for {task} in {output_path}...")
 
         with open(output_path, "w", encoding="utf-8") as file:
-            json.dump(outputs, file, ensure_ascii=False)
+            json.dump(outputs, file, ensure_ascii=False, indent=2)
 
         msg.good(f"Saved file to {output_path}!")
 

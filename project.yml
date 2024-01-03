@@ -406,7 +406,7 @@ commands:
       - python -m scripts.run_pipeline corpus/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
       # Zip everything
-      - zip -r -j submission.zip submission/*
+      - sh -c "cd submission && zip -r ../submission.zip ."
     outputs:
       - submission.zip
       - submission/pos_tagging/

@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import Optional
 
+import conllu
 import spacy
 import srsly
 import typer
@@ -30,10 +31,20 @@ def run_pipeline(
     if model not in spacy.util.get_installed_models():
         msg.fail(f"Model {model} not installed!", exits=1)
     nlp = spacy.load(model)
+    lang_code = lang if lang else input_path.stem.split("_")[0]
 
-    doc_bin = DocBin().from_disk(input_path)
-    _docs = doc_bin.get_docs(nlp.vocab)
-    docs = nlp.pipe(_docs, n_process=n_process)
+    if lang_code == "orv":
+        # orv has a weird special case in their CoNLL-U file that makes
+        # spaCy unable to parse them properly.
+        if input_path.suffix != ".conllu":
+            msg.fail("Lang 'orv' has weird parsing errors so must pass a CoNLL-U file")
+
+        texts = [sent.metadata["text"] for sent in conllu.parse_incr(input_path.open())]
+        docs = nlp.pipe(texts, n_process=n_process)
+    else:
+        doc_bin = DocBin().from_disk(input_path)
+        _docs = doc_bin.get_docs(nlp.vocab)
+        docs = nlp.pipe(_docs, n_process=n_process)
 
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in docs:
@@ -56,7 +67,6 @@ def run_pipeline(
         results["lemmatisation"].append(sentence["lemma"])
 
     # Save results
-    lang_code = lang if lang else input_path.stem.split("_")[0]
     for task, outputs in results.items():
         task_dir = output_dir / task
         task_dir.mkdir(parents=True, exist_ok=True)

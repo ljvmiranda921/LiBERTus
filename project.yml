@@ -384,13 +384,15 @@ commands:
       - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
       - mkdir -p corpus/test
+      # remove orv because of weird test case, we'll read the conllu file directly instead
+      - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
+      # convert everything to spaCy files
       - python -m spacy convert assets/test/ corpus/test/ -T
+      # bring it back again
 
   - name: "get-test-results"
     help: "Get results from the test file"
     script:
-      - mkdir -p corpus/test
-      - python -m spacy convert assets/test/ corpus/test/ -T
       - python -m scripts.run_pipeline corpus/test/chu_test.spacy submission xx_chu_sigtyp_trf
       - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf
       - python -m scripts.run_pipeline corpus/test/fro_test.spacy submission xx_fro_sigtyp_trf
@@ -402,7 +404,7 @@ commands:
       - python -m scripts.run_pipeline corpus/test/latm_test.spacy submission xx_latm_sigtyp_trf
       - python -m scripts.run_pipeline corpus/test/lzh_test.spacy submission zh_lzh_sigtyp_trf
       - python -m scripts.run_pipeline corpus/test/ohu_test.spacy submission xx_ohu_sigtyp_trf
-      - python -m scripts.run_pipeline corpus/test/orv_test.spacy submission xx_orv_sigtyp_trf
+      - python -m scripts.run_pipeline corpus/test/orv_test.conllu submission xx_orv_sigtyp_trf
       - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf
       # Zip everything
       - zip -r -j submission.zip submission/*

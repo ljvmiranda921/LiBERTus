@@ -71,7 +71,6 @@ def check_inconsistencies(
                             f"Mismatch tokens id={idx+1}, ref={orth_ref}, pred={orth_pred}",
                             show=verbose,
                         )
-                        breakpoint()
                         break
 
 

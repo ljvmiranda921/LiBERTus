@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from typing import Optional
+from enum import Enum, List
 
 import conllu
 import spacy
@@ -11,6 +12,12 @@ from tqdm import tqdm
 from wasabi import msg
 
 
+class MWE(str, Enum):
+    all: str = "all"
+    subtokens_only: str = "subtokens_only"
+    mew_only: str = "mwe_only"
+
+
 def run_pipeline(
     # fmt: off
     input_path: Path = typer.Argument(..., help="Path to the input spaCy file."),
@@ -18,6 +25,7 @@ def run_pipeline(
     model: str = typer.Argument(..., help="spaCy pipeline to use."),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
     save_preds_path: Optional[Path] = typer.Option(None, help="Optional path to save the predictions as a spaCy file."),
+    multiword_handling: MWE = typer.Option(MWE.all, "--multiword-handling", "--multiword", "--mwe", "-M", help="Dictates how multiword expressions are handled."),
     use_gpu: int = typer.Option(-1, "--gpu-id", "-g", help="GPU ID or -1 for CPU."),
     n_process: int = typer.Option(1, "--n-process", "-n", help="Number of processors to use. Doesn't work for GPUs.")
     # fmt: on
@@ -35,21 +43,7 @@ def run_pipeline(
     lang_code = lang if lang else input_path.stem.split("_")[0]
     msg.good(f"Loaded '{model}' for lang code '{lang_code}'")
 
-    if lang_code == "orv":
-        # orv has a weird special case in their CoNLL-U file that makes
-        # spaCy unable to parse them properly.
-        if input_path.suffix != ".conllu":
-            msg.fail("Lang 'orv' has weird parsing errors so must pass a CoNLL-U file")
-        texts = [
-            sent.metadata["text"]
-            for sent in conllu.parse_incr(input_path.open(encoding="utf-8"))
-        ]
-    else:
-        doc_bin = DocBin().from_disk(input_path)
-        _docs = doc_bin.get_docs(nlp.vocab)
-        # Convert to text for faster processing
-        texts = [_doc.text for _doc in _docs]
-
+    texts = get_texts(input_path, multiword=multiword_handling, lang_code=lang_code)
     docs = nlp.pipe(texts, n_process=n_process)
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in tqdm(docs):
@@ -86,6 +80,24 @@ def run_pipeline(
     if save_preds_path:
         doc_bin_out = DocBin(docs=docs)
         doc_bin_out.to_disk(save_preds_path)
+
+
+def get_texts(input_path: Path, multiword: MWE, lang_code: str) -> List[str]:
+    """Read the file and get the texts"""
+    if lang_code == "orv":
+        # orv has a weird special case in their CoNLL-U file that makes
+        # spaCy unable to parse them properly.
+        if input_path.suffix != ".conllu":
+            msg.fail("Lang 'orv' has weird parsing errors so must pass a CoNLL-U file")
+        texts = [
+            sent.metadata["text"]
+            for sent in conllu.parse_incr(input_path.open(encoding="utf-8"))
+        ]
+    else:
+        doc_bin = DocBin().from_disk(input_path)
+        _docs = doc_bin.get_docs(nlp.vocab)
+        # Convert to text for faster processing
+        texts = [_doc.text for _doc in _docs]
 
 
 if __name__ == "__main__":

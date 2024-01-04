@@ -8,6 +8,7 @@ import spacy
 import typer
 from spacy.cli._util import setup_gpu
 from spacy.tokens import Doc, DocBin
+from spacy.util import get_words_and_spaces
 from tqdm import tqdm
 from wasabi import msg
 
@@ -20,7 +21,7 @@ class MWE(str, Enum):
 
 def run_pipeline(
     # fmt: off
-    input_path: Path = typer.Argument(..., help="Path to the input spaCy / Co file."),
+    input_path: Path = typer.Argument(..., help="Path to the input CoNLL-U file."),
     output_dir: Path = typer.Argument(..., help="Directory to save the outputs."),
     model: str = typer.Argument(..., help="spaCy pipeline to use."),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
@@ -43,19 +44,12 @@ def run_pipeline(
     lang_code = lang if lang else input_path.stem.split("_")[0]
     msg.good(f"Loaded '{model}' for lang code '{lang_code}'")
 
-    texts = get_texts(input_path, nlp, lang_code, multiword=multiword_handling)
-    docs = nlp.pipe(texts, n_process=n_process)
+    _docs = get_docs(input_path, nlp, lang_code, multiword=multiword_handling)
+    docs = nlp.pipe(_docs, n_process=n_process)
     # infer reference CoNLL-U file
-    conllu_file = Path(f"assets/test/{lang_code}_test.conllu")
-    references = [sent for sent in conllu.parse_incr(conllu_file)]
-
-    if len(references) != len(docs):
-        msg.fail("Unequal num of sentences", exits=1)
 
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
-    for doc, ref in tqdm(zip(docs, references)):
-        if len(doc) != len(ref):
-            doc = retokenize_doc(doc, ref)
+    for doc in tqdm(docs):
         sentence = {"pos": [], "morph": [], "lemma": []}
         for token in doc:
             # Add POS-tagging results
@@ -91,35 +85,17 @@ def run_pipeline(
         doc_bin_out.to_disk(save_preds_path)
 
 
-def retokenize_doc(doc: Doc, reference: conllu.TokenList) -> Doc:
-    while True:
-        # Get offsets of tokens that need to be retokenized
-        offsets: List[Tuple[int, int]] = []
-        for i, (tok_doc, tok_ref) in enumerate(zip(doc, reference)):
-            if tok_doc.text != tok_ref["form"]:
-                offsets.append((i, i + 1))
-
-        # If no mismatches found, break the loop
-        if not offsets:
-            break
-
-        for start, end in offsets:
-            with doc.retokenize() as retokenizer:
-                retokenizer.merge(doc[start:end])
-    return doc
-
-
-def get_texts(
+def get_docs(
     input_path: Path, nlp: spacy.language.Language, lang_code: str, *, multiword: MWE
-) -> List[str]:
+) -> List[Doc]:
     """Read the file and get the texts"""
     SPECIAL_CASE_MWE = ["cop", "hbo"]
-    SPECIAL_CASE_PARSE = ["orv"]
 
     def _check_if_conllu(input_path: Path):
         if input_path.suffix != ".conllu":
             msg.fail("This language code requires the CoNLL-U file", exits=1)
 
+    # FIXME
     if lang_code in SPECIAL_CASE_MWE:
         msg.info(f"Language {lang_code} contains multiword tokens")
         if multiword == MWE.all:
@@ -141,25 +117,28 @@ def get_texts(
                 texts.append(" ".join(tokens))
         elif multiword == MWE.mwe_only:
             msg.text("Getting the multiword expressions only")
+            # TODO
             doc_bin = DocBin().from_disk(input_path)
             _docs = doc_bin.get_docs(nlp.vocab)
             # Convert to text for faster processing
             texts = [_doc.text for _doc in _docs]
         else:
             msg.fail(f"Unknown multiword handler: {multiword}", exits=1)
-    elif lang_code in SPECIAL_CASE_PARSE:
-        _check_if_conllu(input_path)
-        texts = [
-            sent.metadata["text"]
-            for sent in conllu.parse_incr(input_path.open(encoding="utf-8"))
-        ]
     else:
-        doc_bin = DocBin().from_disk(input_path)
-        _docs = doc_bin.get_docs(nlp.vocab)
-        # Convert to text for faster processing
-        texts = [_doc.text for _doc in _docs]
+        docs = []
+        for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
+            if "text" in sentence.metadata:
+                text = sentence.metadata["text"]
+                orig_words = [token.get("form") for token in sentence]
+                words, spaces = get_words_and_spaces(orig_words, text)
+                doc = Doc(nlp.vocab, words=words, spaces=spaces)
+            else:
+                # Just use the words
+                words = [token.get("form") for token in sentence]
+                doc = Doc(nlp.vocab, words=words)
+            docs.append(doc)
 
-    return texts
+    return docs
 
 
 if __name__ == "__main__":

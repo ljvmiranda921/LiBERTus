@@ -43,7 +43,7 @@ def run_pipeline(
     lang_code = lang if lang else input_path.stem.split("_")[0]
     msg.good(f"Loaded '{model}' for lang code '{lang_code}'")
 
-    texts = get_texts(input_path, multiword=multiword_handling, lang_code=lang_code)
+    texts = get_texts(input_path, nlp, lang_code, multiword=multiword_handling)
     docs = nlp.pipe(texts, n_process=n_process)
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in tqdm(docs):
@@ -82,7 +82,9 @@ def run_pipeline(
         doc_bin_out.to_disk(save_preds_path)
 
 
-def get_texts(input_path: Path, multiword: MWE, lang_code: str) -> List[str]:
+def get_texts(
+    input_path: Path, nlp: spacy.language.Language, lang_code: str, *, multiword: MWE
+) -> List[str]:
     """Read the file and get the texts"""
     if lang_code == "orv":
         # orv has a weird special case in their CoNLL-U file that makes
@@ -98,6 +100,7 @@ def get_texts(input_path: Path, multiword: MWE, lang_code: str) -> List[str]:
         _docs = doc_bin.get_docs(nlp.vocab)
         # Convert to text for faster processing
         texts = [_doc.text for _doc in _docs]
+    return texts
 
 
 if __name__ == "__main__":

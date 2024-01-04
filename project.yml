@@ -44,6 +44,9 @@ vars:
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
+  # Submission
+  ## mwe: all, subtokens_only, mwe_only
+  mwe: "all"
 
 env:
   HUGGINGFACE_TOKEN: HUGGINGFACE_TOKEN
@@ -98,6 +101,7 @@ workflows:
   make-submission:
     - setup-test
     - get-test-results
+    - zip-results
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -386,6 +390,9 @@ commands:
       - mkdir -p corpus/test
       # remove orv because of weird test case, we'll read the conllu file directly instead
       - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
+      # copy special case languages
+      - cp assets/test/cop_test.conllu corpus/test/cop_test.conllu
+      - cp assets/test/hbo_test.conllu corpus/test/hbo_test.conllu
       # convert everything to spaCy files
       - python -m spacy convert assets/test/ corpus/test/ -T
 
@@ -393,11 +400,11 @@ commands:
     help: "Get results from the test file"
     script:
       - python -m scripts.run_pipeline corpus/test/chu_test.spacy submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
       - python -m scripts.run_pipeline corpus/test/fro_test.spacy submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/got_test.spacy submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/grc_test.spacy submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/hbo_test.spacy submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/hbo_test.spacy submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
       - python -m scripts.run_pipeline corpus/test/isl_test.spacy submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/lat_test.spacy submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/latm_test.spacy submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
@@ -405,10 +412,40 @@ commands:
       - python -m scripts.run_pipeline corpus/test/ohu_test.spacy submission xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
-      # Zip everything
-      - sh -c "cd submission && zip -r ../submission.zip ."
     outputs:
-      - submission.zip
       - submission/pos_tagging/
       - submission/morph_features/
       - submission/lemmatisation/
+
+  - name: "special-case-all"
+    help: "Get results from the test file with both subtokens and mwe"
+    script:
+      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
+      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
+    outputs:
+      - submission/morph_features/cop.json
+      - submission/lemmatisation/cop.json
+      - submission/morph_features/hbo.json
+      - submission/lemmatisation/hbo.json
+
+  - name: "special-case-subtokens-only"
+    help: "Get results from the test file with subtokens only"
+    script:
+      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
+      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
+    outputs:
+      - submission/morph_features/cop.json
+      - submission/lemmatisation/cop.json
+      - submission/morph_features/hbo.json
+      - submission/lemmatisation/hbo.json
+
+  - name: "zip-results"
+    help: "Zip the results into a single file for submission"
+    script:
+      - sh -c "cd submission && zip -r ../submission.zip ."
+    deps:
+      - submission/pos_tagging/
+      - submission/morph_features/
+      - submission/lemmatisation/
+    outputs:
+      - submission.zip

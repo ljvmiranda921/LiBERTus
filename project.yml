@@ -422,9 +422,18 @@ commands:
     script:
       - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
       - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
+      # inspect results
+      - head -20 submission/pos_tagging/cop.json
+      - head -20 submission/morph_features/cop.json
+      - head -20 submission/lemmatisation/cop.json
+      - head -20 submission/pos_tagging/hbo.json
+      - head -20 submission/morph_features/hbo.json
+      - head -20 submission/lemmatisation/hbo.json
     outputs:
+      - submission/pos_tagging/cop.json
       - submission/morph_features/cop.json
       - submission/lemmatisation/cop.json
+      - submission/pos_tagging/hbo.json
       - submission/morph_features/hbo.json
       - submission/lemmatisation/hbo.json
 
@@ -433,9 +442,18 @@ commands:
     script:
       - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
       - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
+      # inspect results
+      - head -20 submission/pos_tagging/cop.json
+      - head -20 submission/morph_features/cop.json
+      - head -20 submission/lemmatisation/cop.json
+      - head -20 submission/pos_tagging/hbo.json
+      - head -20 submission/morph_features/hbo.json
+      - head -20 submission/lemmatisation/hbo.json
     outputs:
+      - submission/pos_tagging/cop.json
       - submission/morph_features/cop.json
       - submission/lemmatisation/cop.json
+      - submission/pos_tagging/hbo.json
       - submission/morph_features/hbo.json
       - submission/lemmatisation/hbo.json
 

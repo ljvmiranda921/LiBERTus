@@ -25,7 +25,6 @@ Commands are only re-run if their inputs have changed.
 | `create-vocab` | Train a tokenizer to create a vocabulary |
 | `pretrain-model` | Pretrain a multilingual LM from a corpus |
 | `pretrain-model-from-checkpoint` | Pretrain a multilingual LM from a corpus based on a checkpoint |
-| `pretrain-model-with-validation` | Pretrain a multilingual LM yet include validation dataset |
 | `upload-to-hf` | Upload pretrained model and corresponding tokenizer to the HuggingFace repository |
 | `convert-to-spacy-merged` | Convert CoNLL-U files into spaCy format for finetuning |
 | `convert-to-spacy` | Convert CoNLL-U files into spaCy format for finetuning |
@@ -36,6 +35,8 @@ Commands are only re-run if their inputs have changed.
 | `evaluate-model-dev` | Evaluate a model on the validation set |
 | `evaluate-model-test` | Evaluate a model on the test set |
 | `plot-figures` | Plot figures for the writeup |
+| `setup-test` | Download models from HuggingFace and convert test files to spaCy |
+| `get-test-results` | Get results from the test file |
 
 ### ⏭ Workflows
 
@@ -49,7 +50,8 @@ inputs have changed.
 | `pretrain` | `create-pretraining` &rarr; `create-vocab` &rarr; `pretrain-model` |
 | `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 | `experiment-merged` | `convert-to-spacy-merged` &rarr; `finetune-with-merged-corpus` |
-| `experiment-sampling` | `create-vocab` &rarr; `pretrain-model-with-validation` |
+| `experiment-sampling` | `create-vocab` &rarr; `pretrain-model` |
+| `make-submission` | `setup-test` &rarr; `get-test-results` |
 
 ### 🗂 Assets
 
@@ -61,5 +63,6 @@ in the project directory.
 | --- | --- | --- |
 | `assets/train/` | Git | CoNLL-U training datasets for Task 0 (morphology/lemma/POS) |
 | `assets/dev/` | Git | CoNLL-U validation datasets for Task 0 (morphology/lemma/POS) |
+| `assets/test/` | Git | CoNLL-U test datasets for Task 0 (morphology/lemma/POS) |
 
 <!-- WEASEL: AUTO-GENERATED DOCS END (do not remove) -->

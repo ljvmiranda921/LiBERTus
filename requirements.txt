@@ -1,7 +1,7 @@
 # Experiments
 transformers[torch]>=4.35.0
 spacy-transformers
-spacy
+spacy>=3.6.0,<3.7.0
 conllu
 torch
 wandb

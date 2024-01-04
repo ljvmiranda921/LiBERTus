@@ -13,6 +13,7 @@ directories:
   - "packages"
   - "pretraining"
   - "scripts"
+  - "submission"
   - "tokenizer"
   - "training"
 
@@ -43,6 +44,9 @@ vars:
   # Training logs
   name: "main"
   wandb_project: "sigtyp2024"
+  # Submission
+  ## mwe: all, subtokens_only, mwe_only
+  mwe: "all"
 
 env:
   HUGGINGFACE_TOKEN: HUGGINGFACE_TOKEN
@@ -68,9 +72,12 @@ assets:
       branch: main
       path: morphology/valid
     description: "CoNLL-U validation datasets for Task 0 (morphology/lemma/POS)"
-  - dest: assets/default_zh_model.zip
-    url: https://github.com/lancopku/pkuseg-python/releases/download/v0.0.25/default_v2.zip
-    description: "Model to use for pkuseg for Chinese"
+  - dest: assets/test/
+    git:
+      repo: https://github.com/sigtyp/ST2024
+      branch: main
+      path: morphology/test
+    description: "CoNLL-U test datasets for Task 0 (morphology/lemma/POS)"
 
 # Workflows are sequences of commands (see below) executed in order. You can
 # run them via "weasel run [workflow]". If a commands's inputs/outputs
@@ -91,6 +98,10 @@ workflows:
   experiment-sampling:
     - create-vocab
     - pretrain-model
+  make-submission:
+    - setup-test
+    - get-test-results
+    - zip-results
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -359,3 +370,100 @@ commands:
       - paper/figures/token_counts.pdf
       - paper/figures/cross_lingual.pdf
       - paper/figures/hashembed.pdf
+
+  - name: "setup-test"
+    help: "Download models from HuggingFace and convert test files to spaCy"
+    script:
+      - pip install https://huggingface.co/ljvmiranda921/xx_chu_sigtyp_trf/resolve/main/xx_chu_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/el_cop_sigtyp_trf/resolve/main/el_cop_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_fro_sigtyp_trf/resolve/main/xx_fro_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_got_sigtyp_trf/resolve/main/xx_got_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_grc_sigtyp_trf/resolve/main/xx_grc_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/he_hbo_sigtyp_trf/resolve/main/he_hbo_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_isl_sigtyp_trf/resolve/main/xx_isl_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_lat_sigtyp_trf/resolve/main/xx_lat_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_latm_sigtyp_trf/resolve/main/xx_latm_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/zh_lzh_sigtyp_trf/resolve/main/zh_lzh_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
+      - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
+      - mkdir -p corpus/test
+      # remove orv because of weird test case, we'll read the conllu file directly instead
+      - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
+      # copy special case languages
+      - cp assets/test/cop_test.conllu corpus/test/cop_test.conllu
+      - cp assets/test/hbo_test.conllu corpus/test/hbo_test.conllu
+      # convert everything to spaCy files
+      - python -m spacy convert assets/test/ corpus/test/ -T
+
+  - name: "get-test-results"
+    help: "Get results from the test file"
+    script:
+      - python -m scripts.run_pipeline corpus/test/chu_test.spacy submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
+      - python -m scripts.run_pipeline corpus/test/fro_test.spacy submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/got_test.spacy submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/grc_test.spacy submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/hbo_test.spacy submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
+      - python -m scripts.run_pipeline corpus/test/isl_test.spacy submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/lat_test.spacy submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/latm_test.spacy submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/lzh_test.spacy submission zh_lzh_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/ohu_test.spacy submission xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
+    outputs:
+      - submission/pos_tagging/
+      - submission/morph_features/
+      - submission/lemmatisation/
+
+  - name: "special-case-all"
+    help: "Get results from the test file with both subtokens and mwe"
+    script:
+      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
+      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
+      # inspect results
+      - head -20 submission/pos_tagging/cop.json
+      - head -20 submission/morph_features/cop.json
+      - head -20 submission/lemmatisation/cop.json
+      - head -20 submission/pos_tagging/hbo.json
+      - head -20 submission/morph_features/hbo.json
+      - head -20 submission/lemmatisation/hbo.json
+    outputs:
+      - submission/pos_tagging/cop.json
+      - submission/morph_features/cop.json
+      - submission/lemmatisation/cop.json
+      - submission/pos_tagging/hbo.json
+      - submission/morph_features/hbo.json
+      - submission/lemmatisation/hbo.json
+
+  - name: "special-case-subtokens-only"
+    help: "Get results from the test file with subtokens only"
+    script:
+      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
+      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
+      # inspect results
+      - head -20 submission/pos_tagging/cop.json
+      - head -20 submission/morph_features/cop.json
+      - head -20 submission/lemmatisation/cop.json
+      - head -20 submission/pos_tagging/hbo.json
+      - head -20 submission/morph_features/hbo.json
+      - head -20 submission/lemmatisation/hbo.json
+    outputs:
+      - submission/pos_tagging/cop.json
+      - submission/morph_features/cop.json
+      - submission/lemmatisation/cop.json
+      - submission/pos_tagging/hbo.json
+      - submission/morph_features/hbo.json
+      - submission/lemmatisation/hbo.json
+
+  - name: "zip-results"
+    help: "Zip the results into a single file for submission"
+    script:
+      - sh -c "cd submission && zip -r ../submission.zip ."
+    deps:
+      - submission/pos_tagging/
+      - submission/morph_features/
+      - submission/lemmatisation/
+    outputs:
+      - submission.zip

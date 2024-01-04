@@ -2,9 +2,9 @@ from enum import Enum
 from pathlib import Path
 from typing import Dict, List
 
+import numpy as np
 import srsly
 import typer
-import numpy as np
 from wasabi import msg
 
 from .constants import COMPONENT_TO_METRIC

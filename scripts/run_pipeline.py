@@ -20,7 +20,7 @@ class MWE(str, Enum):
 
 def run_pipeline(
     # fmt: off
-    input_path: Path = typer.Argument(..., help="Path to the input spaCy file."),
+    input_path: Path = typer.Argument(..., help="Path to the input spaCy / Co file."),
     output_dir: Path = typer.Argument(..., help="Directory to save the outputs."),
     model: str = typer.Argument(..., help="spaCy pipeline to use."),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
@@ -88,6 +88,7 @@ def get_texts(
     """Read the file and get the texts"""
     SPECIAL_CASE_MWE = ["cop", "hbo"]
     SPECIAL_CASE_PARSE = ["orv"]
+    SPECIAL_CASE_NO_SPACE = ["lzh"]
 
     def _check_if_conllu(input_path: Path):
         if input_path.suffix != ".conllu":

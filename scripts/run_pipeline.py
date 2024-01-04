@@ -1,7 +1,7 @@
 import json
 from enum import Enum
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import conllu
 import spacy
@@ -92,8 +92,21 @@ def run_pipeline(
 
 
 def retokenize_doc(doc: Doc, reference: conllu.TokenList) -> Doc:
-    # TODO
-    pass
+    while True:
+        # Get offsets of tokens that need to be retokenized
+        offsets: List[Tuple[int, int]] = []
+        for i, (tok_doc, tok_ref) in enumerate(zip(doc, reference)):
+            if tok_doc.text != tok_ref["form"]:
+                offsets.append((i, i + 1))
+
+        # If no mismatches found, break the loop
+        if not offsets:
+            break
+
+        for start, end in offsets:
+            with doc.retokenize() as retokenizer:
+                retokenizer.merge(doc[start:end])
+    return doc
 
 
 def get_texts(

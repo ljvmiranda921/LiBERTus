@@ -123,19 +123,8 @@ def get_docs(
     # else:
     docs = []
     for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-        if "text" in sentence.metadata and lang_code not in SPECIAL_CASE_MWE:
-            text = sentence.metadata["text"]
-            orig_words = [token.get("form") for token in sentence]
-            words, spaces = get_words_and_spaces(orig_words, text)
-            doc = Doc(nlp.vocab, words=words, spaces=spaces)
-        elif lang_code in SPECIAL_CASE_MWE:
-            # Just use the words
-            words = [token.get("form") for token in sentence]
-            doc = Doc(nlp.vocab, words=words)
-        else:
-            # Just use the words
-            words = [token.get("form") for token in sentence]
-            doc = Doc(nlp.vocab, words=words)
+        words = [token.get("form") for token in sentence]
+        doc = Doc(nlp.vocab, words=words)
         docs.append(doc)
 
     return docs

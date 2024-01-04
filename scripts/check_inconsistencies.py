@@ -55,7 +55,7 @@ def check_inconsistencies(
                 ref_text = sep.join([token["form"] for token in ref])
                 if len(ref) != len(pred):
                     msg.warn(
-                        f"Unequal lengths ({len(ref) != len(pred)}) id={idx+1} text={ref_text}"
+                        f"Unequal lengths ({len(ref)} != {len(pred)}) id={idx+1} text={ref_text}"
                     )
                 for idx, (tok_ref, tok_pred) in enumerate(zip(ref, pred)):
                     orth_ref = tok_ref["form"]

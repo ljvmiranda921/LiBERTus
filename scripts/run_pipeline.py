@@ -7,7 +7,7 @@ import conllu
 import spacy
 import typer
 from spacy.cli._util import setup_gpu
-from spacy.tokens import DocBin
+from spacy.tokens import Doc, DocBin
 from tqdm import tqdm
 from wasabi import msg
 
@@ -45,8 +45,17 @@ def run_pipeline(
 
     texts = get_texts(input_path, nlp, lang_code, multiword=multiword_handling)
     docs = nlp.pipe(texts, n_process=n_process)
+    # infer reference CoNLL-U file
+    conllu_file = Path(f"assets/test/{lang_code}_test.conllu")
+    references = [sent for sent in conllu.parse_incr(conllu_file)]
+
+    if len(references) != len(docs):
+        msg.fail("Unequal num of sentences", exits=1)
+
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
-    for doc in tqdm(docs):
+    for doc, ref in tqdm(zip(docs, references)):
+        if len(doc) != len(ref):
+            doc = retokenize_doc(doc, ref)
         sentence = {"pos": [], "morph": [], "lemma": []}
         for token in doc:
             # Add POS-tagging results
@@ -82,13 +91,17 @@ def run_pipeline(
         doc_bin_out.to_disk(save_preds_path)
 
 
+def retokenize_doc(doc: Doc, reference: conllu.TokenList) -> Doc:
+    # TODO
+    pass
+
+
 def get_texts(
     input_path: Path, nlp: spacy.language.Language, lang_code: str, *, multiword: MWE
 ) -> List[str]:
     """Read the file and get the texts"""
     SPECIAL_CASE_MWE = ["cop", "hbo"]
     SPECIAL_CASE_PARSE = ["orv"]
-    SPECIAL_CASE_NO_SPACE = ["lzh"]
 
     def _check_if_conllu(input_path: Path):
         if input_path.suffix != ".conllu":

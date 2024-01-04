@@ -527,13 +527,14 @@
     {
       "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Plur",
+      "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
       "Form": "qui"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -552,21 +553,18 @@
       "Form": "animo"
     },
     {
-      "Case": "Dat",
-      "Gender": "Masc",
+      "Case": "Abl",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meo"
     },
     {
       "Case": "Gen",
-      "Gender": "Neut",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
-      "PronType": "Ind",
       "UPOS": "DET",
       "Form": "nullius"
     },
@@ -575,10 +573,10 @@
       "Form": "umquam"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "Case": "Dat",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "delicti"
     },
     {
@@ -589,7 +587,6 @@
       "Form": "gratiam"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "1",
@@ -604,19 +601,21 @@
       "Form": ","
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "haud"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "facile"
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "alterius"
     },
     {
@@ -627,14 +626,16 @@
       "Form": "lubidini"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "male"
     },
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
+      "Case": "Abl",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -652,7 +653,7 @@
       "Form": "condonabam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -1043,7 +1044,7 @@
       "Form": "faciet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -1073,7 +1074,7 @@
       "Form": "feceritis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     },
     {
@@ -1402,6 +1403,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -1413,6 +1415,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -1426,7 +1429,7 @@
       "Form": "utribus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -1438,7 +1441,6 @@
       "Form": "quales"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -1449,9 +1451,9 @@
       "Form": "solent"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esse"
     },
@@ -1482,7 +1484,6 @@
       "Form": "amphitheatro"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -1508,7 +1509,6 @@
       "Form": "vinum"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -1527,7 +1527,7 @@
       "Form": "manus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -2304,6 +2304,7 @@
   [
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -2329,6 +2330,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -2336,7 +2338,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "magnis"
@@ -2361,13 +2363,13 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Pistoriensem"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -2379,9 +2381,8 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Masc",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "eo"
     },
@@ -2393,7 +2394,7 @@
       "Form": "consilio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -2412,6 +2413,7 @@
       "Form": "tramites"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "occulte"
     },
@@ -2439,13 +2441,14 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Transalpinam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -4849,11 +4852,11 @@
       "Form": "pariter"
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -4863,18 +4866,18 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "dextros"
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "gressus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -4897,6 +4900,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -4929,7 +4933,6 @@
       "Form": "ac"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -4937,11 +4940,11 @@
       "Form": "rogare"
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -4976,7 +4979,7 @@
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "1",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -5840,7 +5843,6 @@
       "Form": "molliter"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -5848,11 +5850,11 @@
       "Form": "irasci"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -5866,12 +5868,12 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illa"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -5879,7 +5881,7 @@
       "Form": "tibi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -8319,10 +8321,8 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "Number[psor]": "Plur",
-      "Person[psor]": "2",
+      "Person": "2",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "vestras"
     },
@@ -11038,7 +11038,7 @@
       "Form": "habet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -12110,8 +12110,7 @@
       "Case": "Nom",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Illud"
     },
     {
@@ -12125,7 +12124,6 @@
       "Form": "erat"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -12133,7 +12131,7 @@
       "Form": "vivere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -15317,7 +15315,7 @@
       "Form": "Expectabam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -15330,6 +15328,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -15355,7 +15354,8 @@
     },
     {
       "Case": "Dat",
-      "Number": "Sing",
+      "Gender": "Masc",
+      "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
       "Reflex": "Yes",
@@ -15377,7 +15377,6 @@
       "Form": "Corintho"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -15385,7 +15384,7 @@
       "Form": "afferri"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -16979,17 +16978,13 @@
       "Form": "ore"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Gen",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "loquendi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -16999,7 +16994,7 @@
       "Form": "que"
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "nam"
     },
     {
@@ -17026,7 +17021,8 @@
     },
     {
       "Case": "Gen",
-      "Number": "Plur",
+      "Gender": "Masc",
+      "Number": "Sing",
       "Person": "3",
       "PronType": "Prs",
       "Reflex": "Yes",
@@ -17087,7 +17083,11 @@
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "Q."
+      "Form": "Q"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "."
     },
     {
       "Case": "Nom",
@@ -17097,7 +17097,7 @@
       "Form": "Curius"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -17133,7 +17133,7 @@
       "Form": "memoravi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -17171,7 +17171,7 @@
       "Form": "proderet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -17503,6 +17503,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -17510,7 +17511,8 @@
       "Form": "me"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
@@ -17532,21 +17534,16 @@
       "Form": "vitae"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
+      "UPOS": "SCONJ",
       "Form": "quodcumque"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
+      "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Fut",
+      "Tense": "Pres",
       "VerbForm": "Fin",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "sequetur"
     },
@@ -17564,17 +17561,12 @@
       "Form": "magis"
     },
     {
-      "Aspect": "Perf",
       "Case": "Abl",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "assueto"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -17589,7 +17581,7 @@
       "Form": "servitio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -18975,14 +18967,14 @@
   [
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "Congesta"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
+      "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
       "Tense": "Pres",
@@ -18993,6 +18985,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -19006,29 +18999,26 @@
       "Form": "dona"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "dapes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Abl",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "ADV",
       "Form": "fuso"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -19042,7 +19032,7 @@
       "Form": "olivo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -19430,7 +19420,6 @@
       "Form": "necem"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -19441,14 +19430,15 @@
       "Form": "Fugitant"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "inertes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -19459,7 +19449,6 @@
       "Form": "vocem"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -19477,7 +19466,7 @@
       "Form": "metus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -20919,11 +20908,11 @@
       "Form": "asinum"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -20934,21 +20923,21 @@
       "Form": "potest"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "stratum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -20959,7 +20948,7 @@
       "Form": "caedit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -21034,20 +21023,21 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "effata"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -23822,6 +23812,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -23864,12 +23855,8 @@
       "Form": "iussit"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Gen",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "effundi"
     },
@@ -23893,13 +23880,13 @@
       "Case": "Abl",
       "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "mero"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -23940,13 +23927,13 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "improbis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -23957,7 +23944,7 @@
       "Form": "desiderat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -23968,7 +23955,6 @@
       "Form": "Bis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -24179,9 +24165,8 @@
       "Form": "Cynthia"
     },
     {
-      "Case": "Abl",
+      "Case": "Nom",
       "Gender": "Fem",
-      "NumType": "Ord",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "prima"
@@ -24193,15 +24178,16 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "fuit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Voc",
+      "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "PROPN",
@@ -24215,17 +24201,17 @@
       "Form": "finis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Fut",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "erit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -24518,12 +24504,12 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "hanc"
     },
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -24531,7 +24517,7 @@
       "Form": "ego"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -24554,21 +24540,21 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "deperditus"
     },
     {
-      "Case": "Acc",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Plur",
-      "PronType": "Tot",
+      "Number": "Sing",
       "UPOS": "DET",
       "Form": "omnis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -24580,7 +24566,6 @@
       "Form": "impresso"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -24591,7 +24576,6 @@
       "Form": "conor"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -25510,9 +25494,10 @@
       "Form": "mulieres"
     },
     {
-      "Case": "Dat",
+      "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "sauciae"
     },
@@ -25545,10 +25530,10 @@
       "Form": "que"
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Fem",
-      "Number": "Plur",
-      "UPOS": "PROPN",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "ebriae"
     },
     {
@@ -25570,7 +25555,7 @@
       "Form": "oscula"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -25579,10 +25564,10 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "altera"
     },
     {
@@ -25607,7 +25592,6 @@
       "Form": "familiae"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -25618,15 +25602,15 @@
       "Form": "iactat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "altera"
     },
     {
@@ -25655,7 +25639,7 @@
       "Form": "viri"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -26334,7 +26318,6 @@
       "Form": "sic"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -26345,7 +26328,7 @@
       "Form": "existumo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -26366,7 +26349,7 @@
       "Form": "conscripti"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -27084,23 +27067,24 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "magna"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "ardens"
     },
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "tamquam"
     },
     {
@@ -27173,7 +27157,7 @@
       "Form": "aquarum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -28840,6 +28824,7 @@
   [
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -28866,7 +28851,6 @@
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -28877,7 +28861,7 @@
       "Form": "ago"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -28914,7 +28898,7 @@
       "Form": "didici"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -29173,11 +29157,7 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "Pr"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "."
+      "Form": "Pr."
     },
     {
       "UPOS": "ADV",
@@ -29761,6 +29741,7 @@
   [
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -29768,6 +29749,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -29782,27 +29764,26 @@
       "Form": "copia"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Gen",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "memorandi"
     },
     {
-      "UPOS": "PUNCT",
+      "Case": "Dat",
+      "Degree": "Pos",
+      "Number": "Plur",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -29823,7 +29804,7 @@
       "Form": "conscripti"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -29875,12 +29856,14 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "inpulsi"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "male"
     },
@@ -29896,7 +29879,7 @@
       "Form": "consuluerint"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -29990,10 +29973,10 @@
       "Form": "inter"
     },
     {
-      "Aspect": "Imp",
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -30011,14 +29994,14 @@
       "Form": "diceret"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "PRON",
       "Form": "neuter"
     },
     {
@@ -30040,13 +30023,10 @@
       "Form": "tulit"
     },
     {
-      "Aspect": "Imp",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Abl",
+      "Gender": "Neut",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "UPOS": "NOUN",
       "Form": "decernentis"
     },
     {
@@ -30059,10 +30039,10 @@
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "alterius"
     },
     {
@@ -30073,6 +30053,7 @@
       "Form": "amphoram"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "fuste"
     },
@@ -30088,13 +30069,12 @@
       "Form": "percussit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "1",
@@ -30110,7 +30090,7 @@
       "Form": "diutius"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -30134,7 +30114,7 @@
       "Form": "coepero"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -30476,12 +30456,12 @@
       "Form": "Ingeniosus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
@@ -30491,6 +30471,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -30498,13 +30479,13 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "filo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -30528,23 +30509,24 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "morbosus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -32007,7 +31989,6 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "ipso"
     },
@@ -32035,12 +32016,12 @@
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
@@ -32320,7 +32301,8 @@
       "Form": "terram"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "sicut"
     },
     {
@@ -32331,7 +32313,6 @@
       "Form": "ficus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -32352,9 +32333,9 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suos"
     },
@@ -32371,13 +32352,13 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "magno"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -32388,7 +32369,7 @@
       "Form": "movetur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -33264,11 +33245,7 @@
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "σύκῳ"
-    },
-    {
-      "UPOS": "PUNCT",
-      "Form": ","
+      "Form": "σύκῳ,"
     },
     {
       "UPOS": "X",
@@ -33280,11 +33257,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "Δήμητρα"
-    },
-    {
-      "UPOS": "PUNCT",
-      "Form": ","
+      "Form": "Δήμητρα,"
     },
     {
       "UPOS": "VERB",
@@ -33942,8 +33915,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "haec"
     },
     {
@@ -33954,7 +33926,6 @@
       "Form": "lupatria"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -33968,8 +33939,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Tot",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "omnia"
     },
     {
@@ -33977,15 +33947,16 @@
       "Form": "et"
     },
     {
+      "PronType": "Rel",
       "UPOS": "ADV",
       "Form": "ubi"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "2",
@@ -33996,7 +33967,7 @@
       "Form": "putes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -34915,7 +34886,8 @@
       "Form": "post"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
@@ -34946,7 +34918,6 @@
       "Form": "pudorem"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -34957,7 +34928,7 @@
       "Form": "adtriverat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -34969,11 +34940,10 @@
       "Form": "maiora"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "Case": "Abl",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "UPOS": "PRON",
       "Form": "alia"
     },
     {
@@ -34988,7 +34958,7 @@
       "Form": "imperabat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -35233,6 +35203,7 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -35253,7 +35224,7 @@
       "Form": "aquila"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "CCONJ",
       "Form": ","
     },
     {
@@ -35279,7 +35250,7 @@
       "Form": ","
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PROPN",
       "Form": "Simul"
     },
     {
@@ -35288,12 +35259,13 @@
     },
     {
       "Case": "Dat",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "UPOS": "PROPN",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "UPOS": "NOUN",
       "Form": "magistrae"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "large"
     },
@@ -35330,7 +35302,7 @@
       "Form": "merito"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -35364,7 +35336,7 @@
       "Form": "puellam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -35374,6 +35346,7 @@
     },
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -35381,10 +35354,13 @@
       "Form": "ego"
     },
     {
-      "Case": "Acc",
-      "Gender": "Fem",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "Mood": "Sub",
+      "Number": "Sing",
+      "Person": "2",
+      "Tense": "Pres",
+      "VerbForm": "Fin",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "desertas"
     },
     {
@@ -35403,7 +35379,7 @@
       "Form": "alcyonas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -35659,7 +35635,6 @@
       "Form": "manu"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -35710,15 +35685,16 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Graecum"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esse"
     },
@@ -35734,7 +35710,7 @@
       "Form": "affirmabat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -36080,18 +36056,16 @@
       "Form": "ergo"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "quaerens"
     },
     {
-      "NumType": "Card",
-      "PronType": "Ind",
       "UPOS": "DET",
       "Form": "aliquot"
     },
@@ -36114,14 +36088,14 @@
       "Form": "domus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "PRON",
       "Form": "Tandem"
     },
     {
@@ -36140,7 +36114,8 @@
       "Form": "invenit"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
@@ -36162,7 +36137,7 @@
       "Form": "accenderet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -37655,6 +37630,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -37668,7 +37644,7 @@
       "Form": "stupor"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -38287,9 +38263,10 @@
     },
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -38308,10 +38285,9 @@
       "Form": "qui"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "queri"
     },
@@ -38331,7 +38307,7 @@
       "Form": "poterant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -38350,7 +38326,7 @@
       "Form": "indignabantur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -38901,7 +38877,7 @@
       "Form": "dissilio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -38918,16 +38894,8 @@
       "Form": "Pompeius"
     },
     {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Gender": "Masc",
-      "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "μάλ"
-    },
-    {
-      "UPOS": "ADJ",
-      "Form": "’"
+      "Form": "μάλ’"
     },
     {
       "UPOS": "ADJ",
@@ -39495,7 +39463,6 @@
       "Form": "Gratias"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
@@ -39545,7 +39512,6 @@
       "Form": "subinde"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
@@ -39557,7 +39523,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Masc",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "crebris"
@@ -39577,7 +39543,7 @@
       "Form": "risum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -40657,33 +40623,34 @@
   ],
   [
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "Minerva"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "admirans"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "SCONJ",
       "Form": "quare"
     },
     {
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "steriles"
@@ -40711,7 +40678,7 @@
       "Form": "Interrogavit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -40877,6 +40844,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -40904,12 +40872,8 @@
       "Form": "putem"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Gen",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "exprobrandi"
     },
@@ -41405,7 +41369,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -41416,14 +41379,14 @@
       "Form": "Fit"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "gemitus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -41835,11 +41798,11 @@
       "Form": "Curius"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -41850,11 +41813,15 @@
       "Form": "intellegit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "ADV",
+      "Case": "Nom",
+      "Gender": "Neut",
+      "Number": "Sing",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quantum"
     },
     {
@@ -41872,7 +41839,6 @@
       "Form": "consuli"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -41883,7 +41849,7 @@
       "Form": "inpendeat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -41935,7 +41901,6 @@
       "Form": "parabatur"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -41946,17 +41911,17 @@
       "Form": "enuntiat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
   [
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -41970,7 +41935,7 @@
       "Form": "populus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -42725,7 +42690,6 @@
       "Form": "regebat"
     },
     {
-      "AdvType": "Tim",
       "UPOS": "ADV",
       "Form": "tum"
     },
@@ -42744,14 +42708,12 @@
       "Form": "Alexander"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Gen",
-      "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "eiusdem"
     },
@@ -42763,7 +42725,7 @@
       "Form": "nationis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -43701,7 +43663,7 @@
       "Form": "poenas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -43802,23 +43764,20 @@
       "Form": "Sed"
     },
     {
-      "AdvType": "Tim",
       "UPOS": "ADV",
       "Form": "tum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "ADV",
       "Form": "forte"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -43829,7 +43788,6 @@
       "Form": "dum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -43847,25 +43805,26 @@
       "Form": "aequora"
     },
     {
-      "Case": "Voc",
+      "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "concha"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "demens"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -43880,7 +43839,6 @@
       "Form": "cantu"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -43903,13 +43861,14 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "divos"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -43921,9 +43880,10 @@
     },
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -43933,7 +43893,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "PROPN",
       "Form": "Triton"
     },
     {
@@ -43945,7 +43905,6 @@
       "Form": "si"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -43954,23 +43913,24 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "dignum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -43993,13 +43953,13 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "spumosa"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -44017,7 +43977,7 @@
       "Form": "unda"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -44783,6 +44743,7 @@
   [
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -44790,7 +44751,7 @@
       "Form": "Nos"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -44801,12 +44762,12 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "alii"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
@@ -44822,7 +44783,6 @@
       "Form": "ludos"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -44833,7 +44793,7 @@
       "Form": "faciunt"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -44848,11 +44808,15 @@
       "Form": "solium"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "SCONJ",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Sing",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quod"
     },
     {
@@ -44874,7 +44838,7 @@
       "Form": "vaporabatur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -44889,7 +44853,7 @@
       "Form": "descendimus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -44898,12 +44862,10 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "idem"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -44915,6 +44877,7 @@
     },
     {
       "Case": "Dat",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -44932,7 +44895,7 @@
       "Form": "praetores"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -46168,7 +46131,6 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "ea"
     },
@@ -46184,6 +46146,7 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -46220,7 +46183,6 @@
       "Form": "caedis"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -46231,7 +46193,7 @@
       "Form": "transtulerant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -47714,7 +47676,7 @@
       "Form": "ipsa"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -47727,6 +47689,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -47773,7 +47736,7 @@
       "Form": "foribus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -47795,14 +47758,12 @@
     {
       "Case": "Nom",
       "Gender": "Masc",
-      "NumForm": "Word",
-      "NumType": "Card",
       "Number": "Plur",
       "UPOS": "NUM",
       "Form": "duo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -47824,7 +47785,7 @@
       "Form": "urbe"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -47847,7 +47808,6 @@
       "Form": "Gallia"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -47858,7 +47818,7 @@
       "Form": "obstant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -49041,7 +49001,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "2",
@@ -49085,7 +49044,7 @@
       "Form": "pandas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -49715,7 +49674,7 @@
       "Form": "Alexandrinus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -49745,7 +49704,7 @@
       "Form": "ministrabat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -49767,7 +49726,6 @@
       "Form": "coepit"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -49775,10 +49733,10 @@
       "Form": "imitari"
     },
     {
-      "Aspect": "Imp",
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -50040,7 +49998,6 @@
     {
       "Case": "Abl",
       "Degree": "Cmp",
-      "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "pluribus"
@@ -50053,17 +50010,15 @@
       "Form": "modis"
     },
     {
-      "Aspect": "Perf",
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "VerbForm": "Part",
+      "Aspect": "Imp",
+      "Tense": "Pres",
+      "VerbForm": "Inf",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "infracta"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -50092,18 +50047,18 @@
       "Form": "publicae"
     },
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "ut"
     },
     {
-      "Case": "Dat",
+      "Case": "Gen",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "alienae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -50311,7 +50266,8 @@
   [
     {
       "Case": "Nom",
-      "Gender": "Fem",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "crudelis"
@@ -50342,7 +50298,7 @@
       "Form": "Ascanius"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -51082,8 +51038,6 @@
       "Form": "et"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "septem"
     },
@@ -51114,8 +51068,6 @@
       "Form": "habebant"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "septem"
     },
@@ -51139,7 +51091,8 @@
     },
     {
       "Case": "Acc",
-      "Number": "Sing",
+      "Gender": "Masc",
+      "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
       "Reflex": "Yes",
@@ -51169,7 +51122,7 @@
       "Form": "canerent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -51503,16 +51456,16 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "disparibus"
     },
     {
-      "Case": "Dat",
+      "Case": "Abl",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "calamis"
     },
     {
@@ -51545,8 +51498,9 @@
     {
       "Aspect": "Perf",
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -51575,7 +51529,7 @@
       "Form": "puellae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -51769,10 +51723,10 @@
     },
     {
       "Aspect": "Perf",
-      "Mood": "Sub",
+      "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Past",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -51783,7 +51737,6 @@
       "Form": "sic"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -51802,6 +51755,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -51812,11 +51766,11 @@
       "Form": "et"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -51865,11 +51819,10 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
-      "Tense": "Pres",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -51906,10 +51859,8 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meo"
     },
@@ -51938,7 +51889,7 @@
       "Form": "eius"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -52234,18 +52185,19 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "carus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
       "Tense": "Fut",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "eris"
     },
@@ -53193,12 +53145,12 @@
   ],
   [
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "VerbForm": "Fin",
+      "Aspect": "Perf",
+      "Case": "Abl",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "Tense": "Past",
+      "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "Vota"
@@ -53218,15 +53170,14 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "mea"
     },
     {
-      "Case": "Abl",
+      "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -53291,7 +53242,7 @@
       "Form": "decrevit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -53458,7 +53409,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Imp",
       "Number": "Sing",
       "Person": "2",
@@ -53469,11 +53419,10 @@
       "Form": "Parce"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -53496,6 +53445,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -53503,19 +53453,24 @@
       "Form": "mihi"
     },
     {
-      "UPOS": "PUNCT",
+      "Case": "Dat",
+      "Degree": "Pos",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "Case": "Nom",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Gen",
+      "Gender": "Masc",
+      "Number": "Plur",
       "PronType": "Rel",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Quae"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -53524,7 +53479,8 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Degree": "Pos",
+      "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "molestis"
@@ -53537,7 +53493,6 @@
       "Form": "muribus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -53555,7 +53510,7 @@
       "Form": "domum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -54039,17 +53994,16 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illa"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sit"
     },
@@ -54079,7 +54033,7 @@
       "Form": "heroinis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -54092,11 +54046,10 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
       "Number": "Plur",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suis"
     },
@@ -54108,7 +54061,6 @@
       "Form": "verbis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -54119,7 +54071,6 @@
       "Form": "cogat"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -54134,7 +54085,7 @@
       "Form": "Iovem"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -54645,7 +54596,6 @@
       "Form": "Iam"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -54656,11 +54606,11 @@
       "Form": "scio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "AdvType": "Loc",
+      "PronType": "Rel",
       "UPOS": "ADV",
       "Form": "unde"
     },
@@ -54683,20 +54633,19 @@
       "Form": "denarios"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "mille"
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "aureos"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -55091,13 +55040,12 @@
       "Form": "Illis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
       "Tense": "Pres",
       "VerbForm": "Fin",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "revertor"
     },
@@ -55109,7 +55057,7 @@
       "Form": "hostis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -55122,6 +55070,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -55140,7 +55089,7 @@
       "Form": "laeserunt"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -55469,13 +55418,10 @@
   ],
   [
     {
-      "Aspect": "Perf",
-      "Case": "Abl",
-      "Gender": "Fem",
+      "Case": "Dat",
+      "Gender": "Neut",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Pass",
-      "UPOS": "VERB",
+      "UPOS": "NOUN",
       "Form": "Laudatis"
     },
     {
@@ -55513,7 +55459,6 @@
       "Form": "Saepe"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -55524,8 +55469,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "haec"
     },
     {
@@ -55547,7 +55491,7 @@
       "Form": "narratio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -56490,7 +56434,8 @@
       "Form": "Quippe"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
@@ -56501,7 +56446,6 @@
       "Form": "temperiem"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -56531,11 +56475,10 @@
       "Form": "calor"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -56561,12 +56504,10 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "his"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -56587,14 +56528,12 @@
     {
       "Case": "Abl",
       "Gender": "Masc",
-      "NumForm": "Word",
-      "NumType": "Card",
       "Number": "Plur",
       "UPOS": "NUM",
       "Form": "duobus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -57189,7 +57128,7 @@
       "Form": "magistratus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -57207,7 +57146,6 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Con",
       "UPOS": "DET",
       "Form": "alia"
     },
@@ -57215,12 +57153,10 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Tot",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "omnia"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -57827,8 +57763,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illos"
     },
     {
@@ -57848,7 +57783,7 @@
       "Form": "eorum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -58062,7 +57997,6 @@
       "Form": "iterum"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -58073,7 +58007,7 @@
       "Form": "abiecisset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -58088,15 +58022,13 @@
       "Form": "catenatio"
     },
     {
-      "Case": "Acc",
-      "Gender": "Masc",
-      "Number": "Plur",
+      "Case": "Gen",
+      "Gender": "Neut",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "mobilis"
     },
     {
-      "NumType": "Card",
-      "PronType": "Ind",
       "UPOS": "DET",
       "Form": "aliquot"
     },
@@ -58104,7 +58036,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "figuras"
     },
     {
@@ -58119,7 +58051,7 @@
       "Form": "exprimeret"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -61544,11 +61476,7 @@
   ],
   [
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "ADV",
       "Form": "tantum"
     },
     {
@@ -61574,6 +61502,7 @@
       "Form": "et"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "bene"
     },
@@ -61588,7 +61517,6 @@
       "Form": "facta"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -61599,7 +61527,7 @@
       "Form": "valent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -61705,7 +61633,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Imp",
       "Number": "Sing",
       "Person": "2",
@@ -61720,7 +61647,7 @@
       "Form": "modo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -63113,9 +63040,9 @@
       "Form": "et"
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "opera"
     },
@@ -64875,24 +64802,24 @@
     },
     {
       "Case": "Gen",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "vivorum"
     },
     {
       "Aspect": "Perf",
-      "Mood": "Sub",
+      "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
-      "Tense": "Past",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "meminerimus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -66516,14 +66443,14 @@
   ],
   [
     {
-      "UPOS": "CCONJ",
+      "UPOS": "ADP",
       "Form": "Aut"
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "PronType": "Int",
+      "PronType": "Rel",
       "UPOS": "PRON",
       "Form": "quo"
     },
@@ -66546,10 +66473,7 @@
       "Form": "fecisti"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "ADV",
       "Form": "tantum"
     },
     {
@@ -66560,7 +66484,7 @@
       "Form": "corporis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -67532,7 +67456,6 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -67607,8 +67530,9 @@
       "Form": "per"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
+      "Case": "Acc",
+      "Gender": "Fem",
+      "Number": "Plur",
       "UPOS": "NUM",
       "Form": "tres"
     },
@@ -67651,11 +67575,11 @@
       "Form": "eorum"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -67666,7 +67590,6 @@
       "Form": "sinunt"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -67685,7 +67608,7 @@
       "Form": "monumentis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -69198,6 +69121,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -69215,7 +69139,6 @@
       "Form": "dum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -69227,24 +69150,25 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Fem",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "ADJ",
       "Form": "levem"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Nom",
+      "Degree": "Pos",
+      "Gender": "Masc",
+      "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "Gravi"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -69258,8 +69182,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "alios"
     },
     {
@@ -69275,7 +69198,8 @@
     },
     {
       "Case": "Dat",
-      "Number": "Sing",
+      "Gender": "Masc",
+      "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
       "Reflex": "Yes",
@@ -69290,7 +69214,6 @@
       "Form": "nocivum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -69308,30 +69231,30 @@
       "Form": "periculum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
   [
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Periculosum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -69343,11 +69266,11 @@
       "Form": "et"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -69355,7 +69278,7 @@
       "Form": "credere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -70188,21 +70111,21 @@
   [
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "consultatum"
     },
     {
-      "AdvType": "Loc",
       "UPOS": "ADV",
       "Form": "inde"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -70265,7 +70188,7 @@
       "Form": "nuncuparetur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -70517,7 +70440,7 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "nam"
     },
     {
@@ -70539,7 +70462,6 @@
       "Form": "salutem"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -70547,7 +70469,7 @@
       "Form": "sperare"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -70562,7 +70484,10 @@
       "Form": "arma"
     },
     {
-      "UPOS": "PUNCT",
+      "Case": "Dat",
+      "Degree": "Pos",
+      "Number": "Plur",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -70581,7 +70506,6 @@
       "Form": "corpus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -70608,13 +70532,16 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "avorteris"
     },
     {
-      "UPOS": "PUNCT",
+      "Case": "Dat",
+      "Degree": "Pos",
+      "Number": "Plur",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -70638,17 +70565,17 @@
       "Form": "dementia"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -71962,7 +71889,7 @@
       "Form": "scilicet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -71984,7 +71911,6 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "tanta"
     },
@@ -71998,7 +71924,7 @@
     },
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "atrox"
@@ -72039,7 +71965,6 @@
       "Form": "oratio"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -72050,7 +71975,7 @@
       "Form": "accendet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -73081,7 +73006,7 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "UPOS": "INTJ",
       "Form": "ecce"
     },
     {
@@ -73111,7 +73036,6 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -73134,7 +73058,6 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Tot",
       "UPOS": "DET",
       "Form": "omnis"
     },
@@ -73182,7 +73105,6 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -73216,9 +73138,8 @@
     },
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
-      "PronType": "Tot",
       "UPOS": "DET",
       "Form": "omnes"
     },
@@ -73245,7 +73166,7 @@
       "Form": "amen"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -73988,7 +73909,6 @@
       "Form": "me"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -74013,7 +73933,7 @@
       "Form": "nervis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -74721,6 +74641,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -74728,7 +74649,6 @@
       "Form": "me"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -74739,11 +74659,12 @@
       "Form": "teneo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "SCONJ",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "ne"
     },
     {
@@ -74751,12 +74672,12 @@
       "Form": "c"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sum"
     },
@@ -74769,6 +74690,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -74798,7 +74720,7 @@
       "Form": "coepi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -74812,10 +74734,8 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meam"
     },
@@ -74827,11 +74747,11 @@
       "Form": "dupundii"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -74842,7 +74762,7 @@
       "Form": "facio"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -75597,12 +75517,12 @@
       "Form": "solidum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
@@ -75615,6 +75535,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -75625,15 +75546,14 @@
       "Form": "nequit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
-      "Tense": "Pres",
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "Case": "Acc",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "mutatur"
     },
     {
@@ -75648,7 +75568,7 @@
       "Form": "ossa"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -77878,18 +77798,7 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "A.d"
-    },
-    {
-      "UPOS": "PUNCT",
-      "Form": "."
-    },
-    {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "III"
+      "Form": "A.d.III"
     },
     {
       "Case": "Acc",
@@ -78116,7 +78025,6 @@
       "Form": "qui"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -78134,7 +78042,6 @@
       "Form": "aurem"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -78160,8 +78067,7 @@
       "Form": "Spiritus"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
+      "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
@@ -78178,7 +78084,7 @@
       "Form": "ecclesiis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -80682,14 +80588,13 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "ceteros"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -82905,7 +82810,7 @@
       "Form": "Trimalchio"
     },
     {
-      "UPOS": "ADP",
+      "UPOS": "ADV",
       "Form": "contra"
     },
     {
@@ -82913,6 +82818,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -82962,7 +82868,7 @@
       "Form": "immisit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -83704,7 +83610,6 @@
       "Form": "Dardanidae"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -83715,7 +83620,7 @@
       "Form": "venient"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -85179,15 +85084,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "a.d"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "."
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "III"
+      "Form": "a.d.III"
     },
     {
       "UPOS": "ADV",
@@ -85340,11 +85237,13 @@
   ],
   [
     {
+      "PronType": "Int",
       "UPOS": "ADV",
       "Form": "quale"
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -85352,11 +85251,10 @@
       "Form": "te"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Sub",
+      "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
-      "Tense": "Pres",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -85364,6 +85262,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -85377,11 +85276,12 @@
       "Aspect": "Perf",
       "Tense": "Past",
       "VerbForm": "Inf",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "fuisse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -85396,12 +85296,12 @@
       "Form": "cum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sint"
     },
@@ -85413,7 +85313,7 @@
       "Form": "reliquiae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -87536,12 +87436,12 @@
       "Form": "paulo"
     },
     {
-      "AdvType": "Tim",
-      "UPOS": "ADV",
+      "UPOS": "ADP",
       "Form": "ante"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -87555,7 +87455,6 @@
       "Form": "senatus"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -87578,6 +87477,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -87592,7 +87492,7 @@
       "Form": "fecisse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -88546,7 +88446,6 @@
       "Form": "Iam"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -88565,12 +88464,10 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Neut",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "2",
+      "Person": "2",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "tuum"
     },
@@ -88609,7 +88506,6 @@
       "Form": "rhetoricam"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -88620,7 +88516,7 @@
       "Form": "scis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -90266,8 +90162,6 @@
       "Form": "exierunt"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "septem"
     },
@@ -90279,18 +90173,16 @@
       "Form": "angeli"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "habentes"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "septem"
     },
@@ -90317,6 +90209,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -90338,6 +90231,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -90352,6 +90246,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -90383,7 +90278,7 @@
       "Form": "aureis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -91812,14 +91707,13 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "ceteros"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -91928,7 +91822,7 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "UPOS": "INTJ",
       "Form": "o"
     },
     {
@@ -91940,6 +91834,7 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -91947,19 +91842,18 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "cava"
     },
     {
-      "Case": "Abl",
+      "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "mea"
     },
@@ -91981,7 +91875,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "percussas"
     },
     {
@@ -91992,7 +91886,6 @@
       "Form": "dominae"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -92014,7 +91907,7 @@
       "Form": "auriculas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "NOUN",
       "Form": "!"
     }
   ],
@@ -92597,7 +92490,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "classibus"
@@ -92652,7 +92545,7 @@
       "Form": "circiter"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -92784,6 +92677,7 @@
   [
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -92801,7 +92695,6 @@
       "Form": "uetuit"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -92810,13 +92703,13 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "inberbes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -92825,7 +92718,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "Saecularibus"
@@ -92848,7 +92741,6 @@
       "Case": "Gen",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Con",
       "UPOS": "DET",
       "Form": "utriusque"
     },
@@ -92872,9 +92764,9 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "DET",
       "Form": "ullum"
     },
     {
@@ -92892,7 +92784,6 @@
       "Form": "spectaculum"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -92900,7 +92791,7 @@
       "Form": "frequentare"
     },
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "nisi"
     },
     {
@@ -92909,9 +92800,8 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "PronType": "Ind",
       "UPOS": "PRON",
       "Form": "aliquo"
     },
@@ -92938,7 +92828,7 @@
       "Form": "propinquorum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -93270,8 +93160,7 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Illa"
     },
     {
@@ -93286,7 +93175,6 @@
       "Form": "oculum"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -93297,7 +93185,7 @@
       "Form": "perdidisset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -93323,10 +93211,10 @@
       "Form": "manus"
     },
     {
-      "Aspect": "Imp",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Fem",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -93347,9 +93235,9 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suam"
     },
@@ -93365,7 +93253,7 @@
       "Form": "admovit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -93399,7 +93287,7 @@
       "Form": "profuderunt"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -93413,9 +93301,9 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suas"
     },
@@ -93711,10 +93599,11 @@
       "Form": "vixit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "honeste"
     },
@@ -94848,8 +94737,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Hoc"
     },
     {
@@ -94858,6 +94746,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -94867,8 +94756,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "ille"
     },
     {
@@ -94894,7 +94782,7 @@
       "Form": "rettulit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -94914,6 +94802,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "3",
       "PronType": "Prs",
@@ -94929,7 +94818,8 @@
       "Form": "hominem"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
@@ -94937,6 +94827,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -94946,15 +94837,16 @@
       "Case": "Gen",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "seni"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -94970,9 +94862,10 @@
     },
     {
       "Aspect": "Perf",
-      "Case": "Abl",
+      "Case": "Dat",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -94990,7 +94883,7 @@
       "Form": "alluserit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -95635,7 +95528,8 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "Non"
     },
     {
@@ -95658,12 +95552,10 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "quicquam"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -95671,7 +95563,7 @@
       "Form": "gustare"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -95683,6 +95575,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -95702,7 +95595,7 @@
       "Form": "eum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -95710,7 +95603,7 @@
       "Form": "ut"
     },
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "quam"
     },
     {
@@ -95733,15 +95626,15 @@
       "Form": "exciperem"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "longe"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -95771,7 +95664,6 @@
       "Form": "que"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -95779,15 +95671,15 @@
       "Form": "sciscitari"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "PronType": "Int",
+      "UPOS": "PRON",
       "Form": "quae"
     },
     {
@@ -95797,6 +95689,7 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esset"
     },
@@ -95811,18 +95704,17 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "illa"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
+      "Case": "Nom",
+      "Gender": "Fem",
+      "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
       "Form": "quae"
@@ -95851,7 +95743,7 @@
       "Form": "discurreret"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -96128,15 +96020,16 @@
       "Form": "fortunae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "stulte"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -96147,7 +96040,6 @@
       "Form": "delictum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -96158,7 +96050,7 @@
       "Form": "arguis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -97382,23 +97274,22 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Illi"
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "negarunt"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -98080,18 +97971,20 @@
       "Case": "Nom",
       "Gender": "Neut",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "subducta"
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "enim"
     },
     {
       "Case": "Dat",
-      "Number": "Sing",
+      "Gender": "Masc",
+      "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
       "Reflex": "Yes",
@@ -98150,8 +98043,6 @@
       "Form": "fuissent"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "decem"
     },
@@ -98163,7 +98054,7 @@
       "Form": "sestertiorum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -98353,7 +98244,7 @@
       "Form": "abiit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -98372,11 +98263,11 @@
       "Form": ","
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -98387,7 +98278,6 @@
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -98687,7 +98577,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -98701,22 +98590,20 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "haec"
     },
     {
-      "Aspect": "Perf",
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
-      "UPOS": "VERB",
+      "UPOS": "ADJ",
       "Form": "opprobria"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -98728,7 +98615,6 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -98748,7 +98634,8 @@
       "Form": "et"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
@@ -98767,7 +98654,7 @@
       "Form": "refelli"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -101251,11 +101138,11 @@
   ],
   [
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "aquam"
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "enim"
     },
     {
@@ -103285,29 +103172,29 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "ipsa"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "aspera"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -103316,6 +103203,7 @@
     },
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "2",
       "PronType": "Prs",
@@ -103327,12 +103215,12 @@
       "Form": "non"
     },
     {
-      "Aspect": "Perf",
-      "Case": "Abl",
-      "Gender": "Neut",
+      "Mood": "Ind",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "Person": "2",
+      "Tense": "Pres",
+      "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "VERB",
       "Form": "timetis"
     },
@@ -103346,7 +103234,7 @@
       "Form": "eam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -103626,33 +103514,34 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "Person": "3",
+      "PronType": "Prs",
+      "UPOS": "PRON",
       "Form": "ipsi"
     },
     {
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "innoxii"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "florentes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -103674,7 +103563,6 @@
       "Form": "aetatem"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -103687,10 +103575,10 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "ceteros"
     },
     {
@@ -103701,7 +103589,6 @@
       "Form": "iudiciis"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -103713,7 +103600,11 @@
       "Form": ","
     },
     {
-      "UPOS": "SCONJ",
+      "Case": "Abl",
+      "Gender": "Masc,Neut",
+      "Number": "Sing",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quo"
     },
     {
@@ -103751,7 +103642,7 @@
       "Form": "tractarent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -105304,20 +105195,21 @@
   [
     {
       "Case": "Gen",
-      "Gender": "Masc",
+      "Degree": "Cmp",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "laudis"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "avidi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -105329,7 +105221,8 @@
     },
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "liberales"
@@ -105341,11 +105234,12 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "erant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -107613,6 +107507,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -107624,12 +107519,8 @@
       "Form": "ad"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Acc",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Ger",
       "UPOS": "VERB",
       "Form": "legendum"
     },
@@ -109269,6 +109160,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -109276,13 +109168,13 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "ambo"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -109300,7 +109192,7 @@
       "Form": "monitis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -110419,11 +110311,11 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "PronType": "Int",
+      "UPOS": "ADV",
       "Form": "num"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -110431,7 +110323,6 @@
       "Form": "infitiari"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -110443,6 +110334,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -110453,15 +110345,13 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "illo"
     },
     {
       "Case": "Abl",
-      "Gender": "Masc",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "ipso"
     },
@@ -110474,12 +110364,10 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Plur",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meis"
     },
@@ -110491,17 +110379,15 @@
       "Form": "praesidiis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "mea"
     },
@@ -110517,13 +110403,13 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "circumclusum"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -110532,6 +110418,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -110551,13 +110438,15 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "publicam"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
@@ -110577,11 +110466,10 @@
       "Form": "cum"
     },
     {
-      "Case": "Nom",
+      "Case": "Abl",
+      "Gender": "Masc",
       "Number": "Sing",
-      "Person": "2",
-      "PronType": "Prs",
-      "UPOS": "PRON",
+      "UPOS": "NOUN",
       "Form": "tu"
     },
     {
@@ -110593,6 +110481,7 @@
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -110602,10 +110491,8 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Plur",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "nostra"
     },
@@ -110640,6 +110527,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -110647,6 +110535,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -110654,9 +110543,9 @@
       "Form": "te"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esse"
     },
@@ -110672,7 +110561,7 @@
       "Form": "dicebas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -111004,7 +110893,6 @@
       "Form": "Et"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -111020,13 +110908,14 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "medium"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -111052,7 +110941,6 @@
       "Form": "aurem"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -111063,7 +110951,7 @@
       "Form": "accessisset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -111092,7 +110980,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -111128,7 +111015,6 @@
       "Form": "que"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -111139,7 +111025,7 @@
       "Form": "intellegit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -111701,12 +111587,12 @@
   ],
   [
     {
-      "AdvType": "Tim",
-      "UPOS": "ADV",
+      "UPOS": "ADP",
       "Form": "post"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
@@ -111724,7 +111610,6 @@
       "Form": "virtute"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -111735,7 +111620,7 @@
       "Form": "propulerant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -111775,7 +111660,8 @@
       "Form": "portabant"
     },
     {
-      "UPOS": "PUNCT",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -111788,27 +111674,22 @@
       "Form": "magis"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Abl",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Gdv",
       "UPOS": "VERB",
       "Form": "dandis"
     },
     {
-      "PronType": "Rel",
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "quam"
     },
     {
-      "Aspect": "Prosp",
-      "Case": "Acc",
-      "Gender": "Fem",
+      "Case": "Abl",
+      "Gender": "Neut",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Gdv",
       "UPOS": "VERB",
       "Form": "accipiundis"
     },
@@ -111838,7 +111719,7 @@
       "Form": "parabant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -112061,7 +111942,7 @@
       "Form": "praeterea"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -112072,7 +111953,7 @@
       "Form": "milites"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -112083,7 +111964,6 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "eadem"
     },
@@ -112103,8 +111983,7 @@
       "Case": "Dat",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illis"
     },
     {
@@ -112115,7 +111994,6 @@
       "Form": "necessitudo"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -115200,7 +115078,7 @@
   ],
   [
     {
-      "Case": "Acc",
+      "Case": "Nom",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -117517,7 +117395,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "2",
@@ -117528,7 +117405,7 @@
       "Form": "Scitis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -117540,7 +117417,6 @@
       "Form": "quid"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "1",
@@ -117564,7 +117440,7 @@
       "Form": "Glyco"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -117589,14 +117465,14 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -118840,23 +118716,21 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "haec"
     },
     {
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illis"
     },
     {
-      "Aspect": "Imp",
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -118893,13 +118767,14 @@
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "publicae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -120237,7 +120112,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
@@ -120278,6 +120152,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -120303,17 +120178,14 @@
       "Form": "electissimas"
     },
     {
-      "Aspect": "Imp",
-      "Case": "Nom",
-      "Gender": "Fem",
+      "Case": "Acc",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "UPOS": "ADJ",
       "Form": "ridentes"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
@@ -120324,7 +120196,7 @@
       "Form": "aggredimur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -120378,15 +120250,21 @@
       "Form": "Opus"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Sub",
+      "Mood": "Ind",
       "Number": "Sing",
-      "Person": "3",
+      "Person": "1",
       "Tense": "Pres",
       "VerbForm": "Fin",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
-      "Form": "adgredior†"
+      "Form": "adgredior"
+    },
+    {
+      "Case": "Acc",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NUM",
+      "Form": "†"
     },
     {
       "Case": "Gen",
@@ -120403,12 +120281,13 @@
       "Form": "casibus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "atrox"
@@ -120421,32 +120300,32 @@
       "Form": "proeliis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
-      "Gender": "Fem",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "discors"
     },
     {
-      "Case": "Dat",
+      "Case": "Abl",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "seditionibus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Nom",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "PronType": "Dem",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
       "UPOS": "DET",
       "Form": "ipsa"
     },
@@ -120463,13 +120342,14 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "saevum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -120697,13 +120577,13 @@
       "Number": "Plur",
       "Person": "1",
       "Poss": "Yes",
-      "UPOS": "PRON",
+      "UPOS": "DET",
       "Form": "nostras"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
+      "Case": "Nom",
+      "Gender": "Fem",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "infamia"
     },
@@ -120722,7 +120602,7 @@
       "Form": "aures"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -120908,7 +120788,6 @@
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -120997,7 +120876,7 @@
   ],
   [
     {
-      "UPOS": "CCONJ",
+      "UPOS": "ADV",
       "Form": "At"
     },
     {
@@ -121020,13 +120899,13 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "ceteris"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -121041,7 +120920,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "principes"
     },
     {
@@ -121058,11 +120937,12 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "erant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -121070,6 +120950,7 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -121092,6 +120973,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -121105,7 +120987,6 @@
       "Form": "copiis"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -121124,7 +121005,7 @@
       "Form": "uti"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -121179,7 +121060,7 @@
       "Form": "venisset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -121187,10 +121068,14 @@
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "L."
+      "Form": "L"
     },
     {
-      "Case": "Abl",
+      "UPOS": "PROPN",
+      "Form": "."
+    },
+    {
+      "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "PROPN",
@@ -121355,6 +121240,7 @@
   [
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -121369,12 +121255,10 @@
       "Form": "omnia"
     },
     {
-      "Case": "Nom",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
+      "UPOS": "DET",
       "Form": "ea"
     },
     {
@@ -125032,25 +124916,24 @@
   ],
   [
     {
+      "Case": "Nom",
       "Gender": "Neut",
       "Number": "Sing",
-      "Polarity": "Neg",
-      "PronType": "Ind",
       "UPOS": "PRON",
       "Form": "Nihil"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -125683,7 +125566,7 @@
       "Form": "geruntur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -125691,7 +125574,14 @@
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "C."
+      "Form": "C"
+    },
+    {
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "PROPN",
+      "Form": "."
     },
     {
       "Case": "Nom",
@@ -125706,11 +125596,11 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suo"
     },
@@ -126187,7 +126077,8 @@
       "Form": "Retices"
     },
     {
-      "UPOS": "SCONJ",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "ne"
     },
     {
@@ -126196,6 +126087,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -126203,12 +126095,9 @@
     },
     {
       "Case": "Dat",
-      "Gender": "Masc",
       "Number": "Plur",
-      "Number[psor]": "Plur",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "nostris"
     },
@@ -126217,13 +126106,13 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "dicta"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -126234,11 +126123,12 @@
       "Form": "refers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -126252,7 +126142,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "suspiria"
     },
     {
@@ -126270,28 +126160,25 @@
       "Form": "pectore"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quodque"
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
-      "NumForm": "Word",
-      "NumType": "Card",
+      "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "NUM",
       "Form": "unum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -126302,7 +126189,7 @@
       "Form": "potes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -126310,13 +126197,11 @@
       "Form": "ad"
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "mea"
     },
@@ -126335,7 +126220,7 @@
       "Form": "remugis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -127425,12 +127310,16 @@
   ],
   [
     {
-      "PronType": "Rel",
-      "UPOS": "ADV",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Sing",
+      "PronType": "Int",
+      "UPOS": "PRON",
       "Form": "Quid"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -127443,38 +127332,34 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "multas"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Gdv",
       "UPOS": "VERB",
       "Form": "laudando"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "1",
-      "Tense": "Pres",
-      "VerbForm": "Fin",
+      "Aspect": "Perf",
+      "Tense": "Past",
+      "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "Basse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -127485,24 +127370,20 @@
       "Form": "puellas"
     },
     {
-      "Aspect": "Perf",
       "Case": "Acc",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Sup",
       "UPOS": "VERB",
       "Form": "mutatum"
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "domina"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -127513,7 +127394,6 @@
       "Form": "cogis"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -127524,15 +127404,13 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "mea"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -127789,6 +127667,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -127800,14 +127679,14 @@
       "Form": "tamen"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "ADJ",
+      "Number": "Plur",
+      "UPOS": "NOUN",
       "Form": "atriensis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -127829,9 +127708,9 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suo"
     },
@@ -127870,10 +127749,10 @@
       "Form": "nos"
     },
     {
-      "Aspect": "Imp",
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -127896,23 +127775,22 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "siccum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
   [
     {
-      "Aspect": "Imp",
-      "Tense": "Pres",
-      "VerbForm": "Inf",
-      "Voice": "Pass",
-      "UPOS": "VERB",
+      "Case": "Dat",
+      "Gender": "Neut",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "Phaedri"
     },
     {
@@ -127923,7 +127801,6 @@
       "Form": "libellos"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -127935,7 +127812,6 @@
       "Form": "si"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "2",
@@ -127946,18 +127822,17 @@
       "Form": "desideras"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "Vaces"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -127968,7 +127843,7 @@
       "Form": "oportet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -127979,7 +127854,7 @@
       "Form": "Eutyche"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -127994,7 +127869,7 @@
       "Form": "negotiis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -128003,6 +127878,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -128016,7 +127892,6 @@
       "Form": "animus"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -128041,7 +127916,7 @@
       "Form": "carminis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -128768,9 +128643,8 @@
     {
       "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "Number": "Plur",
+      "UPOS": "PRON",
       "Form": "quidam"
     },
     {
@@ -128796,7 +128670,7 @@
       "Form": "quippe"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -128805,9 +128679,9 @@
     },
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "PRON",
       "Form": "nemo"
     },
     {
@@ -128822,11 +128696,10 @@
       "Form": "laederet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -128863,7 +128736,7 @@
       "Form": "spiritum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -130450,7 +130323,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "PROPN",
       "Form": "Volturcius"
     },
     {
@@ -130458,6 +130331,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -130475,7 +130349,7 @@
       "Form": "itinere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -130490,7 +130364,7 @@
       "Form": "litteris"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -130513,8 +130387,8 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "PronType": "Int",
+      "UPOS": "PRON",
       "Form": "qua"
     },
     {
@@ -130536,7 +130410,6 @@
       "Form": "consili"
     },
     {
-      "Aspect": "Perf",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -130547,7 +130420,7 @@
       "Form": "habuisset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -130555,7 +130428,6 @@
       "Form": "primo"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -130563,19 +130435,17 @@
       "Form": "fingere"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "Case": "Abl",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "UPOS": "PRON",
       "Form": "alia"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -130594,7 +130464,7 @@
       "Form": "coniuratione"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -130650,6 +130520,7 @@
   ],
   [
     {
+      "Polarity": "Neg",
       "UPOS": "ADV",
       "Form": "Ne"
     },
@@ -130666,6 +130537,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -130673,21 +130545,21 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "suo"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
@@ -130717,8 +130589,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illum"
     },
     {
@@ -130736,7 +130607,6 @@
       "Form": "frater"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -130748,7 +130618,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Fem",
+      "Degree": "Pos",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "auxiliaribus"
@@ -130761,7 +130631,7 @@
       "Form": "undis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -131813,7 +131683,7 @@
       "Form": "dii"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -131827,7 +131697,6 @@
       "Form": "lanatos"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -131846,7 +131715,8 @@
       "Form": "quia"
     },
     {
-      "Case": "Acc",
+      "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -131855,27 +131725,29 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "religiosi"
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "1",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sumus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -131893,7 +131765,6 @@
       "Form": "accelerare"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -131904,7 +131775,7 @@
       "Form": "volent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -132138,10 +132009,10 @@
       "Form": "altare"
     },
     {
-      "Aspect": "Imp",
       "Case": "Acc",
-      "Gender": "Fem",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -132735,6 +132606,7 @@
   [
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -132747,11 +132619,10 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Cmp",
       "Gender": "Neut",
-      "NumType": "Card",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "plus"
     },
     {
@@ -132777,15 +132648,16 @@
       "Form": ","
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "nam"
     },
     {
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "Person": "3",
+      "PronType": "Prs",
+      "UPOS": "PRON",
       "Form": "ipsum"
     },
     {
@@ -132807,7 +132679,7 @@
       "Form": "sapiebat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -132816,7 +132688,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "UPOS": "PROPN",
+      "UPOS": "NOUN",
       "Form": "Personam"
     },
     {
@@ -133244,12 +133116,13 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quam"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -133289,13 +133162,13 @@
       "Case": "Nom",
       "Gender": "Neut",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "lapsa"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -133313,7 +133186,7 @@
       "Form": "folia"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -133344,27 +133217,29 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "alto"
     },
     {
+      "Case": "Acc",
+      "Gender": "Fem",
+      "Number": "Sing",
       "PronType": "Rel",
-      "UPOS": "SCONJ",
+      "UPOS": "PRON",
       "Form": "quam"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
-      "NumType": "Card",
       "Number": "Plur",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "multae"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
@@ -133382,15 +133257,17 @@
       "Form": "aves"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ubi"
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -133415,7 +133292,6 @@
       "Form": "pontum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -133441,7 +133317,6 @@
       "Form": "terris"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -133459,7 +133334,7 @@
       "Form": "apricis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -133781,6 +133656,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -133804,7 +133680,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -133815,11 +133690,12 @@
       "Form": "exponam"
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "enim"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "2",
       "PronType": "Prs",
@@ -133827,7 +133703,7 @@
       "Form": "vobis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -133838,7 +133714,7 @@
       "Form": "Quirites"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -133871,7 +133747,7 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "DET",
       "Form": "istae"
     },
     {
@@ -133882,18 +133758,17 @@
       "Form": "copiae"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Sub",
+      "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "comparentur"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -134364,7 +134239,6 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Ind",
       "UPOS": "PRON",
       "Form": "quid"
     },
@@ -134387,7 +134261,7 @@
       "Form": "feci"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -134405,15 +134279,12 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meam"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Imp",
       "Number": "Sing",
       "Person": "2",
@@ -134424,7 +134295,7 @@
       "Form": "inspue"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -134540,7 +134411,6 @@
       "Form": "asello"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Imp",
       "Number": "Plur",
       "Person": "2",
@@ -134573,7 +134443,7 @@
       "Form": "leo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -134591,8 +134461,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illum"
     },
     {
@@ -134622,7 +134491,7 @@
       "Form": "simul"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -134631,6 +134500,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -134658,26 +134528,30 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "feras"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "Tense": "Pres",
+      "VerbForm": "Part",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "Fugientes"
     },
     {
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "Person": "3",
+      "PronType": "Prs",
+      "UPOS": "PRON",
       "Form": "ipse"
     },
     {
@@ -134692,7 +134566,7 @@
       "Form": "exciperet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -134806,7 +134680,7 @@
       "Form": "nenias"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -134818,18 +134692,18 @@
       "Form": "libentissime"
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Pres",
+      "Tense": "Past",
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "pingit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -135421,7 +135295,6 @@
       "Form": "imprudens"
     },
     {
-      "AdvType": "Tim",
       "UPOS": "ADV",
       "Form": "olim"
     },
@@ -136231,7 +136104,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -136243,6 +136115,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -136258,7 +136131,6 @@
       "Form": "quae"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "1",
@@ -136269,7 +136141,7 @@
       "Form": "scribam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -136277,7 +136149,6 @@
       "Form": "sed"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -136288,17 +136159,17 @@
       "Form": "parco"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "sciens"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -136313,7 +136184,6 @@
       "Form": "ne"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "1",
@@ -136324,14 +136194,15 @@
       "Form": "videar"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esse"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -136346,7 +136217,7 @@
       "Form": "molestior"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -136366,11 +136237,10 @@
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Fem",
-      "NumType": "Card",
       "Number": "Plur",
-      "PronType": "Ind",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "multarum"
     },
     {
@@ -136388,13 +136258,12 @@
       "Form": "varietas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -136435,7 +136304,6 @@
       "Form": "nondum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "2",
@@ -136454,7 +136322,6 @@
       "Form": "sic"
     },
     {
-      "AdvType": "Tim",
       "UPOS": "ADV",
       "Form": "iam"
     },
@@ -136476,17 +136343,17 @@
       "Form": "nota"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "secantes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -137034,16 +136901,19 @@
   ],
   [
     {
-      "AdvType": "Loc",
-      "UPOS": "ADV",
+      "Case": "Abl",
+      "Gender": "Masc,Neut",
+      "Number": "Sing",
+      "PronType": "Rel",
+      "UPOS": "PRON",
       "Form": "quo"
     },
     {
-      "Case": "Nom",
-      "Gender": "Fem",
-      "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "Case": "Acc",
+      "Degree": "Pos",
+      "Gender": "Neut",
+      "Number": "Plur",
+      "UPOS": "ADJ",
       "Form": "sola"
     },
     {
@@ -137054,7 +136924,6 @@
       "Form": "timorem"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -137066,7 +136935,6 @@
       "Form": "modo"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "2",
@@ -137077,7 +136945,7 @@
       "Form": "posses"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -137085,8 +136953,7 @@
     {
       "Case": "Acc",
       "Gender": "Fem",
-      "Number": "Sing",
-      "PronType": "Ind",
+      "Number": "Plur",
       "UPOS": "DET",
       "Form": "alias"
     },
@@ -137102,6 +136969,7 @@
       "Form": "nationes"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "male"
     },
@@ -137135,7 +137003,7 @@
       "Form": "redegit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -137149,9 +137017,10 @@
     },
     {
       "Aspect": "Perf",
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -137187,12 +137056,13 @@
       "Form": "lupi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Abl",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Magno"
@@ -137209,6 +137079,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -137227,18 +137098,14 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
-      "NumType": "Dist",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "singulos"
     },
     {
-      "Aspect": "Imp",
-      "Tense": "Pres",
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "UPOS": "ADV",
       "Form": "Illicere"
     },
     {
@@ -137260,8 +137127,7 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "illud"
     },
     {
@@ -137277,13 +137143,14 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "malum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -139064,9 +138931,9 @@
       "Form": "unius"
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Fem",
-      "Number": "Plur",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "familiae"
     },
@@ -139106,11 +138973,10 @@
       "Form": "Multum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
-      "Tense": "Pres",
+      "Tense": "Fut",
       "VerbForm": "Fin",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -139123,11 +138989,8 @@
   ],
   [
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Sing",
       "PronType": "Rel",
-      "UPOS": "DET",
+      "UPOS": "ADV",
       "Form": "Quantum"
     },
     {
@@ -139139,18 +139002,17 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "bilinguis"
     },
     {
-      "AdvType": "Tim",
-      "UPOS": "ADV",
+      "UPOS": "ADP",
       "Form": "saepe"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -139162,24 +139024,24 @@
     },
     {
       "Case": "Gen",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "mali"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Acc",
       "Gender": "Neut",
-      "Number": "Plur",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "Documentum"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -139201,7 +139063,6 @@
       "Form": "credulitas"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -139212,7 +139073,7 @@
       "Form": "potest"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -139327,7 +139188,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -139335,7 +139195,6 @@
       "Form": "memorare"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -139346,12 +139205,12 @@
       "Form": "possum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Dat",
-      "Gender": "Masc",
+      "Case": "Abl",
+      "Gender": "Fem",
       "Number": "Plur",
       "PronType": "Rel",
       "UPOS": "PRON",
@@ -139370,6 +139229,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -139398,13 +139258,15 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "Romanus"
     },
     {
-      "Case": "Abl",
+      "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -139429,7 +139291,7 @@
       "Form": "fuderit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -139455,22 +139317,17 @@
       "Form": "natura"
     },
     {
-      "Aspect": "Perf",
-      "Case": "Acc",
+      "Case": "Nom",
       "Gender": "Fem",
-      "Number": "Plur",
-      "VerbForm": "Part",
-      "Voice": "Pass",
-      "UPOS": "VERB",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "munitas"
     },
     {
-      "Aspect": "Prosp",
       "Case": "Abl",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
+      "VerbForm": "Gdv",
       "UPOS": "VERB",
       "Form": "pugnando"
     },
@@ -139497,7 +139354,6 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "ea"
     },
@@ -139515,6 +139371,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -139530,6 +139387,7 @@
       "Case": "Abl",
       "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -139547,7 +139405,7 @@
       "Form": "traheret"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -140790,12 +140648,10 @@
       "Case": "Gen",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "illorum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -141074,11 +140930,11 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -141089,21 +140945,21 @@
       "Form": "feram"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
       "Tense": "Fut",
       "VerbForm": "Fin",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "patiar"
     },
@@ -141112,7 +140968,8 @@
       "Form": ","
     },
     {
-      "UPOS": "PART",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "non"
     },
     {
@@ -141123,7 +140980,7 @@
       "Form": "sinam"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -141247,6 +141104,7 @@
   [
     {
       "Case": "Nom",
+      "Degree": "Cmp",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -141256,15 +141114,13 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
-      "Number[psor]": "Plur",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "nostri"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -141285,7 +141141,7 @@
       "Form": "conscripti"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -141312,10 +141168,10 @@
       "Form": "que"
     },
     {
-      "Case": "Gen",
+      "Case": "Dat",
       "Gender": "Fem",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "PROPN",
       "Form": "audaciae"
     },
     {
@@ -141334,7 +141190,7 @@
       "Form": "eguere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ";"
     }
   ],
@@ -141457,15 +141313,16 @@
       "Form": "Heu"
     },
     {
-      "Case": "Voc",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
       "PronType": "Rel",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "quanta"
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -141473,7 +141330,6 @@
       "Form": "nobis"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -141484,14 +141340,14 @@
       "Form": "instat"
     },
     {
-      "Case": "Voc",
+      "Case": "Acc",
       "Gender": "Fem",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "pernicies"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "!"
     }
   ],
@@ -145578,10 +145434,8 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "2",
+      "Person": "2",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "tuus"
     },
@@ -145593,7 +145447,6 @@
       "Form": "ardor"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -145604,7 +145457,7 @@
       "Form": "aget"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -146091,7 +145944,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Plur",
       "Person": "3",
@@ -146116,11 +145968,12 @@
       "Form": "flamma"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -146134,7 +145987,7 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "umeris"
     },
     {
@@ -146142,7 +145995,6 @@
       "Form": "nodo"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -146157,13 +146009,14 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "amictus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -148337,19 +148190,23 @@
       "Form": "hilaria"
     },
     {
+      "Aspect": "Perf",
       "Case": "Nom",
       "Gender": "Neut",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "Voice": "Pass",
+      "UPOS": "VERB",
       "Form": "mera"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sint"
     },
@@ -148362,7 +148219,6 @@
       "Form": "etsi"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -148376,7 +148232,6 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "istos"
     },
@@ -148384,11 +148239,11 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "scholasticos"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -148397,6 +148252,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -148404,7 +148260,6 @@
       "Form": "me"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
@@ -148415,7 +148270,7 @@
       "Form": "rideant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -148647,7 +148502,6 @@
       "Form": "frustra"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "2",
@@ -148659,13 +148513,13 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "mollem"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -148689,6 +148543,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -148696,7 +148551,6 @@
       "Form": "tibi"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -148717,7 +148571,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "serus"
     },
     {
@@ -148728,7 +148582,7 @@
       "Form": "Amor"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -149249,7 +149103,7 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "Nam"
     },
     {
@@ -149275,7 +149129,7 @@
       "Form": "adpropinquabat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -149289,9 +149143,9 @@
       "Case": "Abl",
       "Gender": "Fem",
       "Number": "Sing",
-      "Person[psor]": "3",
+      "Person": "3",
       "Poss": "Yes",
-      "PronType": "Prs",
+      "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "sua"
     },
@@ -149303,9 +149157,10 @@
       "Form": "Caesar"
     },
     {
-      "NumForm": "Roman",
-      "NumType": "Card",
-      "UPOS": "NUM",
+      "Case": "Nom",
+      "Gender": "Fem",
+      "Number": "Sing",
+      "UPOS": "PROPN",
       "Form": "VI"
     },
     {
@@ -149320,6 +149175,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -150979,7 +150835,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -150990,7 +150845,7 @@
       "Form": "Placet"
     },
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "igitur"
     },
     {
@@ -151003,7 +150858,6 @@
       "Form": "eos"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -151015,7 +150869,6 @@
       "Form": "et"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -151037,7 +150890,7 @@
       "Form": "Catilinae"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "?"
     }
   ],
@@ -151979,6 +151832,7 @@
     },
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -151987,6 +151841,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -152000,7 +151855,7 @@
       "Form": "copias"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -152011,7 +151866,7 @@
       "Form": "ornamenta"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -152022,9 +151877,9 @@
       "Form": "praesidia"
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
       "Person": "2",
       "Poss": "Yes",
       "UPOS": "DET",
@@ -152068,7 +151923,6 @@
       "Form": "egestate"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -152076,7 +151930,6 @@
       "Form": "conferre"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -152087,7 +151940,7 @@
       "Form": "debeo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -152599,6 +152452,7 @@
   [
     {
       "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -152606,7 +152460,7 @@
       "Form": "Ego"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -152618,16 +152472,17 @@
       "Form": "qui"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "sum"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "longe"
     },
@@ -152640,11 +152495,10 @@
       "Form": "fortior"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -152662,7 +152516,7 @@
       "Form": "fame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -153323,22 +153177,22 @@
   [
     {
       "Case": "Nom",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "alius"
     },
     {
-      "Case": "Acc",
-      "Gender": "Neut",
-      "Number": "Plur",
+      "Case": "Nom",
+      "Gender": "Fem",
+      "Number": "Sing",
       "PronType": "Con",
       "UPOS": "DET",
       "Form": "alia"
     },
     {
       "Case": "Abl",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "2",
       "PronType": "Prs",
@@ -154180,8 +154034,7 @@
       "Case": "Acc",
       "Gender": "Fem",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "eam"
     },
     {
@@ -154201,6 +154054,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -154329,7 +154183,6 @@
     {
       "Case": "Abl",
       "Gender": "Fem",
-      "NumType": "Ord",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "prima"
@@ -154346,6 +154199,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -154353,6 +154207,7 @@
     },
     {
       "Case": "Acc",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "1",
       "PronType": "Prs",
@@ -154378,7 +154233,7 @@
       "Form": "ocellis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -154386,6 +154241,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -154393,9 +154249,7 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "nullis"
     },
@@ -154411,7 +154265,7 @@
       "Form": "cupidinibus"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -154631,10 +154485,11 @@
   ],
   [
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "PronType": "Int",
+      "UPOS": "PRON",
       "Form": "Quis"
     },
     {
@@ -154649,6 +154504,7 @@
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -154666,13 +154522,11 @@
       "Form": "atque"
     },
     {
-      "Aspect": "Perf",
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
-      "VerbForm": "Part",
-      "Voice": "Pass",
-      "UPOS": "VERB",
+      "UPOS": "ADJ",
       "Form": "inmutata"
     },
     {
@@ -154696,11 +154550,12 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "erat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -155994,7 +155849,7 @@
       "Form": "mensarius"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     },
     {
@@ -158563,6 +158418,7 @@
   ],
   [
     {
+      "Polarity": "Neg",
       "UPOS": "ADV",
       "Form": "ne"
     },
@@ -158576,6 +158432,7 @@
     },
     {
       "Case": "Gen",
+      "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
       "PronType": "Prs",
@@ -158624,6 +158481,7 @@
       "Form": "uti"
     },
     {
+      "Polarity": "Neg",
       "UPOS": "ADV",
       "Form": "ne"
     },
@@ -158634,8 +158492,9 @@
     {
       "Aspect": "Perf",
       "Case": "Abl",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Sing",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -158663,7 +158522,6 @@
       "Form": "corpus"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -162455,7 +162313,6 @@
     {
       "Case": "Nom",
       "Gender": "Masc",
-      "NumType": "Ord",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "primus"
@@ -162466,18 +162323,17 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Con",
-      "UPOS": "DET",
+      "UPOS": "ADJ",
       "Form": "solus"
     },
     {
       "Case": "Gen",
       "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Tot",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "omnium"
     },
     {
@@ -162561,10 +162417,8 @@
       "Case": "Gen",
       "Gender": "Fem",
       "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "meae"
     },
@@ -162580,7 +162434,7 @@
       "Form": "feci"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -162837,28 +162691,31 @@
       "Form": "sub"
     },
     {
+      "Aspect": "Perf",
       "Case": "Nom",
       "Gender": "Fem",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "Voice": "Pass",
+      "UPOS": "VERB",
       "Form": "alta"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "est"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -162876,12 +162733,11 @@
       "Case": "Abl",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "indigno"
     },
     {
-      "Aspect": "Imp",
-      "Mood": "Ind",
+      "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
@@ -162905,12 +162761,13 @@
       "Form": "collo"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
   [
     {
+      "PronType": "Rel",
       "UPOS": "ADV",
       "Form": "Quapropter"
     },
@@ -162929,7 +162786,6 @@
       "Form": "fructum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "1",
@@ -162950,7 +162806,7 @@
       "Form": "suum"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -163183,13 +163039,12 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Imp",
       "Number": "Sing",
       "Person": "2",
       "Tense": "Pres",
       "VerbForm": "Fin",
-      "Voice": "Act",
+      "Voice": "Pass",
       "UPOS": "VERB",
       "Form": "egredere"
     },
@@ -163569,7 +163424,7 @@
       "Form": "neu"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -163577,10 +163432,9 @@
       "Form": "si"
     },
     {
-      "Case": "Acc",
+      "Case": "Nom",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Ind",
       "UPOS": "PRON",
       "Form": "quid"
     },
@@ -163596,11 +163450,12 @@
       "Form": "petiit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -163614,18 +163469,23 @@
       "Form": "fronte"
     },
     {
-      "Case": "Abl",
-      "Gender": "Fem",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "Aspect": "Perf",
+      "Mood": "Sub",
+      "Number": "Sing",
+      "Person": "2",
+      "Tense": "Past",
+      "VerbForm": "Fin",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "negaris"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -163633,6 +163493,7 @@
     },
     {
       "Case": "Dat",
+      "Gender": "Masc",
       "Number": "Sing",
       "Person": "2",
       "PronType": "Prs",
@@ -163645,6 +163506,7 @@
     },
     {
       "Case": "Abl",
+      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -163665,7 +163527,6 @@
       "Form": "benigna"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Plur",
       "Person": "3",
@@ -163676,7 +163537,7 @@
       "Form": "cadant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -163989,7 +163850,6 @@
       "Form": "destitit"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -163998,6 +163858,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "ADJ",
@@ -164011,13 +163872,11 @@
       "Form": "Cynthia"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "Number[psor]": "Plur",
-      "Person[psor]": "1",
+      "Person": "1",
       "Poss": "Yes",
-      "PronType": "Prs",
       "UPOS": "DET",
       "Form": "nostra"
     },
@@ -164029,7 +163888,7 @@
       "Form": "vias"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -164327,12 +164186,12 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "Haec"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Rel",
+      "UPOS": "ADV",
       "Form": "ut"
     },
     {
@@ -164347,7 +164206,7 @@
       "Form": "dixit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -164362,16 +164221,14 @@
       "Form": "symphoniam"
     },
     {
-      "NumForm": "Word",
-      "NumType": "Card",
       "UPOS": "NUM",
       "Form": "quattuor"
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -164409,9 +164266,10 @@
     },
     {
       "Aspect": "Perf",
-      "Case": "Nom",
-      "Gender": "Masc",
+      "Case": "Acc",
+      "Gender": "Neut",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -164577,7 +164435,6 @@
   ],
   [
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -164596,7 +164453,6 @@
       "Form": "quid"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -164607,7 +164463,7 @@
       "Form": "faciat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -164618,14 +164474,14 @@
       "Form": "crucis"
     },
     {
-      "Case": "Nom",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Acc",
+      "Gender": "Neut",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "offla"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -164643,7 +164499,7 @@
       "Form": "cibaria"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -166065,11 +165921,11 @@
       "Form": "quas"
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "honeste"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -166088,7 +165944,7 @@
       "Form": "licebat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -166096,6 +165952,7 @@
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
       "UPOS": "VERB",
@@ -166124,7 +165981,7 @@
       "Form": "properabant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -166191,15 +166048,22 @@
   ],
   [
     {
-      "UPOS": "PART",
+      "UPOS": "ADV",
       "Form": "igitur"
     },
     {
-      "Case": "Nom",
+      "Case": "Dat",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "P."
+      "Form": "P"
+    },
+    {
+      "Case": "Dat",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "PROPN",
+      "Form": "."
     },
     {
       "Case": "Abl",
@@ -166210,6 +166074,7 @@
     },
     {
       "Case": "Acc",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -166223,7 +166088,6 @@
       "Form": "negotium"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -166234,7 +166098,7 @@
       "Form": "dat"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -166256,7 +166120,6 @@
       "Form": "Allobrogum"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -166280,7 +166143,7 @@
       "Form": "eos"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -166288,7 +166151,6 @@
       "Form": "si"
     },
     {
-      "Aspect": "Imp",
       "Mood": "Sub",
       "Number": "Sing",
       "Person": "3",
@@ -166299,11 +166161,10 @@
       "Form": "possit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
@@ -166332,14 +166193,14 @@
       "Form": "belli"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
-      "Aspect": "Imp",
       "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
+      "Tense": "Pres",
       "VerbForm": "Part",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -166366,20 +166227,22 @@
     },
     {
       "Case": "Abl",
-      "Gender": "Neut",
+      "Degree": "Pos",
+      "Gender": "Masc,Neut",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "alieno"
     },
     {
-      "Case": "Acc",
-      "Gender": "Masc",
+      "Case": "Nom",
+      "Degree": "Pos",
+      "Gender": "Fem,Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "oppresses"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -166413,6 +166276,7 @@
     },
     {
       "Case": "Nom",
+      "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "ADJ",
@@ -166425,14 +166289,16 @@
       "Person": "3",
       "Tense": "Past",
       "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "AUX",
       "Form": "esset"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
+      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "facile"
     },
@@ -166453,7 +166319,6 @@
       "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "tale"
     },
@@ -166465,7 +166330,6 @@
       "Form": "consilium"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Pass",
@@ -166473,7 +166337,6 @@
       "Form": "adduci"
     },
     {
-      "Aspect": "Imp",
       "Tense": "Pres",
       "VerbForm": "Inf",
       "Voice": "Act",
@@ -166481,7 +166344,7 @@
       "Form": "posse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": "."
     }
   ],
@@ -168486,11 +168349,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "Febr"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "."
+      "Form": "Febr."
     },
     {
       "Mood": "Ind",

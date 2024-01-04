@@ -567,11 +567,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -773,23 +769,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -937,11 +923,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -1006,21 +988,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Ins",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "ualoual"
+      "Form": "==ualoual"
     },
     {
       "Case": "Dat",
@@ -1126,13 +1094,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -1175,13 +1137,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -1482,19 +1438,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "PronType": "Dem",
@@ -1673,13 +1617,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -1732,15 +1670,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "čac"
+      "Form": "==čac"
     },
     {
       "Case": "Nom",
@@ -1818,13 +1748,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -1840,13 +1764,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -1867,14 +1785,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -1884,17 +1795,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -1925,13 +1826,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -2323,15 +2218,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "penze"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(penze)"
     },
     {
       "Case": "Ins",
@@ -2386,23 +2273,11 @@
     },
     {
       "Case": "Dat",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
       "Number": "Sing",
       "Number[psor]": "Plur",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "ÿaroknac"
+      "Form": "==ÿaroknac"
     },
     {
       "UPOS": "X",
@@ -2703,31 +2578,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ter",
@@ -2872,15 +2729,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "el"
+      "Form": "==el"
     },
     {
       "VerbForm": "Trans",
@@ -3293,13 +3142,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -3335,11 +3178,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -3369,19 +3208,7 @@
       "Case": "Nom",
       "Number": "Plur",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "tanoc"
+      "Form": "==tanoc"
     },
     {
       "UPOS": "PUNCT",
@@ -3402,13 +3229,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -3507,13 +3328,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -3841,13 +3656,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -3877,19 +3686,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -3919,13 +3716,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -3951,11 +3742,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -4095,15 +3882,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "."
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "<.>"
     },
     {
       "UPOS": "PUNCT",
@@ -4216,17 +3995,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "Definite": "Def",
@@ -4641,11 +4410,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -4810,13 +4575,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -4941,13 +4700,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -4959,13 +4712,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sub",
@@ -5206,23 +4953,7 @@
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "mÿata"
+      "Form": "==mÿata"
     },
     {
       "Case": "Dat",
@@ -5456,13 +5187,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -5514,13 +5239,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -5677,15 +5396,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meg"
+      "Form": "==meg"
     },
     {
       "UPOS": "PUNCT",
@@ -5905,27 +5616,7 @@
       "Tense": "Imp",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "vala"
+      "Form": "==vala"
     },
     {
       "Case": "Nom",
@@ -6080,17 +5771,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguan"
+      "Form": "==foguan"
     },
     {
       "Case": "Nom",
@@ -6428,17 +6109,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Lattʼatoc"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Lattʼatoc_"
     },
     {
       "UPOS": "PART",
@@ -6475,15 +6146,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "z"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(z)"
     },
     {
       "Case": "Acc",
@@ -6720,11 +6383,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "mýatt"
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "'"
+      "Form": "mýatt'"
     },
     {
       "UPOS": "X",
@@ -7533,15 +7192,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "ha"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[ha]"
     },
     {
       "Definite": "Def",
@@ -7610,15 +7261,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Acc",
@@ -7876,14 +7519,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -7893,17 +7529,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -8068,23 +7694,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Nom",
@@ -8118,19 +7728,7 @@
       "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "lennÿ"
+      "Form": "==lennÿ"
     },
     {
       "UPOS": "PUNCT",
@@ -8442,11 +8040,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -8485,23 +8079,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -8629,15 +8213,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "zerent"
+      "Form": "==zerent"
     },
     {
       "Case": "Del",
@@ -8892,13 +8468,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -9255,27 +8825,13 @@
     },
     {
       "Definite": "Indef",
-      "Mood": "Imp",
+      "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nam"
+      "Form": "==nam"
     },
     {
       "Case": "Nom",
@@ -9379,13 +8935,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -9401,13 +8951,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -9460,19 +9004,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "vala"
+      "Form": "==vala"
     },
     {
       "Definite": "Def",
@@ -9594,17 +9126,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "eltezet"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "'"
+      "Form": "eltezet'"
     },
     {
       "UPOS": "PUNCT",
@@ -9903,15 +9425,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "megh"
+      "Form": "==megh"
     },
     {
       "Case": "Nom",
@@ -10432,17 +9946,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -10749,19 +10253,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "PronType": "Dem",
@@ -10796,17 +10288,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Hallod"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Hallod_"
     },
     {
       "UPOS": "PART",
@@ -10832,17 +10314,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguan"
+      "Form": "==foguan"
     },
     {
       "Case": "All",
@@ -11070,13 +10542,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Imadsag"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Imadsag'"
     }
   ],
   [
@@ -11093,13 +10559,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -11753,19 +11213,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "ADV",
@@ -11804,13 +11252,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -12291,13 +11733,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -12351,13 +11787,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "holtat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "holtat'"
     },
     {
       "Definite": "Indef",
@@ -12396,15 +11826,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "segedelmet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "segedelmet'"
     },
     {
       "Definite": "Def",
@@ -12441,12 +11863,7 @@
     {
       "PronType": "Dem",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "PronType": "Dem",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Sup",
@@ -12475,13 +11892,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -12517,13 +11928,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -12541,13 +11946,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Dychewseg"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Dychewseg'"
     },
     {
       "Case": "Dat",
@@ -12887,13 +12286,7 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "frat{er"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "}"
+      "Form": "frat{er}"
     },
     {
       "Case": "Ins",
@@ -13284,27 +12677,7 @@
       "Tense": "Imp",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "ualanak"
+      "Form": "==ualanak"
     },
     {
       "UPOS": "PUNCT",
@@ -13443,13 +12816,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -14117,23 +13484,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -14240,15 +13597,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ki"
+      "Form": "==ki"
     },
     {
       "Case": "Acc",
@@ -14894,17 +14243,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Past",
       "UPOS": "ADJ",
-      "Form": "zylethewtt"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "'"
+      "Form": "zylethewtt'"
     },
     {
       "UPOS": "PUNCT",
@@ -16010,13 +15349,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -16048,13 +15381,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -16206,31 +15533,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "<"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "e"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": ">"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "el_mwlth"
+      "Form": "<e>el_mwlth"
     },
     {
       "UPOS": "PUNCT",
@@ -16348,11 +15651,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -16388,15 +15687,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "el"
+      "Form": "==el"
     },
     {
       "PronType": "Dem",
@@ -16446,17 +15737,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "ueuen"
+      "Form": "==ueuen"
     },
     {
       "UPOS": "PUNCT",
@@ -16532,13 +15813,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -16669,13 +15944,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -16894,15 +16163,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nekwl"
+      "Form": "==nekwl"
     },
     {
       "Definite": "Def",
@@ -16963,23 +16224,7 @@
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "o"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "."
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "o<.>"
     },
     {
       "Case": "Dat",
@@ -17056,13 +16301,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -17109,13 +16348,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -17929,15 +17162,7 @@
     },
     {
       "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "e"
+      "Form": "==e"
     },
     {
       "Case": "Nom",
@@ -18080,13 +17305,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -18135,13 +17354,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -18360,21 +17573,7 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "nagÿ"
+      "Form": "==nagÿ"
     },
     {
       "Case": "Nom",
@@ -18587,13 +17786,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -18873,13 +18066,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -18917,15 +18104,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Dat",
@@ -19013,19 +18192,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -19061,15 +18228,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "lo̗t"
+      "Form": "==lo̗t"
     },
     {
       "UPOS": "PUNCT",
@@ -19180,15 +18339,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ki"
+      "Form": "==ki"
     },
     {
       "UPOS": "ADV",
@@ -19218,13 +18369,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -19376,13 +18521,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "PronType": "Dem",
@@ -19981,36 +19120,14 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "="
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "="
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "s=="
+      "Form": "==s=="
     },
     {
       "Case": "Nom",
       "Number": "Sing",
       "PronType": "Int",
       "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Int",
-      "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Int",
-      "UPOS": "PRON",
-      "Form": "kÿ"
+      "Form": "==kÿ"
     },
     {
       "Definite": "Indef",
@@ -20148,15 +19265,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "tanalchýtt"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "tanalchýtt'"
     },
     {
       "UPOS": "PUNCT",
@@ -20603,17 +19712,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -20634,19 +19733,7 @@
       "Case": "Cau",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Cau",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Cau",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "nėpeꝛt"
+      "Form": "==nėpeꝛt"
     },
     {
       "UPOS": "PUNCT",
@@ -20796,14 +19883,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -20813,17 +19893,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Sub",
@@ -20911,11 +19981,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -21061,19 +20127,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Dat",
@@ -21126,13 +20180,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -21361,13 +20409,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "maríat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "maríat'"
     },
     {
       "Definite": "Indef",
@@ -21578,13 +20620,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sub",
@@ -21606,19 +20642,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "PronType": "Dem",
@@ -21638,11 +20662,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -22006,12 +21026,7 @@
     {
       "PronType": "Rel",
       "UPOS": "ADV",
-      "Form": "mýkent"
-    },
-    {
-      "PronType": "Rel",
-      "UPOS": "ADV",
-      "Form": "'"
+      "Form": "mýkent'"
     },
     {
       "UPOS": "X",
@@ -22048,27 +21063,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "legy̋"
+      "Form": "==legy̋"
     },
     {
       "Case": "Nom",
@@ -22135,11 +21130,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -22190,19 +21181,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -22217,11 +21196,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -22340,12 +21315,7 @@
     {
       "PronType": "Rel",
       "UPOS": "ADV",
-      "Form": "mykent"
-    },
-    {
-      "PronType": "Rel",
-      "UPOS": "ADV",
-      "Form": "'"
+      "Form": "mykent'"
     },
     {
       "Definite": "Indef",
@@ -22628,13 +21598,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -22740,13 +21704,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -22994,13 +21952,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -23027,13 +21979,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -23239,19 +22185,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -23382,13 +22316,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "wrat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "wrat'"
     },
     {
       "UPOS": "PUNCT",
@@ -23689,12 +22617,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "PronType": "Dem",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -23897,17 +22820,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Akaꝛd"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Akaꝛd_"
     },
     {
       "UPOS": "PART",
@@ -24071,15 +22984,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "."
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "<.>"
     },
     {
       "Case": "Nom",
@@ -24473,19 +23378,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -24779,11 +23672,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -25164,13 +24053,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -25203,13 +24086,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -25367,11 +24244,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "kè"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "kè·"
     },
     {
       "Case": "Dat",
@@ -25663,13 +24536,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -25796,19 +24663,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "vala"
+      "Form": "==vala"
     },
     {
       "UPOS": "X",
@@ -25834,11 +24689,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Ela",
@@ -26131,13 +24982,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -26197,13 +25042,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -26307,19 +25146,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Nom",
@@ -26729,15 +25556,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "el"
+      "Form": "==el"
     },
     {
       "UPOS": "PUNCT",
@@ -26864,15 +25683,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "ÿs"
+      "Form": "==ÿs"
     },
     {
       "Case": "Nom",
@@ -26963,19 +25774,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -26991,11 +25790,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -28033,57 +26828,19 @@
       "Tense": "Imp",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "lata=="
+      "Form": "==lata=="
     },
     {
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "frat{er"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "}"
+      "Form": "frat{er}"
     },
     {
       "Case": "Acc",
@@ -28130,11 +26887,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -28375,15 +27128,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "utan"
+      "Form": "==utan"
     },
     {
       "Definite": "Def",
@@ -28660,13 +27405,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -29608,23 +28347,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -29845,31 +28574,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -30023,13 +28734,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -30477,17 +29182,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguan"
+      "Form": "==foguan"
     },
     {
       "UPOS": "PUNCT",
@@ -30636,17 +29331,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -30791,13 +29476,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "me-@@neeseet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "me-@@neeseet'"
     },
     {
       "UPOS": "X",
@@ -30876,13 +29555,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -31325,13 +29998,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -31343,13 +30010,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -31365,13 +30026,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -31429,13 +30084,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -31557,27 +30206,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "mondnak"
+      "Form": "==mondnak"
     },
     {
       "Case": "Nom",
@@ -32035,19 +30664,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -32099,15 +30716,7 @@
   [
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "Ilʼ-"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[Ilʼ-]"
     },
     {
       "Case": "Acc",
@@ -32544,15 +31153,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "mÿatt"
+      "Form": "==mÿatt"
     },
     {
       "Case": "Tra",
@@ -33127,11 +31728,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -33371,13 +31968,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -33436,13 +32027,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -33489,15 +32074,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nal_kẃl"
+      "Form": "==nal_kẃl"
     },
     {
       "UPOS": "PUNCT",
@@ -33576,15 +32153,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "PronType": "Dem",
@@ -33638,11 +32207,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -33854,17 +32419,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "elhitlèno̗ltètec"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "2",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "elhitlèno̗ltètec_"
     },
     {
       "UPOS": "PART",
@@ -33983,13 +32538,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "vala"
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "_"
+      "Form": "vala_"
     },
     {
       "UPOS": "PART",
@@ -34167,11 +32716,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "VerbForm": "Trans",
@@ -34182,13 +32727,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -34362,13 +32901,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "PronType": "Dem",
@@ -34429,13 +32962,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -34662,14 +33189,10 @@
   ],
   [
     {
-      "UPOS": "CONJ",
-      "Form": "Tahaͣt"
-    },
-    {
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Tahaͣt'"
     },
     {
       "Definite": "Indef",
@@ -34806,15 +33329,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "fel"
+      "Form": "==fel"
     },
     {
       "Case": "Ela",
@@ -34854,13 +33369,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -34906,13 +33415,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -34932,11 +33435,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -35080,11 +33579,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -35175,11 +33670,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "PronType": "Rel",
@@ -35649,19 +34140,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "ADV",
@@ -35747,11 +34226,7 @@
   [
     {
       "UPOS": "CONJ",
-      "Form": "{"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "de}_maga"
+      "Form": "{de}_maga"
     },
     {
       "UPOS": "ADV",
@@ -35776,24 +34251,8 @@
       "Case": "Nom",
       "Degree": "Pos",
       "Number": "Sing",
-      "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "{"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "2",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "te"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "}"
+      "Form": "{te}"
     },
     {
       "Case": "Acc",
@@ -35801,15 +34260,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "2",
       "UPOS": "NOUN",
-      "Form": "{"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "2",
-      "UPOS": "NOUN",
-      "Form": "yteleted}ett"
+      "Form": "{yteleted}ett"
     },
     {
       "UPOS": "PUNCT",
@@ -35911,23 +34362,7 @@
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "mÿatta"
+      "Form": "==mÿatta"
     },
     {
       "UPOS": "PUNCT",
@@ -36178,14 +34613,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "heet"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "'"
+      "Form": "heet'"
     },
     {
       "Case": "Nom",
@@ -36197,13 +34625,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "maríat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "maríat'"
     },
     {
       "Definite": "Indef",
@@ -36305,17 +34727,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "èꝛtitec"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "èꝛtitec_"
     },
     {
       "UPOS": "PART",
@@ -36555,15 +34967,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "zerent"
+      "Form": "==zerent"
     },
     {
       "Definite": "Indef",
@@ -36774,15 +35178,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "myatt"
+      "Form": "==myatt"
     },
     {
       "UPOS": "CONJ",
@@ -36892,19 +35288,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -36932,13 +35316,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -36989,13 +35367,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -37015,13 +35387,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -37396,13 +35762,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -37448,19 +35808,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -37531,13 +35879,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -37953,11 +36295,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -38214,17 +36552,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguan"
+      "Form": "==foguan"
     },
     {
       "UPOS": "PUNCT",
@@ -38872,11 +37200,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "VerbForm": "Trans",
@@ -38972,13 +37296,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -39063,15 +37381,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "čac"
+      "Form": "==čac"
     },
     {
       "UPOS": "SCONJ",
@@ -39357,13 +37667,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -39389,11 +37693,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -39568,10 +37868,6 @@
       "Form": ","
     },
     {
-      "UPOS": "X",
-      "Form": "["
-    },
-    {
       "Definite": "Def",
       "Mood": "Ind",
       "Number": "Sing",
@@ -39579,7 +37875,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "b]mondom"
+      "Form": "[b]mondom"
     },
     {
       "Case": "Dat",
@@ -39695,15 +37991,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "ruh"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(ruh)"
     },
     {
       "Case": "Nom",
@@ -39755,15 +38043,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "he"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(he)"
     },
     {
       "Case": "Nom",
@@ -39831,13 +38111,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -39958,17 +38232,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "megye{n"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "}"
+      "Form": "megye{n}"
     },
     {
       "Mood": "Ind",
@@ -40290,13 +38554,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -40378,13 +38636,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -40869,19 +39121,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Dat",
@@ -41191,19 +39431,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -41266,13 +39494,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "frat{er"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "}"
+      "Form": "frat{er}"
     },
     {
       "Case": "Dat",
@@ -41934,15 +40156,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "octauo"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[octauo]"
     },
     {
       "UPOS": "X",
@@ -42255,11 +40469,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -42275,13 +40485,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -42324,13 +40528,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -42448,21 +40646,7 @@
       "Number": "Plur",
       "PronType": "Dem",
       "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Cau",
-      "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Cau",
-      "Number": "Plur",
-      "PronType": "Dem",
-      "UPOS": "PRON",
-      "Form": "okeꝛt"
+      "Form": "==okeꝛt"
     },
     {
       "Definite": "Def",
@@ -42538,11 +40722,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -42620,13 +40800,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -42836,13 +41010,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -42864,19 +41032,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
@@ -43094,13 +41250,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -43128,13 +41278,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -43343,26 +41487,6 @@
       "Form": "s=="
     },
     {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "1",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "1",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
       "Definite": "Indef",
       "Mood": "Ind",
       "Number": "Sing",
@@ -43370,7 +41494,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "megewtewgettem"
+      "Form": "==megewtewgettem"
     },
     {
       "Case": "Acc",
@@ -43659,13 +41783,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "wrat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "wrat'"
     },
     {
       "UPOS": "PUNCT",
@@ -44059,15 +42177,7 @@
       "Person": "2",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "te[Ʒe"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "2",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "]"
+      "Form": "te[Ʒe]"
     },
     {
       "Case": "Nom",
@@ -44288,13 +42398,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "beke-@@seeget"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "beke-@@seeget'"
     },
     {
       "Case": "Del",
@@ -44322,13 +42426,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -44649,19 +42747,7 @@
     },
     {
       "UPOS": "INTJ",
-      "Form": "{"
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "etc"
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "."
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "}"
+      "Form": "{etc.}"
     },
     {
       "UPOS": "PUNCT",
@@ -44724,15 +42810,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "es"
+      "Form": "==es"
     },
     {
       "Case": "Del",
@@ -44814,13 +42892,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -44936,17 +43008,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -44963,14 +43025,7 @@
       "Number": "Sing",
       "PronType": "Dem",
       "UPOS": "PRON",
-      "Form": "èʒ"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "PRON",
-      "Form": "_"
+      "Form": "èʒ_"
     },
     {
       "UPOS": "PART",
@@ -45042,17 +43097,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "Case": "Nom",
@@ -45068,13 +43113,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -45112,13 +43151,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -45275,13 +43308,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -45311,13 +43338,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -45670,15 +43691,7 @@
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "mezewket"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Plur",
-      "Person": "1",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "'"
+      "Form": "mezewket'"
     },
     {
       "UPOS": "PUNCT",
@@ -45781,13 +43794,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -45817,13 +43824,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -45954,15 +43955,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "yss"
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "<yss>"
     },
     {
       "Definite": "Indef",
@@ -46009,19 +44002,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -46226,13 +44207,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Nom",
@@ -46243,11 +44218,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -46362,13 +44333,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Definite": "Indef",
@@ -46390,13 +44355,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Nom",
@@ -46414,11 +44373,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "CONJ",
@@ -46428,13 +44383,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -46460,13 +44409,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -46697,15 +44640,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ala"
+      "Form": "==ala"
     },
     {
       "Case": "Del",
@@ -46768,15 +44703,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nem"
+      "Form": "==nem"
     },
     {
       "Definite": "Indef",
@@ -47208,13 +45135,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -47231,13 +45152,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Del",
@@ -47408,15 +45323,7 @@
       "Person": "1",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "engemet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Person": "1",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "'"
+      "Form": "engemet'"
     },
     {
       "UPOS": "ADV",
@@ -47823,15 +45730,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "vag"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[vag]"
     },
     {
       "Number": "Sing",
@@ -47929,15 +45828,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ki"
+      "Form": "==ki"
     },
     {
       "UPOS": "PUNCT",
@@ -48130,13 +46021,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "bewlcheseeget"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "bewlcheseeget'"
     },
     {
       "Case": "Nom",
@@ -48359,13 +46244,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -48418,15 +46297,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "sokath"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[sokath]"
     },
     {
       "Case": "Nom",
@@ -48674,15 +46545,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nèlku̇l"
+      "Form": "==nèlku̇l"
     },
     {
       "UPOS": "PUNCT",
@@ -48793,11 +46656,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -48846,13 +46705,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "maríat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "maríat'"
     },
     {
       "Definite": "Indef",
@@ -48878,13 +46731,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -49288,13 +47135,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -49320,17 +47161,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Illic"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Illic_"
     },
     {
       "UPOS": "PART",
@@ -49548,13 +47379,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -49848,13 +47673,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -49884,17 +47703,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "vag"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "vag_"
     },
     {
       "UPOS": "PART",
@@ -50019,11 +47828,7 @@
       "Number[psor]": "Plur",
       "Person[psor]": "2",
       "UPOS": "NOUN",
-      "Form": "ʒuuetecbe[n"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "ʒuuetecbe[n]"
     },
     {
       "UPOS": "PUNCT",
@@ -50056,13 +47861,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -50198,11 +47997,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -50590,19 +48385,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "VerbForm": "Trans",
@@ -50683,17 +48466,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Akaꝛiatoc"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Akaꝛiatoc_"
     },
     {
       "UPOS": "PART",
@@ -50749,13 +48522,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Fewldet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Fewldet'"
     },
     {
       "Case": "Ins",
@@ -50791,23 +48558,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -50952,13 +48709,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -51082,13 +48833,7 @@
       "Case": "Dat",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "fywnak"
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "fywnak'"
     },
     {
       "UPOS": "CONJ",
@@ -51120,11 +48865,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -51377,13 +49118,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "PronType": "Dem",
@@ -51587,17 +49322,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguan"
+      "Form": "==foguan"
     },
     {
       "UPOS": "PUNCT",
@@ -51629,13 +49354,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -51740,17 +49459,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -51880,11 +49589,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -52381,13 +50086,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -52529,15 +50228,7 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "bewlcz{e"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Plur",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "}"
+      "Form": "bewlcz{e}"
     },
     {
       "Case": "Nom",
@@ -52922,23 +50613,7 @@
       "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Number": "Sing",
-      "Person": "2",
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "Person": "2",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "teneked"
+      "Form": "==teneked"
     },
     {
       "PronType": "Dem",
@@ -53524,23 +51199,7 @@
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "Person": "3",
-      "PronType": "Prs",
-      "UPOS": "PRON",
-      "Form": "utanna"
+      "Form": "==utanna"
     },
     {
       "Case": "Nom",
@@ -53613,15 +51272,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "b"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(b)"
     },
     {
       "Case": "Acc",
@@ -53672,20 +51323,8 @@
     {
       "Case": "Dat",
       "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "ÿanosnak"
+      "Form": "==ÿanosnak"
     },
     {
       "VerbForm": "Inf",
@@ -53890,28 +51529,7 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "ne-@@mes"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "<"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "."
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": ">"
+      "Form": "ne-@@mes<.>"
     },
     {
       "Case": "Ins",
@@ -54159,15 +51777,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "el"
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "<el>"
     },
     {
       "UPOS": "PUNCT",
@@ -54350,13 +51960,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -54428,15 +52032,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nalku̇l"
+      "Form": "==nalku̇l"
     },
     {
       "Case": "Acc",
@@ -54555,19 +52151,7 @@
       "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "lennÿ"
+      "Form": "==lennÿ"
     },
     {
       "UPOS": "PUNCT",
@@ -54701,13 +52285,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "wylaͣg"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "wylaͣg'"
     },
     {
       "VerbForm": "Trans",
@@ -54757,30 +52335,10 @@
       "Form": "monno=="
     },
     {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
       "Case": "Dat",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "felnek"
+      "Form": "==felnek"
     },
     {
       "Case": "Nom",
@@ -55180,11 +52738,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -55429,15 +52983,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "1",
       "UPOS": "NOUN",
-      "Form": "ýmadsaagomat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "ýmadsaagomat'"
     },
     {
       "UPOS": "PUNCT",
@@ -55482,14 +53028,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -55499,17 +53038,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -56203,11 +53732,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "DET",
@@ -56312,13 +53837,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "ma-@@riat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "ma-@@riat'"
     },
     {
       "VerbForm": "Inf",
@@ -56385,13 +53904,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Nom",
@@ -56418,19 +53931,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -56620,11 +54121,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "ADP",
@@ -56632,15 +54129,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "ne"
+      "Form": "==ne"
     },
     {
       "Definite": "Def",
@@ -57006,19 +54495,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -57338,13 +54815,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -57441,15 +54912,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meǵ"
+      "Form": "==meǵ"
     },
     {
       "UPOS": "PUNCT",
@@ -57505,14 +54968,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -57522,17 +54978,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -57719,13 +55165,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "wýraͣg"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "wýraͣg'"
     },
     {
       "Case": "Nom",
@@ -58067,13 +55507,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -58112,13 +55546,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -58140,13 +55568,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -58321,11 +55743,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -58565,16 +55983,10 @@
       "Form": "nagÿ"
     },
     {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "fel_zoual{al"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
+      "Case": "Ins",
       "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "}"
+      "UPOS": "NOUN",
+      "Form": "fel_zoual{al}"
     },
     {
       "Case": "Acc",
@@ -58626,19 +56038,7 @@
     },
     {
       "UPOS": "INTJ",
-      "Form": "{"
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "etc"
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "."
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "}"
+      "Form": "{etc.}"
     },
     {
       "UPOS": "PUNCT",
@@ -58702,13 +56102,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Nom",
@@ -58718,11 +56112,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -58907,11 +56297,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "All",
@@ -59178,13 +56564,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -59296,15 +56676,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Dat",
@@ -59332,23 +56704,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -59585,15 +56947,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meǵ"
+      "Form": "==meǵ"
     },
     {
       "Case": "Nom",
@@ -59635,13 +56989,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -59993,15 +57341,7 @@
       "Number[psor]": "Plur",
       "Person[psor]": "1",
       "UPOS": "NOUN",
-      "Form": "zywen-@@ket"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Plur",
-      "Person[psor]": "1",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "zywen-@@ket'"
     },
     {
       "UPOS": "PUNCT",
@@ -60471,27 +57811,7 @@
       "Tense": "Imp",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Dat",
@@ -60595,15 +57915,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "keuesse"
+      "Form": "==keuesse"
     },
     {
       "UPOS": "ADV",
@@ -60621,15 +57933,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "zerent"
+      "Form": "==zerent"
     },
     {
       "UPOS": "PUNCT",
@@ -60825,11 +58129,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "PronType": "Dem",
@@ -60867,15 +58167,7 @@
     },
     {
       "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "ee"
+      "Form": "==ee"
     },
     {
       "UPOS": "PUNCT",
@@ -61236,27 +58528,11 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Acc",
@@ -61270,13 +58546,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -61308,13 +58578,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Definite": "Def",
@@ -61986,15 +59250,7 @@
   [
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "xᶜ"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[xᶜ]"
     },
     {
       "Definite": "Indef",
@@ -62156,11 +59412,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -62234,11 +59486,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -62311,15 +59559,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meǵ"
+      "Form": "==meǵ"
     },
     {
       "Case": "Acc",
@@ -62604,27 +59844,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "legy"
+      "Form": "==legy"
     },
     {
       "Case": "Nom",
@@ -62697,11 +59917,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -62717,19 +59933,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "VerbForm": "Trans",
@@ -62852,19 +60056,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "ADP",
@@ -62902,19 +60094,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "vala"
+      "Form": "==vala"
     },
     {
       "Case": "Dat",
@@ -63321,15 +60501,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "ol"
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[ol]"
     },
     {
       "Case": "Tra",
@@ -63670,13 +60842,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -63693,12 +60859,7 @@
     {
       "PronType": "Rel",
       "UPOS": "ADV",
-      "Form": "Mykent"
-    },
-    {
-      "PronType": "Rel",
-      "UPOS": "ADV",
-      "Form": "'"
+      "Form": "Mykent'"
     },
     {
       "Definite": "Indef",
@@ -63805,15 +60966,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "valo"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(valo)"
     },
     {
       "Case": "Nom",
@@ -63827,23 +60980,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Acc",
@@ -64016,17 +61153,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "Case": "Ela",
@@ -64236,11 +61363,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -64357,13 +61480,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -64375,13 +61492,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -64500,13 +61611,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -64591,11 +61696,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -64642,19 +61743,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -65159,13 +62248,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Definite": "Indef",
@@ -65207,13 +62290,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -65315,11 +62392,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Abl",
@@ -65400,27 +62473,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "akaꝛiad"
+      "Form": "==akaꝛiad"
     },
     {
       "Case": "Nom",
@@ -65565,17 +62618,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "Ihatʼtʼatoc"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "Ihatʼtʼatoc_"
     },
     {
       "UPOS": "PART",
@@ -65585,13 +62628,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -66008,30 +63045,11 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "kewuewl=="
+      "Form": "==kewuewl=="
     },
     {
       "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "ee"
+      "Form": "==ee"
     },
     {
       "Definite": "Indef",
@@ -66083,11 +63101,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -66187,13 +63201,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -66390,32 +63398,12 @@
       "Form": "nem=="
     },
     {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
       "Case": "Nom",
       "Degree": "Pos",
       "Number": "Sing",
       "VerbForm": "Part:Past",
       "UPOS": "ADJ",
-      "Form": "tewt"
+      "Form": "==tewt"
     },
     {
       "PronType": "Dem",
@@ -66489,13 +63477,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -66546,17 +63528,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -66588,15 +63560,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nekwl"
+      "Form": "==nekwl"
     },
     {
       "Case": "Nom",
@@ -66840,17 +63804,7 @@
     {
       "PronType": "Ind",
       "UPOS": "DET",
-      "Form": "="
-    },
-    {
-      "PronType": "Ind",
-      "UPOS": "DET",
-      "Form": "="
-    },
-    {
-      "PronType": "Ind",
-      "UPOS": "DET",
-      "Form": "nemely"
+      "Form": "==nemely"
     },
     {
       "Case": "Nom",
@@ -66955,13 +63909,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -66981,13 +63929,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -67056,11 +63998,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "PronType": "Int",
@@ -67081,19 +64019,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -67116,27 +64042,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "legý"
+      "Form": "==legý"
     },
     {
       "Case": "Ins",
@@ -67258,15 +64164,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "el"
+      "Form": "==el"
     },
     {
       "Case": "Ins",
@@ -67547,27 +64445,11 @@
     },
     {
       "UPOS": "X",
-      "Form": "xiij"
+      "Form": "xiij:"
     },
     {
       "UPOS": "X",
-      "Form": ":"
-    },
-    {
-      "UPOS": "X",
-      "Form": "capitul"
-    },
-    {
-      "UPOS": "X",
-      "Form": "<"
-    },
-    {
-      "UPOS": "X",
-      "Form": "o"
-    },
-    {
-      "UPOS": "X",
-      "Form": ">"
+      "Form": "capitul<o>"
     },
     {
       "UPOS": "X",
@@ -67678,17 +64560,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "fuguan"
+      "Form": "==fuguan"
     },
     {
       "Case": "Nom",
@@ -67797,11 +64669,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Dat",
@@ -68217,13 +65085,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -68275,15 +65137,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ſèlo̗l"
+      "Form": "==ſèlo̗l"
     },
     {
       "UPOS": "PUNCT",
@@ -68385,17 +65239,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "UPOS": "PUNCT",
@@ -68456,27 +65300,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "ÿryad"
+      "Form": "==ÿryad"
     },
     {
       "UPOS": "ADV",
@@ -68669,13 +65493,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -68693,13 +65511,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -68735,11 +65547,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -68840,23 +65648,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Sup",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Sup",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "napÿan"
+      "Form": "==napÿan"
     },
     {
       "UPOS": "PUNCT",
@@ -69041,13 +65833,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Hewsag"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Hewsag'"
     },
     {
       "Case": "Dat",
@@ -69421,27 +66207,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "keʒ́"
+      "Form": "==keʒ́"
     },
     {
       "Case": "Dat",
@@ -69481,11 +66247,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -69922,27 +66684,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "nèm"
+      "Form": "==nèm"
     },
     {
       "Aspect": "Mod",
@@ -70449,15 +67191,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nèlku̇l"
+      "Form": "==nèlku̇l"
     },
     {
       "Definite": "Indef",
@@ -70526,27 +67260,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "kel"
+      "Form": "==kel"
     },
     {
       "Definite": "Def",
@@ -70601,15 +67315,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "2",
       "UPOS": "NOUN",
-      "Form": "erewkseegedet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "2",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "erewkseegedet'"
     },
     {
       "UPOS": "PUNCT",
@@ -70754,19 +67460,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -70843,11 +67537,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "VerbForm": "Trans",
@@ -70872,13 +67562,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -71018,15 +67702,7 @@
     },
     {
       "UPOS": "X",
-      "Form": ","
-    },
-    {
-      "UPOS": "X",
-      "Form": "xxij"
-    },
-    {
-      "UPOS": "X",
-      "Form": ":"
+      "Form": ",xxij:"
     },
     {
       "UPOS": "X",
@@ -71048,13 +67724,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -71100,13 +67770,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -71282,27 +67946,13 @@
       "Number[psor]": "Sing",
       "Person[psor]": "2",
       "UPOS": "NOUN",
-      "Form": "zolgaͣdert"
-    },
-    {
-      "Case": "Cau",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "2",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "zolgaͣdert'"
     },
     {
       "Case": "Cau",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "dauídert"
-    },
-    {
-      "Case": "Cau",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "dauídert'"
     },
     {
       "UPOS": "PUNCT",
@@ -71402,19 +68052,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -71497,11 +68135,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "alat"
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "'"
+      "Form": "alat'"
     },
     {
       "UPOS": "PUNCT",
@@ -71518,11 +68152,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -71538,19 +68168,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -71688,11 +68306,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "VerbForm": "Trans",
@@ -71724,11 +68338,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -71750,13 +68360,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Del",
@@ -71788,13 +68392,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -71806,13 +68404,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sub",
@@ -72188,11 +68780,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -72239,28 +68827,12 @@
       "Form": "bal=="
     },
     {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
       "Case": "Abl",
       "Number": "Sing",
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "fèlo̗llèm"
+      "Form": "==fèlo̗llèm"
     },
     {
       "UPOS": "ADV",
@@ -72392,13 +68964,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -72639,13 +69205,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -72862,39 +69422,20 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "zerzet"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "'"
+      "Form": "zerzet'"
     },
     {
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Imaadsaag"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Imaadsaag'"
     },
     {
       "Case": "Acc",
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "kyt"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "kyt'"
     },
     {
       "PronType": "Tot",
@@ -73212,15 +69753,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "el"
+      "Form": "==el"
     },
     {
       "UPOS": "PUNCT",
@@ -73275,23 +69808,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Acc",
@@ -73340,15 +69857,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nē"
+      "Form": "==nē"
     },
     {
       "Definite": "Def",
@@ -73387,15 +69896,7 @@
     },
     {
       "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "="
-    },
-    {
-      "UPOS": "PART",
-      "Form": "e"
+      "Form": "==e"
     },
     {
       "UPOS": "ADV",
@@ -73592,13 +70093,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -73640,11 +70135,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -73661,11 +70152,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -74598,13 +71085,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -74853,13 +71334,7 @@
       "Case": "Dat",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "zent'_leeleknek"
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "zent'_leeleknek'"
     },
     {
       "Definite": "Def",
@@ -75421,13 +71896,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -75523,13 +71992,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -75729,14 +72192,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -75746,17 +72202,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -76097,19 +72543,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Nom",
@@ -76511,11 +72945,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "VerbForm": "Trans",
@@ -76568,11 +72998,7 @@
   [
     {
       "UPOS": "SCONJ",
-      "Form": "mert"
-    },
-    {
-      "UPOS": "SCONJ",
-      "Form": "'"
+      "Form": "mert'"
     },
     {
       "Case": "Nom",
@@ -76633,11 +73059,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "meg"
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "'"
+      "Form": "meg'"
     },
     {
       "Case": "Nom",
@@ -76669,11 +73091,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -76758,11 +73176,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Dat",
@@ -76850,13 +73264,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -77183,13 +73591,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -77459,11 +73861,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -77694,14 +74092,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -77711,17 +74102,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -78323,13 +74704,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -78445,15 +74820,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "1",
       "UPOS": "NOUN",
-      "Form": "lelkemet"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "lelkemet'"
     },
     {
       "UPOS": "PUNCT",
@@ -79321,11 +75688,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "PronType": "Dem",
@@ -79522,19 +75885,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -79870,13 +76221,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -79954,20 +76299,8 @@
       "Form": "nemely=="
     },
     {
-      "Case": "Sup",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Sup",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
       "UPOS": "ADV",
-      "Form": "nappon"
+      "Form": "==nappon"
     },
     {
       "Definite": "Indef",
@@ -80019,14 +76352,7 @@
       "Number": "Sing",
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "k"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Rel",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "k·"
     },
     {
       "Definite": "Indef",
@@ -80036,17 +76362,7 @@
       "Tense": "Past",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "v"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "·"
+      "Form": "v·"
     },
     {
       "Case": "Nom",
@@ -80188,19 +76504,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meg"
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "'"
+      "Form": "==meg'"
     },
     {
       "Case": "Nom",
@@ -80312,13 +76616,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "haͣlat"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "haͣlat'"
     },
     {
       "Definite": "Indef",
@@ -80398,23 +76696,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Ill",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Ill",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "arataſaba"
+      "Form": "==arataſaba"
     },
     {
       "UPOS": "PUNCT",
@@ -80588,11 +76870,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -80608,19 +76886,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "ADP",
@@ -80630,13 +76896,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -80884,15 +77144,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meg"
+      "Form": "==meg"
     },
     {
       "Case": "Acc",
@@ -81089,13 +77341,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -81126,13 +77372,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -81192,11 +77432,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -81264,15 +77500,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nē"
+      "Form": "==nē"
     },
     {
       "Definite": "Indef",
@@ -81282,17 +77510,7 @@
       "Tense": "Past",
       "Voice": "Pass",
       "UPOS": "VERB",
-      "Form": "kaꝛhoʒtatot"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "kaꝛhoʒtatot_"
     },
     {
       "UPOS": "PART",
@@ -82123,13 +78341,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Nom",
@@ -82139,11 +78351,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -82466,13 +78674,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -83148,13 +79350,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -83193,13 +79389,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -83233,15 +79423,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "meǵ"
+      "Form": "==meǵ"
     },
     {
       "Case": "Ins",
@@ -83421,15 +79603,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "býzo-@@dalmaͣt"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "býzo-@@dalmaͣt'"
     },
     {
       "Case": "Dat",
@@ -83565,11 +79739,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "ýsmeg"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "'"
+      "Form": "ýsmeg'"
     },
     {
       "Definite": "Indef",
@@ -83850,13 +80020,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -84186,13 +80350,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -84453,13 +80611,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Del",
@@ -84469,11 +80621,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -84514,27 +80662,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "mond"
+      "Form": "==mond"
     },
     {
       "Case": "Nom",
@@ -84664,11 +80792,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Dat",
@@ -84756,14 +80880,7 @@
       "Number": "Sing",
       "PronType": "Dem",
       "UPOS": "PRON",
-      "Form": "a"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "PRON",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Definite": "Indef",
@@ -84878,13 +80995,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -84903,17 +81014,7 @@
     {
       "VerbForm": "Trans",
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "VerbForm": "Trans",
-      "UPOS": "ADV",
-      "Form": "foguā"
+      "Form": "==foguā"
     },
     {
       "Case": "Nom",
@@ -85012,15 +81113,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "sem"
+      "Form": "==sem"
     },
     {
       "Definite": "Def",
@@ -85166,13 +81259,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -85358,37 +81445,11 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "ywel"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "_"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "·"
+      "Form": "ywel_·"
     },
     {
       "UPOS": "ADV",
-      "Form": "teh"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "·"
+      "Form": "teh_·"
     },
     {
       "UPOS": "X",
@@ -85396,15 +81457,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "yvs"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "_"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "·"
+      "Form": "yvs_·"
     },
     {
       "UPOS": "PUNCT",
@@ -85430,13 +81483,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ade",
@@ -86139,15 +82186,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "["
-    },
-    {
-      "UPOS": "X",
-      "Form": "..."
-    },
-    {
-      "UPOS": "X",
-      "Form": "]"
+      "Form": "[...]"
     },
     {
       "UPOS": "PUNCT",
@@ -86759,13 +82798,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -86808,19 +82841,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Case": "Acc",
@@ -87336,13 +83357,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -87432,13 +83447,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "Imadsaag"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "Imadsaag'"
     }
   ],
   [
@@ -87872,15 +83881,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Past",
       "UPOS": "ADJ",
-      "Form": "megh_eekesewltet"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Past",
-      "UPOS": "ADJ",
-      "Form": "'"
+      "Form": "megh_eekesewltet'"
     },
     {
       "UPOS": "PUNCT",
@@ -88026,15 +84027,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "1",
       "UPOS": "NOUN",
-      "Form": "ymad-@@sagomat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "1",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "ymad-@@sagomat'"
     },
     {
       "UPOS": "PUNCT",
@@ -88125,27 +84118,11 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -88182,15 +84159,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nem"
+      "Form": "==nem"
     },
     {
       "Definite": "Def",
@@ -88430,13 +84399,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -88489,19 +84452,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -88551,15 +84502,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "bè"
+      "Form": "==bè"
     },
     {
       "Case": "Dat",
@@ -88776,31 +84719,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ins",
@@ -88862,15 +84787,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "feleeth"
+      "Form": "==feleeth"
     },
     {
       "UPOS": "PUNCT",
@@ -89134,15 +85051,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "nem"
+      "Form": "==nem"
     },
     {
       "Case": "Nom",
@@ -89295,13 +85204,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -89323,31 +85226,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -89567,13 +85452,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -89629,13 +85508,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -89738,13 +85611,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -90125,17 +85992,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "vag"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "vag_"
     },
     {
       "UPOS": "PART",
@@ -90399,13 +86256,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Sup",
@@ -90445,23 +86296,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Nom",
@@ -91001,17 +86836,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "hiʒ́tèc"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "hiʒ́tèc_"
     },
     {
       "UPOS": "PART",
@@ -91341,14 +87166,7 @@
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "zent"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "'"
+      "Form": "zent'"
     },
     {
       "Case": "Abl",
@@ -91439,17 +87257,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "meǵʒ́amlalʼlʼa"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "meǵʒ́amlalʼlʼa_"
     },
     {
       "UPOS": "PART",
@@ -91775,13 +87583,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -91919,15 +87721,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Abl",
@@ -91941,13 +87735,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -92118,17 +87906,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "PronType": "Dem",
@@ -92165,13 +87943,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -92310,13 +88082,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -92368,13 +88134,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -92498,11 +88258,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -92582,13 +88338,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -92623,13 +88373,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -93225,41 +88969,11 @@
       "Form": ","
     },
     {
-      "Definite": "Indef",
-      "Mood": "Imp",
-      "Number": "Sing",
-      "Person": "2",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "l"
-    },
-    {
       "Case": "Nom",
       "Degree": "Pos",
       "Number": "Sing",
       "UPOS": "ADJ",
-      "Form": "<"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "ÿ"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": ">"
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "UPOS": "ADJ",
-      "Form": "ukas"
+      "Form": "l<ÿ>ukas"
     },
     {
       "Case": "Acc",
@@ -93669,13 +89383,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -93803,11 +89511,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "nugatla{n"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "}"
+      "Form": "nugatla{n}"
     },
     {
       "UPOS": "PUNCT",
@@ -93933,11 +89637,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Def",
@@ -94043,13 +89743,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -94121,23 +89815,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Acc",
@@ -94165,23 +89843,7 @@
       "Number": "Sing",
       "VerbForm": "Part:Pres",
       "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "="
-    },
-    {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Number": "Sing",
-      "VerbForm": "Part:Pres",
-      "UPOS": "ADJ",
-      "Form": "ualo"
+      "Form": "==ualo"
     },
     {
       "Case": "Sub",
@@ -95022,13 +90684,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -95080,13 +90736,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -95234,11 +90884,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "ADV",
@@ -95265,19 +90911,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -95297,27 +90931,7 @@
       "Tense": "Imp",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "="
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Imp",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "monda"
+      "Form": "==monda"
     },
     {
       "UPOS": "PUNCT",
@@ -95329,13 +90943,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "A"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "A·"
     },
     {
       "Case": "Dat",
@@ -95907,13 +91515,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -95936,11 +91538,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -95964,13 +91562,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -96674,13 +92266,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "mariat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "'"
+      "Form": "mariat'"
     },
     {
       "Definite": "Indef",
@@ -96846,13 +92432,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -96897,13 +92477,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ela",
@@ -97309,11 +92883,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -97328,17 +92898,7 @@
     {
       "Mood": "Cnd",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Cnd",
-      "UPOS": "AUX",
-      "Form": "uolna"
+      "Form": "==uolna"
     },
     {
       "Definite": "Def",
@@ -97452,17 +93012,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "lattua{n"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "}"
+      "Form": "lattua{n}"
     },
     {
       "Case": "Acc",
@@ -97567,13 +93117,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -97620,15 +93164,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "fwlyakýaat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "fwlyakýaat'"
     },
     {
       "UPOS": "X",
@@ -97662,15 +93198,7 @@
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "orzaagaat"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "orzaagaat'"
     },
     {
       "UPOS": "PUNCT",
@@ -97928,13 +93456,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -97963,13 +93485,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -98004,19 +93520,7 @@
       "Case": "Acc",
       "Number": "Plur",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Acc",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Acc",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "tanoſagocat"
+      "Form": "==tanoſagocat"
     },
     {
       "Case": "Nom",
@@ -98178,11 +93682,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "PUNCT",
@@ -98682,13 +94182,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -98789,15 +94283,7 @@
     },
     {
       "UPOS": "X",
-      "Form": "("
-    },
-    {
-      "UPOS": "X",
-      "Form": "me"
-    },
-    {
-      "UPOS": "X",
-      "Form": ")"
+      "Form": "(me)"
     },
     {
       "UPOS": "ADV",
@@ -99147,11 +94633,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Dat",
@@ -99465,20 +94947,10 @@
       "Mood": "Ind",
       "Number": "Sing",
       "Person": "3",
-      "Tense": "Past",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "kellet"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "_"
+      "Form": "kellet_"
     },
     {
       "UPOS": "PART",
@@ -100445,13 +95917,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ine",
@@ -100514,11 +95980,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -100599,15 +96061,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Acc",
@@ -100674,17 +96128,9 @@
       "Form": "Ha=="
     },
     {
-      "UPOS": "SCONJ",
-      "Form": "="
-    },
-    {
-      "UPOS": "SCONJ",
-      "Form": "="
-    },
-    {
       "PronType": "Dem",
       "UPOS": "ADV",
-      "Form": "aʒẻt"
+      "Form": "==aʒẻt"
     },
     {
       "Definite": "Def",
@@ -100873,15 +96319,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "ki"
+      "Form": "==ki"
     },
     {
       "Case": "Nom",
@@ -101033,13 +96471,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -101082,19 +96514,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "ADV",
@@ -101118,13 +96538,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -101620,13 +97034,7 @@
       "Case": "Acc",
       "Number": "Plur",
       "UPOS": "NOUN",
-      "Form": "lelkeket"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Plur",
-      "UPOS": "NOUN",
-      "Form": "'"
+      "Form": "lelkeket'"
     },
     {
       "UPOS": "PUNCT",
@@ -101929,15 +97337,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "megh"
+      "Form": "==megh"
     },
     {
       "Case": "Nom",
@@ -102189,13 +97589,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -102381,19 +97775,7 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "UPOS": "PUNCT",
@@ -102745,13 +98127,7 @@
       "Case": "Nom",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "Legim{us"
-    },
-    {
-      "Case": "Nom",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "}"
+      "Form": "Legim{us}"
     }
   ],
   [
@@ -103375,13 +98751,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -103393,13 +98763,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -103422,23 +98786,13 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "kè"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "kè·"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Dat",
@@ -103618,13 +98972,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "UPOS": "ADP",
@@ -103718,11 +99066,7 @@
     },
     {
       "UPOS": "X",
-      "Form": ":"
-    },
-    {
-      "UPOS": "X",
-      "Form": "~"
+      "Form": ":~"
     },
     {
       "Case": "Dat",
@@ -103754,15 +99098,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "mýath"
+      "Form": "==mýath"
     },
     {
       "Case": "Dat",
@@ -104231,24 +99567,12 @@
       "Form": "nylaat"
     },
     {
-      "UPOS": "X",
-      "Form": "<"
-    },
-    {
       "Case": "Sup",
       "Number": "Sing",
       "Number[psor]": "Sing",
       "Person[psor]": "3",
       "UPOS": "NOUN",
-      "Form": "cheeýen"
-    },
-    {
-      "Case": "Sup",
-      "Number": "Sing",
-      "Number[psor]": "Sing",
-      "Person[psor]": "3",
-      "UPOS": "NOUN",
-      "Form": ">"
+      "Form": "<cheeýen>"
     },
     {
       "UPOS": "PUNCT",
@@ -104339,31 +99663,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "uala"
+      "Form": "==uala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Nom",
@@ -104929,13 +100235,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -105222,15 +100522,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "fel"
+      "Form": "==fel"
     },
     {
       "Case": "Nom",
@@ -105542,15 +100834,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "nèlku̇l"
+      "Form": "==nèlku̇l"
     },
     {
       "Definite": "Indef",
@@ -105747,11 +101031,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Case": "Nom",
@@ -106319,13 +101599,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -106433,19 +101707,7 @@
       "Case": "Dat",
       "Number": "Sing",
       "UPOS": "PROPN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "="
-    },
-    {
-      "Case": "Dat",
-      "Number": "Sing",
-      "UPOS": "PROPN",
-      "Form": "zýleýeͤnek"
+      "Form": "==zýleýeͤnek"
     },
     {
       "Definite": "Def",
@@ -106455,17 +101717,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "hýzýewk"
-    },
-    {
-      "Definite": "Def",
-      "Mood": "Ind",
-      "Number": "Plur",
-      "Person": "1",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "'"
+      "Form": "hýzýewk'"
     },
     {
       "UPOS": "PUNCT",
@@ -106507,13 +101759,7 @@
       "Case": "Acc",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "bizadalma{t"
-    },
-    {
-      "Case": "Acc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "}"
+      "Form": "bizadalma{t}"
     },
     {
       "Definite": "Indef",
@@ -106551,13 +101797,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Abl",
@@ -106871,11 +102111,7 @@
   [
     {
       "UPOS": "INTJ",
-      "Form": "ame{n"
-    },
-    {
-      "UPOS": "INTJ",
-      "Form": "}"
+      "Form": "ame{n}"
     },
     {
       "UPOS": "PUNCT",
@@ -108038,31 +103274,13 @@
       "Mood": "Ind",
       "Tense": "Imp",
       "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "="
-    },
-    {
-      "Mood": "Ind",
-      "Tense": "Imp",
-      "UPOS": "AUX",
-      "Form": "vala"
+      "Form": "==vala"
     },
     {
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",
@@ -108186,15 +103404,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "megh"
+      "Form": "==megh"
     },
     {
       "Case": "Nom",
@@ -108251,13 +103461,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "All",
@@ -108738,19 +103942,7 @@
       "Case": "Ela",
       "Number": "Sing",
       "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Ela",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "="
-    },
-    {
-      "Case": "Ela",
-      "Number": "Sing",
-      "UPOS": "NOUN",
-      "Form": "uilaǵbol"
+      "Form": "==uilaǵbol"
     },
     {
       "Definite": "Indef",
@@ -109157,13 +104349,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Definite": "Def",
@@ -109177,15 +104363,7 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "="
-    },
-    {
-      "UPOS": "ADP",
-      "Form": "m̄g"
+      "Form": "==m̄g"
     },
     {
       "Case": "Acc",
@@ -109346,13 +104524,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Acc",
@@ -109492,11 +104664,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "UPOS": "ADV",
@@ -109564,11 +104732,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -109929,17 +105093,7 @@
       "Tense": "Pres",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "illic"
-    },
-    {
-      "Definite": "Indef",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Pres",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "_"
+      "Form": "illic_"
     },
     {
       "UPOS": "PART",
@@ -110085,11 +105239,7 @@
     },
     {
       "UPOS": "CONJ",
-      "Form": "ke"
-    },
-    {
-      "UPOS": "CONJ",
-      "Form": "·"
+      "Form": "ke·"
     },
     {
       "Definite": "Indef",
@@ -110139,13 +105289,7 @@
       "Definite": "Def",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "a"
-    },
-    {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "·"
+      "Form": "a·"
     },
     {
       "Case": "Ill",

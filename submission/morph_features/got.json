@@ -6334,15 +6334,7 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "þat"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "-"
-    },
-    {
-      "UPOS": "ADV",
-      "Form": "ain"
+      "Form": "þat-ain"
     },
     {
       "UPOS": "CCONJ",
@@ -11722,15 +11714,7 @@
     },
     {
       "UPOS": "NUM",
-      "Form": "·"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "ib"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "·"
+      "Form": "·ib·"
     },
     {
       "Mood": "Ind",
@@ -12208,15 +12192,7 @@
     },
     {
       "UPOS": "ADJ",
-      "Form": "·"
-    },
-    {
-      "UPOS": "ADJ",
-      "Form": "a"
-    },
-    {
-      "UPOS": "ADJ",
-      "Form": "·"
+      "Form": "·a·"
     },
     {
       "Mood": "Ind",
@@ -13829,15 +13805,7 @@
     },
     {
       "UPOS": "NUM",
-      "Form": "·"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "t"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "·"
+      "Form": "·t·"
     },
     {
       "Case": "Gen",
@@ -19106,27 +19074,7 @@
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "diz"
-    },
-    {
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "VerbForm": "Fin",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "-"
-    },
-    {
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "VerbForm": "Fin",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "sat"
+      "Form": "diz-sat"
     },
     {
       "UPOS": "CCONJ",
@@ -28596,27 +28544,7 @@
       "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
-      "Form": "at"
-    },
-    {
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "VerbForm": "Fin",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "-"
-    },
-    {
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Past",
-      "VerbForm": "Fin",
-      "Voice": "Act",
-      "UPOS": "VERB",
-      "Form": "gaf"
+      "Form": "at-gaf"
     },
     {
       "UPOS": "CCONJ",
@@ -40150,15 +40078,7 @@
     },
     {
       "UPOS": "NUM",
-      "Form": "·"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "id"
-    },
-    {
-      "UPOS": "NUM",
-      "Form": "·"
+      "Form": "·id·"
     },
     {
       "UPOS": "CCONJ",

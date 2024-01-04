@@ -46,8 +46,14 @@
       "Form": "pansa"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -93,12 +99,17 @@
       "Form": "verra"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'il"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -106,7 +117,7 @@
       "Form": "puet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -203,7 +214,12 @@
     {
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -361,9 +377,14 @@
       "Form": "oltre"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "n'orent"
+      "UPOS": "AUX",
+      "Form": "orent"
     },
     {
       "UPOS": "NOUN",
@@ -518,7 +539,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'ele"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -634,7 +660,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'eles"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "eles"
     },
     {
       "VerbForm": "Fin",
@@ -772,13 +803,24 @@
       "Form": "plevist"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "AUX",
-      "Form": "s'iroit"
+      "UPOS": "VERB",
+      "Form": "iroit"
     },
     {
       "VerbForm": "Inf",
@@ -826,9 +868,12 @@
       "Form": "de"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "l'uevre"
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
+      "UPOS": "PROPN",
+      "Form": "uevre"
     },
     {
       "UPOS": "ADP",
@@ -845,8 +890,13 @@
     },
     {
       "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "N'"
+    },
+    {
+      "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "N'avra"
+      "Form": "avra"
     },
     {
       "PronType": "Ind",
@@ -868,14 +918,13 @@
       "Form": "vivre"
     },
     {
-      "NumType": "Card",
-      "UPOS": "NUM",
-      "Form": "Que.iiii"
+      "UPOS": "SCONJ",
+      "Form": "Que"
     },
     {
       "NumType": "Card",
       "UPOS": "NUM",
-      "Form": "."
+      "Form": ".iiii."
     },
     {
       "UPOS": "NOUN",
@@ -929,9 +978,13 @@
       "Form": "Por"
     },
     {
+      "UPOS": "NOUN",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Inf",
       "UPOS": "VERB",
-      "Form": "l'oïr"
+      "Form": "oïr"
     },
     {
       "UPOS": "CCONJ",
@@ -953,7 +1006,7 @@
       "Form": "savoir"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1147,10 +1200,13 @@
       "Form": "qui"
     },
     {
-      "Tense": "Past",
-      "VerbForm": "Part",
-      "UPOS": "VERB",
-      "Form": "d'aïe"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "d'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "aïe"
     },
     {
       "VerbForm": "Fin",
@@ -1196,7 +1252,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "m'est"
+      "Form": "m'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -1212,10 +1273,12 @@
       "Form": "il"
     },
     {
-      "Tense": "Past",
-      "VerbForm": "Part",
-      "UPOS": "VERB",
-      "Form": "m'aïe"
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "aïe"
     },
     {
       "UPOS": "PUNCT",
@@ -1233,7 +1296,7 @@
       "Form": "Desdaing"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1251,7 +1314,7 @@
       "Form": "Et"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -1259,7 +1322,8 @@
       "Form": "se"
     },
     {
-      "UPOS": "ADP",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": "a"
     },
     {
@@ -1364,11 +1428,20 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "Qu'ancor"
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "ancor"
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'an"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -1405,9 +1478,13 @@
       "Form": "je"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'os"
+      "Form": "os"
     },
     {
       "UPOS": "ADV",
@@ -1429,9 +1506,13 @@
   ],
   [
     {
+      "UPOS": "PRON",
+      "Form": "S'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "S'a"
+      "Form": "a"
     },
     {
       "Tense": "Past",
@@ -1444,8 +1525,14 @@
       "Form": "cuer"
     },
     {
-      "UPOS": "ADJ",
-      "Form": "d'estrenge"
+      "UPOS": "PUNCT",
+      "Form": "d'"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "UPOS": "VERB",
+      "Form": "estrenge"
     },
     {
       "UPOS": "NOUN",
@@ -1456,8 +1543,13 @@
       "Form": "De"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "s'esperance"
+      "Form": "esperance"
     },
     {
       "PronType": "Prs,Rel",
@@ -1474,7 +1566,7 @@
       "Form": "vant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1516,11 +1608,16 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "t'an"
+      "Form": "t'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "AUX",
       "Form": "oi"
     },
     {
@@ -1537,7 +1634,7 @@
       "Form": "mes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1567,7 +1664,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "t'an"
+      "Form": "t'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -1617,7 +1719,7 @@
       "Form": "ci"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1630,7 +1732,7 @@
       "Form": "Kex"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -1668,8 +1770,14 @@
       "Form": "cil"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "n'en"
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -1685,10 +1793,15 @@
       "Form": "mes"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "Tense": "Past",
       "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "l'oïe"
+      "Form": "oïe"
     },
     {
       "UPOS": "PUNCT",
@@ -1713,8 +1826,14 @@
       "Form": "cuers"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "n'i"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -1771,8 +1890,12 @@
       "Form": "de"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "l'ostel"
+      "Form": "ostel"
     },
     {
       "PronType": "Prs",
@@ -1848,7 +1971,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -1866,7 +1994,7 @@
       "Form": "Chevaliers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -2006,7 +2134,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "Qu'il"
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Dem",
@@ -2089,9 +2222,13 @@
   ],
   [
     {
+      "UPOS": "PRON",
+      "Form": "S'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "S'aimme"
+      "Form": "aimme"
     },
     {
       "Definite": "Def",
@@ -2131,7 +2268,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'ainme"
+      "Form": "N'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "ainme"
     },
     {
       "Polarity": "Neg",
@@ -2139,7 +2281,7 @@
       "Form": "pas"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -2158,12 +2300,17 @@
       "Form": "savoir"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
+      "PronType": "Ind",
+      "UPOS": "DET",
+      "Form": "L'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "L'ome"
+      "Form": "ome"
     },
     {
       "PronType": "Prs,Rel",
@@ -2284,7 +2431,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'enrage"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "enrage"
     },
     {
       "UPOS": "PUNCT",
@@ -2364,7 +2516,7 @@
       "Form": "androit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -2381,11 +2533,11 @@
       "Form": "verra"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "UPOS": "NOUN",
+      "UPOS": "ADV",
       "Form": "Seront"
     },
     {
@@ -2396,12 +2548,12 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "si.iv"
+      "Form": "si"
     },
     {
       "NumType": "Card",
       "UPOS": "NUM",
-      "Form": "."
+      "Form": ".iv."
     },
     {
       "UPOS": "NOUN",
@@ -2414,9 +2566,13 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "S'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "S'avoient"
+      "UPOS": "AUX",
+      "Form": "avoient"
     },
     {
       "UPOS": "ADV",
@@ -2585,9 +2741,14 @@
       "Form": "sai"
     },
     {
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "qu'alasse"
+      "Form": "alasse"
     },
     {
       "Tense": "Pres",
@@ -2615,9 +2776,13 @@
       "Form": "duel"
     },
     {
-      "PronType": "Rel",
+      "UPOS": "NUM",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "qu'ele"
+      "Form": "ele"
     },
     {
       "PronType": "Dem",
@@ -2646,10 +2811,15 @@
       "Form": "morz"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "Tense": "Past",
       "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "l'asproie"
+      "Form": "asproie"
     },
     {
       "UPOS": "PUNCT",
@@ -2710,7 +2880,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'i"
+      "Form": "N'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -2852,7 +3027,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'en"
+      "Form": "N'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -2901,8 +3081,12 @@
   ],
   [
     {
-      "UPOS": "PROPN",
-      "Form": "Qu'a"
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "UPOS": "NOUN",
@@ -2928,9 +3112,13 @@
       "Form": "Ne"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'ainment"
+      "Form": "ainment"
     },
     {
       "UPOS": "ADV",
@@ -2965,9 +3153,13 @@
       "Form": "Felenessemant"
     },
     {
+      "UPOS": "ADV",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'antrespruevent"
+      "Form": "antrespruevent"
     }
   ],
   [
@@ -3044,7 +3236,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'an"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -3053,7 +3250,11 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "S'Amors"
+      "Form": "S'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "Amors"
     },
     {
       "Tense": "Past",
@@ -3067,9 +3268,14 @@
       "Form": "ne"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'eüst"
+      "Form": "eüst"
     },
     {
       "UPOS": "PUNCT",
@@ -3127,8 +3333,9 @@
       "Form": "cuer"
     },
     {
-      "PronType": "Prs",
-      "UPOS": "PRON",
+      "Definite": "Def",
+      "PronType": "Art",
+      "UPOS": "DET",
       "Form": "le"
     },
     {
@@ -3144,12 +3351,22 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'il"
+      "Form": "N'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -3157,14 +3374,12 @@
       "Form": "avoit"
     },
     {
-      "UPOS": "ADV",
-      "Form": "que.i"
+      "UPOS": "SCONJ",
+      "Form": "que"
     },
     {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "."
+      "UPOS": "ADP",
+      "Form": ".i."
     },
     {
       "UPOS": "ADJ",
@@ -3259,7 +3474,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'a"
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "a"
     },
     {
       "Tense": "Past",
@@ -3274,10 +3494,14 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
       "Tense": "Past",
       "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "Qu'antreconeü"
+      "Form": "antreconeü"
     },
     {
       "Polarity": "Neg",
@@ -3301,8 +3525,13 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "Qu'ele"
+      "UPOS": "CCONJ",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -3338,8 +3567,7 @@
       "Form": "mes"
     },
     {
-      "PronType": "Prs,Rel",
-      "UPOS": "PRON",
+      "UPOS": "SCONJ",
       "Form": "que"
     },
     {
@@ -3366,7 +3594,13 @@
     {
       "PronType": "Dem",
       "UPOS": "DET",
-      "Form": "C'uns"
+      "Form": "C'"
+    },
+    {
+      "Definite": "Ind",
+      "PronType": "Art",
+      "UPOS": "DET",
+      "Form": "uns"
     },
     {
       "UPOS": "ADJ",
@@ -3471,9 +3705,13 @@
       "Form": "formant"
     },
     {
+      "UPOS": "PROPN",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'esjot"
+      "Form": "esjot"
     },
     {
       "UPOS": "ADP",
@@ -3494,7 +3732,8 @@
       "Form": ","
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Prs,Rel",
+      "UPOS": "PRON",
       "Form": "que"
     },
     {
@@ -3514,7 +3753,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "UPOS": "ADV",
@@ -3568,8 +3812,7 @@
       "Form": "pailles"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "NOUN",
       "Form": "Fet"
     },
     {
@@ -3622,7 +3865,7 @@
       "Form": "Dex"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -3748,12 +3991,16 @@
       "Form": "il"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "l'avra"
+      "UPOS": "PUNCT",
+      "Form": "l'"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "avra"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -3775,8 +4022,14 @@
       "Form": "garçons"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -3846,12 +4099,22 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "Qu'il"
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -3895,9 +4158,13 @@
       "Form": "mout"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "m'est"
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -4009,16 +4276,26 @@
       "Form": "de"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "l'arbre"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "NOUN",
+      "Form": "arbre"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
       "UPOS": "PUNCT",
-      "Form": "c'est"
+      "Form": "c'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "Definite": "Def",
@@ -4114,7 +4391,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "Qu'ele"
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -4124,7 +4406,12 @@
     {
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -4152,8 +4439,12 @@
       "Form": "Par"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "UPOS": "ADV",
-      "Form": "l'amonestemant"
+      "Form": "amonestemant"
     },
     {
       "UPOS": "ADP",
@@ -4165,7 +4456,7 @@
       "Form": "moi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -4268,7 +4559,7 @@
       "Form": "saut"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -4276,9 +4567,13 @@
       "Form": "Bien"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "m'as"
+      "UPOS": "AUX",
+      "Form": "as"
     },
     {
       "UPOS": "ADV",
@@ -4344,7 +4639,8 @@
       "Form": "Qualogrenant"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": ","
     },
     {
@@ -4386,8 +4682,14 @@
       "Form": "de"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "l'ataïne"
+      "UPOS": "ADJ",
+      "Form": "l'"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "UPOS": "VERB",
+      "Form": "ataïne"
     },
     {
       "UPOS": "NOUN",
@@ -4415,7 +4717,12 @@
   [
     {
       "UPOS": "CCONJ",
-      "Form": "Quequ'il"
+      "Form": "Quequ'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -4483,8 +4790,12 @@
       "Form": "dames"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "C'"
+    },
+    {
       "UPOS": "ADV",
-      "Form": "C'onques"
+      "Form": "onques"
     },
     {
       "VerbForm": "Fin",
@@ -4739,25 +5050,43 @@
       "Form": "tant"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "UPOS": "VERB",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'arache"
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "arache"
     },
     {
       "UPOS": "CCONJ",
       "Form": "et"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'i"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "AUX",
       "Form": "serre"
     },
     {
@@ -4903,8 +5232,14 @@
       "Form": "santier"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'est"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "Tense": "Past",
@@ -4933,8 +5268,12 @@
   ],
   [
     {
-      "UPOS": "ADJ",
-      "Form": "N'encor"
+      "UPOS": "ADV",
+      "Form": "N'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "encor"
     },
     {
       "Polarity": "Neg",
@@ -4947,8 +5286,7 @@
       "Form": "cuit"
     },
     {
-      "PronType": "Prs,Rel",
-      "UPOS": "PRON",
+      "UPOS": "SCONJ",
       "Form": "que"
     },
     {
@@ -5010,7 +5348,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'a"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "a"
     },
     {
       "Polarity": "Neg",
@@ -5022,12 +5365,18 @@
       "Form": "tort"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'ele"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -5146,7 +5495,7 @@
       "Form": "Oïl"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5154,7 +5503,7 @@
       "Form": "voir"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5162,7 +5511,7 @@
       "Form": "dame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5288,9 +5637,14 @@
       "Form": "tant"
     },
     {
-      "VerbForm": "Fin",
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "m'anhardi"
+      "Form": "anhardi"
     },
     {
       "UPOS": "SCONJ",
@@ -5318,13 +5672,21 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'irons"
+      "Form": "irons"
     },
     {
       "UPOS": "ADP",
-      "Form": "jusqu'a"
+      "Form": "jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "UPOS": "NOUN",
@@ -5350,12 +5712,17 @@
       "Form": "vos"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "l'avroiz"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "avroiz"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5374,7 +5741,7 @@
       "Form": "le"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "NOUN",
       "Form": "mains"
     },
     {
@@ -5383,7 +5750,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "Jusqu'a"
+      "Form": "Jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "NumType": "Ord",
@@ -5554,7 +5925,11 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "C'onques"
+      "Form": "C'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "onques"
     },
     {
       "VerbForm": "Fin",
@@ -5562,8 +5937,7 @@
       "Form": "poïst"
     },
     {
-      "VerbForm": "Inf",
-      "UPOS": "VERB",
+      "UPOS": "NOUN",
       "Form": "former"
     },
     {
@@ -5578,7 +5952,11 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "C'onques"
+      "Form": "C'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "onques"
     },
     {
       "UPOS": "ADP",
@@ -5668,7 +6046,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'avoit"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "avoit"
     },
     {
       "UPOS": "SCONJ",
@@ -5753,7 +6136,7 @@
       "Form": "iert"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5851,14 +6234,18 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'onques"
+      "Form": "N'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "onques"
     },
     {
       "UPOS": "ADV",
       "Form": "mes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -5958,9 +6345,13 @@
       "Form": "fille"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "n'iert"
+      "Form": "iert"
     },
     {
       "Tense": "Past",
@@ -6009,9 +6400,13 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "S'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "S'est"
+      "Form": "est"
     },
     {
       "UPOS": "NOUN",
@@ -6078,7 +6473,8 @@
       "Form": "chief"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": ","
     },
     {
@@ -6140,7 +6536,11 @@
     {
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "qu'an"
+      "Form": "qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "UPOS": "ADJ",
@@ -6185,12 +6585,16 @@
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "N'en"
+      "UPOS": "ADV",
+      "Form": "N'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "en"
     },
     {
       "PronType": "Ind",
-      "UPOS": "ADJ",
+      "UPOS": "DET",
       "Form": "autre"
     },
     {
@@ -6198,7 +6602,8 @@
       "Form": "leu"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": ","
     },
     {
@@ -6220,12 +6625,21 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "S'ele"
+      "Form": "S'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
+    },
+    {
+      "UPOS": "PUNCT",
+      "Form": "n'"
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "n'est"
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -6344,8 +6758,14 @@
       "Form": "Et"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'autre"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "ADJ",
+      "Form": "autre"
     },
     {
       "UPOS": "ADP",
@@ -6491,7 +6911,12 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "n'en"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -6527,8 +6952,8 @@
       "Form": "lui"
     },
     {
-      "PronType": "Ind",
-      "UPOS": "PRON",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
       "Form": "autresi"
     },
     {
@@ -6585,7 +7010,7 @@
       "Form": "derotes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -6744,11 +7169,11 @@
       "Form": "onques"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "UPOS": "ADJ",
+      "UPOS": "ADV",
       "Form": "Mien"
     },
     {
@@ -6809,8 +7234,7 @@
       "Form": "En"
     },
     {
-      "Tense": "Pres",
-      "VerbForm": "Part",
+      "VerbForm": "Inf",
       "UPOS": "VERB",
       "Form": "trancha"
     },
@@ -6861,7 +7285,7 @@
       "Form": "Deu"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -6869,7 +7293,7 @@
       "Form": "sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -6899,7 +7323,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'i"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -6958,7 +7387,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "jusqu'an"
+      "Form": "jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "Definite": "Def",
@@ -7034,10 +7467,14 @@
       "Form": "a"
     },
     {
+      "UPOS": "NOUN",
+      "Form": "l'"
+    },
+    {
       "Tense": "Past",
       "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "l'ermite"
+      "Form": "ermite"
     },
     {
       "UPOS": "NOUN",
@@ -7059,8 +7496,14 @@
       "Form": "Tot"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "m'ont"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "m'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "ont"
     },
     {
       "Poss": "Yes",
@@ -7096,7 +7539,7 @@
       "Form": "Deu"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7104,7 +7547,7 @@
       "Form": "Qualogrenant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7249,8 +7692,12 @@
       "Form": "de"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "UPOS": "ADJ",
-      "Form": "l'espaule"
+      "Form": "espaule"
     },
     {
       "PronType": "Prs",
@@ -7300,11 +7747,15 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'an"
+      "Form": "s'"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
+    },
+    {
+      "UPOS": "NOUN",
       "Form": "part"
     },
     {
@@ -7428,12 +7879,17 @@
       "Form": "que"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'il"
+      "UPOS": "PROPN",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -7502,12 +7958,17 @@
       "Form": "aprés"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "l'asaut"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "asaut"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7601,12 +8062,17 @@
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'en"
+      "UPOS": "ADV",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "AUX",
+      "UPOS": "VERB",
       "Form": "a"
     },
     {
@@ -7755,7 +8221,7 @@
       "Form": "plot"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7764,9 +8230,14 @@
       "Form": "vanter"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'oserent"
+      "Form": "oserent"
     },
     {
       "UPOS": "PUNCT",
@@ -7798,8 +8269,13 @@
       "Form": "li"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "UPOS": "ADJ",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -7873,7 +8349,7 @@
       "Form": "Kex"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7892,7 +8368,7 @@
       "Form": "rois"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -7900,8 +8376,14 @@
       "Form": "des"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -7927,9 +8409,14 @@
       "Form": "toz"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "l'avez"
+      "Form": "avez"
     },
     {
       "Tense": "Past",
@@ -7938,7 +8425,7 @@
       "Form": "rovee"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8001,7 +8488,7 @@
       "Form": "saut"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8015,8 +8502,12 @@
   ],
   [
     {
-      "UPOS": "PROPN",
-      "Form": "Qu'assez"
+      "UPOS": "NOUN",
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "assez"
     },
     {
       "VerbForm": "Fin",
@@ -8179,7 +8670,11 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "Qu'a"
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "PronType": "Ind",
@@ -8232,7 +8727,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8261,7 +8756,12 @@
     {
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "l'i"
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -8280,11 +8780,15 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'an"
+      "Form": "s'"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
+    },
+    {
+      "UPOS": "NOUN",
       "Form": "part"
     },
     {
@@ -8301,7 +8805,11 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "d'ore"
+      "Form": "d'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "ore"
     },
     {
       "UPOS": "SCONJ",
@@ -8319,7 +8827,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'est"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADV",
@@ -8332,8 +8845,15 @@
       "Form": "esveilliez"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "Qu'au"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "Qu'"
+    },
+    {
+      "Definite": "Def",
+      "PronType": "Art",
+      "UPOS": "ADP",
+      "Form": "au"
     },
     {
       "VerbForm": "Inf",
@@ -8447,7 +8967,7 @@
       "Form": "Et"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -8470,7 +8990,7 @@
       "Form": "siust"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8494,12 +9014,16 @@
       "Form": "veneison"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "UPOS": "NUM",
+      "Form": "qu'"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "AUX",
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
+    },
+    {
+      "UPOS": "ADP",
       "Form": "a"
     },
     {
@@ -8521,7 +9045,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8699,7 +9223,8 @@
       "Form": "veoir"
     },
     {
-      "UPOS": "PUNCT",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": ","
     },
     {
@@ -8727,7 +9252,7 @@
       "Form": "Amie"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8757,7 +9282,7 @@
       "Form": "atendre"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADP",
       "Form": ","
     },
     {
@@ -8887,7 +9412,7 @@
       "Form": "vindrent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -8980,7 +9505,12 @@
     {
       "PronType": "Ind",
       "UPOS": "ADJ",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -9124,7 +9654,7 @@
       "Form": "Oïl"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9132,7 +9662,7 @@
       "Form": "voir"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9209,7 +9739,7 @@
       "Form": "seror"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "NOUN",
       "Form": ","
     },
     {
@@ -9247,7 +9777,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9256,9 +9786,13 @@
       "Form": "je"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'ai"
+      "Form": "ai"
     },
     {
       "UPOS": "ADV",
@@ -9302,9 +9836,13 @@
       "Form": "veoir"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "s'anuie"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "anuie"
     },
     {
       "VerbForm": "Fin",
@@ -9317,7 +9855,12 @@
     },
     {
       "UPOS": "NOUN",
-      "Form": "l'eve"
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "eve"
     },
     {
       "UPOS": "ADJ",
@@ -9342,7 +9885,7 @@
       "Form": "perron"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADP",
       "Form": ","
     },
     {
@@ -9378,7 +9921,7 @@
       "Form": "foi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9386,7 +9929,7 @@
       "Form": "dame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9487,7 +10030,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "m'est"
+      "Form": "m'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADV",
@@ -9549,7 +10097,12 @@
     {
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -9557,7 +10110,7 @@
       "Form": "a"
     },
     {
-      "UPOS": "SCONJ",
+      "UPOS": "ADV",
       "Form": "que"
     },
     {
@@ -9620,7 +10173,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "jusqu'a"
+      "Form": "jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "Definite": "Def",
@@ -9733,7 +10290,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9762,7 +10319,7 @@
       "Form": "teüe"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9779,7 +10336,7 @@
       "Form": "Gauvains"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9792,7 +10349,7 @@
       "Form": "niés"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -9976,19 +10533,22 @@
   ],
   [
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "S'ot"
+      "UPOS": "PRON",
+      "Form": "S'"
     },
     {
-      "NumType": "Card",
-      "UPOS": "PRON",
-      "Form": "bien.xvii"
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "ot"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "bien"
     },
     {
       "NumType": "Card",
       "UPOS": "NUM",
-      "Form": "."
+      "Form": ".xvii."
     },
     {
       "UPOS": "NOUN",
@@ -10018,7 +10578,7 @@
       "Form": "prie"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -10045,8 +10605,14 @@
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -10250,7 +10816,7 @@
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "AUX",
       "Form": "furent"
     },
     {
@@ -10402,7 +10968,7 @@
       "Form": "cil"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -10414,7 +10980,8 @@
       "Form": "mautalentis"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": ","
     },
     {
@@ -10431,13 +10998,17 @@
       "Form": "tost"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "AUX",
-      "Form": "c'uns"
+      "UPOS": "PUNCT",
+      "Form": "c'"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "Definite": "Ind",
+      "PronType": "Art",
+      "UPOS": "DET",
+      "Form": "uns"
+    },
+    {
+      "UPOS": "NOUN",
       "Form": "alerions"
     },
     {
@@ -10527,7 +11098,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "Qu'an"
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "PronType": "Prs",
@@ -10540,9 +11115,13 @@
       "Form": "haïr"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "n'a"
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "n'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "PronType": "Prs",
@@ -10576,8 +11155,14 @@
       "Form": "liee"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'avoit"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "avoit"
     },
     {
       "Tense": "Past",
@@ -10675,9 +11260,13 @@
       "Form": "mout"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'efforce"
+      "Form": "efforce"
     },
     {
       "UPOS": "ADP",
@@ -10723,7 +11312,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'aiez"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "aiez"
     },
     {
       "UPOS": "ADP",
@@ -10745,7 +11339,12 @@
     {
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "qu'el"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "el"
     },
     {
       "Polarity": "Neg",
@@ -10778,8 +11377,14 @@
       "Form": "reva"
     },
     {
-      "UPOS": "ADV",
-      "Form": "t'an"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "t'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "an"
     },
     {
       "UPOS": "PUNCT",
@@ -10789,7 +11394,11 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "D'or"
+      "Form": "D'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "or"
     },
     {
       "UPOS": "ADV",
@@ -10831,7 +11440,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -10851,7 +11465,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "S'il"
+      "Form": "S'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -10890,7 +11509,7 @@
       "Form": "Yvain"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -10935,11 +11554,15 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'en"
+      "Form": "l'"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
+    },
+    {
+      "UPOS": "NOUN",
       "Form": "lieve"
     },
     {
@@ -11060,7 +11683,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "jusqu'a"
+      "Form": "jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "PronType": "Dem",
@@ -11488,8 +12115,15 @@
   ],
   [
     {
-      "UPOS": "PROPN",
-      "Form": "D'autres"
+      "Definite": "Def",
+      "PronType": "Art",
+      "UPOS": "ADP",
+      "Form": "D'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "autres"
     },
     {
       "UPOS": "NOUN",
@@ -11590,9 +12224,13 @@
       "Form": "Qui"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "AUX",
-      "Form": "n'estoient"
+      "UPOS": "VERB",
+      "Form": "estoient"
     },
     {
       "Polarity": "Neg",
@@ -11621,7 +12259,7 @@
       "Form": "asena"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -11644,8 +12282,14 @@
       "Form": "qui"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'i"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -11772,8 +12416,13 @@
       "Form": "an"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "UPOS": "ADJ",
-      "Form": "l'onde"
+      "Form": "onde"
     },
     {
       "UPOS": "NOUN",
@@ -11838,7 +12487,7 @@
       "Form": "amis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -11852,7 +12501,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -11880,7 +12534,8 @@
   ],
   [
     {
-      "UPOS": "ADJ",
+      "VerbForm": "Inf",
+      "UPOS": "VERB",
       "Form": "Miaudre"
     },
     {
@@ -11902,9 +12557,13 @@
       "Form": "vos"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "m'anvoie"
+      "Form": "anvoie"
     },
     {
       "UPOS": "PUNCT",
@@ -11951,7 +12610,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -11974,7 +12633,12 @@
     },
     {
       "UPOS": "NOUN",
-      "Form": "pieç'a"
+      "Form": "pieç'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "a"
     },
     {
       "UPOS": "SCONJ",
@@ -11995,8 +12659,13 @@
       "Form": "de"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "l'Isle"
+      "UPOS": "ADJ",
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "Isle"
     },
     {
       "Definite": "Def",
@@ -12078,8 +12747,14 @@
       "Form": "cuit"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -12186,9 +12861,14 @@
       "Form": "mout"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'aville"
+      "Form": "aville"
     },
     {
       "UPOS": "PUNCT",
@@ -12259,8 +12939,13 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "Qu'ele"
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -12281,7 +12966,7 @@
       "Form": "meniere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -12309,7 +12994,7 @@
       "Form": "proiere"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -12564,8 +13249,13 @@
       "Form": "avrons"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "l'ostel"
+      "Form": "ostel"
     },
     {
       "NumType": "Card",
@@ -12576,7 +13266,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "C'est"
+      "Form": "C'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -12644,13 +13339,11 @@
     {
       "VerbForm": "Inf",
       "UPOS": "VERB",
-      "Form": "panre.i"
+      "Form": "panre"
     },
     {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "."
+      "UPOS": "ADP",
+      "Form": ".i."
     },
     {
       "UPOS": "ADJ",
@@ -12672,7 +13365,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "m'an"
+      "Form": "m'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -12730,7 +13428,7 @@
       "Form": "Volez"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -12756,7 +13454,7 @@
       "Form": "Dame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -12938,12 +13636,24 @@
       "Form": "que"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -12955,12 +13665,11 @@
       "Form": "aprés"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
-      "VerbForm": "Inf",
-      "UPOS": "VERB",
+      "UPOS": "ADV",
       "Form": "Eidier"
     },
     {
@@ -12970,7 +13679,7 @@
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "AUX",
+      "UPOS": "VERB",
       "Form": "voldra"
     },
     {
@@ -13063,7 +13772,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "s'est"
+      "Form": "s'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "Tense": "Past",
@@ -13092,7 +13806,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'i"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -13135,8 +13854,13 @@
       "Form": "grevoit"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "Qu'il"
+      "UPOS": "ADP",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -13175,7 +13899,7 @@
       "Form": "Kex"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -13187,7 +13911,7 @@
       "Form": "faille"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -13204,12 +13928,17 @@
       "Form": "il"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'il"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -13228,8 +13957,13 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "Qu'il"
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "Polarity": "Neg",
@@ -13274,7 +14008,7 @@
       "Form": "Deu"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -13335,7 +14069,7 @@
       "Form": "plest"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -13434,7 +14168,7 @@
       "Form": "Ça"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -13471,7 +14205,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'en"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -13815,7 +14554,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "S'est"
+      "Form": "S'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -13875,15 +14619,21 @@
       "Form": "prueve"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "Qu'el"
+      "UPOS": "ADP",
+      "Form": "Qu'"
+    },
+    {
+      "Definite": "Def",
+      "PronType": "Art",
+      "UPOS": "ADP",
+      "Form": "el"
     },
     {
       "UPOS": "ADV",
       "Form": "plus"
     },
     {
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "despit"
     },
     {
@@ -13893,7 +14643,12 @@
     {
       "PronType": "Rel",
       "UPOS": "PRON",
-      "Form": "qu'ele"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -13949,8 +14704,14 @@
       "Form": "de"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "l'ost"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "ost"
     },
     {
       "UPOS": "PUNCT",
@@ -14002,7 +14763,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'est"
+      "Form": "s'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "PronType": "Prs",
@@ -14019,7 +14785,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "Qu'an"
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "PronType": "Prs",
@@ -14118,7 +14888,12 @@
     {
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "s'an"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -14166,14 +14941,13 @@
       "Form": "Car"
     },
     {
-      "NumType": "Card",
-      "UPOS": "PRON",
-      "Form": "an.ii"
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "NumType": "Card",
       "UPOS": "NUM",
-      "Form": "."
+      "Form": ".ii."
     },
     {
       "UPOS": "NOUN",
@@ -14219,7 +14993,7 @@
       "Form": "il"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14227,7 +15001,7 @@
       "Form": "fame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14318,7 +15092,7 @@
       "Form": "parole"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14392,7 +15166,7 @@
       "Form": "plainne"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14400,8 +15174,13 @@
       "Form": "Tant"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'ele"
+      "UPOS": "SCONJ",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "VerbForm": "Fin",
@@ -14468,7 +15247,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'i"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -14481,7 +15265,7 @@
       "Form": "fier"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14494,17 +15278,30 @@
       "Form": "moi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
+      "UPOS": "ADV",
+      "Form": "s'"
+    },
+    {
       "UPOS": "PUNCT",
-      "Form": "s'antr'eles"
+      "Form": "antr'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "eles"
+    },
+    {
+      "UPOS": "PUNCT",
+      "Form": "s'"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "s'estoit"
+      "Form": "estoit"
     },
     {
       "Tense": "Past",
@@ -14518,7 +15315,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "Qu'il"
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "Polarity": "Neg",
@@ -14556,7 +15358,8 @@
       "Form": "nus"
     },
     {
-      "VerbForm": "Inf",
+      "Tense": "Past",
+      "VerbForm": "Part",
       "UPOS": "VERB",
       "Form": "cristauz"
     },
@@ -14575,14 +15378,21 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "N'est"
+      "Form": "N'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADV",
       "Form": "si"
     },
     {
-      "UPOS": "ADJ",
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "UPOS": "VERB",
       "Form": "clere"
     },
     {
@@ -14623,7 +15433,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'en"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -14808,18 +15623,29 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "N'onques"
+      "Form": "N'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "onques"
     },
     {
       "UPOS": "PUNCT",
-      "Form": "d'un"
+      "Form": "d'"
     },
     {
-      "UPOS": "ADJ",
+      "Definite": "Ind",
+      "PronType": "Art",
+      "UPOS": "DET",
+      "Form": "un"
+    },
+    {
+      "UPOS": "NOUN",
       "Form": "estal"
     },
     {
-      "UPOS": "CCONJ",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "ne"
     },
     {
@@ -14841,8 +15667,7 @@
       "Form": "plus"
     },
     {
-      "PronType": "Prs,Rel",
-      "UPOS": "PRON",
+      "UPOS": "ADV",
       "Form": "que"
     },
     {
@@ -14852,7 +15677,7 @@
     },
     {
       "NumType": "Card",
-      "UPOS": "ADJ",
+      "UPOS": "NUM",
       "Form": "dui"
     },
     {
@@ -14874,7 +15699,7 @@
       "Form": "mes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -14916,7 +15741,8 @@
       "Form": "consauz"
     },
     {
-      "UPOS": "CCONJ",
+      "Polarity": "Neg",
+      "UPOS": "ADV",
       "Form": "ne"
     },
     {
@@ -14925,9 +15751,14 @@
       "Form": "le"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "m'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "m'aporte"
+      "Form": "aporte"
     },
     {
       "UPOS": "PUNCT",
@@ -14978,9 +15809,14 @@
       "Form": "si"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'areste"
+      "Form": "areste"
     },
     {
       "UPOS": "PUNCT",
@@ -14993,8 +15829,13 @@
       "Form": "Si"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'est"
+      "UPOS": "ADJ",
+      "Form": "s'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADP",
@@ -15021,8 +15862,13 @@
       "Form": "Tant"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'ele"
+      "UPOS": "SCONJ",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ele"
     },
     {
       "UPOS": "ADP",
@@ -15050,7 +15896,11 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "Qu'a"
+      "Form": "Qu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "PronType": "Prs",
@@ -15068,7 +15918,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'en"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -15130,7 +15985,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'aiez"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "aiez"
     },
     {
       "UPOS": "NOUN",
@@ -15163,20 +16023,14 @@
       "Form": "son"
     },
     {
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "cote"
     },
     {
       "Definite": "Ind",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "."
-    },
-    {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "I."
+      "Form": ".I."
     },
     {
       "UPOS": "ADJ",
@@ -15203,13 +16057,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "Sor.i"
+      "Form": "Sor"
     },
     {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "."
+      "UPOS": "PROPN",
+      "Form": ".i."
     },
     {
       "UPOS": "NOUN",
@@ -15278,9 +16130,14 @@
       "Form": "qui"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "l'a"
+      "Form": "a"
     },
     {
       "Tense": "Past",
@@ -15307,9 +16164,12 @@
       "Form": "et"
     },
     {
-      "VerbForm": "Inf",
-      "UPOS": "VERB",
-      "Form": "d'ire"
+      "UPOS": "ADV",
+      "Form": "d'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "ire"
     },
     {
       "VerbForm": "Fin",
@@ -15342,7 +16202,7 @@
       "Form": "volons"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -15350,7 +16210,7 @@
       "Form": "Sire"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -15469,7 +16329,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'i"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -15512,7 +16377,7 @@
       "Form": "cil"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -15534,11 +16399,15 @@
       "Form": "eüst"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "D'aïde"
+      "UPOS": "ADP",
+      "Form": "D'"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "NOUN",
+      "Form": "aïde"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -15557,8 +16426,8 @@
       "Form": "chausist"
     },
     {
-      "PronType": "Prs,Rel",
-      "UPOS": "PRON",
+      "PronType": "Rel",
+      "UPOS": "DET",
       "Form": "quel"
     },
     {
@@ -15572,7 +16441,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'en"
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -15581,7 +16455,11 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "jusqu'a"
+      "Form": "jusqu'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "a"
     },
     {
       "UPOS": "NOUN",
@@ -15593,7 +16471,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -15618,7 +16501,7 @@
       "Form": "force"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -15640,9 +16523,13 @@
       "Form": "mout"
     },
     {
+      "UPOS": "ADJ",
+      "Form": "s'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "s'esforce"
+      "Form": "esforce"
     },
     {
       "UPOS": "PUNCT",
@@ -15804,7 +16691,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'est"
+      "Form": "s'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "NOUN",
@@ -15837,7 +16729,11 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "c'onques"
+      "Form": "c'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "onques"
     },
     {
       "UPOS": "ADV",
@@ -15864,8 +16760,14 @@
       "Form": "Que"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "c'est"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "c'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "NOUN",
@@ -15970,7 +16872,7 @@
       "Form": "Mes"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16069,7 +16971,7 @@
       "Form": "chevaliers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16105,9 +17007,14 @@
       "Form": "besoing"
     },
     {
-      "VerbForm": "Fin",
+      "UPOS": "PUNCT",
+      "Form": "m'"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "m'apelez"
+      "Form": "apelez"
     },
     {
       "UPOS": "PUNCT",
@@ -16160,9 +17067,13 @@
       "Form": "bien"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'entande"
+      "Form": "entande"
     },
     {
       "Definite": "Ind",
@@ -16194,7 +17105,7 @@
       "Form": "mot"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16269,7 +17180,7 @@
       "Form": "cuidoit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16316,9 +17227,13 @@
       "Form": "je"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "l'avoie"
+      "Form": "avoie"
     },
     {
       "UPOS": "ADV",
@@ -16344,9 +17259,13 @@
       "Form": "vos"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "l'avez"
+      "Form": "avez"
     },
     {
       "Tense": "Past",
@@ -16571,8 +17490,14 @@
       "Form": "Et"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "g'en"
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "g'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -16642,7 +17567,7 @@
       "Form": "sires"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16666,13 +17591,22 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "D'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "D'ire"
+      "Form": "ire"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "m'"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "m'espranent"
+      "Form": "espranent"
     }
   ],
   [
@@ -16763,7 +17697,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "n'en"
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -16792,7 +17731,11 @@
     },
     {
       "UPOS": "NOUN",
-      "Form": "l'oignemant"
+      "Form": "l'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "oignemant"
     },
     {
       "UPOS": "PUNCT",
@@ -16806,10 +17749,15 @@
     },
     {
       "UPOS": "ADV",
-      "Form": "quelqu'enui"
+      "Form": "quelqu'"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "enui"
+    },
+    {
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16848,7 +17796,7 @@
     },
     {
       "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "ce"
     },
     {
@@ -16875,7 +17823,7 @@
       "Form": "Yvain"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -16892,7 +17840,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "N'a"
+      "Form": "N'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "a"
     },
     {
       "Poss": "Yes",
@@ -16973,7 +17926,12 @@
     {
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "l'en"
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -16985,8 +17943,14 @@
       "Form": ","
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "Qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -17003,8 +17967,13 @@
       "Form": "et"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "UPOS": "NUM",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -17129,7 +18098,7 @@
       "Form": "force"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17148,7 +18117,7 @@
       "Form": "puisse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17156,10 +18125,12 @@
       "Form": "Por"
     },
     {
-      "Tense": "Past",
-      "VerbForm": "Part",
-      "UPOS": "VERB",
-      "Form": "qu'aïe"
+      "UPOS": "NUM",
+      "Form": "qu'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "aïe"
     },
     {
       "UPOS": "CCONJ",
@@ -17175,7 +18146,7 @@
       "Form": "truisse"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17209,13 +18180,23 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "Qu'il"
+      "UPOS": "ADV",
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'a"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "a"
     },
     {
       "Polarity": "Neg",
@@ -17328,7 +18309,7 @@
       "Form": "seiremant"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17342,7 +18323,7 @@
       "Form": "cuit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17399,7 +18380,7 @@
       "Form": "volent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17442,7 +18423,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "S'est"
+      "Form": "S'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "Definite": "Def",
@@ -17490,8 +18476,12 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "S'"
+    },
+    {
       "UPOS": "ADP",
-      "Form": "S'ancontre"
+      "Form": "ancontre"
     },
     {
       "PronType": "Prs",
@@ -17542,7 +18532,7 @@
       "Form": "ocirre"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17676,9 +18666,14 @@
       "Form": "flame"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "m'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "m'arde"
+      "Form": "arde"
     },
     {
       "UPOS": "SCONJ",
@@ -17690,8 +18685,14 @@
       "Form": "je"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "t'an"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "t'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -17713,7 +18714,7 @@
       "Form": "mialz"
     },
     {
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "vives"
     },
     {
@@ -17727,9 +18728,13 @@
       "Form": "ne"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'oserons"
+      "Form": "oserons"
     },
     {
       "Definite": "Def",
@@ -17839,7 +18844,7 @@
       "Form": "Dame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17969,7 +18974,7 @@
       "Form": "pervers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -17989,9 +18994,13 @@
       "Form": "et"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "d'enui"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "d'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "enui"
     },
     {
       "UPOS": "PUNCT",
@@ -17999,7 +19008,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "Qu'il"
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "Polarity": "Neg",
@@ -18050,9 +19064,14 @@
       "Form": "siudre"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'osai"
+      "Form": "osai"
     },
     {
       "UPOS": "PUNCT",
@@ -18098,7 +19117,11 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'an"
+      "Form": "l'"
+    },
+    {
+      "UPOS": "ADP",
+      "Form": "an"
     },
     {
       "UPOS": "NOUN",
@@ -18186,9 +19209,14 @@
       "Form": "qui"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'ocist"
+      "Form": "ocist"
     },
     {
       "UPOS": "PUNCT",
@@ -18202,7 +19230,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'a"
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "a"
     },
     {
       "Definite": "Def",
@@ -18227,8 +19260,13 @@
   ],
   [
     {
-      "UPOS": "NOUN",
-      "Form": "S'il"
+      "UPOS": "ADV",
+      "Form": "S'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "Polarity": "Neg",
@@ -18280,9 +19318,13 @@
       "Form": "tu"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'eüs"
+      "Form": "eüs"
     },
     {
       "UPOS": "ADP",
@@ -18298,8 +19340,12 @@
       "Form": "despit"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "C'"
+    },
+    {
       "UPOS": "ADV",
-      "Form": "C'onques"
+      "Form": "onques"
     },
     {
       "UPOS": "ADV",
@@ -18312,10 +19358,16 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "t'an"
+      "Form": "t'"
     },
     {
-      "VerbForm": "Fin",
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
       "UPOS": "VERB",
       "Form": "remanbra"
     },
@@ -18330,14 +19382,24 @@
       "Form": "Ou"
     },
     {
-      "UPOS": "ADV",
-      "Form": "l'empereres"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Inf",
+      "UPOS": "VERB",
+      "Form": "empereres"
+    },
+    {
+      "UPOS": "PUNCT",
+      "Form": "d'"
     },
     {
       "Tense": "Past",
       "VerbForm": "Part",
       "UPOS": "VERB",
-      "Form": "d'Alemaingne"
+      "Form": "Alemaingne"
     },
     {
       "VerbForm": "Fin",
@@ -18353,13 +19415,23 @@
       "Form": "saus"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'il"
+      "UPOS": "PROPN",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
     },
     {
       "VerbForm": "Fin",
       "UPOS": "AUX",
-      "Form": "l'avoit"
+      "Form": "avoit"
     },
     {
       "Tense": "Past",
@@ -18429,8 +19501,14 @@
       "Form": "que"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "PronType": "Prs",
@@ -18491,8 +19569,7 @@
       "Form": "tort"
     },
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "ADP",
       "Form": "a"
     },
     {
@@ -18541,12 +19618,17 @@
       "Form": "onbre"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
       "UPOS": "PUNCT",
-      "Form": "S'il"
+      "Form": "S'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -18554,7 +19636,7 @@
       "Form": "puet"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -18562,17 +19644,22 @@
       "Form": "volentiers"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Prs",
+      "UPOS": "PRON",
       "Form": "se"
     },
     {
-      "UPOS": "NOUN",
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
       "Form": "desconbre"
     },
     {
-      "PronType": "Ind",
-      "UPOS": "PRON",
-      "Form": "D'ancontre"
+      "UPOS": "ADJ",
+      "Form": "D'"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": "ancontre"
     },
     {
       "UPOS": "ADP",
@@ -18808,7 +19895,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "s'an"
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "an"
     },
     {
       "VerbForm": "Fin",
@@ -18816,7 +19908,7 @@
       "Form": "vienent"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -18853,9 +19945,14 @@
       "Form": "tu"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'as"
+      "Form": "as"
     },
     {
       "UPOS": "PUNCT",
@@ -18892,7 +19989,8 @@
       "Form": "Certes"
     },
     {
-      "UPOS": "PUNCT",
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
       "Form": ","
     },
     {
@@ -18906,7 +20004,7 @@
       "Form": "ele"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -18914,7 +20012,7 @@
       "Form": "chevaliers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -18928,7 +20026,8 @@
       "Form": "criem"
     },
     {
-      "UPOS": "SCONJ",
+      "PronType": "Prs,Rel",
+      "UPOS": "PRON",
       "Form": "que"
     },
     {
@@ -18988,8 +20087,14 @@
       "Form": "ne"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -19011,7 +20116,7 @@
       "Form": "Amis"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19021,7 +20126,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -19050,7 +20160,12 @@
   [
     {
       "UPOS": "ADV",
-      "Form": "Qu'il"
+      "Form": "Qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -19073,7 +20188,7 @@
       "Form": "avuglé"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19087,7 +20202,7 @@
       "Form": "desconfit"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19111,7 +20226,7 @@
     },
     {
       "VerbForm": "Fin",
-      "UPOS": "AUX",
+      "UPOS": "VERB",
       "Form": "anrageront"
     },
     {
@@ -19120,9 +20235,12 @@
       "Form": "tuit"
     },
     {
-      "VerbForm": "Inf",
-      "UPOS": "VERB",
-      "Form": "d'ire"
+      "UPOS": "PUNCT",
+      "Form": "d'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "ire"
     },
     {
       "UPOS": "PUNCT",
@@ -19203,7 +20321,7 @@
       "Form": "seror"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19215,7 +20333,7 @@
       "Form": "desleal"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19315,7 +20433,7 @@
       "Form": "salue"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19363,7 +20481,7 @@
       "Form": "esmaiez"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19407,11 +20525,21 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "l'une"
+      "Form": "l'"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "l'autre"
+      "NumType": "Card",
+      "UPOS": "PRON",
+      "Form": "une"
+    },
+    {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Ind",
+      "UPOS": "PRON",
+      "Form": "autre"
     },
     {
       "UPOS": "ADJ",
@@ -19527,7 +20655,7 @@
       "Form": "Haïne"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -19555,7 +20683,7 @@
       "Form": "tote"
     },
     {
-      "UPOS": "NOUN",
+      "UPOS": "ADJ",
       "Form": "aperte"
     },
     {
@@ -19580,7 +20708,7 @@
       "Form": "pas"
     },
     {
-      "VerbForm": "Fin",
+      "VerbForm": "Inf",
       "UPOS": "AUX",
       "Form": "asez"
     },
@@ -19600,6 +20728,7 @@
       "Form": "Et"
     },
     {
+      "PronType": "Prs",
       "UPOS": "SCONJ",
       "Form": "se"
     },
@@ -19708,8 +20837,14 @@
       "Form": "pooir"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "n'en"
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -19788,8 +20923,14 @@
       "Form": "toz"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'a"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "a"
     },
     {
       "UPOS": "ADP",
@@ -19861,8 +21002,7 @@
   ],
   [
     {
-      "VerbForm": "Fin",
-      "UPOS": "VERB",
+      "UPOS": "ADP",
       "Form": "a"
     },
     {
@@ -19889,8 +21029,14 @@
       "Form": "Or"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "n'en"
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "n'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -19912,8 +21058,15 @@
       "Form": ","
     },
     {
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "Qu'"
+    },
+    {
+      "Definite": "Def",
+      "PronType": "Art",
       "UPOS": "ADP",
-      "Form": "Qu'au"
+      "Form": "au"
     },
     {
       "UPOS": "NOUN",
@@ -19925,8 +21078,14 @@
       "Form": "ne"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -19973,8 +21132,12 @@
       "Form": "Robe"
     },
     {
-      "UPOS": "ADV",
-      "Form": "d'escarlate"
+      "UPOS": "PUNCT",
+      "Form": "d'"
+    },
+    {
+      "UPOS": "NOUN",
+      "Form": "escarlate"
     },
     {
       "UPOS": "ADJ",
@@ -19994,7 +21157,7 @@
       "Form": "veir"
     },
     {
-      "UPOS": "ADJ",
+      "UPOS": "NOUN",
       "Form": "forree"
     },
     {
@@ -20003,9 +21166,8 @@
       "Form": "atot"
     },
     {
-      "Definite": "Def",
-      "PronType": "Art",
-      "UPOS": "DET",
+      "PronType": "Prs",
+      "UPOS": "PRON",
       "Form": "la"
     },
     {
@@ -20027,7 +21189,7 @@
       "Form": "Dame"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -20046,9 +21208,14 @@
       "Form": "pas"
     },
     {
-      "PronType": "Ind",
-      "UPOS": "PRON",
-      "Form": "c'uns"
+      "UPOS": "PUNCT",
+      "Form": "c'"
+    },
+    {
+      "Definite": "Ind",
+      "PronType": "Art",
+      "UPOS": "DET",
+      "Form": "uns"
     },
     {
       "UPOS": "NOUN",
@@ -20065,13 +21232,12 @@
     },
     {
       "UPOS": "ADP",
-      "Form": "en.i"
+      "Form": "en"
     },
     {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "."
+      "NumType": "Card",
+      "UPOS": "NUM",
+      "Form": ".i."
     },
     {
       "UPOS": "NOUN",
@@ -20145,7 +21311,7 @@
       "Form": "foi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -20420,7 +21586,7 @@
       "Form": "voloir"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -20523,9 +21689,13 @@
       "Form": "trop"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "n'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'eüsse"
+      "Form": "eüsse"
     },
     {
       "UPOS": "ADJ",
@@ -20563,7 +21733,7 @@
       "Form": "loing"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -20638,8 +21808,14 @@
       "Form": "que"
     },
     {
-      "UPOS": "ADJ",
-      "Form": "j'aim"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "j'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "aim"
     },
     {
       "UPOS": "ADV",
@@ -20716,12 +21892,16 @@
     {
       "PronType": "Prs",
       "UPOS": "PRON",
-      "Form": "il,.viii"
+      "Form": "il"
+    },
+    {
+      "UPOS": "ADJ",
+      "Form": ","
     },
     {
       "NumType": "Card",
       "UPOS": "NUM",
-      "Form": "."
+      "Form": ".viii."
     },
     {
       "UPOS": "NOUN",
@@ -20732,7 +21912,7 @@
       "Form": "antiers"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -20793,9 +21973,13 @@
       "Form": "Si"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "l'esmaie"
+      "Form": "esmaie"
     },
     {
       "UPOS": "PUNCT",
@@ -20831,9 +22015,14 @@
       "Form": "Qui"
     },
     {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "l'a"
+      "UPOS": "AUX",
+      "Form": "a"
     },
     {
       "UPOS": "ADP",
@@ -20931,9 +22120,13 @@
   ],
   [
     {
+      "UPOS": "ADV",
+      "Form": "S'"
+    },
+    {
       "VerbForm": "Fin",
-      "UPOS": "VERB",
-      "Form": "S'est"
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "ADJ",
@@ -21002,7 +22195,7 @@
       "Form": "dameisele"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
@@ -21086,8 +22279,13 @@
   ],
   [
     {
-      "UPOS": "ADV",
-      "Form": "Entr'ax"
+      "UPOS": "ADP",
+      "Form": "Entr'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "ax"
     },
     {
       "VerbForm": "Fin",
@@ -21109,12 +22307,17 @@
       "Form": "foi"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "ADJ",
       "Form": ","
     },
     {
       "UPOS": "PUNCT",
-      "Form": "c'est"
+      "Form": "c'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "AUX",
+      "Form": "est"
     },
     {
       "UPOS": "NOUN",
@@ -21131,8 +22334,14 @@
       "Form": "Que"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "l'en"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "l'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "en"
     },
     {
       "VerbForm": "Fin",
@@ -21185,8 +22394,12 @@
       "Form": "de"
     },
     {
+      "UPOS": "PUNCT",
+      "Form": "s'"
+    },
+    {
       "UPOS": "NOUN",
-      "Form": "s'enor"
+      "Form": "enor"
     },
     {
       "PronType": "Prs",
@@ -21227,7 +22440,12 @@
     },
     {
       "UPOS": "PUNCT",
-      "Form": "S'il"
+      "Form": "S'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "VerbForm": "Fin",
@@ -21266,8 +22484,14 @@
       "Form": "et"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "qu'il"
+      "PronType": "Rel",
+      "UPOS": "PRON",
+      "Form": "qu'"
+    },
+    {
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "il"
     },
     {
       "PronType": "Prs",
@@ -21283,13 +22507,7 @@
       "Definite": "Ind",
       "PronType": "Art",
       "UPOS": "DET",
-      "Form": "."
-    },
-    {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "I."
+      "Form": ".I."
     },
     {
       "UPOS": "NOUN",
@@ -21335,8 +22553,14 @@
       "Form": "meïsmes"
     },
     {
-      "UPOS": "NOUN",
-      "Form": "s'alume"
+      "UPOS": "PUNCT",
+      "Form": "s'"
+    },
+    {
+      "Tense": "Past",
+      "VerbForm": "Part",
+      "UPOS": "VERB",
+      "Form": "alume"
     },
     {
       "UPOS": "ADV",
@@ -21385,8 +22609,14 @@
       "Form": "flame"
     },
     {
-      "UPOS": "PUNCT",
-      "Form": "s'i"
+      "PronType": "Prs",
+      "UPOS": "PRON",
+      "Form": "s'"
+    },
+    {
+      "PronType": "Dem",
+      "UPOS": "ADV",
+      "Form": "i"
     },
     {
       "VerbForm": "Fin",
@@ -21430,7 +22660,12 @@
     {
       "VerbForm": "Fin",
       "UPOS": "VERB",
-      "Form": "n'atise"
+      "Form": "n'"
+    },
+    {
+      "VerbForm": "Fin",
+      "UPOS": "VERB",
+      "Form": "atise"
     },
     {
       "UPOS": "PUNCT",
@@ -21504,13 +22739,11 @@
     },
     {
       "UPOS": "ADJ",
-      "Form": "chiés.i"
+      "Form": "chiés"
     },
     {
-      "Definite": "Ind",
-      "PronType": "Art",
-      "UPOS": "DET",
-      "Form": "."
+      "UPOS": "PUNCT",
+      "Form": ".i."
     },
     {
       "Poss": "Yes",

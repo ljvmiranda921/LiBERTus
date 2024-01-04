@@ -1,11 +1,11 @@
 from pathlib import Path
 from typing import Optional
 
+import conllu
 import spacy
+import srsly
 import typer
 from spacy.tokens import DocBin
-import conllu
-import srsly
 from wasabi import msg
 
 LANGUAGES = [

@@ -123,7 +123,7 @@ def get_docs(
     # else:
     docs = []
     for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-        words = [token.get("form") for token in sentence]
+        words = [token.get("form") for token in sentence if token.get("form")]
         doc = Doc(nlp.vocab, words=words)
         docs.append(doc)
 

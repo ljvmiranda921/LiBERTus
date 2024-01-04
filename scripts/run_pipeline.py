@@ -91,52 +91,48 @@ def get_docs(
     """Read the file and get the texts"""
     SPECIAL_CASE_MWE = ["cop", "hbo"]
 
-    def _check_if_conllu(input_path: Path):
-        if input_path.suffix != ".conllu":
-            msg.fail("This language code requires the CoNLL-U file", exits=1)
-
     # FIXME
-    if lang_code in SPECIAL_CASE_MWE:
-        msg.info(f"Language {lang_code} contains multiword tokens")
-        if multiword == MWE.all:
-            _check_if_conllu(input_path)
-            msg.text("Getting both multiword expressions and subtokens")
-            texts = []
-            for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-                tokens = [token["form"] for token in sentence]
-                texts.append(" ".join(tokens))
-        elif multiword == MWE.subtokens_only:
-            _check_if_conllu(input_path)
-            msg.text("Getting the subtokens only")
-            texts = []
-            for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-                tokens = []
-                for token in sentence:
-                    if isinstance(token["id"], int):
-                        tokens.append(token["form"])
-                texts.append(" ".join(tokens))
-        elif multiword == MWE.mwe_only:
-            msg.text("Getting the multiword expressions only")
-            # TODO
-            doc_bin = DocBin().from_disk(input_path)
-            _docs = doc_bin.get_docs(nlp.vocab)
-            # Convert to text for faster processing
-            texts = [_doc.text for _doc in _docs]
+    # if lang_code in SPECIAL_CASE_MWE:
+    #     msg.info(f"Language {lang_code} contains multiword tokens")
+    #     if multiword == MWE.all:
+    #         _check_if_conllu(input_path)
+    #         msg.text("Getting both multiword expressions and subtokens")
+    #         texts = []
+    #         for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
+    #             tokens = [token["form"] for token in sentence]
+    #             texts.append(" ".join(tokens))
+    #     elif multiword == MWE.subtokens_only:
+    #         _check_if_conllu(input_path)
+    #         msg.text("Getting the subtokens only")
+    #         texts = []
+    #         for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
+    #             tokens = []
+    #             for token in sentence:
+    #                 if isinstance(token["id"], int):
+    #                     tokens.append(token["form"])
+    #             texts.append(" ".join(tokens))
+    #     elif multiword == MWE.mwe_only:
+    #         msg.text("Getting the multiword expressions only")
+    #         # TODO
+    #         doc_bin = DocBin().from_disk(input_path)
+    #         _docs = doc_bin.get_docs(nlp.vocab)
+    #         # Convert to text for faster processing
+    #         texts = [_doc.text for _doc in _docs]
+    #     else:
+    #         msg.fail(f"Unknown multiword handler: {multiword}", exits=1)
+    # else:
+    docs = []
+    for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
+        if "text" in sentence.metadata:
+            text = sentence.metadata["text"]
+            orig_words = [token.get("form") for token in sentence]
+            words, spaces = get_words_and_spaces(orig_words, text)
+            doc = Doc(nlp.vocab, words=words, spaces=spaces)
         else:
-            msg.fail(f"Unknown multiword handler: {multiword}", exits=1)
-    else:
-        docs = []
-        for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-            if "text" in sentence.metadata:
-                text = sentence.metadata["text"]
-                orig_words = [token.get("form") for token in sentence]
-                words, spaces = get_words_and_spaces(orig_words, text)
-                doc = Doc(nlp.vocab, words=words, spaces=spaces)
-            else:
-                # Just use the words
-                words = [token.get("form") for token in sentence]
-                doc = Doc(nlp.vocab, words=words)
-            docs.append(doc)
+            # Just use the words
+            words = [token.get("form") for token in sentence]
+            doc = Doc(nlp.vocab, words=words)
+        docs.append(doc)
 
     return docs
 

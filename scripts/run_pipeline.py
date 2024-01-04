@@ -86,7 +86,7 @@ def get_texts(
     input_path: Path, nlp: spacy.language.Language, lang_code: str, *, multiword: MWE
 ) -> List[str]:
     """Read the file and get the texts"""
-    SPECIAL_CASE_MWE = ["chu", "cop"]
+    SPECIAL_CASE_MWE = ["cop", "hbo"]
     SPECIAL_CASE_PARSE = ["orv"]
 
     def _check_if_conllu(input_path: Path):

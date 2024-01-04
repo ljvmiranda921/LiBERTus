@@ -400,11 +400,11 @@ commands:
     help: "Get results from the test file"
     script:
       - python -m scripts.run_pipeline assets/test/chu_test.conllu submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
+      - python -m scripts.run_pipeline assets/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/fro_test.conllu submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/got_test.conllu submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/grc_test.conllu submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
+      - python -m scripts.run_pipeline assets/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/isl_test.conllu submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/lat_test.conllu submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
       - python -m scripts.run_pipeline assets/test/latm_test.conllu submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}

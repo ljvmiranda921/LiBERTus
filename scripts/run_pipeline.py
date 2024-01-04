@@ -57,7 +57,7 @@ def run_pipeline(
             morphs["Form"] = token.orth_
             sentence["morph"].append(morphs)
             # Add lemmatization results
-            lemma = [token.text, [token.lemma_, "", ""]]
+            lemma = [token.text, [token.lemma_.strip(), "", ""]]
             sentence["lemma"].append(lemma)
 
         # Append each sentence

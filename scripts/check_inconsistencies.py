@@ -31,6 +31,7 @@ def check_inconsistencies(
     predictions_dir: Path,
     reference_dir: Path,
     languages: Optional[str] = None,
+    verbose: bool = False,
 ):
     """Check inconsistencies between your predictions and the reference files"""
     if languages:
@@ -67,7 +68,8 @@ def check_inconsistencies(
                         orth_pred, _ == tok_pred
                     if orth_ref != orth_pred:
                         msg.text(
-                            f"Mismatch tokens id={idx+1}, ref={orth_ref}, pred={orth_pred}"
+                            f"Mismatch tokens id={idx+1}, ref={orth_ref}, pred={orth_pred}",
+                            show=verbose,
                         )
                         break
 

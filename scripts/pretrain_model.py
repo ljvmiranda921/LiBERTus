@@ -7,11 +7,10 @@ import typer
 import wandb
 from tokenizers.implementations import ByteLevelBPETokenizer
 from tokenizers.processors import BertProcessing
-from transformers import (AutoModelForMaskedLM,
-                          DataCollatorForLanguageModeling,
-                          LineByLineTextDataset, RobertaConfig,
-                          RobertaForMaskedLM, RobertaTokenizerFast, Trainer,
-                          TrainingArguments)
+from transformers import AutoModelForMaskedLM, DataCollatorForLanguageModeling
+from transformers import LineByLineTextDataset, RobertaConfig
+from transformers import RobertaForMaskedLM, RobertaTokenizerFast, Trainer
+from transformers import TrainingArguments
 from wasabi import msg
 
 MODEL_CONFIG = {

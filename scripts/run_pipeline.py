@@ -1,13 +1,13 @@
 import json
+from enum import Enum
 from pathlib import Path
 from typing import List, Optional
-from enum import Enum
 
 import conllu
 import spacy
 import typer
-from spacy.tokens import DocBin
 from spacy.cli._util import setup_gpu
+from spacy.tokens import DocBin
 from tqdm import tqdm
 from wasabi import msg
 
@@ -131,8 +131,6 @@ def get_texts(
         _docs = doc_bin.get_docs(nlp.vocab)
         # Convert to text for faster processing
         texts = [_doc.text for _doc in _docs]
-
-    breakpoint()
 
     return texts
 

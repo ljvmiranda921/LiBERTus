@@ -128,6 +128,10 @@ def get_docs(
             orig_words = [token.get("form") for token in sentence]
             words, spaces = get_words_and_spaces(orig_words, text)
             doc = Doc(nlp.vocab, words=words, spaces=spaces)
+        elif lang_code in SPECIAL_CASE_MWE:
+            # Just use the words
+            words = [token.get("form") for token in sentence]
+            doc = Doc(nlp.vocab, words=words)
         else:
             # Just use the words
             words = [token.get("form") for token in sentence]

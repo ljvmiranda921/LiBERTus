@@ -387,31 +387,31 @@ commands:
       - pip install https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
-      - mkdir -p corpus/test
+      # - mkdir -p corpus/test
       # remove orv because of weird test case, we'll read the conllu file directly instead
-      - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
+      # - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
       # copy special case languages
-      - cp assets/test/cop_test.conllu corpus/test/cop_test.conllu
-      - cp assets/test/hbo_test.conllu corpus/test/hbo_test.conllu
+      # - cp assets/test/cop_test.conllu corpus/test/cop_test.conllu
+      # - cp assets/test/hbo_test.conllu corpus/test/hbo_test.conllu
       # convert everything to spaCy files
-      - python -m spacy convert assets/test/ corpus/test/ -T
+      # - python -m spacy convert assets/test/ corpus/test/ -T
 
   - name: "get-test-results"
     help: "Get results from the test file"
     script:
-      - python -m scripts.run_pipeline corpus/test/chu_test.spacy submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/cop_test.spacy submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
-      - python -m scripts.run_pipeline corpus/test/fro_test.spacy submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/got_test.spacy submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/grc_test.spacy submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/hbo_test.spacy submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe mwe_only
-      - python -m scripts.run_pipeline corpus/test/isl_test.spacy submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/lat_test.spacy submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/latm_test.spacy submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/lzh_test.spacy submission zh_lzh_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/ohu_test.spacy submission xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline corpus/test/san_test.spacy submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/chu_test.conllu submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/fro_test.conllu submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/got_test.conllu submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/grc_test.conllu submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/isl_test.conllu submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/lat_test.conllu submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/latm_test.conllu submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/lzh_test.conllu submission zh_lzh_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/ohu_test.conllu submission xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/san_test.conllu submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
     outputs:
       - submission/pos_tagging/
       - submission/morph_features/

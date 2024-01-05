@@ -1,13 +1,14 @@
 import json
 from enum import Enum
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import conllu
 import spacy
 import typer
 from spacy.cli._util import setup_gpu
-from spacy.tokens import DocBin
+from spacy.tokens import Doc, DocBin
+from spacy.util import get_words_and_spaces
 from tqdm import tqdm
 from wasabi import msg
 
@@ -20,12 +21,11 @@ class MWE(str, Enum):
 
 def run_pipeline(
     # fmt: off
-    input_path: Path = typer.Argument(..., help="Path to the input spaCy file."),
+    input_path: Path = typer.Argument(..., help="Path to the input CoNLL-U file."),
     output_dir: Path = typer.Argument(..., help="Directory to save the outputs."),
     model: str = typer.Argument(..., help="spaCy pipeline to use."),
     lang: Optional[str] = typer.Option(None, help="Language code of the file. If None, will infer from input_path."),
     save_preds_path: Optional[Path] = typer.Option(None, help="Optional path to save the predictions as a spaCy file."),
-    multiword_handling: MWE = typer.Option(MWE.all, "--multiword-handling", "--multiword", "--mwe", "-M", help="Dictates how multiword expressions are handled in cop and hbo."),
     use_gpu: int = typer.Option(-1, "--gpu-id", "-g", help="GPU ID or -1 for CPU."),
     n_process: int = typer.Option(1, "--n-process", "-n", help="Number of processors to use. Doesn't work for GPUs.")
     # fmt: on
@@ -43,8 +43,14 @@ def run_pipeline(
     lang_code = lang if lang else input_path.stem.split("_")[0]
     msg.good(f"Loaded '{model}' for lang code '{lang_code}'")
 
-    texts = get_texts(input_path, nlp, lang_code, multiword=multiword_handling)
-    docs = nlp.pipe(texts, n_process=n_process)
+    raw_docs = []
+    for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
+        words = [token.get("form") for token in sentence if token.get("form")]
+        doc = Doc(nlp.vocab, words=words)
+        raw_docs.append(doc)
+
+    docs = nlp.pipe(raw_docs, n_process=n_process)
+
     results = {"pos_tagging": [], "morph_features": [], "lemmatisation": []}
     for doc in tqdm(docs):
         sentence = {"pos": [], "morph": [], "lemma": []}
@@ -80,59 +86,6 @@ def run_pipeline(
     if save_preds_path:
         doc_bin_out = DocBin(docs=docs)
         doc_bin_out.to_disk(save_preds_path)
-
-
-def get_texts(
-    input_path: Path, nlp: spacy.language.Language, lang_code: str, *, multiword: MWE
-) -> List[str]:
-    """Read the file and get the texts"""
-    SPECIAL_CASE_MWE = ["cop", "hbo"]
-    SPECIAL_CASE_PARSE = ["orv"]
-
-    def _check_if_conllu(input_path: Path):
-        if input_path.suffix != ".conllu":
-            msg.fail("This language code requires the CoNLL-U file", exits=1)
-
-    if lang_code in SPECIAL_CASE_MWE:
-        msg.info(f"Language {lang_code} contains multiword tokens")
-        if multiword == MWE.all:
-            _check_if_conllu(input_path)
-            msg.text("Getting both multiword expressions and subtokens")
-            texts = []
-            for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-                tokens = [token["form"] for token in sentence]
-                texts.append(" ".join(tokens))
-        elif multiword == MWE.subtokens_only:
-            _check_if_conllu(input_path)
-            msg.text("Getting the subtokens only")
-            texts = []
-            for sentence in conllu.parse_incr(input_path.open(encoding="utf-8")):
-                tokens = []
-                for token in sentence:
-                    if isinstance(token["id"], int):
-                        tokens.append(token["form"])
-                texts.append(" ".join(tokens))
-        elif multiword == MWE.mwe_only:
-            msg.text("Getting the multiword expressions only")
-            doc_bin = DocBin().from_disk(input_path)
-            _docs = doc_bin.get_docs(nlp.vocab)
-            # Convert to text for faster processing
-            texts = [_doc.text for _doc in _docs]
-        else:
-            msg.fail(f"Unknown multiword handler: {multiword}", exits=1)
-    elif lang_code in SPECIAL_CASE_PARSE:
-        _check_if_conllu(input_path)
-        texts = [
-            sent.metadata["text"]
-            for sent in conllu.parse_incr(input_path.open(encoding="utf-8"))
-        ]
-    else:
-        doc_bin = DocBin().from_disk(input_path)
-        _docs = doc_bin.get_docs(nlp.vocab)
-        # Convert to text for faster processing
-        texts = [_doc.text for _doc in _docs]
-
-    return texts
 
 
 if __name__ == "__main__":

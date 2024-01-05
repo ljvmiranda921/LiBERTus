@@ -31,6 +31,7 @@ def fill_orv_empty_tokens(
             if not is_equal(ref_tokens, pred_tokens):
                 msg.divider(f"Sentence {idx} not equal!")
                 new_pred = fix_tokens(pred, task=task, ref_tokens=ref_tokens)
+                breakpoint()
                 assert is_equal(
                     ref_tokens, [get_orth(token, task) for token in new_pred]
                 ), "Still not fixed!"
@@ -78,8 +79,9 @@ def fix_tokens(pred: List[Any], task: str, ref_tokens: List[str]) -> List[Any]:
 
     new_pred = copy.copy(pred)
     for empty_idx in empty_idxs:
-        new_pred = _insert_at_idx(empty_idx, TASK_TO_EMPTY_PREDS[task], new_pred)
-
+        new_pred = _insert_at_idx(
+            empty_idx, value=TASK_TO_EMPTY_PREDS[task], target=new_pred
+        )
     return new_pred
 
 

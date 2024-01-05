@@ -19,6 +19,7 @@ def fill_orv_empty_tokens(
     submissions_dir: Path,
     reference_path: Path,
     output_path: Optional[Path] = None,
+    recheck_after_fix: bool = False,
 ):
     """Add empty predictions for empty orv tokens"""
     tasks = list(TASK_TO_EMPTY_PREDS.keys())
@@ -38,12 +39,19 @@ def fill_orv_empty_tokens(
                 ), "Still not fixed!"
                 new_preds.append(new_pred)
 
-        # Override if output_path is not included
-        output_path = output_path or input_path
-        with open(output_path, "w", encoding="utf-8") as file:
-            json.dump(new_preds, file, ensure_ascii=False, indent=2)
+        if recheck_after_fix:
+            for idx, (ref, pred) in enumerate(zip(refs, new_preds)):
+                ref_tokens = [token["form"] for token in ref]
+                pred_tokens = [get_orth(token, task) for token in pred]
+                if is_equal(ref_tokens, pred_tokens):
+                    msg.good("Everything's good!")
+                else:
+                    msg.fail("There are still errors!", exits=1)
 
-        msg.good(f"Saved fixed predictions to {output_path}!")
+        if output_path:
+            with open(output_path, "w", encoding="utf-8") as file:
+                json.dump(new_preds, file, ensure_ascii=False, indent=2)
+            msg.good(f"Saved fixed predictions to {output_path}!")
 
 
 def get_orth(pred, task: str) -> str:

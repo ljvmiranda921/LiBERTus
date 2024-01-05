@@ -37,6 +37,9 @@ Commands are only re-run if their inputs have changed.
 | `plot-figures` | Plot figures for the writeup |
 | `setup-test` | Download models from HuggingFace and convert test files to spaCy |
 | `get-test-results` | Get results from the test file |
+| `special-case-all` | Get results from the test file with both subtokens and mwe |
+| `special-case-subtokens-only` | Get results from the test file with subtokens only |
+| `zip-results` | Zip the results into a single file for submission |
 
 ### ⏭ Workflows
 
@@ -51,7 +54,7 @@ inputs have changed.
 | `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 | `experiment-merged` | `convert-to-spacy-merged` &rarr; `finetune-with-merged-corpus` |
 | `experiment-sampling` | `create-vocab` &rarr; `pretrain-model` |
-| `make-submission` | `setup-test` &rarr; `get-test-results` |
+| `make-submission` | `setup-test` &rarr; `get-test-results` &rarr; `zip-results` |
 
 ### 🗂 Assets
 

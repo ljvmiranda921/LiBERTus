@@ -55,10 +55,10 @@ def fill_orv_empty_tokens(
             else:
                 msg.good("All sentences passed the test!")
 
-        if output_path:
-            with open(output_path, "w", encoding="utf-8") as file:
-                json.dump(new_preds, file, ensure_ascii=False, indent=2)
-            msg.good(f"Saved fixed predictions to {output_path}!")
+        output_path = output_path or input_path
+        with open(output_path, "w", encoding="utf-8") as file:
+            json.dump(new_preds, file, ensure_ascii=False, indent=2)
+        msg.good(f"Saved fixed predictions to {output_path}!")
 
 
 def get_orth(pred, task: str) -> str:

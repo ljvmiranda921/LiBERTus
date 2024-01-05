@@ -38,15 +38,22 @@ def fill_orv_empty_tokens(
                     ref_tokens, [get_orth(token, task) for token in new_pred]
                 ), "Still not fixed!"
                 new_preds.append(new_pred)
+            else:
+                new_preds.append(pred)
 
         if recheck_after_fix:
-            for idx, (ref, pred) in enumerate(zip(refs, new_preds)):
+            bad_sentences_idx = []
+            for idx, (ref, new_pred) in enumerate(zip(refs, new_preds)):
                 ref_tokens = [token["form"] for token in ref]
-                pred_tokens = [get_orth(token, task) for token in pred]
-                if is_equal(ref_tokens, pred_tokens):
-                    msg.good("Everything's good!")
-                else:
-                    msg.fail("There are still errors!", exits=1)
+                new_pred_tokens = [get_orth(token, task) for token in new_pred]
+                if not is_equal(ref_tokens, new_pred_tokens):
+                    bad_sentences_idx.append(idx)
+            if len(bad_sentences_idx) > 0:
+                msg.fail(
+                    f"There are still errors in sentences: {bad_sentences_idx}", exits=1
+                )
+            else:
+                msg.good("All sentences passed the test!")
 
         if output_path:
             with open(output_path, "w", encoding="utf-8") as file:

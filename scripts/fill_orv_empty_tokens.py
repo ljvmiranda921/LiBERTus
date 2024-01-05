@@ -1,4 +1,5 @@
 import copy
+import json
 from pathlib import Path
 from typing import Any, List, Optional
 
@@ -23,7 +24,8 @@ def fill_orv_empty_tokens(
     tasks = list(TASK_TO_EMPTY_PREDS.keys())
     refs = [sent for sent in conllu.parse_incr(reference_path.open(encoding="utf-8"))]
     for task in tasks:
-        preds = srsly.read_json(submissions_dir / task / "orv.json")
+        input_path = submissions_dir / task / "orv.json"
+        preds = srsly.read_json(input_path)
         new_preds = []
         for idx, (ref, pred) in enumerate(zip(refs, preds)):
             ref_tokens = [token["form"] for token in ref]
@@ -36,6 +38,13 @@ def fill_orv_empty_tokens(
                     ref_tokens, [get_orth(token, task) for token in new_pred]
                 ), "Still not fixed!"
                 new_preds.append(new_pred)
+
+        # Override if output_path is not included
+        output_path = output_path or input_path
+        with open(output_path, "w", encoding="utf-8") as file:
+            json.dump(new_preds, file, ensure_ascii=False, indent=2)
+
+        msg.good(f"Saved fixed predictions to {output_path}!")
 
 
 def get_orth(pred, task: str) -> str:
@@ -61,7 +70,7 @@ def is_equal(ref_tokens: List[str], pred_tokens: List[str]) -> bool:
 
     for idx, (ref_tok, pred_tok) in enumerate(zip(ref_tokens, pred_tokens)):
         if ref_tok != pred_tok:
-            msg.warn(f"Position {idx} tokens unequal: {ref_tok} != {pred_tok}")
+            msg.text(f"Position {idx} tokens unequal: {ref_tok} != {pred_tok}")
             parity = False
 
     return parity

@@ -1,3 +1,4 @@
+import copy
 from pathlib import Path
 from typing import Any, List, Optional
 
@@ -60,12 +61,26 @@ def is_equal(ref_tokens: List[str], pred_tokens: List[str]) -> bool:
     for idx, (ref_tok, pred_tok) in enumerate(zip(ref_tokens, pred_tokens)):
         if ref_tok != pred_tok:
             msg.warn(f"Position {idx} tokens unequal: {ref_tok} != {pred_tok}")
+            parity = False
 
     return parity
 
 
 def fix_tokens(pred: List[Any], task: str, ref_tokens: List[str]) -> List[Any]:
-    pass
+    # Get indices where empty tokens show up
+    empty_idxs = [idx for idx, token, in enumerate(ref_tokens) if token == ""]
+
+    def _insert_at_idx(idx: int, value: Any, target: List[Any]) -> List[Any]:
+        _target = target[:idx]
+        _target.append(value)
+        _target.extend(target[idx:])
+        return _target
+
+    new_pred = copy.copy(pred)
+    for empty_idx in empty_idxs:
+        new_pred = _insert_at_idx(empty_idx, TASK_TO_EMPTY_PREDS[task], new_pred)
+
+    return new_pred
 
 
 if __name__ == "__main__":

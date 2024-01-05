@@ -33,7 +33,6 @@ def fill_orv_empty_tokens(
             if not is_equal(ref_tokens, pred_tokens):
                 msg.divider(f"Sentence {idx} not equal!")
                 new_pred = fix_tokens(pred, task=task, ref_tokens=ref_tokens)
-                breakpoint()
                 assert is_equal(
                     ref_tokens, [get_orth(token, task) for token in new_pred]
                 ), "Still not fixed!"

@@ -6,6 +6,8 @@ from spacy.tokens import Doc, Span, Token
 from spacy.language import Language
 from wasabi import msg
 
+print("hi")
+
 
 @Language.factory("tensor2attr")
 class Tensor2Attr:

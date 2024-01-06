@@ -1,0 +1,58 @@
+========================================
+README for Team21a load_model submission
+========================================
+
+This folder contains the embedding loaders for the Team 21a submission of the
+SIGTYP 2024 Shared Task. These are context-sensitive embeddings so there is no
+vector table / dictionary. Instead, the embeddings are computed at runtime. The
+model was built by first pretraining on the raw text of the Universal
+Dependencies (UD) annotations, and then finetuned for each downstream task. 
+
+------------
+Installation
+------------
+
+First, you need to install all dependencies and download the models from HuggingFace.
+This step takes care of both:
+
+```
+pip install -r requirements.txt
+```
+
+Note that each model is around (400 MB) in size.
+
+-----
+Usage
+-----
+
+The `load_model()` function works as in the shared task's specification.
+However, instead of passing a path to a model binary, we just need to pass the
+model name. 
+
+
+```python
+from .load_model import load_model
+
+# Load model for 'lat'
+model = load_model(model_name="xx_lat_sigtyp_trf")
+model["ocum"]
+```
+
+The table below shows the model name for a given language code:
+
+| Language code | Model name         |
+|---------------|--------------------|
+| chu           | xx_chu_sigtyp_trf  |
+| cop           | el_cop_sigtyp_trf  |
+| fro           | xx_fro_sigtyp_trf  |
+| got           | xx_got_sigtyp_trf  |
+| grc           | xx_grc_sigtyp_trf  |
+| hbo           | he_hbo_sigtyp_trf  |
+| isl           | xx_isl_sigtyp_trf  |
+| lat           | xx_lat_sigtyp_trf  |
+| latm          | xx_latm_sigtyp_trf |
+| lzh           | zh_lzh_sigtyp_trf  |
+| ohu           | xx_ohu_sigtyp_trf  |
+| orv           | xx_orv_sigtyp_trf  |
+| san           | xx_san_sigtyp_trf  |
+

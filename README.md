@@ -4,7 +4,10 @@
 
 Submission to Task 1 (Constrained) of the [SIGTYP 2024 Shared Task on Word
 Embedding Evaluation for Ancient and Historical
-Languages](https://sigtyp.github.io/st2024.html)
+Languages](https://sigtyp.github.io/st2024.html).  The system is built by
+first pretraining a multilingual language model and then finetuning it for a
+downstream task. The submission for Phase 1 and 2 of the Shared Task can be
+found in the `submission_p1` and `submission_p2` directories.
 
 
 ## 📋 project.yml
@@ -33,12 +36,9 @@ Commands are only re-run if their inputs have changed.
 | `finetune-with-merged-corpus` | Finetune a transformer model on the combined training and validation corpora |
 | `package-model` | Package model and upload to HuggingFace |
 | `evaluate-model-dev` | Evaluate a model on the validation set |
-| `evaluate-model-test` | Evaluate a model on the test set |
 | `plot-figures` | Plot figures for the writeup |
 | `setup-test` | Download models from HuggingFace and convert test files to spaCy |
 | `get-test-results` | Get results from the test file |
-| `special-case-all` | Get results from the test file with both subtokens and mwe |
-| `special-case-subtokens-only` | Get results from the test file with subtokens only |
 | `zip-results` | Zip the results into a single file for submission |
 
 ### ⏭ Workflows

@@ -2,7 +2,10 @@ title: "LiBERTus - A Multilingual Language Model for Ancient and Historical Lang
 description: |
   Submission to Task 1 (Constrained) of the [SIGTYP 2024 Shared Task on Word
   Embedding Evaluation for Ancient and Historical
-  Languages](https://sigtyp.github.io/st2024.html)
+  Languages](https://sigtyp.github.io/st2024.html).  The system is built by
+  first pretraining a multilingual language model and then finetuning it for a
+  downstream task. The submission for Phase 1 and 2 of the Shared Task can be
+  found in the `submission_p1` and `submission_p2` directories.
 
 # These are the directories that the project needs. The project CLI will make
 # sure that they always exist.
@@ -91,7 +94,6 @@ workflows:
     - convert-to-spacy
     - finetune-trf-model
     - evaluate-model-dev
-    # - evaluate-model-test
   experiment-merged:
     - convert-to-spacy-merged
     - finetune-with-merged-corpus
@@ -340,22 +342,6 @@ commands:
     outputs:
       - metrics/system_scores/${vars.train_lang}/metrics-${vars.dev_lang}-dev.json
 
-  - name: "evaluate-model-test"
-    help: "Evaluate a model on the test set"
-    script:
-      - mkdir -p metrics/system_scores/${vars.train_lang}/
-      - >-
-        python -m spacy evaluate
-        training/${vars.train_lang}/model-best/ corpus/test/${vars.test_lang}_test.spacy
-        --output metrics/system_scores/${vars.train_lang}/metrics-${vars.test_lang}-test.json
-        --per-component
-        --gpu-id ${vars.gpu_id}
-    deps:
-      - training/${vars.train_lang}/model-best/
-      - corpus/test/${vars.test_lang}_test.spacy
-    outputs:
-      - metrics/system_scores/${vars.train_lang}/metrics-${vars.test_lang}-dev.json
-
   - name: "plot-figures"
     help: "Plot figures for the writeup"
     script:
@@ -364,7 +350,6 @@ commands:
       - python -m scripts.plotters.plot_crosseval_heatmap metrics/system_scores/ paper/figures/cross_lingual.pdf
       - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/hashembed_scores/ paper/figures/hashembed.pdf --ours-name "RoBERTa-based (ours)" --theirs-name "Multi hash embeddings"
       - python -m scripts.plotters.plot_comparison metrics/system_scores/ metrics/monolithic_scores/ paper/figures/monolithic.pdf --ours-name "Language-specific (ours)" --theirs-name "Monolithic"
-      # - python -m scripts.plotters.plot_pretraining_eval_scores metrics/compare_pretraining.csv paper/figures/effect_sampling.pdf
     outputs:
       - paper/figures/train_loss.pdf
       - paper/figures/token_counts.pdf

@@ -37,8 +37,6 @@ Commands are only re-run if their inputs have changed.
 | `plot-figures` | Plot figures for the writeup |
 | `setup-test` | Download models from HuggingFace and convert test files to spaCy |
 | `get-test-results` | Get results from the test file |
-| `special-case-all` | Get results from the test file with both subtokens and mwe |
-| `special-case-subtokens-only` | Get results from the test file with subtokens only |
 | `zip-results` | Zip the results into a single file for submission |
 
 ### ⏭ Workflows

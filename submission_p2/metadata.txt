@@ -38,8 +38,21 @@ model = load_model(model_name="xx_lat_sigtyp_trf")
 model["ocum"]
 ```
 
-The table below shows the model name for a given language code. You can also
-import a function, `model_table()`, from the `load_model` module:
+The table below shows the model name for a given language code:
 
-
+| Language code | Model name         |
+|---------------|--------------------|
+| chu           | xx_chu_sigtyp_trf  |
+| cop           | el_cop_sigtyp_trf  |
+| fro           | xx_fro_sigtyp_trf  |
+| got           | xx_got_sigtyp_trf  |
+| grc           | xx_grc_sigtyp_trf  |
+| hbo           | he_hbo_sigtyp_trf  |
+| isl           | xx_isl_sigtyp_trf  |
+| lat           | xx_lat_sigtyp_trf  |
+| latm          | xx_latm_sigtyp_trf |
+| lzh           | zh_lzh_sigtyp_trf  |
+| ohu           | xx_ohu_sigtyp_trf  |
+| orv           | xx_orv_sigtyp_trf  |
+| san           | xx_san_sigtyp_trf  |
 

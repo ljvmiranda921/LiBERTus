@@ -6,8 +6,6 @@ from spacy.tokens import Doc, Span, Token
 from spacy.language import Language
 from wasabi import msg
 
-print("hi")
-
 
 @Language.factory("tensor2attr")
 class Tensor2Attr:
@@ -63,14 +61,8 @@ def load_model(model_name: str) -> TransformerEmbeddings:
             f"Model '{model_name}' not found in your environment. "
             f" Found: {', '.join(spacy.util.get_installed_models())}."
             " Please install the model from requirements.txt",
-            " To get the list of models per language code, import and call "
-            " model_table()",
             exits=1,
         )
 
     embeddings = TransformerEmbeddings(model_name)
     return embeddings
-
-
-def model_table():
-    pass

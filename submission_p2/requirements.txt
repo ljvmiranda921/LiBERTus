@@ -1,5 +1,6 @@
 # app
 wasabi
+pytest
 # model reading
 spacy==3.6.0
 spacy-transformers

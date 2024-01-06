@@ -1,5 +1,20 @@
 # app
-typer
 wasabi
-# model
-transformers
+# model reading
+spacy==3.6.0
+spacy-transformers
+numpy
+# models
+https://huggingface.co/ljvmiranda921/xx_chu_sigtyp_trf/resolve/main/xx_chu_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/el_cop_sigtyp_trf/resolve/main/el_cop_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_fro_sigtyp_trf/resolve/main/xx_fro_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_got_sigtyp_trf/resolve/main/xx_got_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_grc_sigtyp_trf/resolve/main/xx_grc_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/he_hbo_sigtyp_trf/resolve/main/he_hbo_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_isl_sigtyp_trf/resolve/main/xx_isl_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_lat_sigtyp_trf/resolve/main/xx_lat_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_latm_sigtyp_trf/resolve/main/xx_latm_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/zh_lzh_sigtyp_trf/resolve/main/zh_lzh_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
+https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl

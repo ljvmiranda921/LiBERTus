@@ -387,83 +387,35 @@ commands:
       - pip install https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
-      # - mkdir -p corpus/test
-      # remove orv because of weird test case, we'll read the conllu file directly instead
-      # - mv assets/test/orv_test.conllu corpus/test/orv_test.conllu
-      # copy special case languages
-      # - cp assets/test/cop_test.conllu corpus/test/cop_test.conllu
-      # - cp assets/test/hbo_test.conllu corpus/test/hbo_test.conllu
-      # convert everything to spaCy files
-      # - python -m spacy convert assets/test/ corpus/test/ -T
 
   - name: "get-test-results"
     help: "Get results from the test file"
     script:
-      - python -m scripts.run_pipeline assets/test/chu_test.conllu submission xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/fro_test.conllu submission xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/got_test.conllu submission xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/grc_test.conllu submission xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/isl_test.conllu submission xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/lat_test.conllu submission xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/latm_test.conllu submission xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/lzh_test.conllu submission zh_lzh_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/ohu_test.conllu submission xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/orv_test.conllu submission xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
-      - python -m scripts.run_pipeline assets/test/san_test.conllu submission xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/chu_test.conllu submission_p1 xx_chu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/cop_test.conllu submission_p1 el_cop_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/fro_test.conllu submission_p1 xx_fro_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/got_test.conllu submission_p1 xx_got_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/grc_test.conllu submission_p1 xx_grc_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/hbo_test.conllu submission_p1 he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/isl_test.conllu submission_p1 xx_isl_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/lat_test.conllu submission_p1 xx_lat_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/latm_test.conllu submission_p1 xx_latm_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/lzh_test.conllu submission_p1 zh_lzh_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/ohu_test.conllu submission_p1 xx_ohu_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/orv_test.conllu submission_p1 xx_orv_sigtyp_trf --gpu-id ${vars.gpu_id}
+      - python -m scripts.run_pipeline assets/test/san_test.conllu submission_p1 xx_san_sigtyp_trf --gpu-id ${vars.gpu_id}
     outputs:
-      - submission/pos_tagging/
-      - submission/morph_features/
-      - submission/lemmatisation/
-
-  - name: "special-case-all"
-    help: "Get results from the test file with both subtokens and mwe"
-    script:
-      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
-      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe all
-      # inspect results
-      - head -20 submission/pos_tagging/cop.json
-      - head -20 submission/morph_features/cop.json
-      - head -20 submission/lemmatisation/cop.json
-      - head -20 submission/pos_tagging/hbo.json
-      - head -20 submission/morph_features/hbo.json
-      - head -20 submission/lemmatisation/hbo.json
-    outputs:
-      - submission/pos_tagging/cop.json
-      - submission/morph_features/cop.json
-      - submission/lemmatisation/cop.json
-      - submission/pos_tagging/hbo.json
-      - submission/morph_features/hbo.json
-      - submission/lemmatisation/hbo.json
-
-  - name: "special-case-subtokens-only"
-    help: "Get results from the test file with subtokens only"
-    script:
-      - python -m scripts.run_pipeline corpus/test/cop_test.conllu submission el_cop_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
-      - python -m scripts.run_pipeline corpus/test/hbo_test.conllu submission he_hbo_sigtyp_trf --gpu-id ${vars.gpu_id} --mwe subtokens_only
-      # inspect results
-      - head -20 submission/pos_tagging/cop.json
-      - head -20 submission/morph_features/cop.json
-      - head -20 submission/lemmatisation/cop.json
-      - head -20 submission/pos_tagging/hbo.json
-      - head -20 submission/morph_features/hbo.json
-      - head -20 submission/lemmatisation/hbo.json
-    outputs:
-      - submission/pos_tagging/cop.json
-      - submission/morph_features/cop.json
-      - submission/lemmatisation/cop.json
-      - submission/pos_tagging/hbo.json
-      - submission/morph_features/hbo.json
-      - submission/lemmatisation/hbo.json
+      - submission_p1/pos_tagging/
+      - submission_p1/morph_features/
+      - submission_p1/lemmatisation/
 
   - name: "zip-results"
     help: "Zip the results into a single file for submission"
     script:
-      - sh -c "cd submission && zip -r ../submission.zip ."
+      - sh -c "cd submission_p1 && zip -r ../submission.zip ."
     deps:
-      - submission/pos_tagging/
-      - submission/morph_features/
-      - submission/lemmatisation/
+      - submission_p1/pos_tagging/
+      - submission_p1/morph_features/
+      - submission_p1/lemmatisation/
     outputs:
       - submission.zip

@@ -52,7 +52,7 @@ class TransformerEmbeddings(dict):
 
     def __getitem__(self, __key: str) -> Any:
         doc = self.nlp(__key)
-        return doc.vector.shape
+        return doc.vector
 
 
 def load_model(model_name: str) -> TransformerEmbeddings:

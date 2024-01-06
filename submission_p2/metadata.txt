@@ -1,0 +1,22 @@
+========================================
+README for Team21a load_model submission
+========================================
+
+This folder contains the embedding loaders for the Team 21a submission of the
+SIGTYP 2024 Shared Task. These are context-sensitive embeddings so there is no
+vector table / dictionary. Instead, the embeddings are computed at runtime. The
+model was built by first pretraining on the raw text of the Universal
+Dependencies (UD) annotations, and then finetuned for each downstream task. 
+
+
+Instead, the embeddings are computed ev
+
+-----
+Setup
+-----
+
+First, you need to install all dependencies and models from HuggingFace:
+
+```
+pip install -r requirements.txt
+```

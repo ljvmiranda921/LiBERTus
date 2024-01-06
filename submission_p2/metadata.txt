@@ -8,15 +8,35 @@ vector table / dictionary. Instead, the embeddings are computed at runtime. The
 model was built by first pretraining on the raw text of the Universal
 Dependencies (UD) annotations, and then finetuned for each downstream task. 
 
+------------
+Installation
+------------
 
-Instead, the embeddings are computed ev
-
------
-Setup
------
-
-First, you need to install all dependencies and models from HuggingFace:
+First, you need to install all dependencies and download the models from HuggingFace.
+This step takes care of both:
 
 ```
 pip install -r requirements.txt
 ```
+
+Note that each model is around (400 MB) in size.
+
+-----
+Usage
+-----
+
+The `load_model()` function works as in the shared task's specification.
+However, instead of passing a path to a model binary, we just need to pass
+the model name. 
+
+
+```python
+# Load model for 'lat'
+model = load_model(model_name="xx_lat_sigtyp_trf")
+model["ocum"]
+```
+
+The table below shows the model name for a given language code:
+
+
+

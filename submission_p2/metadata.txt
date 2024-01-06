@@ -26,17 +26,20 @@ Usage
 -----
 
 The `load_model()` function works as in the shared task's specification.
-However, instead of passing a path to a model binary, we just need to pass
-the model name. 
+However, instead of passing a path to a model binary, we just need to pass the
+model name. 
 
 
 ```python
+from .load_model import load_model
+
 # Load model for 'lat'
 model = load_model(model_name="xx_lat_sigtyp_trf")
 model["ocum"]
 ```
 
-The table below shows the model name for a given language code:
+The table below shows the model name for a given language code. You can also
+import a function, `model_table()`, from the `load_model` module:
 
 
 

@@ -106,10 +106,16 @@ Each POS tag is a unique class that we assign exclusively to a token.
 We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
 The network is then optimized using a categorical cross-entropy loss.
 
+For languages with subtokens such as \textsc{cop} and \textsc{hbo}, we merged each token and used the full multi-word expression (MWE) during training.
+\lj{show example}
+
 \paragraph{Morphological analyzer.}
 Similar to the POS tagger, we treat morphological annotation as a token classification task.
 Instead of directly modeling each feature, we made every unique combination of morphological features as a class.
 The limitation of this approach is that it can only predict combinations that were present in the training corpora.
+
+Similar to the POS tagger, we merged each token for every multi-word expression (MWE) during training.
+\lj{show example}
 
 \begin{figure*}[t]
 \centering

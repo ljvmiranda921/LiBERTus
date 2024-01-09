@@ -212,28 +212,15 @@ Instead of showing subtokens, we used the full multi-word expression during trai
 \section{Appendix}
 \label{sec:appendix}
 
-\begin{figure}[b]
+\subsection{Different sampling strategies on pretraining validation performance}
+
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/effect_sampling.pdf}
 \caption{Validation loss curve for different sampling strategies in 20k steps.}
 \label{fig:effect_sampling}
 \end{figure}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/monolithic.pdf}
-\caption{Comparison between training language-specific models versus a single monolithic model as evaluated on the validation set.}
-\label{fig:monolithic}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.95\textwidth]{figures/hashembed.pdf}
-\caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
-\label{fig:hashembed}
-\end{figure*}
-
-\subsection{Different sampling strategies on pretraining validation performance}
 
 We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
 We ran the pretraining pipeline for 20k steps (one-fifths of the final hyperparameter value) and measured the validation loss.
@@ -251,6 +238,13 @@ We highly recommend exploring alternative data mixes to ensure that all language
 
 \subsection{Finetuning a model per language vs. monolithic system}
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/monolithic.pdf}
+\caption{Comparison between training language-specific models versus a single monolithic model as evaluated on the validation set.}
+\label{fig:monolithic}
+\end{figure*}
+
 We investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 Here, we combined the training corpora for all languages, then shuffled them before batching.
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
@@ -262,6 +256,13 @@ Training the monolithic model is also sensitive to the training data distributio
 Due to these findings, we decided to train multiple models for our final system.
 
 \subsection{Alternative approach\textemdash multi-hash embeddings}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/hashembed.pdf}
+\caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
+\label{fig:hashembed}
+\end{figure*}
 
 We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.

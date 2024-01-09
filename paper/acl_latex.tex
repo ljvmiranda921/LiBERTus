@@ -40,7 +40,7 @@
 \begin{abstract}
 In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
 Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
-Our systems achieved \lj{on the test set...}.
+Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in \textsc{cop} and \textsc{hbo}.
 On the validation set, we obtained $\geq$70\% F1-score on most language-task pairs.
 We also explored the cross-lingual capability of our trained models.
 This paper highlights our pretraining and finetuning process, and our findings from our internal evaluations.
@@ -52,11 +52,11 @@ Our general approach involves pretraining a transformer-based multilingual model
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
-Our systems achieved...\lj{stuff}. 
+Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in \textsc{cop} and \textsc{hbo}. 
 Table \ref{table:main_results} shows our systems' performance on the shared task test set.
 On the validation set, we obtained $\geq$70\% F1-score for the majority of language-task pairs.
 
-We detail our resource creation, model pretraining, and finetuning methodologies.
+We detail our resource creation, model pretraining, and finetuning methodologies in this paper.
 The source code for all experiments can be found on GitHub: \githuburl{}.
 
 \subfile{tables/main_results.tex}
@@ -140,8 +140,8 @@ The learning rate warms up linearly for the first 250 steps, and then decays aft
 \section{Results}
 
 Table \ref{table:main_results} shows the test scores for the shared task.
-\lj{Talk about how you ranked against other teams?}
-In this section, we will outline our internal evaluations and benchmarking experiments.
+Our systems obtained decent performance for the majority of language-task pairs.
+In the following sections, we will outline our internal evaluations and benchmarking experiments.
 
 \subsection{Performance on the validation set}
 
@@ -173,12 +173,9 @@ Finally, there is also good cross-lingual compatibility between \textsc{lat} and
 \section{Conclusion}
 
 This paper describes Team 21a's system: a pretrained multilingual model (\libertus{}) finetuned on different languages for each downstream task.
-Our system obtained \lj{describe your rank, how you stack, etc. etc.}
-
-Our system's main strength is its downstream performance.
-The validation scores are high ($\geq$70\% F1-score) for the majority of language-task pairs.
-However, performance on languages such as \textsc{cop} and \textsc{hbo} are low because of our downstream tokenization process.
-We highly recommend exploring alternative approaches to tokenization.
+Our system obtained decent performance for the majority of language-task pairs.
+However, due to our training paradigm, it struggles annotating subtokens of multiword expressions.
+Nevertheless, our validation scores are high ($\geq$70\% F1-score) for the majority of language-task pairs.
 
 We also evaluated each language's cross-lingual capability and showed that transfer learning is possible especially on lemmatization.
 This approach can be a viable alternative on limited corpora.

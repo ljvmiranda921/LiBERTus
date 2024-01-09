@@ -105,17 +105,13 @@ We employed a standard classifier that predicts a vector of tag probabilities fo
 Each POS tag is a unique class that we assign exclusively to a token.
 We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
 The network is then optimized using a categorical cross-entropy loss.
-
-For languages with subtokens such as \textsc{cop} and \textsc{hbo}, we merged each token and used the full multi-word expression (MWE) during training.
-\lj{show example}
+For languages with subtokens such as \textsc{cop} and \textsc{hbo}, we merged each subtoken and used the full multi-word expression (MWE) during training.
 
 \paragraph{Morphological analyzer.}
 Similar to the POS tagger, we treat morphological annotation as a token classification task.
 Instead of directly modeling each feature, we made every unique combination of morphological features as a class.
 The limitation of this approach is that it can only predict combinations that were present in the training corpora.
-
-Similar to the POS tagger, we merged each token for every multi-word expression (MWE) during training.
-\lj{show example}
+Similar to the POS tagger, we merged each subtoken for every multi-word expression (MWE) during training.
 
 \begin{figure*}[t]
 \centering
@@ -155,6 +151,11 @@ Table \ref{table:validation_results} shows the validation scores of our finetune
 We achieved $\geq$70\% performance in most language-task pairs. 
 The top performers, calculated by taking the average across all tasks, are \textsc{latm} (0.968), \textsc{isl} (0.938), and \textsc{lat} (0.918),
 whereas the bottom performers are \textsc{cop} (0.849), \textsc{san} (0.839), and \textsc{hbo} (0.468).
+
+Compared to our validation scores, our leaderboard scores on \textsc{cop} and \textsc{hbo} are poor.
+This performance is due to our models being unable to accurately predict subtoken information as it has only seen the full MWE during training.
+In order to align our tokenization with the shared task's validation script in Codalab, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
+Finally, for empty tokens such as those found in \textsc{orv}, we added a rule in our system to produce empty predictions.
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -199,6 +200,10 @@ We only tested simple up-/downsampling strategies and our experiments are limite
 \paragraph{Label combination as individual classes}
 When training the morphologizer and POS tagger, we treated each feature and parts-of-speech combination as its own class instead of modeling them individually.
 This limits our text classifier to only predicting combinations it has seen during the training process.
+
+\paragraph{Subtoken performance for multiword expressions}
+Our systems performed poorly on \textsc{cop} and \textsc{hbo} in the leaderboard due to how we trained our model.
+Instead of showing subtokens, we used the full multi-word expression during training.
 
 \bibliography{custom}
 

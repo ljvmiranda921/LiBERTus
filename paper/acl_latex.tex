@@ -23,7 +23,10 @@
 \newcommand{\draftcomment}[3]{\draftonly{\textcolor{#2}{[#3]{$_{\textsc{#1}}$}}}}
 \newcommand{\lj}[1]{\draftcomment{Lj}{red}{#1}}
 \newcommand{\libertus}{\textsc{LiBERTus}}
-\newcommand{\githuburl}{\url{https://anonymous.4open.science/r/sigtyp-1F05/}}
+% \newcommand{\teamname}{Team 21a}
+% \newcommand{\githuburl}{\url{https://anonymous.4open.science/r/sigtyp-1F05/}}
+\newcommand{\teamname}{Allen AI}
+\newcommand{\githuburl}{\url{https://github.com/ljvmiranda921/LiBERTus}}
 
 
 \title{Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages}
@@ -38,7 +41,7 @@
 \maketitle
 
 \begin{abstract}
-In this paper, we describe Team 21a's submission to the constrained track of the SIGTYP 2024 Shared Task.
+In this paper, we describe \teamname{}'s submission to the constrained track of the SIGTYP 2024 Shared Task.
 Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
 Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in \textsc{cop} and \textsc{hbo}.
 On the validation set, we obtained $\geq$70\% F1-score on most language-task pairs.
@@ -47,7 +50,7 @@ This paper highlights our pretraining and finetuning process, and our findings f
 \end{abstract}
 
 \section{Introduction}
-This paper describes Team 21a's submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
+This paper describes \teamname{}'s submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
 Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
@@ -172,7 +175,7 @@ Finally, there is also good cross-lingual compatibility between \textsc{lat} and
 
 \section{Conclusion}
 
-This paper describes Team 21a's system: a pretrained multilingual model (\libertus{}) finetuned on different languages for each downstream task.
+This paper describes Team \teamname{}'s system: a pretrained multilingual model (\libertus{}) finetuned on different languages for each downstream task.
 Our system obtained decent performance for the majority of language-task pairs.
 However, due to our training paradigm, it struggles annotating subtokens of multiword expressions.
 Nevertheless, our validation scores are high ($\geq$70\% F1-score) for the majority of language-task pairs.
@@ -182,7 +185,6 @@ This approach can be a viable alternative on limited corpora.
 
 Our training and benchmarking source code is on GitHub: \githuburl{}.
 We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
-
 
 \section*{Limitations}
 

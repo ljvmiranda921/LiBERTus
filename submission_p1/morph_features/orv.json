@@ -27637,7 +27637,7 @@
   ],
   [
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -51630,7 +51630,7 @@
       "Token": "Москву"
     },
     {
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -91725,10 +91725,7 @@
       "Token": "государю"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -91750,7 +91747,7 @@
       "Token": "титулъ"
     },
     {
-      "UPOS": "X",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -92252,10 +92249,7 @@
       "Token": "государь"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -92270,7 +92264,7 @@
       "Token": "титул"
     },
     {
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -94409,7 +94403,7 @@
       "Token": "притѣсненія"
     },
     {
-      "UPOS": "X",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -128273,10 +128267,7 @@
       "Token": "государю"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -128298,10 +128289,7 @@
       "Token": "титулъ"
     },
     {
-      "Case": "Gen",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -147567,10 +147555,7 @@
       "Token": "Михайловича"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -147581,9 +147566,7 @@
       "Token": "титулъ"
     },
     {
-      "Case": "Acc",
-      "NumForm": "Digit",
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -147699,10 +147682,7 @@
       "Token": ","
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NUM",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -147718,7 +147698,7 @@
       "Token": "титулъ"
     },
     {
-      "UPOS": "X",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {
@@ -174290,7 +174270,7 @@
   ],
   [
     {
-      "UPOS": "ADP",
+      "UPOS": "PUNCT",
       "Token": "["
     },
     {
@@ -213686,10 +213666,7 @@
       "Token": "Москву"
     },
     {
-      "Case": "Acc",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "DET",
+      "UPOS": "PUNCT",
       "Token": "]"
     },
     {

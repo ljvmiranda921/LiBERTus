@@ -37,7 +37,8 @@ Commands are only re-run if their inputs have changed.
 | `package-model` | Package model and upload to HuggingFace |
 | `evaluate-model-dev` | Evaluate a model on the validation set |
 | `plot-figures` | Plot figures for the writeup |
-| `setup-test` | Download models from HuggingFace and convert test files to spaCy |
+| `setup-test` | Install models from HuggingFace via pip |
+| `download-models-locally` | Download models from HuggingFace |
 | `get-test-results` | Get results from the test file |
 | `zip-results` | Zip the results into a single file for submission |
 

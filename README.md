@@ -40,7 +40,8 @@ Commands are only re-run if their inputs have changed.
 | `setup-test` | Install models from HuggingFace via pip |
 | `download-models-locally` | Download models from HuggingFace |
 | `get-test-results` | Get results from the test file |
-| `zip-results` | Zip the results into a single file for submission |
+| `zip-results-p1` | Zip the results into a single file for submission (Phase 1) |
+| `zip-results-p2` | Zip teh results into a single file for submission (Phase 2) |
 
 ### ⏭ Workflows
 
@@ -55,7 +56,8 @@ inputs have changed.
 | `finetune` | `convert-to-spacy` &rarr; `finetune-trf-model` &rarr; `evaluate-model-dev` |
 | `experiment-merged` | `convert-to-spacy-merged` &rarr; `finetune-with-merged-corpus` |
 | `experiment-sampling` | `create-vocab` &rarr; `pretrain-model` |
-| `make-submission` | `setup-test` &rarr; `get-test-results` &rarr; `zip-results` |
+| `make-submission-p1` | `setup-test` &rarr; `get-test-results` &rarr; `zip-results-p1` |
+| `make-submission-p2` | `download-models-locally` &rarr; `zip-results-p2` |
 
 ### 🗂 Assets
 

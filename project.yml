@@ -100,10 +100,13 @@ workflows:
   experiment-sampling:
     - create-vocab
     - pretrain-model
-  make-submission:
+  make-submission-p1:
     - setup-test
     - get-test-results
-    - zip-results
+    - zip-results-p1
+  make-submission-p2:
+    - download-models-locally
+    - zip-results-p2
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -411,13 +414,20 @@ commands:
       - submission_p1/morph_features/
       - submission_p1/lemmatisation/
 
-  - name: "zip-results"
-    help: "Zip the results into a single file for submission"
+  - name: "zip-results-p1"
+    help: "Zip the results into a single file for submission (Phase 1)"
     script:
-      - sh -c "cd submission_p1 && zip -r ../submission.zip ."
+      - sh -c "cd submission_p1 && zip -r ../submission_p1.zip ."
     deps:
       - submission_p1/pos_tagging/
       - submission_p1/morph_features/
       - submission_p1/lemmatisation/
     outputs:
-      - submission.zip
+      - submission_p1.zip
+
+  - name: "zip-results-p2"
+    help: "Zip teh results into a single file for submission (Phase 2)"
+    script:
+      - sh -c "cd submission_p2 && zip -r ../submission_p2.zip ."
+    outputs:
+      - submission_p2.zip

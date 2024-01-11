@@ -158,7 +158,7 @@ whereas the bottom performers are \textsc{cop} (0.849), \textsc{san} (0.839), an
 Compared to our validation scores, our leaderboard scores on \textsc{cop} and \textsc{hbo} are poor.
 This performance is due to our models being unable to accurately predict subtoken information as it has only seen the full MWE during training.
 In order to align our tokenization with the shared task's validation script in Codalab, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
-Finally, for empty tokens such as those found in \textsc{orv}, we added a rule in our system to produce empty predictions.
+Finally, for empty tokens such as previously found in \textsc{orv}, we added a rule in our system to produce empty predictions.\footnote[1]{This problem was initially caused by missing brackets in the reference annotations. We used the correct tokens for \textsc{orv} in the final submission.}
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}

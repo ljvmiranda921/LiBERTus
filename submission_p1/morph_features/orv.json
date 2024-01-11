@@ -27637,14 +27637,14 @@
   ],
   [
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "ADV",
+      "Form": "["
     },
     {
-      "Case": "Nom",
+      "Case": "Loc",
       "Gender": "Masc",
       "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "PROPN",
       "Form": "III"
     },
     {
@@ -51604,7 +51604,7 @@
       "Form": "объ"
     },
     {
-      "Case": "Dat",
+      "Case": "Gen",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -51630,8 +51630,8 @@
       "Form": "Москву"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "NUM",
+      "Form": "]"
     },
     {
       "UPOS": "PUNCT",
@@ -91725,13 +91725,16 @@
       "Form": "государю"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NOUN",
+      "Form": "["
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Neut",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "имя"
     },
@@ -91740,15 +91743,15 @@
       "Form": "и"
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "титулъ"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "X",
+      "Form": "]"
     },
     {
       "Case": "Nom",
@@ -92249,8 +92252,11 @@
       "Form": "государь"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NUM",
+      "Form": "["
     },
     {
       "Case": "Nom",
@@ -92264,8 +92270,8 @@
       "Form": "титул"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "NUM",
+      "Form": "]"
     },
     {
       "Case": "Nom",
@@ -92280,7 +92286,7 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "выписки"
@@ -92290,10 +92296,11 @@
       "Form": ","
     },
     {
-      "Aspect": "Perf",
+      "Case": "Nom",
       "Gender": "Masc",
       "Number": "Sing",
       "Tense": "Past",
+      "Variant": "Short",
       "VerbForm": "PartRes",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -92330,8 +92337,7 @@
       "Form": "привели"
     },
     {
-      "Animacy": "Anim",
-      "Case": "Acc",
+      "Case": "Gen",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -94351,9 +94357,8 @@
       "Form": "на"
     },
     {
-      "Case": "Acc",
+      "Case": "Gen",
       "Gender": "Masc",
-      "NameType": "Giv",
       "Number": "Sing",
       "UPOS": "PROPN",
       "Form": "Шавкунова"
@@ -94365,7 +94370,7 @@
     {
       "Case": "Nom",
       "Gender": "Fem",
-      "Number": "Plur",
+      "Number": "Sing",
       "Tense": "Past",
       "VerbForm": "Part",
       "Voice": "Pass",
@@ -94404,8 +94409,8 @@
       "Form": "притѣсненія"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "X",
+      "Form": "]"
     },
     {
       "UPOS": "PUNCT",
@@ -128268,8 +128273,11 @@
       "Form": "государю"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NUM",
+      "Form": "["
     },
     {
       "Case": "Acc",
@@ -128285,13 +128293,16 @@
     {
       "Case": "Gen",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "титулъ"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Gen",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NOUN",
+      "Form": "]"
     },
     {
       "UPOS": "PUNCT",
@@ -128372,7 +128383,7 @@
       "Form": "твоему"
     },
     {
-      "Case": "Nom",
+      "Case": "Ins",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -128588,9 +128599,9 @@
       "Form": "явно"
     },
     {
-      "Case": "Dat",
+      "Case": "Acc",
       "Degree": "Pos",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "гостиной"
@@ -128603,8 +128614,8 @@
       "Form": "сотни"
     },
     {
-      "Case": "Dat",
-      "Gender": "Masc",
+      "Case": "Acc",
+      "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "PROPN",
       "Form": "Мартыну"
@@ -128654,7 +128665,7 @@
       "Form": "той"
     },
     {
-      "Case": "Loc",
+      "Case": "Dat",
       "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
@@ -128662,7 +128673,7 @@
       "Form": "табашной"
     },
     {
-      "Case": "Loc",
+      "Case": "Gen",
       "Gender": "Fem",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -128721,12 +128732,9 @@
       "Form": "числа"
     },
     {
-      "Case": "Gen",
-      "Degree": "Pos",
-      "Gender": "Masc",
+      "Case": "Acc",
       "NumForm": "Digit",
-      "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NUM",
       "Form": "205"
     },
     {
@@ -128748,19 +128756,15 @@
       "Form": "жъ"
     },
     {
-      "Case": "Gen",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
+      "UPOS": "ADP",
       "Form": "по"
     },
     {
-      "Case": "Gen",
-      "Degree": "Pos",
-      "Gender": "Neut",
+      "Case": "Nom",
+      "Gender": "Masc",
       "NumForm": "Digit",
       "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NUM",
       "Form": "1"
     },
     {
@@ -147563,19 +147567,24 @@
       "Form": "Михайловича"
     },
     {
-      "Form": "",
-      "UPOS": ""
-    },
-    {
       "Case": "Nom",
       "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NUM",
+      "Form": "["
+    },
+    {
+      "Case": "Gen",
+      "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "титулъ"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Acc",
+      "NumForm": "Digit",
+      "UPOS": "NUM",
+      "Form": "]"
     },
     {
       "UPOS": "CCONJ",
@@ -147608,14 +147617,14 @@
       "Form": "государева"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Form": ","
     },
     {
-      "Case": "Acc",
+      "Case": "Gen",
       "Degree": "Pos",
-      "Gender": "Masc",
-      "Number": "Plur",
+      "Gender": "Fem",
+      "Number": "Sing",
       "UPOS": "ADJ",
       "Form": "блаженныя"
     },
@@ -147690,19 +147699,27 @@
       "Form": ","
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NUM",
+      "Form": "["
     },
     {
-      "Case": "Acc",
+      "Aspect": "Perf",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Plur",
-      "UPOS": "NOUN",
+      "Number": "Sing",
+      "Tense": "Past",
+      "Variant": "Short",
+      "VerbForm": "Part",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "титулъ"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "X",
+      "Form": "]"
     },
     {
       "UPOS": "CCONJ",
@@ -147763,7 +147780,6 @@
     {
       "Aspect": "Perf",
       "Number": "Plur",
-      "Reflex": "Yes",
       "Tense": "Past",
       "VerbForm": "PartRes",
       "Voice": "Mid",
@@ -147790,13 +147806,14 @@
       "Form": "годѣхъ"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "ADP",
       "Form": ","
     },
     {
       "Case": "Gen",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣхъ"
     },
@@ -147812,9 +147829,9 @@
       "Form": "съ"
     },
     {
-      "Case": "Ins",
+      "Case": "Gen",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "посадовъ"
     },
@@ -147834,9 +147851,9 @@
       "Form": "уѣздовъ"
     },
     {
-      "Case": "Acc",
+      "Case": "Nom",
       "Degree": "Pos",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "стрѣлецкіе"
@@ -147846,7 +147863,7 @@
       "Form": "и"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Plur",
@@ -147930,7 +147947,7 @@
       "Form": "доимки"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Form": ","
     },
     {
@@ -148001,7 +148018,7 @@
       "Form": "сбирать"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Form": ","
     },
     {
@@ -148241,6 +148258,7 @@
       "Case": "Loc",
       "Gender": "Fem",
       "Number": "Plur",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣхъ"
     },
@@ -148304,11 +148322,11 @@
       "Case": "Loc",
       "Gender": "Neut",
       "Number": "Sing",
-      "UPOS": "PRON",
+      "UPOS": "DET",
       "Form": "всемъ"
     },
     {
-      "UPOS": "ADP",
+      "UPOS": "CCONJ",
       "Form": "по"
     },
     {
@@ -148348,9 +148366,9 @@
       "Form": "государя"
     },
     {
-      "Case": "Nom",
+      "Case": "Dat",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "указомъ"
     },
@@ -148363,25 +148381,25 @@
       "Form": "и"
     },
     {
-      "Case": "Acc",
-      "Degree": "Pos",
-      "Gender": "Masc",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "Aspect": "Imp",
+      "Tense": "Pres",
+      "VerbForm": "Conv",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "сбирая"
     },
     {
       "Case": "Acc",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Plur",
-      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣ"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
+      "PronType": "Tot",
       "UPOS": "DET",
       "Form": "всякіе"
     },
@@ -148394,7 +148412,7 @@
       "Form": "денежные"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -148434,7 +148452,7 @@
       "Form": "тѣ"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
@@ -148640,21 +148658,23 @@
       "Form": ","
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NUM",
-      "Form": "ежегодъ"
-    },
-    {
-      "UPOS": "ADP",
-      "Form": ","
-    },
-    {
       "Case": "Gen",
       "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "NOUN",
+      "Form": "ежегодъ"
+    },
+    {
+      "UPOS": "ADV",
+      "Form": ","
+    },
+    {
+      "Case": "Acc",
+      "Degree": "Pos",
+      "Gender": "Neut",
+      "Number": "Sing",
+      "Variant": "Short",
+      "UPOS": "ADJ",
       "Form": "безпереводно"
     },
     {
@@ -148663,16 +148683,13 @@
     },
     {
       "Polarity": "Neg",
-      "UPOS": "ADV",
+      "UPOS": "PART",
       "Form": "не"
     },
     {
-      "Aspect": "Perf",
-      "Mood": "Ind",
-      "Number": "Sing",
-      "Person": "3",
-      "Tense": "Fut",
-      "VerbForm": "Fin",
+      "Aspect": "Imp",
+      "Tense": "Pres",
+      "VerbForm": "Conv",
       "Voice": "Mid",
       "UPOS": "VERB",
       "Form": "дожидаясь"
@@ -148690,7 +148707,7 @@
       "Form": "томъ"
     },
     {
-      "Case": "Gen",
+      "Case": "Loc",
       "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
@@ -148721,7 +148738,7 @@
       "Form": "указовъ"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Form": ","
     },
     {
@@ -148780,15 +148797,16 @@
     },
     {
       "Case": "Gen",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣхъ"
     },
     {
       "Case": "Gen",
       "Degree": "Pos",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "вышеписанныхъ"
@@ -148865,13 +148883,13 @@
       "Form": ","
     },
     {
-      "UPOS": "CCONJ",
+      "UPOS": "ADP",
       "Form": "и"
     },
     {
-      "Case": "Acc",
-      "Gender": "Fem",
-      "Number": "Sing",
+      "Case": "Loc",
+      "Gender": "Masc",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "правежу"
     },
@@ -148888,8 +148906,8 @@
     },
     {
       "Case": "Loc",
-      "Gender": "Masc",
-      "Number": "Plur",
+      "Gender": "Fem",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "доимки"
     },
@@ -148898,13 +148916,10 @@
       "Form": ","
     },
     {
-      "Mood": "Ind",
+      "Case": "Loc",
+      "Gender": "Fem",
       "Number": "Plur",
-      "Person": "3",
-      "Tense": "Pres",
-      "VerbForm": "Fin",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "UPOS": "NOUN",
       "Form": "выбрать"
     },
     {
@@ -149047,11 +149062,9 @@
     },
     {
       "Case": "Acc",
-      "Degree": "Pos",
       "Gender": "Neut",
       "Number": "Sing",
-      "Variant": "Short",
-      "UPOS": "ADJ",
+      "UPOS": "NUM",
       "Form": "пристойно"
     },
     {
@@ -149071,8 +149084,8 @@
       "Form": "меншей"
     },
     {
-      "Case": "Gen",
-      "Gender": "Fem",
+      "Case": "Loc",
+      "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "статьи"
@@ -149163,6 +149176,7 @@
       "Case": "Loc",
       "Gender": "Neut",
       "Number": "Sing",
+      "PronType": "Dem",
       "UPOS": "PRON",
       "Form": "томъ"
     },
@@ -149171,6 +149185,7 @@
       "Form": "отъ"
     },
     {
+      "Degree": "Cmp",
       "UPOS": "ADV",
       "Form": "прежде"
     },
@@ -149200,8 +149215,12 @@
       "Form": "приставовъ"
     },
     {
-      "Case": "Acc",
-      "VerbForm": "Sup",
+      "Mood": "Ind",
+      "Number": "Plur",
+      "Person": "3",
+      "Tense": "Pres",
+      "VerbForm": "Fin",
+      "Voice": "Act",
       "UPOS": "VERB",
       "Form": "волокитъ"
     },
@@ -149244,7 +149263,7 @@
       "Form": "было"
     },
     {
-      "UPOS": "PUNCT",
+      "UPOS": "CCONJ",
       "Form": ";"
     },
     {
@@ -149283,7 +149302,7 @@
     },
     {
       "Case": "Acc",
-      "Gender": "Masc",
+      "Gender": "Fem",
       "Number": "Plur",
       "UPOS": "DET",
       "Form": "тѣ"
@@ -149311,6 +149330,7 @@
       "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
+      "PronType": "Tot",
       "UPOS": "DET",
       "Form": "всякіе"
     },
@@ -149351,7 +149371,7 @@
     },
     {
       "Case": "Nom",
-      "Gender": "Fem",
+      "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "отпуски"
@@ -149477,24 +149497,21 @@
       "Form": "съ"
     },
     {
-      "Case": "Gen",
+      "Case": "Dat",
       "Degree": "Pos",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "ADJ",
       "Form": "нынѣшняго"
     },
     {
-      "Case": "Loc",
-      "Degree": "Pos",
-      "Gender": "Masc",
+      "Case": "Acc",
       "NumForm": "Digit",
-      "Number": "Sing",
-      "UPOS": "ADJ",
+      "UPOS": "NUM",
       "Form": "206"
     },
     {
-      "Case": "Gen",
+      "Case": "Loc",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -149506,16 +149523,12 @@
     },
     {
       "Polarity": "Neg",
-      "UPOS": "ADV",
+      "UPOS": "PART",
       "Form": "не"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
-      "Number": "Plur",
-      "Tense": "Past",
-      "Variant": "Short",
-      "VerbForm": "PartRes",
+      "Aspect": "Imp",
+      "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "посылать"
@@ -149574,7 +149587,10 @@
       "Form": "денежныхъ"
     },
     {
-      "UPOS": "ADP",
+      "Case": "Loc",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "UPOS": "NOUN",
       "Form": "сборѣхъ"
     },
     {
@@ -149608,9 +149624,9 @@
       "Form": "и"
     },
     {
-      "Case": "Gen",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Plur",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "судеекъ"
     },
@@ -149636,9 +149652,10 @@
     },
     {
       "Case": "Gen",
-      "Gender": "Masc",
+      "Gender": "Neut",
       "Number": "Sing",
-      "UPOS": "DET",
+      "PronType": "Dem",
+      "UPOS": "PRON",
       "Form": "того"
     },
     {
@@ -149766,7 +149783,10 @@
       "Form": "и"
     },
     {
-      "UPOS": "ADP",
+      "Case": "Acc",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "NOUN",
       "Form": "налогъ"
     },
     {
@@ -149786,14 +149806,12 @@
       "Form": "не"
     },
     {
-      "Case": "Nom",
       "Gender": "Neut",
       "Number": "Sing",
       "Tense": "Past",
-      "Variant": "Short",
       "VerbForm": "PartRes",
       "Voice": "Act",
-      "UPOS": "AUX",
+      "UPOS": "VERB",
       "Form": "было"
     },
     {
@@ -149840,6 +149858,7 @@
       "Case": "Gen",
       "Gender": "Masc",
       "Number": "Sing",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "того"
     },
@@ -149907,7 +149926,7 @@
       "Gender": "Neut",
       "Number": "Sing",
       "PronType": "Dem",
-      "UPOS": "DET",
+      "UPOS": "PRON",
       "Form": "того"
     },
     {
@@ -149918,7 +149937,7 @@
       "Case": "Nom",
       "Gender": "Neut",
       "Number": "Sing",
-      "PronType": "Int",
+      "PronType": "Rel",
       "UPOS": "PRON",
       "Form": "что"
     },
@@ -149959,8 +149978,11 @@
       "Form": ","
     },
     {
+      "Case": "Nom",
+      "Gender": "Masc",
       "Number": "Plur",
       "Tense": "Past",
+      "Variant": "Short",
       "VerbForm": "PartRes",
       "Voice": "Act",
       "UPOS": "AUX",
@@ -150033,9 +150055,9 @@
       "Form": "ненадобные"
     },
     {
-      "Case": "Ins",
-      "Gender": "Masc",
-      "Number": "Plur",
+      "Case": "Gen",
+      "Gender": "Fem",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "сборы"
     },
@@ -150075,10 +150097,10 @@
       "Form": "ихъ"
     },
     {
-      "Aspect": "Imp",
-      "VerbForm": "Inf",
-      "Voice": "Act",
-      "UPOS": "VERB",
+      "Case": "Loc",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "UPOS": "NOUN",
       "Form": "прихоти"
     },
     {
@@ -150090,24 +150112,28 @@
       "Form": "и"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Gender": "Fem",
       "Number": "Plur",
-      "UPOS": "NOUN",
+      "PronType": "Dem",
+      "UPOS": "DET",
       "Form": "тѣни"
     },
     {
       "Case": "Ins",
       "Gender": "Masc",
       "Number": "Plur",
-      "Person": "3",
       "Poss": "Yes",
+      "PronType": "Prs",
       "Reflex": "Yes",
       "UPOS": "DET",
       "Form": "своими"
     },
     {
-      "UPOS": "ADP",
+      "Aspect": "Imp",
+      "VerbForm": "Inf",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "прихотьми"
     },
     {
@@ -150128,18 +150154,14 @@
       "Form": "они"
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "воеводы"
     },
     {
-      "Case": "Nom",
-      "Degree": "Pos",
-      "Gender": "Masc",
-      "Number": "Plur",
-      "UPOS": "ADJ",
+      "UPOS": "ADP",
       "Form": "настоящіе"
     },
     {
@@ -150151,9 +150173,9 @@
       "Form": "денежные"
     },
     {
-      "Case": "Gen",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "сборы"
     },
@@ -150173,14 +150195,18 @@
       "Form": "и"
     },
     {
-      "Case": "Gen",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Sing",
-      "UPOS": "NOUN",
+      "Number": "Plur",
+      "Tense": "Past",
+      "Variant": "Short",
+      "VerbForm": "PartRes",
+      "Voice": "Act",
+      "UPOS": "VERB",
       "Form": "запускали"
     },
     {
-      "Case": "Ins",
+      "Case": "Acc",
       "Degree": "Pos",
       "Gender": "Fem",
       "Number": "Sing",
@@ -150369,9 +150395,9 @@
       "Form": "къ"
     },
     {
-      "Case": "Ins",
+      "Case": "Dat",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "Person": "3",
       "PronType": "Prs",
       "UPOS": "PRON",
@@ -150469,7 +150495,7 @@
     },
     {
       "Polarity": "Neg",
-      "UPOS": "ADV",
+      "UPOS": "PART",
       "Form": "не"
     },
     {
@@ -150528,14 +150554,14 @@
       "Form": "государя"
     },
     {
-      "Case": "Dat",
+      "Case": "Gen",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "указу"
     },
     {
-      "Aspect": "Imp",
+      "Aspect": "Perf",
       "VerbForm": "Inf",
       "Voice": "Act",
       "UPOS": "VERB",
@@ -150547,16 +150573,15 @@
     },
     {
       "Case": "Loc",
-      "Gender": "Neut",
+      "Gender": "Masc",
       "Number": "Sing",
-      "PronType": "Dem",
-      "UPOS": "PRON",
+      "UPOS": "DET",
       "Form": "томъ"
     },
     {
-      "Case": "Dat",
+      "Case": "Nom",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "указы"
     },
@@ -150664,9 +150689,10 @@
       "Form": "цѣловалники"
     },
     {
-      "Case": "Nom",
-      "Gender": "Masc",
+      "Case": "Acc",
+      "Gender": "Fem",
       "Number": "Plur",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣ"
     },
@@ -150712,7 +150738,11 @@
       "Form": "по"
     },
     {
-      "UPOS": "CCONJ",
+      "Case": "Acc",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "PronType": "Tot",
+      "UPOS": "DET",
       "Form": "вся"
     },
     {
@@ -150723,7 +150753,6 @@
       "Form": "годы"
     },
     {
-      "Degree": "Pos",
       "UPOS": "ADV",
       "Form": "сполна"
     },
@@ -150758,7 +150787,7 @@
       "Form": "на"
     },
     {
-      "Case": "Nom",
+      "Case": "Acc",
       "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Plur",
@@ -150766,9 +150795,9 @@
       "Form": "указные"
     },
     {
-      "Case": "Loc",
+      "Case": "Acc",
       "Gender": "Masc",
-      "Number": "Sing",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "сроки"
     },
@@ -150924,6 +150953,7 @@
       "Case": "Dat",
       "Gender": "Masc",
       "Number": "Plur",
+      "PronType": "Dem",
       "UPOS": "DET",
       "Form": "тѣмъ"
     },
@@ -150936,7 +150966,7 @@
       "Form": "вышеписаннымъ"
     },
     {
-      "Case": "Ins",
+      "Case": "Loc",
       "Gender": "Masc",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -150954,7 +150984,7 @@
       "Form": "учинятъ"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PART",
       "Form": "хотя"
     },
     {
@@ -151020,7 +151050,7 @@
       "Form": "жестокомъ"
     },
     {
-      "Case": "Loc",
+      "Case": "Acc",
       "Gender": "Neut",
       "Number": "Sing",
       "UPOS": "NOUN",
@@ -151031,18 +151061,21 @@
       "Form": ","
     },
     {
-      "Case": "Acc",
-      "Degree": "Pos",
+      "Aspect": "Perf",
+      "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
+      "Tense": "Past",
       "Variant": "Short",
-      "UPOS": "ADJ",
+      "VerbForm": "Part",
+      "Voice": "Pass",
+      "UPOS": "VERB",
       "Form": "биты"
     },
     {
-      "Case": "Ins",
-      "Gender": "Masc",
-      "Number": "Sing",
+      "Case": "Dat",
+      "Gender": "Neut",
+      "Number": "Plur",
       "UPOS": "NOUN",
       "Form": "кнутомъ"
     },
@@ -151147,7 +151180,7 @@
       "Form": "житье"
     },
     {
-      "UPOS": "ADV",
+      "UPOS": "PUNCT",
       "Form": ","
     },
     {
@@ -151155,7 +151188,7 @@
       "Form": "а"
     },
     {
-      "Case": "Acc",
+      "Case": "Nom",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -151175,7 +151208,7 @@
       "Form": "и"
     },
     {
-      "Case": "Nom",
+      "Case": "Ins",
       "Gender": "Masc",
       "Number": "Plur",
       "UPOS": "NOUN",
@@ -151207,7 +151240,8 @@
       "Form": "на"
     },
     {
-      "Case": "Loc",
+      "Animacy": "Anim",
+      "Case": "Acc",
       "Gender": "Masc",
       "Number": "Plur",
       "Person": "1",
@@ -151264,7 +151298,10 @@
       "Form": "во"
     },
     {
-      "UPOS": "ADP",
+      "Case": "Nom",
+      "Gender": "Masc",
+      "Number": "Plur",
+      "UPOS": "DET",
       "Form": "всѣ"
     },
     {
@@ -151302,8 +151339,12 @@
       "Form": "велѣно"
     },
     {
-      "Aspect": "Imp",
-      "VerbForm": "Inf",
+      "Aspect": "Perf",
+      "Mood": "Ind",
+      "Number": "Plur",
+      "Person": "3",
+      "Tense": "Fut",
+      "VerbForm": "Fin",
       "Voice": "Act",
       "UPOS": "VERB",
       "Form": "послать"
@@ -151352,7 +151393,7 @@
       "Form": "къ"
     },
     {
-      "Case": "Ins",
+      "Case": "Dat",
       "Degree": "Pos",
       "Gender": "Masc",
       "Number": "Sing",
@@ -151362,7 +151403,7 @@
     {
       "Case": "Dat",
       "Gender": "Masc",
-      "Number": "Plur",
+      "Number": "Sing",
       "UPOS": "NOUN",
       "Form": "старостамъ"
     },
@@ -174249,18 +174290,19 @@
   ],
   [
     {
-      "Form": "",
-      "UPOS": ""
+      "UPOS": "ADP",
+      "Form": "["
     },
     {
-      "Case": "Nom",
+      "Case": "Gen",
       "Gender": "Masc",
+      "NameType": "Giv",
       "Number": "Sing",
       "UPOS": "PROPN",
       "Form": "IV"
     },
     {
-      "UPOS": "X",
+      "UPOS": "PUNCT",
       "Form": "."
     }
   ],
@@ -213644,8 +213686,11 @@
       "Form": "Москву"
     },
     {
-      "Form": "",
-      "UPOS": ""
+      "Case": "Acc",
+      "Gender": "Masc",
+      "Number": "Sing",
+      "UPOS": "DET",
+      "Form": "]"
     },
     {
       "UPOS": "PUNCT",

@@ -48,6 +48,7 @@ def check_inconsistencies(
             )
         ]
         for task in TASK_NAMES:
+            msg.info(f"Checking {task} results")
             preds = srsly.read_json(predictions_dir / task / f"{lang}.json")
             assert len(refs) == len(preds), "Length of refs and preds not the same!"
 

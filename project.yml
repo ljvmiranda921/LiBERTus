@@ -100,10 +100,13 @@ workflows:
   experiment-sampling:
     - create-vocab
     - pretrain-model
-  make-submission:
+  make-submission-p1:
     - setup-test
     - get-test-results
-    - zip-results
+    - zip-results-p1
+  make-submission-p2:
+    - download-models-locally
+    - zip-results-p2
 
 # Project commands, specified in a style similar to CI config files (e.g. Azure
 # pipelines). The name is the command name that lets you trigger the command
@@ -357,7 +360,7 @@ commands:
       - paper/figures/hashembed.pdf
 
   - name: "setup-test"
-    help: "Download models from HuggingFace and convert test files to spaCy"
+    help: "Install models from HuggingFace via pip"
     script:
       - pip install https://huggingface.co/ljvmiranda921/xx_chu_sigtyp_trf/resolve/main/xx_chu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/el_cop_sigtyp_trf/resolve/main/el_cop_sigtyp_trf-any-py3-none-any.whl
@@ -372,6 +375,24 @@ commands:
       - pip install https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl
       - pip install https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl
+
+  - name: "download-models-locally"
+    help: "Download models from HuggingFace"
+    script:
+      - mkdir -p submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_chu_sigtyp_trf/resolve/main/xx_chu_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/el_cop_sigtyp_trf/resolve/main/el_cop_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_fro_sigtyp_trf/resolve/main/xx_fro_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_got_sigtyp_trf/resolve/main/xx_got_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_grc_sigtyp_trf/resolve/main/xx_grc_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/he_hbo_sigtyp_trf/resolve/main/he_hbo_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_isl_sigtyp_trf/resolve/main/xx_isl_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_lat_sigtyp_trf/resolve/main/xx_lat_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_latm_sigtyp_trf/resolve/main/xx_latm_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/zh_lzh_sigtyp_trf/resolve/main/zh_lzh_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_ohu_sigtyp_trf/resolve/main/xx_ohu_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_orv_sigtyp_trf/resolve/main/xx_orv_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
+      - wget https://huggingface.co/ljvmiranda921/xx_san_sigtyp_trf/resolve/main/xx_san_sigtyp_trf-any-py3-none-any.whl -P submission_p2/models/
 
   - name: "get-test-results"
     help: "Get results from the test file"
@@ -394,13 +415,20 @@ commands:
       - submission_p1/morph_features/
       - submission_p1/lemmatisation/
 
-  - name: "zip-results"
-    help: "Zip the results into a single file for submission"
+  - name: "zip-results-p1"
+    help: "Zip the results into a single file for submission (Phase 1)"
     script:
-      - sh -c "cd submission_p1 && zip -r ../submission.zip ."
+      - sh -c "cd submission_p1 && zip -r ../submission_p1.zip ."
     deps:
       - submission_p1/pos_tagging/
       - submission_p1/morph_features/
       - submission_p1/lemmatisation/
     outputs:
-      - submission.zip
+      - submission_p1.zip
+
+  - name: "zip-results-p2"
+    help: "Zip teh results into a single file for submission (Phase 2)"
+    script:
+      - sh -c "cd submission_p2 && zip -r ../submission_p2.zip ."
+    outputs:
+      - submission_p2.zip

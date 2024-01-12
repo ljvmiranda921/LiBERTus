@@ -48,6 +48,7 @@ def check_inconsistencies(
             )
         ]
         for task in TASK_NAMES:
+            msg.info(f"Checking {task} results")
             preds = srsly.read_json(predictions_dir / task / f"{lang}.json")
             assert len(refs) == len(preds), "Length of refs and preds not the same!"
 
@@ -61,7 +62,7 @@ def check_inconsistencies(
                 for idx, (tok_ref, tok_pred) in enumerate(zip(ref, pred)):
                     orth_ref = tok_ref["form"]
                     if task == "morph_features":
-                        orth_pred = tok_pred["Form"]
+                        orth_pred = tok_pred["Token"]
                     elif task == "lemmatisation":
                         orth_pred, _ = tok_pred
                     else:  # pos_tagging

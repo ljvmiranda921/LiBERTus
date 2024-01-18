@@ -51,7 +51,7 @@ This paper highlights our pretraining and finetuning process, and our findings f
 
 \section{Introduction}
 This paper describes \teamname{}'s submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
-Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
+Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset \citep{stgall2017,wurzburg2018, celt1997, csnag,mgtsz2018, simon2014,nivre-etal-2020-universal}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
@@ -184,7 +184,7 @@ We also evaluated each language's cross-lingual capability and showed that trans
 This approach can be a viable alternative on limited corpora.
 
 Our training and benchmarking source code is on GitHub: \githuburl{}.
-We will also release the pretrained multilingual model and finetuned pipelines in public shortly after the review period.
+The pretrained multilingual model and finetuned pipelines are also available on HuggingFace.\footnote[2]{\url{https://huggingface.co/collections/ljvmiranda921/sigtyp2024-shared-task-models-65629ea0462e5ebcbf1a2133}}
 
 \section*{Limitations}
 
@@ -213,14 +213,6 @@ Instead of showing subtokens, we used the full multi-word expression during trai
 
 \subsection{Different sampling strategies on pretraining validation performance}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/effect_sampling.pdf}
-\caption{Validation loss curve for different sampling strategies in 20k steps.}
-\label{fig:effect_sampling}
-\end{figure}
-
-
 We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
 We ran the pretraining pipeline for 20k steps (one-fifths of the final hyperparameter value) and measured the validation loss.
 The evaluation corpus was built from the validation set of the shared task, and we kept it the same throughout the experiment.
@@ -231,6 +223,13 @@ We tested the following sampling strategies:
   \item \textbf{Upsampling:} we upsampled each language to ensure that the number of their unique tokens is greater than or equal to the most dominant language.
   \item \textbf{Averaging:} we took the average number of unique tokens in the whole set and up-/downsampled each language based on this value.
 \end{itemize}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/effect_sampling.pdf}
+\caption{Validation loss curve for different sampling strategies in 20k steps.}
+\label{fig:effect_sampling}
+\end{figure}
 
 Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
 We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.

@@ -1,6 +1,6 @@
 <!-- WEASEL: AUTO-GENERATED DOCS START (do not remove) -->
 
-# 🪐 Weasel Project: LiBERTus - A Multilingual Language Model for Ancient and Historical Languages
+# 🪐 LiBERTus - A Multilingual Language Model for Ancient and Historical Languages
 
 Submission to Task 1 (Constrained) of the [SIGTYP 2024 Shared Task on Word
 Embedding Evaluation for Ancient and Historical

@@ -17,6 +17,7 @@
 \usepackage{subfiles}
 \usepackage{graphicx}
 \usepackage{colortbl}
+\usepackage{xurl}
 
 % Commands 
 \newcommand{\draftonly}[1]{#1}
@@ -27,6 +28,7 @@
 % \newcommand{\githuburl}{\url{https://anonymous.4open.science/r/sigtyp-1F05/}}
 \newcommand{\teamname}{Allen AI}
 \newcommand{\githuburl}{\url{https://github.com/ljvmiranda921/LiBERTus}}
+\newcommand{\hfurl}{\url{https://huggingface.co/collections/ljvmiranda921/sigtyp2024-shared-task-models-65629ea0462e5ebcbf1a2133}}
 
 \title{Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages}
 
@@ -54,10 +56,10 @@ The constrained track requires participants to build a system for three linguist
 
 \subfile{tables/lang_to_code.tex}
 
-The dataset contains Universal Dependencies v2.12 data \cite{zeman-etal-2023-universal} in eleven languages with Old Hungarian codices \cite{has-2018-hungarian}.
+The dataset contains Universal Dependencies v2.12 data \cite{zeman-etal-2023-universal} in eleven languages with five Old Hungarian codices \cite{has-2018-hungarian}.
 The texts were from before 1700 CE, containing four language families (Indo-European, Afro-Asiatic, Sino-Tibetan, and Finno-Ugric), and six scripts (Greek, Hebrew, Hanzi, Coptic, Latin, Cyrillic).
 Finally, the dataset has over 2.6M tokens for training, and around 330k tokens for validation and testing.
-Table \ref{table:lang_to_code} shows all languages for the subtask and their equivalent language code.
+Table \ref{table:lang_to_code} shows all languages for the subtask with their equivalent language code.
 
 Our general approach involves pretraining a transformer-based multilingual language model (LM) on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
@@ -154,7 +156,9 @@ The learning rate warms up linearly for the first 250 steps, and then decays aft
 \section{Results}
 
 Table \ref{table:main_results} shows the test scores for the shared task.
-Our systems obtained decent performance for the majority of language-task pairs.
+Our systems obtained decent performance and beat the baseline for the majority of language-task pairs.
+In addition, our submission obtained 2nd place against three other submissions.
+
 In the following sections, we will outline our internal evaluations and benchmarking experiments.
 
 \subsection{Performance on the validation set}
@@ -190,7 +194,7 @@ In addition, we also observe that Old Church Slavonic (\textsc{chu}) and Old Eas
 Several efforts in the field of NLP involve pretraining a transformer network \cite{vaswani-etal-2017-attention} using a corpus of multiple languages such as XLM-RoBERTa \cite{liu-etal-2019-roberta} and multilingual BERT \cite{conneau-etal-2020-unsupervised}.
 The main advantage of multilingual language modeling is that they can harness the cross-lingual representations of the languages in its corpora to solve several downstream tasks \cite{chang-etal-2022-geometry}.
 However, these models harness modern data sources, not ancient and historical text.
-The only exemplar that we found for a historical and multilingual LM is hmBERT \cite{schweter-etal-2022-hmbert}, where they pretrained on English, German, French, Finnish, Swedish, and Dutch languages from 1800 onwards
+The only exemplar that we found for a historical and multilingual LM is hmBERT \cite{schweter-etal-2022-hmbert}, where they pretrained on English, German, French, Finnish, Swedish, and Dutch languages from 1800 onwards.
 \libertus{} aims to extend this literature by providing another multilingual language model focusing on ancient and historical texts from diverse scripts and language families before 1700 CE.
 
 \section{Conclusion}
@@ -252,10 +256,6 @@ We tested the following sampling strategies:
   \label{fig:effect_sampling}
 \end{figure}
 
-Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
-We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.
-
-\subsection{Finetuning a model per language vs. monolithic system}
 
 \begin{figure*}[t]
   \centering
@@ -272,14 +272,20 @@ We highly recommend exploring alternative data mixes to ensure that all language
 \end{figure*}
 
 
+
+Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
+We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.
+
+\subsection{Finetuning a model per language vs. monolithic system}
+
 We investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 Here, we combined the training corpora for all languages, then shuffled them before batching.
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
 This means that the downstream model sees a language mix per training epoch.
 
 As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
-One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on \textsc{lzh}.
-Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (\textsc{latm}, \textsc{lat}) and minority ones (\textsc{ohu}, \textsc{orv}, \textsc{san}).
+One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on Ancient Chinese (\textsc{lzh}).
+Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (Classical and Late Latin, Medieval Latin) and minority ones (Old Hungarian, Old East Slavic, Vedic Sanskrit).
 Due to these findings, we decided to train multiple models for our final system.
 
 \subsection{Alternative approach\textemdash multi-hash embeddings}

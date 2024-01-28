@@ -1,27 +1,28 @@
 \documentclass{../acl_latex.tex}
 \begin{document}
-\begin{table*}[t]
+\begin{table}[t]
     \centering
-    \begin{tabular}{lcccccc}
+    \begin{tabular}{lccc}
         \toprule
-        Language      & POS tag. & Morph. annot. & Lemma. \\ \midrule
-        \textsc{chu}  & 0.95     & 0.94          & 0.92   \\
-        \textsc{cop}  & 0.43     & 0.80          & 0.46   \\
-        \textsc{fro}  & 0.85     & 0.94          & 0.84   \\
-        \textsc{got}  & 0.93     & 0.94          & 0.91   \\
-        \textsc{grc}  & 0.93     & 0.96          & 0.88   \\
-        \textsc{hbo}  & 0.27     & 0.71          & 0.62   \\
-        \textsc{isl}  & 0.94     & 0.95          & 0.95   \\
-        \textsc{lat}  & 0.92     & 0.93          & 0.92   \\
-        \textsc{latm} & 0.94     & 0.98          & 0.97   \\
-        \textsc{lzh}  & 0.82     & 0.86          & 1.00   \\
-        \textsc{ohu}  & 0.94     & 0.95          & 0.70   \\
-        \textsc{orv}  & 0.91     & 0.92          & 0.78   \\
-        \textsc{san}  & 0.87     & 0.90          & 0.83   \\ \bottomrule
+        Lang.         & POS tag.                  & Morph. annot.             & Lemma.                    \\ \midrule
+        \textsc{chu}  & \cellcolor{green!25}0.946 & \cellcolor{green!25}0.941 & 0.796                     \\
+        \textsc{cop}  & 0.426                     & 0.805                     & 0.463                     \\
+        \textsc{fro}  & 0.851                     & \cellcolor{green!25}0.941 & 0.833                     \\
+        \textsc{got}  & \cellcolor{green!25}0.934 & \cellcolor{green!25}0.940 & 0.908                     \\
+        \textsc{grc}  & \cellcolor{green!25}0.935 & \cellcolor{green!25}0.965 & 0.883                     \\
+        \textsc{hbo}  & 0.273                     & 0.712                     & 0.618                     \\
+        \textsc{isl}  & \cellcolor{green!25}0.939 & \cellcolor{green!25}0.948 & \cellcolor{green!25}0.946 \\
+        \textsc{lat}  & \cellcolor{green!25}0.924 & \cellcolor{green!25}0.933 & \cellcolor{green!25}0.923 \\
+        \textsc{latm} & 0.944                     & \cellcolor{green!25}0.980 & \cellcolor{green!25}0.972 \\
+        \textsc{lzh}  & 0.818                     & \cellcolor{green!25}0.860 & \cellcolor{green!25}1.000 \\
+        \textsc{ohu}  & \cellcolor{green!25}0.944 & \cellcolor{green!25}0.946 & 0.700                     \\
+        \textsc{orv}  & \cellcolor{green!25}0.912 & \cellcolor{green!25}0.922 & 0.784                     \\
+        \textsc{san}  & 0.873                     & \cellcolor{green!25}0.900 & 0.832                     \\ \bottomrule
     \end{tabular}
     \caption{
         SIGTYP 2024 Shared Task final leaderboard results as evaluated on the test set.
+        Cells in green indicate scores that are greater than the baseline.
     }
     \label{table:main_results}
-\end{table*}
+\end{table}
 \end{document}

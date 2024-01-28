@@ -63,13 +63,14 @@ Our general approach involves pretraining a transformer-based multilingual model
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
-Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in Coptic and Ancient Hebrew.
-Table \ref{table:main_results} shows our systems' performance on the shared task test set.
 On the validation set, we obtained $\geq$70\% F1-score for the majority of language-task pairs.
+Moreover, our systems achieved decent performance on the test set, yet struggled with subtoken tags in multiword expressions as seen in Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}).
+Table \ref{table:main_results} shows our performance on the shared task test set.
+Our system achieved better than baseline performance in most language-task pairs, especially in morphological annotation, but underperformed in lemmatisation.
+Finally, our system ranked 2nd in the leaderboard against four other submissions.
 
 We detail our resource creation, model pretraining, and finetuning methodologies in this paper.
 The source code for all experiments can be found on GitHub: \githuburl{}.
-
 
 \subfile{tables/main_results.tex}
 
@@ -90,8 +91,9 @@ We approach this by training a multilingual language model akin to the XLM-RoBER
 \paragraph{Preparing the pretraining corpora.}
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Initially, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
-However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as \textsc{latm}, the most overrepresented language.
+However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as Medieval Latin (\textsc{latm}), the most overrepresented language.
 In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
+More information about our sampling experiments can be found in Appendix \ref{sec:appendix_sampling}.
 
 \paragraph{Pretraining the base model.}
 Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.
@@ -109,7 +111,7 @@ Figure \ref{fig:training_curve} shows the training curve.
 \subsection{Model Finetuning}
 
 For each language, we finetuned a multitask model using spaCy \cite{honnibal-etal-2020-spacy}.
-We used spaCy's tokenization rules for the majority of languages except for \textsc{lzh}, where we segmented on characters.
+We used spaCy's tokenization rules for the majority of languages except for Classical Chinese (\textsc{lzh}), where we segmented on characters.
 The final system consists of a parts-of-speech (POS) tagger, morphological analyzer, and lemmatizer.
 
 \paragraph{Parts-of-speech (POS) tagger.}
@@ -117,7 +119,7 @@ We employed a standard classifier that predicts a vector of tag probabilities fo
 Each POS tag is a unique class that we assign exclusively to a token.
 We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
 The network is then optimized using a categorical cross-entropy loss.
-For languages with subtokens such as \textsc{cop} and \textsc{hbo}, we merged each subtoken and used the full multi-word expression (MWE) during training.
+For languages with subtokens such as Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}), we merged each subtoken and used the full multi-word expression (MWE) during training.
 
 \paragraph{Morphological analyzer.}
 Similar to the POS tagger, we treat morphological annotation as a token classification task.
@@ -128,7 +130,7 @@ Similar to the POS tagger, we merged each subtoken for every multi-word expressi
 \begin{figure*}[t]
   \centering
   \includegraphics[width=\textwidth]{figures/cross_lingual.pdf}
-  \caption{Cross-lingual evaluation given a monolingual model from one language and a validation set in another.}
+  \caption{Cross-lingual evaluation, as measured by the F1-score, given a monolingual model from one language and a validation set in another.}
   \label{fig:cross_lingual}
 \end{figure*}
 
@@ -161,13 +163,13 @@ In the following sections, we will outline our internal evaluations and benchmar
 
 Table \ref{table:validation_results} shows the validation scores of our finetuned models.
 We achieved $\geq$70\% performance in most language-task pairs.
-The top performers, calculated by taking the average across all tasks, are \textsc{latm} (0.968), \textsc{isl} (0.938), and \textsc{lat} (0.918),
-whereas the bottom performers are \textsc{cop} (0.849), \textsc{san} (0.839), and \textsc{hbo} (0.468).
+The top performers, calculated by taking the average across all tasks, are Medieval Latin (0.968), Medieval Icelandic (0.938), and Classical and Late Latin (0.918),
+whereas the bottom performers are Coptic (0.849), Vedic Sanskrit (0.839), and Ancient Hebrew (0.468).
 
-Compared to our validation scores, our leaderboard scores on \textsc{cop} and \textsc{hbo} are poor.
+Compared to our validation scores, our leaderboard scores on Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}) are poor.
 This performance is due to our models being unable to accurately predict subtoken information as it has only seen the full MWE during training.
 In order to align our tokenization with the shared task's validation script in Codalab, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
-Finally, for empty tokens such as previously found in \textsc{orv}, we added a rule in our system to produce empty predictions.\footnote[1]{This problem was initially caused by missing brackets in the reference annotations. We used the correct tokens for \textsc{orv} in the final submission.}
+Finally, for empty tokens such as previously found in Old East Slavic (\textsc{orv}), we added a rule in our system to produce empty predictions.\footnote[1]{This problem was initially caused by missing brackets in the reference annotations. We used the correct tokens for \textsc{orv} in the final submission.}
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
@@ -181,6 +183,9 @@ However, this does not extend to its morphology, as the validation set performs 
 Some target languages tend to be cross-lingually receptive on lemmatization, i.e., many source languages can perform decently when applied to them.
 This observation is true for \textsc{fro}, \textsc{got}, \textsc{isl}, \textsc{lat}, and \textsc{latm}.
 Finally, there is also good cross-lingual compatibility between \textsc{lat} and \textsc{latm}\textemdash which is expected because they came from similar roots.
+
+\section{Related Work}
+
 
 \section{Conclusion}
 
@@ -221,6 +226,7 @@ Instead of showing subtokens, we used the full multi-word expression during trai
 \label{sec:appendix}
 
 \subsection{Different sampling strategies on pretraining validation performance}
+\label{sec:appendix_sampling}
 
 We explored different sampling strategies and their effect on the pretraining validation loss curve as shown in Figure \ref{fig:effect_sampling}.
 We ran the pretraining pipeline for 20k steps (one-fifths of the final hyperparameter value) and measured the validation loss.

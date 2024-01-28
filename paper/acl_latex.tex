@@ -95,7 +95,7 @@ We constructed the pretraining corpora using the annotated tokens of the shared 
 Initially, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
 However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as Medieval Latin (\textsc{latm}), the most overrepresented language.
 In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
-More information about our sampling experiments can be found in Appendix \ref{sec:appendix_sampling}.
+More information about our sampling experiments can be found in Section \ref{sec:appendix_sampling} of the appendix.
 
 \paragraph{Pretraining the base model.}
 Using the pretraining corpora, we trained a model with 126M parameters that will serve as a base for finetuning downstream tasks.

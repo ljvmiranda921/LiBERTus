@@ -1,0 +1,28 @@
+\documentclass{../acl_latex.tex}
+\begin{document*}
+\begin{table}[t]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        Language         & spaCy Model & Model Size (in MB)                    \\ \midrule
+        \textsc{chu}  & \cellcolor{green!25}0.946 & \cellcolor{green!25}0.941  \\
+        \textsc{cop}  & 0.426                     & 0.805                      \\
+        \textsc{fro}  & 0.851                     & \cellcolor{green!25}0.941  \\
+        \textsc{got}  & \cellcolor{green!25}0.934 & \cellcolor{green!25}0.940  \\
+        \textsc{grc}  & \cellcolor{green!25}0.935 & \cellcolor{green!25}0.965  \\
+        \textsc{hbo}  & 0.273                     & 0.712                      \\
+        \textsc{isl}  & \cellcolor{green!25}0.939 & \cellcolor{green!25}0.948  \\
+        \textsc{lat}  & \cellcolor{green!25}0.924 & \cellcolor{green!25}0.933  \\
+        \textsc{latm} & 0.944                     & \cellcolor{green!25}0.980  \\
+        \textsc{lzh}  & 0.818                     & \cellcolor{green!25}0.860  \\
+        \textsc{ohu}  & \cellcolor{green!25}0.944 & \cellcolor{green!25}0.946  \\
+        \textsc{orv}  & \cellcolor{green!25}0.912 & \cellcolor{green!25}0.922  \\
+        \textsc{san}  & 0.873                     & \cellcolor{green!25}0.900  \\ \bottomrule
+    \end{tabular}
+    \caption{
+        SIGTYP 2024 Shared Task final leaderboard results as evaluated on the test set.
+        Cells in green indicate scores that are greater than the baseline.
+    }
+    \label{table:finetuned_models}
+\end{table}
+\end{document*}

@@ -42,7 +42,7 @@
 \begin{abstract}
   In this paper, we describe \teamname{}'s submission to the constrained track of the SIGTYP 2024 Shared Task.
   Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
-  Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in \textsc{cop} and \textsc{hbo}.
+  Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in Coptic and Ancient Hebrew.
   On the validation set, we obtained $\geq$70\% F1-score on most language-task pairs.
   We also explored the cross-lingual capability of our trained models.
   This paper highlights our pretraining and finetuning process, and our findings from our internal evaluations.
@@ -52,21 +52,22 @@
 This paper describes \teamname{}'s submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
 The constrained track requires participants to build a system for three linguistic tasks\textemdash parts-of-speech (POS) tagging, morphological annotation, and lemmatisation\textemdash using only the corpora provided by the organizers \cite{dereza-etal-2024-findings}.
 
-The dataset contains Universal Dependencies v2.12 data \cite{zeman-etal-2023-universal} in eleven languages with Old Hungarian codices from MGTSZ.
-
-
+The dataset contains Universal Dependencies v2.12 data \cite{zeman-etal-2023-universal} in eleven languages with Old Hungarian codices \cite{has-2018-hungarian}.
+The texts were from before 1700 CE, containing four language families (Indo-European, Afro-Asiatic, Sino-Tibetan, and Finno-Ugric), and six scripts (Greek, Hebrew, Hanzi, Coptic, Latin, Cyrillic).
+Finally, the dataset has over 2.6M tokens for training, and around 330k tokens for validation and testing.
 
 Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
-Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in \textsc{cop} and \textsc{hbo}.
+Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in Coptic and Ancient Hebrew.
 Table \ref{table:main_results} shows our systems' performance on the shared task test set.
 On the validation set, we obtained $\geq$70\% F1-score for the majority of language-task pairs.
 
 We detail our resource creation, model pretraining, and finetuning methodologies in this paper.
 The source code for all experiments can be found on GitHub: \githuburl{}.
 
+\subfile{tables/lang_to_code.tex}
 \subfile{tables/main_results.tex}
 
 \section{Methodology}

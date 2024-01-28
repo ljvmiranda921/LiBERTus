@@ -190,7 +190,7 @@ In addition, we also observe that Old Church Slavonic (\textsc{chu}) and Old Eas
 
 \section{Related Work}
 
-\paragraph{Multilingual language modeling.} 
+\paragraph{Multilingual language modeling.}
 Several efforts in the field of NLP involve pretraining a transformer network \cite{vaswani-etal-2017-attention} using a corpus of multiple languages such as XLM-RoBERTa \cite{liu-etal-2019-roberta} and multilingual BERT \cite{conneau-etal-2020-unsupervised}.
 The main advantage of multilingual language modeling is that they can harness the cross-lingual representations of the languages in its corpora to solve several downstream tasks \cite{chang-etal-2022-geometry}.
 However, these models harness modern data sources, not ancient and historical text.
@@ -272,7 +272,6 @@ We tested the following sampling strategies:
 \end{figure*}
 
 
-
 Because any form of sampling resulted to unstable pretraining and higher validation loss, we decided to stick with the dataset's original data distribution.
 We highly recommend exploring alternative data mixes to ensure that all languages will be represented while keeping the training process stable.
 
@@ -284,7 +283,7 @@ The merged dataset has 194,281 documents for training and 26,954 documents for v
 This means that the downstream model sees a language mix per training epoch.
 
 As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
-One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on Ancient Chinese (\textsc{lzh}).
+One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on Classical Chinese (\textsc{lzh}).
 Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (Classical and Late Latin, Medieval Latin) and minority ones (Old Hungarian, Old East Slavic, Vedic Sanskrit).
 Due to these findings, we decided to train multiple models for our final system.
 
@@ -298,5 +297,11 @@ Figure \ref{fig:hashembed} shows the results in comparison to our final system.
 It is notable that simple orthographic features are competitive with our transformer-based model.
 However, we chose to submit the transformer-based pipeline as our final system because it still outperforms the multi-hash embed method in the majority of our language-task pairs.
 We still recommend investigating this approach further because the hash-embed method has noticeable efficiency gains in terms of model size.
+
+\subsection{Finetuned spaCy models}
+
+The
+
+\subfile{tables/model_table.tex}
 
 \end{document}

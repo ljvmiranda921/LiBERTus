@@ -293,6 +293,8 @@ We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an a
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.
 This approach also applies the hashing trick, inspired by Bloom filters \cite{bloom-1970-space}, to decrease the vector table's memory footprint.
 
+\subfile{tables/model_table.tex}
+
 Figure \ref{fig:hashembed} shows the results in comparison to our final system.
 It is notable that simple orthographic features are competitive with our transformer-based model.
 However, we chose to submit the transformer-based pipeline as our final system because it still outperforms the multi-hash embed method in the majority of our language-task pairs.
@@ -300,8 +302,8 @@ We still recommend investigating this approach further because the hash-embed me
 
 \subsection{Finetuned spaCy models}
 
-The
-
-\subfile{tables/model_table.tex}
+The finetuned models follow spaCy's naming convention and are available on HuggingFace: \url{https://huggingface.co/ljvmiranda921/{model\_name}}.
+Table \ref{table:model_table} lists the model name and size (in MB) for each language.
+Each model is multi-task in nature and can perform all downstream tasks (i.e., POS tagging, morphological annotation, lemmatisation) in a single call.
 
 \end{document}

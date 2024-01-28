@@ -59,7 +59,7 @@ The texts were from before 1700 CE, containing four language families (Indo-Euro
 Finally, the dataset has over 2.6M tokens for training, and around 330k tokens for validation and testing.
 Table \ref{table:lang_to_code} shows all languages for the subtask and their equivalent language code.
 
-Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
+Our general approach involves pretraining a transformer-based multilingual language model (LM) on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
@@ -168,7 +168,7 @@ whereas the bottom performers are Coptic (0.849), Vedic Sanskrit (0.839), and An
 
 Compared to our validation scores, our leaderboard scores on Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}) are poor.
 This performance is due to our models being unable to accurately predict subtoken information as it has only seen the full MWE during training.
-In order to align our tokenization with the shared task's validation script in Codalab, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
+In order to align our tokenization with the shared task's validation script in Codalab \cite{pavao-etal-2023-codalab}, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
 Finally, for empty tokens such as previously found in Old East Slavic (\textsc{orv}), we added a rule in our system to produce empty predictions.\footnote[1]{This problem was initially caused by missing brackets in the reference annotations. We used the correct tokens for \textsc{orv} in the final submission.}
 
 \subsection{Evaluating cross-lingual capabilities}
@@ -182,13 +182,16 @@ However, this does not extend to its morphology, as the validation set performs 
 
 Some target languages tend to be cross-lingually receptive on lemmatization, i.e., many source languages can perform decently when applied to them.
 This pattern is apparent especially between Classical and Late Latin (\textsc{lat}) and Medieval Latin (\textsc{latm}) due to the latter being a direct continuation of the former.
-In addition, we also observe that Old Church Slavonic (\textsc{chu}) and Old East Slavic (\textsc{orv}) are also cross-lingually compatible as they came from the same root.
-
-\section{Discussion}
-
+In addition, we also observe that Old Church Slavonic (\textsc{chu}) and Old East Slavic (\textsc{orv}) are also cross-lingually compatible as they came from the same Indo-European root.
 
 \section{Related Work}
 
+\paragraph{Multilingual language modeling.} 
+Several efforts in the field of NLP involve pretraining a transformer network \cite{vaswani-etal-2017-attention} using a corpus of multiple languages such as XLM-RoBERTa \cite{liu-etal-2019-roberta} and multilingual BERT \cite{conneau-etal-2020-unsupervised}.
+The main advantage of multilingual language modeling is that they can harness the cross-lingual representations of the languages in its corpora to solve several downstream tasks \cite{chang-etal-2022-geometry}.
+However, these models harness modern data sources, not ancient and historical text.
+The only exemplar that we found for a historical and multilingual LM is hmBERT \cite{schweter-etal-2022-hmbert}, where they pretrained on English, German, French, Finnish, Swedish, and Dutch languages from 1800 onwards
+\libertus{} aims to extend this literature by providing another multilingual language model focusing on ancient and historical texts from diverse scripts and language families before 1700 CE.
 
 \section{Conclusion}
 
@@ -261,6 +264,14 @@ We highly recommend exploring alternative data mixes to ensure that all language
   \label{fig:monolithic}
 \end{figure*}
 
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/hashembed.pdf}
+  \caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
+  \label{fig:hashembed}
+\end{figure*}
+
+
 We investigated if finetuning a model per language is more effective against a monolithic system, i.e., training on the full multilingual annotated corpora.
 Here, we combined the training corpora for all languages, then shuffled them before batching.
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
@@ -272,13 +283,6 @@ Training the monolithic model is also sensitive to the training data distributio
 Due to these findings, we decided to train multiple models for our final system.
 
 \subsection{Alternative approach\textemdash multi-hash embeddings}
-
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/hashembed.pdf}
-  \caption{Comparison between a RoBERTa-based pretrained model and multi-hash embeddings \cite{miranda-etal-2022-multi} as evaluated on the validation set.}
-  \label{fig:hashembed}
-\end{figure*}
 
 We considered using multi-hash embeddings \cite{miranda-etal-2022-multi} as an alternative approach.
 Instead of pretraining, these embeddings use orthographic features (e.g., prefix, suffix, norm, shape) to create a word vector table.

@@ -51,6 +51,12 @@
 
 \section{Introduction}
 This paper describes \teamname{}'s submission to the \textit{constrained} track of the SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages.
+The constrained track requires participants to build a system for three linguistic tasks\textemdash parts-of-speech (POS) tagging, morphological annotation, and lemmatisation\textemdash using only the corpora provided by the organizers \cite{dereza-etal-2024-findings}.
+
+The dataset contains Universal Dependencies v2.12 data in eleven languages with Old Hungarian codices from MGTSZ.
+
+
+
 Our general approach involves pretraining a transformer-based multilingual model on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.

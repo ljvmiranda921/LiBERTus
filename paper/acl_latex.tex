@@ -44,9 +44,9 @@
 \begin{abstract}
   In this paper, we describe \teamname{}'s submission to the constrained track of the SIGTYP 2024 Shared Task.
   Using only the data provided by the organizers, we pretrained a transformer-based multilingual model, then finetuned it on the Universal Dependencies (UD) annotations of a given language for a downstream task.
-  Our systems achieved decent performance on the test set, yet struggles with subtoken tags in multiword expressions as seen in Coptic and Ancient Hebrew.
+  Our systems achieved decent performance on the test set, beating the baseline in most language-task pairs, yet struggles with subtoken tags in multiword expressions as seen in Coptic and Ancient Hebrew.
   On the validation set, we obtained $\geq$70\% F1-score on most language-task pairs.
-  We also explored the cross-lingual capability of our trained models.
+  In addition, we also explored the cross-lingual capability of our trained models.
   This paper highlights our pretraining and finetuning process, and our findings from our internal evaluations.
 \end{abstract}
 
@@ -221,11 +221,11 @@ We highly recommend pretraining a large \libertus{} model to obtain performance 
 In the end, we didn't employ any sampling strategy to balance the token distribution of different languages during pretraining.
 We only tested simple up-/downsampling strategies and our experiments are limited to repeating available data.
 
-\paragraph{Label combination as individual classes}
+\paragraph{Label combination as individual classes.}
 When training the morphologizer and POS tagger, we treated each feature and parts-of-speech combination as its own class instead of modeling them individually.
 This limits our text classifier to only predicting combinations it has seen during the training process.
 
-\paragraph{Subtoken performance for multiword expressions}
+\paragraph{Subtoken performance for multiword expressions.}
 Our systems performed poorly on \textsc{cop} and \textsc{hbo} in the leaderboard due to how we trained our model.
 Instead of showing subtokens, we used the full multi-word expression during training.
 
@@ -283,12 +283,13 @@ Here, we combined the training corpora for all languages, then shuffled them bef
 The merged dataset has 194,281 documents for training and 26,954 documents for validation.
 This means that the downstream model sees a language mix per training epoch.
 
+\subfile{tables/model_table.tex}
+
 As shown in Figure \ref{fig:monolithic}, finetuning a model per language still yields the best results.
 One advantage of language-specific models is that we were able to set a different tokenizer per language\textemdash enabling us to get decent scores on Classical Chinese (\textsc{lzh}).
 Training the monolithic model is also sensitive to the training data distribution, as shown by the disparity in performance between majority languages (Classical and Late Latin, Medieval Latin) and minority ones (Old Hungarian, Old East Slavic, Vedic Sanskrit).
 Due to these findings, we decided to train multiple models for our final system.
 
-\subfile{tables/model_table.tex}
 
 \subsection{Alternative approach\textemdash multi-hash embeddings}
 
@@ -302,10 +303,13 @@ It is notable that simple orthographic features are competitive with our transfo
 However, we chose to submit the transformer-based pipeline as our final system because it still outperforms the multi-hash embed method in the majority of our language-task pairs.
 We still recommend investigating this approach further because the hash-embed method has noticeable efficiency gains in terms of model size.
 
-\subsection{Finetuned spaCy models}
+\subsection{Open-access models}
 
-The finetuned models follow spaCy's naming convention and are available on HuggingFace: \url{https://huggingface.co/ljvmiranda921/{model\_name}}.
-Table \ref{table:model_table} lists the model name and size (in MB) for each language.
+\paragraph{Finetuned spaCy models.} The finetuned models follow spaCy's naming convention and are available on HuggingFace (\url{https://huggingface.co/ljvmiranda921/{model\_name}}, where \texttt{model\_name} is found on Table \ref{table:model_table}).
+Table \ref{table:model_table} also lists the size (in MB) for each language.
 Each model is multi-task in nature and can perform all downstream tasks (i.e., POS tagging, morphological annotation, lemmatisation) in a single call using the spaCy framework.\footnote[3]{\url{https://spacy.io}}
+
+\paragraph{Pretrained multilingual LM.} 
+In addition, the pretrained multilingual language model is also on HuggingFace (\url{https://huggingface.co/ljvmiranda921/LiBERTus-base}) and can be accessed using the \texttt{transformers} library \cite{wolf-etal-2020-transformers}.
 
 \end{document}

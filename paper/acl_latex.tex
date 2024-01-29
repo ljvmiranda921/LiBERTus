@@ -132,10 +132,12 @@ Similar to the POS tagger, we merged each subtoken for every multi-word expressi
 \begin{figure*}[t]
   \centering
   \includegraphics[width=\textwidth]{figures/cross_lingual.pdf}
-  \caption{Cross-lingual evaluation, as measured by the F1-score, given a monolingual model from one language and a validation set in another.}
+  \caption{
+    Cross-lingual evaluation, as measured by the F1-score, given a monolingual model from one language and a validation set in another.
+    The mapping of language codes to languages can be found in Table \ref{table:lang_to_code}.
+  }
   \label{fig:cross_lingual}
 \end{figure*}
-
 
 \paragraph{Lemmatizer.}
 We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
@@ -155,7 +157,14 @@ The learning rate warms up linearly for the first 250 steps, and then decays aft
 
 \section{Results}
 
-Table \ref{table:main_results} shows the test scores for the shared task.
+Table \ref{table:main_results} shows the test scores for the shared task using the official shared task metrics:
+
+\begin{itemize}
+  \item \textbf{POS-tagging:}	Accuracy@1, F1-score
+  \item \textbf{Detailed morphological annotation:} Macro-average of Accuracy@1 per tag
+  \item \textbf{Lemmatisation:} Accuracy@1, Accuracy@3
+\end{itemize}
+
 Our systems obtained decent performance and beat the baseline for the majority of language-task pairs.
 In addition, our submission obtained 2nd place against three other submissions.
 

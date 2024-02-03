@@ -61,7 +61,7 @@ The texts were from before 1700 CE, containing four language families (Indo-Euro
 Finally, the dataset has over 2.6M tokens for training, and around 330k tokens for validation and testing.
 Table \ref{table:lang_to_code} shows all languages for the subtask with their equivalent language code.
 
-Our general approach involves pretraining a transformer-based multilingual language model (LM) on the shared task dataset \citep{dereza-etal-2024-findings}, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
+Our general approach involves pretraining a transformer-based multilingual language model (LM) on the shared task dataset, and then finetuning the pretrained model using the Universal Dependencies (UD) annotations of each language.
 Throughout this paper, we will refer to the pretrained model as \libertus{}.
 We also explored data sampling and augmentation techniques during the pretraining step to ensure better generalization performance.
 
@@ -69,7 +69,6 @@ On the validation set, we obtained $\geq$70\% F1-score for the majority of langu
 Moreover, our systems achieved decent performance on the test set, yet struggled with subtoken tags in multiword expressions as seen in Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}).
 Table \ref{table:main_results} shows our performance on the shared task test set.
 Our system achieved better than baseline performance in most language-task pairs, especially in morphological annotation, but underperformed in lemmatisation.
-Finally, our system ranked 2nd in the leaderboard against four other submissions.
 
 We detail our resource creation, model pretraining, and finetuning methodologies in this paper.
 The source code for all experiments can be found on GitHub: \githuburl{}.
@@ -93,7 +92,7 @@ We approach this by training a multilingual language model akin to the XLM-RoBER
 \paragraph{Preparing the pretraining corpora.}
 We constructed the pretraining corpora using the annotated tokens of the shared task dataset.
 Initially, we explored several data augmentation techniques to ensure that each language is properly represented based on the number of unique tokens.
-However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as Medieval Latin (\textsc{latm}), the most overrepresented language.
+However, we found pretraining to be unstable when we upsampled tokens to achieve the same count as Medieval Latin (\textsc{latm}), the language with the highest token count.
 In the end, we found that leaving the token distribution as-is leads to more stable pretraining and lower validation scores.
 More information about our sampling experiments can be found in Section \ref{sec:appendix_sampling} of the appendix.
 
@@ -119,7 +118,7 @@ The final system consists of a parts-of-speech (POS) tagger, morphological analy
 \paragraph{Parts-of-speech (POS) tagger.}
 We employed a standard classifier that predicts a vector of tag probabilities for each token.
 Each POS tag is a unique class that we assign exclusively to a token.
-We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing it to a linear layer with a softmax activation.
+We trained a model by taking the context-sensitive vectors from our pretrained embeddings, and passing them to a linear layer with a softmax activation.
 The network is then optimized using a categorical cross-entropy loss.
 For languages with subtokens such as Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}), we merged each subtoken and used the full multi-word expression (MWE) during training.
 
@@ -141,14 +140,14 @@ Similar to the POS tagger, we merged each subtoken for every multi-word expressi
 
 \paragraph{Lemmatizer.}
 We trained a neural-based edit tree lemmatizer \cite{muller-etal-2015-joint} by first extracting an edit tree for each token-lemma pair.
-Because this process can result to hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
+Because this process can result in hundreds of edit trees, we treat the problem of picking the correct tree as a classification task.
 Here, each unique tree serves as a class and we compute a probability distribution over all trees for a given token.
 To obtain the most probable tree, we passed the context-sensitive embeddings from our pretrained model to a softmax layer and trained the network with a cross-entropy loss objective.
 We set the minimum frequency of an edit tree to 3, and used the surface form of the token as a backoff when no applicable edit tree is found.
 Finally, we ensured that the lemmatizer checks at least a single tree before resorting to backoff.
 
 \paragraph{Finetuning the pipelines.} We trained each component of the system in parallel, although the final ``pipeline'' assembles them together using the spaCy framework.
-For all components, the pretrained embeddings are passed on to linear layer with softmax activation.
+For all components, the pretrained embeddings are passed on to a linear layer with softmax activation.
 Sometimes, the tokenization from the multilingual model does not align one-to-one with spaCy's tokenization.
 In such case, we use a pooling layer that computes the average of each feature to obtain a single vector per spaCy token.
 
@@ -181,28 +180,27 @@ whereas the bottom performers are Coptic (0.849), Vedic Sanskrit (0.839), and An
 
 Compared to our validation scores, our leaderboard scores on Coptic (\textsc{cop}) and Ancient Hebrew (\textsc{hbo}) are poor.
 This performance is due to our models being unable to accurately predict subtoken information as it has only seen the full MWE during training.
-In order to align our tokenization with the shared task's validation script in Codalab \cite{pavao-etal-2023-codalab}, we substituted each MWE with its subtokens resulting to potentially incomprehensible text.
+In order to align our tokenization with the shared task's validation script in Codalab \cite{pavao-etal-2023-codalab}, we substituted each MWE with its subtokens resulting in potentially incomprehensible text.
 Finally, for empty tokens such as previously found in Old East Slavic (\textsc{orv}), we added a rule in our system to produce empty predictions.\footnote[1]{This problem was initially caused by missing brackets in the reference annotations. We used the correct tokens for \textsc{orv} in the final submission.}
 
 \subsection{Evaluating cross-lingual capabilities}
 \label{sec:results_crosslingual}
 
-To test the cross-lingual capability of a language, we evaluated its finetuned model to the validation set of another.
+To test the cross-lingual capability of a language, we evaluated its finetuned model according to the validation set of another.
 Figure \ref{fig:cross_lingual} shows the results.
 
-We found that it is possible to adapt a language onto another for morphological annotation and lemmatization.
+We found that it is practical to adapt a language onto another for parts-of-speech (POS) tagging and lemmatization, especially in cases where the target language lacks sufficient data to train a supervised model.
 However, this does not extend to its morphology, as the validation set performs best only in the language it was trained on.
 
 Some target languages tend to be cross-lingually receptive on lemmatization, i.e., many source languages can perform decently when applied to them.
 This pattern is apparent especially between Classical and Late Latin (\textsc{lat}) and Medieval Latin (\textsc{latm}) due to the latter being a direct continuation of the former.
-In addition, we also observed that Old Church Slavonic (\textsc{chu}) and Old East Slavic (\textsc{orv}) are also cross-lingually compatible as they came from the same Indo-European root.
-Finally, we noticed that languages coming from the same family and script such as Old French (\textsc{fro}), Gothic (\textsc{got}), Medieval Icelandic (\textsc{isl}), Classical and Late Latin (\textsc{lat}), and Medieval Latin (\textsc{latm}) tend to have good cross-lingual transfer capabilities.
+Finally, we also observed that Old Church Slavonic (\textsc{chu}) and Old East Slavic (\textsc{orv}) are also cross-lingually compatible as they came from the same family (i.e., Indo-European).
 
 \section{Related Work}
 
 \paragraph{Multilingual language modeling.}
 Several efforts in the field of NLP involve pretraining a transformer network \cite{vaswani-etal-2017-attention} using a corpus of multiple languages such as XLM-RoBERTa \cite{liu-etal-2019-roberta} and multilingual BERT \cite{conneau-etal-2020-unsupervised}.
-The main advantage of multilingual language modeling is that they can harness the cross-lingual representations of the languages in its corpora to solve several downstream tasks \cite{chang-etal-2022-geometry}.
+The main advantage of multilingual language modeling is that it can harness the cross-lingual representations of the languages in its corpora to solve several downstream tasks \cite{chang-etal-2022-geometry}.
 However, these models harness modern data sources, not ancient and historical text.
 The only exemplar that we found for a historical and multilingual LM is hmBERT \cite{schweter-etal-2022-hmbert}, where they pretrained on English, German, French, Finnish, Swedish, and Dutch languages from 1800 onwards.
 \libertus{} aims to extend this literature by providing another multilingual language model focusing on ancient and historical texts from diverse scripts and language families before 1700 CE.
@@ -223,7 +221,7 @@ The pretrained multilingual model and finetuned pipelines are also available on 
 \section*{Limitations}
 
 \paragraph{Pretrained LM size.}
-Due to compute constraints, we were only able to pretrain a model akin to the size of RoBERTa\textsubscript{base}.
+Due to constraints in compute, we were only able to pretrain a model akin to the size of RoBERTa\textsubscript{base}.
 We highly recommend pretraining a large \libertus{} model to obtain performance gains if the resource allows.
 
 \paragraph{Pretraining data mix.}
@@ -318,7 +316,7 @@ We still recommend investigating this approach further because the hash-embed me
 Table \ref{table:model_table} also lists the size (in MB) for each language.
 Each model is multi-task in nature and can perform all downstream tasks (i.e., POS tagging, morphological annotation, lemmatisation) in a single call using the spaCy framework.\footnote[3]{\url{https://spacy.io}}
 
-\paragraph{Pretrained multilingual LM.} 
+\paragraph{Pretrained multilingual LM.}
 In addition, the pretrained multilingual language model is also on HuggingFace (\url{https://huggingface.co/ljvmiranda921/LiBERTus-base}) and can be accessed using the \texttt{transformers} library \cite{wolf-etal-2020-transformers}.
 
 \end{document}

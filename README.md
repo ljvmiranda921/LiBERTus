@@ -71,4 +71,23 @@ in the project directory.
 | `assets/dev/` | Git | CoNLL-U validation datasets for Task 0 (morphology/lemma/POS) |
 | `assets/test/` | Git | CoNLL-U test datasets for Task 0 (morphology/lemma/POS) |
 
+## 📄 Cite
+
+If you used any of the code or the models, don't forget to cite
+
+```
+@inproceedings{miranda-2024-allen,
+    title = "{A}llen Institute for {AI} @ {SIGTYP} 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages",
+    author = "Miranda, Lester",
+    booktitle = "Proceedings of the 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP",
+    month = mar,
+    year = "2024",
+    address = "St. Julian's, Malta",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.sigtyp-1.18",
+    pages = "151--159",
+}
+```
+
+
 <!-- WEASEL: AUTO-GENERATED DOCS END (do not remove) -->
